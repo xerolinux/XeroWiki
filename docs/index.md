@@ -1,12 +1,12 @@
 # Welcome to the XeroLinux Wiki
 
-Welcome to **XeroLinux Wiki** ! This is where you will find more information about all my projects, how to install & use them. Announcements will be shared on the [**XeroLinux**](https://xerolinux.xyz){:target="_blank"} main site.
+Welcome to **XeroLinux Wiki** ! Think of this page as your go-to hub for all things related to our scripts, tools, and configurations. Here, you'll find a comprehensive and centralized resource for every tweak, command, or customization option you've ever tinkered with. Whether you're diving deep into Bash scripting, setting up **ArchLinux** with **KDE Plasma**, or configuring advanced setups, this **wiki** will serve as the one-stop shop for all your documentation needs. It's meticulously designed to keep everything organized and accessible, so you can focus more on experimenting and less on searching for that one-liner you swear you wrote down somewhere. Announcements will be shared on the [**XeroLinux**](https://xerolinux.xyz){:target="_blank"} main site.
 
 <p align="center">
-    <img width="600" src="https://i.imgur.com/9HqsYLP.png" alt="logo">
+    <img src="https://i.imgur.com/9HqsYLP.png" alt="logo">
 </p>
 
-I will adding section links from here in the toolkit of course. For example if you enter the *Customization* page pressing `i` will bring you here on relevant section. You get the idea.
+This wiki is built with intuitive section links that seamlessly navigate to specific parts of the documentation. Imagine needing to remember a specific customization: simply enter the Customization page and press `i` in the toolkit, to instantly jump to the relevant section. The goal is to make this your primary reference, eliminating the need to hunt through disparate notes or scattered files. As I phase out the current **GitHub wiki**, this will become the central repository for all my projects—better organized, more user-friendly, and directly integrated with the tools I use daily.
 
 In order to cantact me, you can do so on either, [**Fosstodon**](https://fosstodon.org/@XeroLinux){:target="_blank"}, or [**Discord**](https://discord.gg/5sqxTSuKZu){:target="_blank"}
 

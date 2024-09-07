@@ -14,7 +14,7 @@ tags:
 With the help of this script, you will be able to install **Plasma** in one of 4 methods as you can see in the image below. Not only that, but it will also fix **PipeWire** and **Bluetooth**. For more detailed info visit the **Plasma-Install Wiki** in the menu on the left...
 
 <p align="center">
-    <img width="600" src="https://i.imgur.com/TOZNp4j.png" alt="logo">
+    <img src="https://i.imgur.com/TOZNp4j.png" alt="shot">
 </p>
 
 This script has an option to include my repo, **Chaotic-AUR**'s & Toolkit. Toolkit also includes option to apply my rice. So if you opt to include it, you do not need to get other projects/tools separately. It’s meant as an All-in-One solution.
