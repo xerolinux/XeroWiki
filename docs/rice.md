@@ -6,7 +6,7 @@ tags:
   - Plasma
 ---
 
-<h1 align="center">.//🎨 The XeroLinux Layan KDE Rice 🎨\\.</h1>
+<h2 align="center">.//🎨 The Layan KDE Rice 🎨\\.</h2>
 
 !!! warning
 

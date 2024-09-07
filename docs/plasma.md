@@ -7,7 +7,7 @@ tags:
   - ArchLinux
 ---
 
-<h1 align="center">.//💻 The XeroLinux Plasma-Install Script 💻\\.</h1>
+<h2 align="center">.//💻 The Plasma-Install Script 💻\\.</h2>
 
 ### What it is
 

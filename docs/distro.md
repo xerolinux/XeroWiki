@@ -5,7 +5,7 @@ tags:
   - Distro
 ---
 
-<h1 align="center">.//💿 The XeroLinux Distro 💿\\.</h1>
+<h2 align="center">.//💿 The XeroLinux Distro 💿\\.</h2>
 
 !!! note
 
