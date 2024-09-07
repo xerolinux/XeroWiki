@@ -1,4 +1,5 @@
 - [🏠Home](index.md)
+- [💿The Distro](distro.md)
 - [🐧The Toolkit](xlapit.md)
 - [💻Plasma Install](plasma.md)
 - [🎨Layan KDE Rice](rice.md)
