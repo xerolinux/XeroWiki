@@ -4,7 +4,7 @@ Welcome to **XeroLinux Wiki** ! Think of this page as your go-to hub for all thi
 
 !!! tip
 
-    Announcements will be shared on the [**XeroLinux**](https://xerolinux.xyz){:target="_blank"} main site.
+    Announcements regarding my tools will be shared on the [**XeroLinux**](https://xerolinux.xyz){:target="_blank"} main site. Please make sure you are subscibed to its **RSS Feed** for any future updates.
 
 It's meticulously designed to keep everything organized and accessible, so you can focus more on experimenting and less on searching for that one-liner you swear you wrote down somewhere.
 
