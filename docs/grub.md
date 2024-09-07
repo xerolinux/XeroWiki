@@ -15,8 +15,6 @@ This is a simple script, that will allow you to install any of the **Grub** them
   <img src="https://i.imgur.com/vgBkIrE.png">
 </p>
 
-Be very careful playing with your bootloader. I made sure they work. Beyond that it's on you. This is provided as is with no warranty whatsoever...
-
 ---
 
 <h1 align="center">.// The Wiki \\.</h1>
@@ -28,4 +26,6 @@ I included a script that makes installing them much easier, just follow steps be
 1- Git Clone [**this**](https://github.com/xerolinux/xero-grubs){:target="_blank"} repo<br />
 2- CD into it and run `sudo ./install.sh`<br />
 3- Select one of the 8 themes, watch the magic.<br />
-4- Reboot your system and see the theme in action !
+4- Reboot your system and see the theme in action !<br />
+
+Be very careful playing with your bootloader. I made sure they work. Beyond that it's on you. This is provided as is with no warranty whatsoever...
