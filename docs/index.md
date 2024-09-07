@@ -1,5 +1,5 @@
 ---
-title: The XeroLinux Wiki
+title: Welcome
 tags:
   - Linux
   - XeroLinux
