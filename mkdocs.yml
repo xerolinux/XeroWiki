@@ -1,0 +1,108 @@
+site_name: XeroLinux Wiki
+site_description: Project Documentation.
+site_url: https://wiki.xerolinux.xyz
+
+# Copyright
+copyright: Copyright &copy; 2024 <a href="https://xerolinux.xyz" target="_blank"><strong>XeroLinux Group</strong></a>.
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  palette:
+    scheme: slate
+    primary: indigo
+  features:
+   - navigation.top
+   - navigation.footer
+   - navigation.indexes
+   - navigation.sections
+   - content.code.copy
+   - content.code.annotate
+   - content.tabs.link
+   - glightbox
+   - search.suggest
+   - search.highlight
+   - search.share
+
+plugins:
+  - search
+  - autorefs
+  - social
+  - glightbox
+  - mkdocs-video:
+      is_video: false
+      video_muted: false
+      video_controls: True
+      css_style:
+        width: "100%"
+        height: 22.172vw;
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - rss:
+      categories:
+        - tags
+      abstract_chars_count: -1
+      date_from_meta:
+        as_creation: "date" # means from page.meta.date
+        as_update: "git" # means from git log
+        datetime_format: "%Y-%m-%d %H:%M"
+        default_time: "09:30"
+        default_timezone: Asia/Beirut
+      enabled: true
+      feeds_filenames:
+        rss_created: feed.xml
+      feed_ttl: 60
+      image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Feed-icon.svg/128px-Feed-icon.svg.png
+      use_git: true
+      use_material_social_cards: true
+
+markdown_extensions:
+
+  # Python Markdown
+   - abbr
+   - admonition
+   - attr_list
+   - def_list
+   - footnotes
+   - md_in_html
+   - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+   - pymdownx.arithmatex:
+       generic: true
+   - pymdownx.betterem:
+       smart_enable: all
+   - pymdownx.caret
+   - pymdownx.details
+   - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+   - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+   - pymdownx.inlinehilite
+   - pymdownx.keys
+   - pymdownx.mark
+   - pymdownx.smartsymbols
+   - pymdownx.superfences
+   - pymdownx.tabbed:
+       alternate_style: true
+   - pymdownx.tasklist:
+       custom_checkbox: true
+   - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/darkxero-dev
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/XeroLinuxOfficial
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/xerolinuxop
+    - icon: fontawesome/brands/mastodon
+      link: https://fosstodon.org/@xerolinux
+    - icon: fontawesome/solid/rss
+      link: /feed.xml
