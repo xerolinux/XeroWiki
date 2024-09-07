@@ -15,7 +15,7 @@ tags:
 
 ### What it is
 
-This toolkit aims to be an all-in-one solution for post-installation, expediting your Arch setup. It's offered as use at your own risk type of thing, without much support. You will have to rely on yourself and your own knowledge and ability to do research your setup. For more detailed info visit the **P Wiki** in the menu on the left...
+This toolkit aims to be an all-in-one solution for post-installation, expediting your Arch setup. It's offered as use at your own risk type of thing, without much support. You will have to rely on yourself and your own knowledge and ability to do research your setup.
 
 ![type:video](https://www.youtube.com/embed/bEFBO2QRN8E)
 

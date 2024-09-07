@@ -14,7 +14,7 @@ tags:
 
 ### Information
 
-This is my complete conversion script, that will transform your **KDE Plasma** into something out of this world. I spent days, nay weeks optimizing it for best performance and stability. Sime bugs may remain, please report them.
+This is my complete conversion script, that will transform your **KDE Plasma** into something out of this world. I spent days, nay weeks optimizing it for best performance and stability. Some bugs may remain, please report them.
 
 <p align="center">
     <img src="https://i.imgur.com/VA2tycb.jpeg" alt="rice">

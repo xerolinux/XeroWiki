@@ -1,3 +1,11 @@
+---
+title: The XeroLinux Wiki
+tags:
+  - Linux
+  - XeroLinux
+  - ArchLinux
+---
+
 # Welcome to the XeroLinux Wiki
 
 Welcome to **XeroLinux Wiki** ! Think of this page as your go-to hub for all things related to our scripts, tools, and configurations. Here, you'll find a comprehensive and centralized resource for every tweak, command, or customization option you've ever tinkered with.
