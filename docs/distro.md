@@ -15,6 +15,8 @@ tags:
 
 Before we begin, I would like to tell everyone of you who has supported the **XeroLinux** project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️
 
+In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/s/cf9def9630){:target="_blank"}.
+
 ### Information
 
 This is the famous **XeroLinux Distro**. It's a culmination of everything you see here, like the **Xero Toolkit**, The **Plasma Install Script** & the **Xero Layan Rice**. All combined as an easy to install **Arch+KDE** Distro.
