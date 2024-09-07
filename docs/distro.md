@@ -45,6 +45,6 @@ To install the distro, all you have to do is use [**Ventoy**](https://xerolinux.
 
 Anyway the installer is and will always function in offline mode, meaning that, while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.
 
-We have also had no choice but to disable the **Swap+/-Hibernate** options due to an ongoing issue with latest version of **Calamares**. Will be re-added at some point in the future. Until then you can still use **Swap File** in only if you have *8GB* or less RAM otherwise it would be a waste of space.
+We have also had no choice but to disable the **Swap+/-Hibernate** options due to an ongoing issue with latest version of **Calamares**. Will be re-added at some point in the future. Until then you can still use **Swap File** only if you have *8GB* or less RAM otherwise it would be a waste of space.
 
 That's it, there ain't much to it. Launch our toolkit from the dock, update system, and have fun shaping the distro to your liking...
