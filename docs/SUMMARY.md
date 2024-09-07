@@ -1,5 +1,5 @@
 - [🏠Home](index.md)
-- [🐧Toolkit](xlapit.md)
+- [🐧The Toolkit](xlapit.md)
 - [💻Plasma Install](plasma.md)
 - [🎨Layan KDE Rice](rice.md)
 - [🎭The Grub Themes](grub.md)
