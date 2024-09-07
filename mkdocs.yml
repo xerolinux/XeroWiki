@@ -80,7 +80,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/darkxero-dev
+      link: https://github.com/xerolinux
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/XeroLinuxOfficial
     - icon: fontawesome/brands/x-twitter
