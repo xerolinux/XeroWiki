@@ -47,7 +47,7 @@ I would recommend you keep the folder backed up somewhere since it will get dele
 cd xero-layan-git/ && git pull
 ```
 
-## Theme Elements Used
+## Elements Used
 
 The rice uses the **Layan** [**GTK**](https://github.com/vinceliuice/Layan-gtk-theme){:target="_blank"} / [**KDE**](https://github.com/vinceliuice/Layan-kde){:target="_blank"} Theme & [**Tela Circle Icons**](https://github.com/vinceliuice/Tela-circle-icon-theme){:target="_blank"} by [**VinceLiuice**](https://github.com/vinceliuice){:target="_blank"}. As for Widgets AkA Plasmoids, it uses [**Apdatifier**](https://store.kde.org/p/2135796){:target="_blank"}, [**Netspeed**](https://store.kde.org/p/2136505){:target="_blank"}, [**Quick Shutdown**](https://store.kde.org/p/1288430){:target="_blank"},
 [**Toggle Overview**](https://store.kde.org/p/2132554){:target="_blank"} and [**Wunderground PWS**](https://store.kde.org/p/2135799){:target="_blank"}.
