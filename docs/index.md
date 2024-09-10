@@ -1,9 +1,5 @@
 ---
 title: Welcome
-tags:
-  - Linux
-  - XeroLinux
-  - ArchLinux
 ---
 
 # Welcome to the Xero Wiki

@@ -19,13 +19,15 @@ This toolkit aims to be an all-in-one solution for post-installation, expediting
 
 ![type:video](https://www.youtube.com/embed/bEFBO2QRN8E)
 
+Toolkit recieves a lot of updates on almost a daily basis. Use above video just as a reference not an absolute lol. I keep getting ideas which I immediately implement. Due to the amount of changes I cannot keep a changelog, sorry. Too many to keep up with.
+
 ### How to get it
 
 First off let me say that everything this awesome toolkit provides is and will forever be optional and up to you the user. I will never force anything on you.
 
 !!! tip
 
-    Don't just run script, without inspecting it first. So before using _Curl_ command you can examine it => [**HERE**](https://raw.githubusercontent.com/xerolinux/xerocurl/main/xapi.sh){:target="_blank"}
+    Don't just run script, without inspecting it first. So before using _Curl_ command below you can examine it => [**HERE**](https://raw.githubusercontent.com/xerolinux/xerocurl/main/xapi.sh){:target="_blank"}. It will always be provided as is without any **Warranty** of any kind. If you need support you know where to find me. Hint : "check the footer for links".
 
 Now, once you have inspected the code, just run this simple curl command to get started :
 

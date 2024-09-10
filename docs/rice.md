@@ -39,26 +39,17 @@ cd xero-layan-git/ && ./install.sh
 
 ### Backing up
 
-The install script will backup some app settings & all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues please find us on our [Discord](https://discord.gg/5sqxTSuKZu){:target="_blank"}. Best of luck !
+The install script will backup some app settings & all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues please find us on our [**Discord**](https://discord.gg/5sqxTSuKZu){:target="_blank"}. Best of luck !
 
-## What Script Does
+I would recommend you keep the folder backed up somewhere since it will get deleted once script is done with execution. That way, when I announce updates all you will have to do is git pull, like so...
 
-- Create a backup of your `~/.config` folder.
-- Download and install necessary packages if needed...
-- Override your settings and files with this rice's.
-- Install and apply New Grub Theme...
+```Bash
+cd xero-layan-git/ && git pull
+```
 
 ## Theme Elements Used
 
-Theme / Icons by [VinceLiuice](https://github.com/vinceliuice){:target="_blank"} :
+The rice uses the **Layan** [**GTK**](https://github.com/vinceliuice/Layan-gtk-theme){:target="_blank"} / [**KDE**](https://github.com/vinceliuice/Layan-kde){:target="_blank"} Theme & [**Tela Circle Icons**](https://github.com/vinceliuice/Tela-circle-icon-theme){:target="_blank"} by [**VinceLiuice**](https://github.com/vinceliuice){:target="_blank"}. As for Widgets AkA Plasmoids, it uses [**Apdatifier**](https://store.kde.org/p/2135796){:target="_blank"}, [**Netspeed**](https://store.kde.org/p/2136505){:target="_blank"}, [**Quick Shutdown**](https://store.kde.org/p/1288430){:target="_blank"},
+[**Toggle Overview**](https://store.kde.org/p/2132554){:target="_blank"} and [**Wunderground PWS**](https://store.kde.org/p/2135799){:target="_blank"}.
 
-- Layan [GTK](https://github.com/vinceliuice/Layan-gtk-theme){:target="_blank"} / [KDE](https://github.com/vinceliuice/Layan-kde){:target="_blank"}
-- Tela Circle Icons [Link](https://github.com/vinceliuice/Tela-circle-icon-theme){:target="_blank"}
-
-Widgets / Plasmoids :
-
-- Apdatifier [Link](https://store.kde.org/p/2135796){:target="_blank"}
-- Netspeed [Link](https://store.kde.org/p/2136505){:target="_blank"}
-- Quick Shutdown [Link](https://store.kde.org/p/1288430){:target="_blank"}
-- Toggle Overview [Link](https://store.kde.org/p/2132554){:target="_blank"}
-- Wunderground PWS [Link](https://store.kde.org/p/2135799){:target="_blank"}
+Adding any more would start causing issues IMO. I kept it at a minimum for balance and stability. You are free to add more, remove what you do not need etc.. This is just a good base. Finally do not report issues to me, I am not the one who created any of the elements used, report upstream to respective Devs. Thanks.
