@@ -43,7 +43,7 @@ To install the distro, all you have to do is use the tried and true [**Ventoy**]
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
 </p>
 
-[**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more. Yes you can still switch to *Wayland* post-install, just use the toolkit, it's under option **7. System Troubleshooting & Tweaks >> 6. Change Autologin Session X11/Wayland (SDDM)**.
+[**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more. Yes you can still switch to *Wayland* post-install, just use the toolkit, it's under option **7. System Troubleshooting & Tweaks >> 6. Change Autologin Session X11/Wayland (SDDM)** and select *Wayland*, done.
 
 <p align="center">
     <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
