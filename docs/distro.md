@@ -27,13 +27,15 @@ This is the famous **XeroLinux Distro**. It's a culmination of everything you se
 
 This is a common question I get. To be honest, there’s no groundbreaking advantage—it simply provides an easier way to install Arch with a polished KDE experience right out of the box, which many users seem to appreciate. I created it specifically for them, as an alternative to my DIY install script, and as a way for you to support my journey.
 
-Users are free to prefer any other distro over mine. I am not and will never force it. Also, I have never pretended that XeroLinux is better than any other distro. It's never been a competition, and I would hate for people to think it was. I hope this clarifies things.
-
 ---
 
 <h1 align="center">.// The Wiki \\.</h1>
 
 ## Installation
+
+!!! warning
+
+    When it comes to **Encryption**, I haven't tested it thoroughly. Use at your own Risk! **Calamares** is meh when it comes to that. All I know is it's extremely limited. It can't ecrypt both `boot` n `root`, just one or the other. Am sorry I test what I can. Please report any findings to me on [**Discord**](https://discord.gg/HPkEc38AcB){:target="_blank"}.
 
 To install the distro, all you have to do is use [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"} to boot, so you have **Grub** as fallback in case **SystemD-Boot** fails. If you burn using **Etcher** or similar tools there will be nothing to fall back to. Just an FYI.
 
