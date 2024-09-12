@@ -37,16 +37,20 @@ This is a common question I get. To be honest, there’s no groundbreaking advan
 
     When it comes to **Encryption**, I haven't tested it thoroughly. Use at your own Risk! **Calamares** is meh when it comes to that. All I know is it's extremely limited. It can't ecrypt both `boot` n `root`, just one or the other. Am sorry I test what I can. Please report any findings to me on [**Discord**](https://discord.gg/HPkEc38AcB){:target="_blank"}.
 
-To install the distro, all you have to do is use [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"} to boot, so you have **Grub** as fallback in case **SystemD-Boot** fails. If you burn using **Etcher** or similar tools there will be nothing to fall back to. Just an FYI.
+To install the distro, all you have to do is use the tried and true [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"} to put ISO on & boot, that way you have **Grub** as fallback in case **SystemD-Boot** fails. If you burn using **Etcher** or similar tools there will be nothing to fall back to. Just an FYI.
 
 <p align="center">
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
 </p>
 
-[**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. If you select the *Autologin* option in the installer you will be logged in to **X11** not **Wayland**, again we chose that for compatibility nothing more.
+[**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more. Yes you can still switch to *Wayland* post-install, just use the toolkit, it's under option **7. System Troubleshooting & Tweaks >> 6. Change Autologin Session X11/Wayland (SDDM)**.
 
-Anyway the installer is and will always function in offline mode, meaning that, while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.
+<p align="center">
+    <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
+</p>
+
+Anyway, the installer is and will always function in offline mode, meaning that while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.
 
 We have also had no choice but to disable the **Swap+/-Hibernate** options due to an ongoing issue with latest version of **Calamares**. Will be re-added at some point in the future. Until then you can still use **Swap File** only if you have *8GB* or less RAM otherwise it would be a waste of space.
 
-That's it, there ain't much to it. Launch our toolkit from the dock, update system, and have fun shaping the distro to your liking...
+That's it, there ain't much to it. Launch our toolkit from the dock, update system first, and have fun shaping the distro to your liking...

@@ -525,15 +525,19 @@
 <p class="admonition-title">Warning</p>
 <p>When it comes to <strong>Encryption</strong>, I haven't tested it thoroughly. Use at your own Risk! <strong>Calamares</strong> is meh when it comes to that. All I know is it's extremely limited. It can't ecrypt both <code>boot</code> n <code>root</code>, just one or the other. Am sorry I test what I can. Please report any findings to me on <a href="https://discord.gg/HPkEc38AcB" target="_blank"><strong>Discord</strong></a>.</p>
 </div>
-<p>To install the distro, all you have to do is use <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a> to boot, so you have <strong>Grub</strong> as fallback in case <strong>SystemD-Boot</strong> fails. If you burn using <strong>Etcher</strong> or similar tools there will be nothing to fall back to. Just an FYI.</p>
+<p>To install the distro, all you have to do is use the tried and true <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a> to put ISO on &amp; boot, that way you have <strong>Grub</strong> as fallback in case <strong>SystemD-Boot</strong> fails. If you burn using <strong>Etcher</strong> or similar tools there will be nothing to fall back to. Just an FYI.</p>
 <p align="center">
     <a class="glightbox" href="https://i.imgur.com/QsLRWtG.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/QsLRWtG.png" alt="rice"></a>
 </p>
 
-<p><a href="https://github.com/calamares/calamares" target="_blank"><strong>Calamares</strong></a> will auto-launch on boot. If you select the <em>Autologin</em> option in the installer you will be logged in to <strong>X11</strong> not <strong>Wayland</strong>, again we chose that for compatibility nothing more.</p>
-<p>Anyway the installer is and will always function in offline mode, meaning that, while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.</p>
+<p><a href="https://github.com/calamares/calamares" target="_blank"><strong>Calamares</strong></a> will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the <em>Autologin</em> option, you will be logged in to an <strong>X11/Xorg</strong> session, not <strong>Wayland</strong>, we chose that for compatibility with legacy hardware nothing more. Yes you can still switch to <em>Wayland</em> post-install, just use the toolkit, it's under option <strong>7. System Troubleshooting &amp; Tweaks &gt;&gt; 6. Change Autologin Session X11/Wayland (SDDM)</strong>.</p>
+<p align="center">
+    <a class="glightbox" href="https://i.imgur.com/yym6CPo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/yym6CPo.png" alt="rice"></a>
+</p>
+
+<p>Anyway, the installer is and will always function in offline mode, meaning that while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.</p>
 <p>We have also had no choice but to disable the <strong>Swap±Hibernate</strong> options due to an ongoing issue with latest version of <strong>Calamares</strong>. Will be re-added at some point in the future. Until then you can still use <strong>Swap File</strong> only if you have <em>8GB</em> or less RAM otherwise it would be a waste of space.</p>
-<p>That's it, there ain't much to it. Launch our toolkit from the dock, update system, and have fun shaping the distro to your liking...</p></div>
+<p>That's it, there ain't much to it. Launch our toolkit from the dock, update system first, and have fun shaping the distro to your liking...</p></div>
 
 
 
