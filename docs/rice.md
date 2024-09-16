@@ -6,7 +6,7 @@ tags:
   - Plasma
 ---
 
-<h2 align="center">.//🎨 The Layan KDE Rice 🎨\\.</h2>
+# <h2 align="center">🎨 Layan KDE Rice 🎨</h2>
 
 !!! warning
 

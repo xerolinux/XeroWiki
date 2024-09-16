@@ -8,7 +8,7 @@ tags:
   - ArchLinux
 ---
 
-<h2 align="center">.//✴️ Cosmic Script (Alpha) ✴️\\.</h2>
+# <h2 align="center">✴️ Cosmic Script (Alpha) ✴️</h2>
 
 !!! warning
 

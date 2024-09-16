@@ -1,13 +1,12 @@
 ---
-title: XeroLinux Plasma-Install
+title: Plasma-Install Script
 tags:
   - Linux
   - Plasma
   - XeroLinux
   - ArchLinux
 ---
-
-<h2 align="center">.//💻 The Plasma-Install Script 💻\\.</h2>
+# <h2 align="center">💻 Plasma-Install Script 💻</h2>
 
 !!! note
 
@@ -24,4 +23,3 @@ With the help of this script, you will be able to install **Plasma** in one of 4
 This script has an option to include my repo, **Chaotic-AUR**'s & Toolkit. Toolkit also includes the option to apply my rice. So if you opt to include it, you do not need to get other projects/tools separately. It’s meant as an All-in-One solution.
 
 ---
-

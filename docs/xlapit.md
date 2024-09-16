@@ -7,7 +7,7 @@ tags:
   - ArchLinux
 ---
 
-<h2 align="center">.//🐧 The Post-Install Toolkit 🐧\\.</h2>
+# <h2 align="center">🐧 Xero Post-Install Toolkit 🐧</h2>
 
 !!! warning
 
