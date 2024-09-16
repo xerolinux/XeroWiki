@@ -2,37 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wiki.xerolinux.xyz/</loc>
-         <lastmod>2024-09-12</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.xerolinux.xyz/SUMMARY/</loc>
-         <lastmod>2024-09-12</lastmod>
+         <lastmod>2024-09-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.xerolinux.xyz/cosmic/</loc>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.xerolinux.xyz/distro/</loc>
-         <lastmod>2024-09-12</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.xerolinux.xyz/grub/</loc>
-         <lastmod>2024-09-12</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.xerolinux.xyz/plasma/</loc>
-         <lastmod>2024-09-12</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.xerolinux.xyz/rice/</loc>
-         <lastmod>2024-09-12</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.xerolinux.xyz/xlapit/</loc>
-         <lastmod>2024-09-12</lastmod>
+         <lastmod>2024-09-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

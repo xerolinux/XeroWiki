@@ -4,3 +4,4 @@
 - [💻Plasma Install](plasma.md)
 - [🎨Layan KDE Rice](rice.md)
 - [🎭The Grub Themes](grub.md)
+- [✴️Cosmic Install (Alpha)](cosmic.md)
