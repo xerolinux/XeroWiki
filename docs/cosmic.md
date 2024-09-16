@@ -76,6 +76,10 @@ Finally, for now at least, once script is done, we will be prompted to exit and 
 
 Now use my toolkit to install any drivers *especially* if you are using an **nVidia** GPU otherwise you will have a bad time. Besides that enjoy the DE.
 
+<p align="center">
+  <img src="https://i.imgur.com/R8Io5eQ.png">
+</p>
+
 If you would like to customize the look, feel free to jump on over to the all-new [**Cosmic-Themes**](https://cosmic-themes.org){:target="_blank"} site, where you will be able to grab a few cool ones, like **Catppuccin**, **Dracula** among others. Keep in mind that those are just color schemes no more no less. They do not apply to everything.
 
 ### Wrapping up
