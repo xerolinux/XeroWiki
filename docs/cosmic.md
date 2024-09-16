@@ -48,13 +48,13 @@ Scroll down for usage instructions...
 
 !!! danger
 
-    Do not select the **Development Version** unless you are ready to fix issues that might arise from it. It's the *Rolling* version which means it's commit based. Should you choose it, I recommend you do regular backups before updating. Please report all the bugs related to the DE or any feature requests you might have upstream, to the [**Cosmic Bug Tracker**](https://github.com/pop-os){:target="_blank"}
+    Do not select the **Development Version** unless you are ready to fix issues that might arise from it. It's commit based. Should you choose it, Please report all the bugs related to the DE or any feature requests you might have upstream, to the [**Cosmic Bug Tracker**](https://github.com/pop-os){:target="_blank"}
 
 Using this script is identical to the [**Plasma Installer**](https://xerolinux.xyz/news/xerolinux-plasma/){:target="_blank"} am not gonna rehash it all here. Suffice it to say, you will need to go through the **ArchInstall** script, skipping the *Profiles* and *Drivers* sections completely, which would result in a minimal *Server* install of Arch.
 
 Anyway, once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with yes of course since we still have no DE yet.
 
-**Caution :** We do not recommend to blindly execute scripts without inspecting them first. We do it this way so it's much easier to use. Especially in cases like this one. But in the end it's all up to you. Anyway, you can find the code on >> [**Github**](https://github.com/xerolinux/cosmic-xero/blob/main/xero-cosmic.sh){:target="_blank"}.
+**Caution :** We do not recommend to blindly execute scripts without inspecting them first. We do it this way so it's much easier to use. Especially in cases like this one. But in the end it's all up to you. Anyway, you can find the code on [**Github**](https://github.com/xerolinux/cosmic-xero/blob/main/xero-cosmic.sh){:target="_blank"}.
 
 Now, we type the following command :
 
