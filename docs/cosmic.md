@@ -8,6 +8,8 @@ tags:
   - ArchLinux
 ---
 
+<h1 align="center">.//✴️ The Cosmic Script (Alpha) ✴️\\.</h1>
+
 !!! warning
 
     The script shared herein is work-in-progress. **Cosmic** is still in Alpha stages; so it needs time to reach full maturity. Please do not use it on your production machine. If you want to test in a VM, for best performance I would highly recommend [**ProxmoxVe**](https://www.proxmox.com/en/proxmox-virtual-environment/overview){:target="_blank"}.
