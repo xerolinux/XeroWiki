@@ -54,7 +54,7 @@ Using this script is identical to the [**Plasma Installer**](https://xerolinux.x
 
 Anyway, once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with yes of course since we still have no DE yet.
 
-**Caution :** We do not recommend to blindly execute scripts without inspecting them first. We do it this way so it's much easier to use. Especially in cases like this one. But in the end it's all up to you. nyway, you can find the code on >> [**Github**](https://github.com/xerolinux/xero-plasma/blob/main/xero-cosmic.sh){:target="_blank"}.
+**Caution :** We do not recommend to blindly execute scripts without inspecting them first. We do it this way so it's much easier to use. Especially in cases like this one. But in the end it's all up to you. Anyway, you can find the code on >> [**Github**](https://github.com/xerolinux/xero-plasma/blob/main/xero-cosmic.sh){:target="_blank"}.
 
 Now, we type the following command :
 
