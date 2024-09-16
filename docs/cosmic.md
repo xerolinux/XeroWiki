@@ -10,7 +10,7 @@ tags:
 
 # <h2 align="center">✴️ Cosmic Script (Alpha) ✴️</h2>
 
-!!! warning
+!!! danger
 
     The script shared herein is work-in-progress. **Cosmic** is still in Alpha stages; so it needs time to reach full maturity. Please do not use it on your production machine. If you want to test in a VM, for best performance I would highly recommend [**ProxmoxVe**](https://www.proxmox.com/en/proxmox-virtual-environment/overview){:target="_blank"}.
 
