@@ -10,7 +10,7 @@ tags:
 
 # <h2 align="center">✴️ Cosmic Script (Alpha) ✴️</h2>
 
-!!! danger
+!!! warning
 
     The script shared herein is work-in-progress. **Cosmic** is still in Alpha stages; so it needs time to reach full maturity. Please do not use it on your production machine. If you want to test in a VM, for best performance I would highly recommend [**ProxmoxVe**](https://www.proxmox.com/en/proxmox-virtual-environment/overview){:target="_blank"}.
 
@@ -46,7 +46,7 @@ Scroll down for usage instructions...
 
 ### Instructions
 
-!!! warning
+!!! danger
 
     Do not select the **Development Version** unless you are ready to fix issues that might arise from it. It's the *Rolling* version which means it's commit based. Should you choose it, I recommend you do regular backups before updating. Please report all the bugs related to the DE or any feature requests you might have upstream, to the [**Cosmic Bug Tracker**](https://github.com/pop-os){:target="_blank"}
 
