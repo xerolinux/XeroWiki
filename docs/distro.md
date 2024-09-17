@@ -3,6 +3,7 @@ title: The XeroLinux Distro
 tags:
   - Linux
   - Distro
+  - XeroLinux
 ---
 
 # <h2 align="center">💿 XeroLinux Distro 💿</h2>
@@ -17,7 +18,7 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
 
 In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/s/cf9def9630){:target="_blank"}.
 
-### Information
+### What is XeroLinux
 
 This is the famous **XeroLinux Distro**. It's a culmination of everything you see here, like the **Xero Toolkit**, The **Plasma Install Script** & the **Xero Layan Rice**. All combined as an easy to install **Arch+KDE** Distro.
 
