@@ -167,13 +167,13 @@ Now am not gonna go over everything this section does, suffice it to say that th
 ```
 1.  Install & Activate Firewalld.
 2.  Clear Pacman Cache (Free Space).
-3.  Restart PipeWire/PipeWire-Pulse.
-4.  Unlock Pacman DB (In case of DB error).
-5.  Activate v4l2loopback for OBS-VirtualCam.
-6.  Change Autologin Session X11/Wayland (SDDM).
+3.  Unlock Pacman DB (In case of DB error).
+4.  Activate v4l2loopback for OBS-VirtualCam.
+5.  Change Autologin Session X11/Wayland (SDDM).
 
 a.  Build Updated Arch ISO.
-w.  WayDroid Installation Guide.
+r.  Reset Distro back to Factory.
+w.  WayDroid Installation Guide (link).
 m.  Update Arch Mirrorlist, for faster download speeds.
 g.  Fix Arch GnuPG Keyring in case of pkg signature issues.
 
