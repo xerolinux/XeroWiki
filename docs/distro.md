@@ -20,7 +20,7 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 ### What is XeroLinux
 
-This is the famous **XeroLinux Distro**. It's a culmination of everything you see here, like the **Xero Toolkit**, The **Plasma Install Script** & the **Xero Layan Rice**. All combined as an easy to install **Arch+KDE** Distro.
+This is the famous **XeroLinux Distro**. It's a culmination of everything you see here, like the [**Xero Toolkit**](https://wiki.xerolinux.xyz/xlapit/), The [**Plasma Install Script**](https://wiki.xerolinux.xyz/plasma/) & the [**Xero Layan Rice**](https://wiki.xerolinux.xyz/rice/). All combined as an easy to install **Arch+KDE** Distro.
 
 ![type:video](https://www.youtube.com/embed/lsYg6-wUWXw)
 
