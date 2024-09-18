@@ -12,7 +12,7 @@ tags:
 This is a simple script, that will allow you to install any of the **Grub** themes I have created in the past. They will not be updated, that's just a relic of time past lol.
 
 <p align="center">
-  <img src="https://i.imgur.com/vgBkIrE.png">
+  <img src="https://i.imgur.com/1dWeSmQ.png">
 </p>
 
 ---

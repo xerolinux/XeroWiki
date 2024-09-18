@@ -16,19 +16,15 @@ tags:
 
 ### Script info
 
-Well, it does what title says, it installs **Cosmic** in one of 3 ways. I also discovered the **Cosmic** group on **Arch** does not include the `xdg-user-dirs` package which creates the `Documents, Music, Pictures, Downloads & Videos` folders in your `home` & `system76-power` is missing which the `Cosmic Settings` will prompt you for; so I added them.
-
-- **Complete**     : Installs Cosmic from Extra Repos.
-- **Selective**    : Select pkgs you want yourselves.
-- **Development**  : Commit-based Install -DANGER-.
+Well, it does what it says on the tin, it installs **Cosmic** in one of 3 ways. I also discovered the **Cosmic** group on **Arch** does not include the `xdg-user-dirs` package which creates the `Documents, Music, Pictures, Downloads & Videos` folders in your `home` & `system76-power` is missing which the `Cosmic Settings` will prompt you for; so I added them.
 
 <p align="center">
-  <img src="https://i.imgur.com/Fvl9uRU.png">
+  <img src="https://i.imgur.com/25GmaOr.png">
 </p>
 
 Included are some useful packages, like a freaking web browser eg. **Firefox**, an archive manager, **Meld** and so much more. It's a start. We shall add more if you wish, just keep in mind that only packages coming from the official **Arch Repositories** are supported, none from the **AUR**.
 
-### Execution Blockers
+### The Blockers
 
 I have also implemented some checks making sure script is being run in *chroot* and on *ArchLinux* blocking execution anywhere else. This helps me in the long run not having to bang my head against the wall trying to provide support in case it was run on Distros I have no control over.
 
