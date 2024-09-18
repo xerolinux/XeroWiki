@@ -10,25 +10,13 @@ tags:
 
 !!! note
 
-    Check out the release notes and issues » [**Here**](https://github.com/XeroLinuxDev/xero-build/#-release-notes-){:target="_blank"}. To access source code, head on over to the » [**XeroLinuxDev Org**](https://github.com/XeroLinuxDev){:target="_blank"}.
+    Check out the release notes and issues » [**Here**](https://github.com/XeroLinuxDev/xero-build/#-release-notes-){:target="_blank"}. To access source code, head on over to the » [**XeroLinuxDev Org**](https://github.com/XeroLinuxDev){:target="_blank"}. To know more about the Distro it's all explained on the [**Main Site**](https://xerolinux.xyz/iso/){:target="_blank"}
 
 ### Thank you
 
 Before we begin, I would like to tell everyone of you who has supported the **XeroLinux** project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️
 
 In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/s/cf9def9630){:target="_blank"}.
-
-### What is XeroLinux
-
-This is the famous **XeroLinux Distro**. It's a culmination of everything you see here, like the [**Xero Toolkit**](https://wiki.xerolinux.xyz/xlapit/), The [**Plasma Install Script**](https://wiki.xerolinux.xyz/plasma/) & the [**Xero Layan Rice**](https://wiki.xerolinux.xyz/rice/). All combined as an easy to install **Arch+KDE** Distro.
-
-![type:video](https://www.youtube.com/embed/lsYg6-wUWXw)
-
-What it isn't, is a distribution like **Ubuntu** or **Mint** that takes care of everything for you. I’ve handled the main setup and included the *Toolkit*, but things like drivers and additional configuration will be up to you. That’s the essence of **ArchLinux**, it puts you in control. If the appearance led you to believe otherwise, I apologize, as that wasn’t the intention. Please don’t grab it unless you're prepared to put in the work to make it your own.
-
-### Is it any Special?
-
-This is a common question I get. To be honest, there’s no groundbreaking advantage—it simply provides an easier way to install Arch with a polished KDE experience right out of the box, which many users seem to appreciate. I created it specifically for them, as an alternative to my DIY install script, and as a way for you to support my journey.
 
 ---
 
