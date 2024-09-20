@@ -130,6 +130,8 @@ I *highly* recommend the third option: **Xero's Curated Set of Plasma Packages**
 
 You will notice that, the *multilib* repo was enabled as well. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
 
+Installation might take a while, it all depends on the speed of your Internet connection. I have included quite a few quality-of-life packages which should make your experience as Seamless as possible. I have also taken care of a few dependencies that might be required down the line.
+
 Finally, for now at least, once script is done, we will be prompted to exit and reboot the system. We do that by typing `exit` then `reboot`, and that's it for this part anyway...
 
 #### Setting up the system
