@@ -50,4 +50,4 @@ If you encounter any issues or have questions directly related to the installati
 
 However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**.
 
-That's it, there ain't much to it. Launch our toolkit from the dock, update system first, and have fun shaping the distro to your liking...
+That's it, there ain't much to it. he rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉
