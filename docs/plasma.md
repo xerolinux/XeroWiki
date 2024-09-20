@@ -18,7 +18,7 @@ The intention of the **PlasmaInstall** script is *not* to replace **ArchInstall*
 
 ![type:video](https://www.youtube.com/embed/v0UPif52i5A)
 
-The script might change, so please use the above video only as a reference. Please keep that in mind.
+The script is subject to change over time, so please treat the video above as a general reference rather than an exact guide. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version of this guide for the best results.
 
 <p align="center">
     <img src="https://i.imgur.com/TOZNp4j.png" alt="shot">
@@ -117,6 +117,10 @@ bash -c "$(curl -fsSL https://tinyurl.com/PlasmaInstall)"
 ```
 
 This script will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
+
+<p align="center">
+    <img src="https://i.imgur.com/mAKjEWQ.png" alt="shot">
+</p>
 
 I *highly* recommend the third option: **Xero's Curated Set of Plasma Packages** to avoid potential future headaches. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
 
