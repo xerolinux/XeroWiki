@@ -78,6 +78,12 @@ Now use my toolkit to install any drivers *especially* if you are using an **nVi
 
 If you would like to customize the look, feel free to jump on over to the all-new [**Cosmic-Themes**](https://cosmic-themes.org){:target="_blank"} site, where you will be able to grab a few cool ones, like **Catppuccin**, **Dracula** among others. Keep in mind that those are just color schemes no more no less. They do not apply to everything.
 
+### Issues
+
+If you encounter any issues or have questions directly related to this script, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
+
+However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**.
+
 ### Wrapping up
 
 That's it for now. If you would like to help out so we can bring it to the public, you are more than welcome to. Especially when it comes to the *Hardware Checker* part which requires a lot of testing that I cannot do due to limited hardware availability.
