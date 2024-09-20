@@ -18,7 +18,7 @@ The intention of the **PlasmaInstall** script is *not* to replace **ArchInstall*
 
 ![type:video](https://www.youtube.com/embed/v0UPif52i5A)
 
-This script has an option to include my repo, **Chaotic-AUR**'s & Toolkit. Toolkit also includes the option to apply my rice. So if you opt to include it, you do not need to get other projects/tools separately. It’s meant as an All-in-One solution.
+The script might change, so please use the above video only as a reference. For example now instead of prompting if you want repos & toolkit it will add them from the beginning as they are requred for best experience.
 
 <p align="center">
     <img src="https://i.imgur.com/TOZNp4j.png" alt="shot">
