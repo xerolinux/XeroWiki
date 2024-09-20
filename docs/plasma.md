@@ -20,10 +20,6 @@ The intention of the **PlasmaInstall** script is *not* to replace **ArchInstall*
 
 The script is subject to change over time, so please treat the video above as a general reference rather than an exact guide. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version of this guide for the best results.
 
-<p align="center">
-    <img src="https://i.imgur.com/TOZNp4j.png" alt="shot">
-</p>
-
 ---
 
 <h1 align="center">.// The Wiki \\.</h1>
@@ -156,16 +152,23 @@ There's nothing to do here except select **Install 3rd-Party GUI Package Manager
 
 - **2 : System Drivers**
 
-This is the part where you select drivers you need for our hardware. Am not going to help you here. All you need to know was mentioned in the video. Just know that selecting the wrong ones will break the system, so that's where you need to understand what works for you.
+This is the part where you select drivers you need for our hardware. Toolkit does not and will not support Hybrid (iGPU+dGPU) setups as I do not own any, just Single GPU ones. Just know that selecting the wrong ones will break the system, so that's where you need to understand what works for you.
+
+I did my best to cover most *Single GPU* scenarios, I cannot cover all. Also the whole point of the distro, is for me *not* to do everything for you. In my humble opinion if I did, you wouldn't be learning anything.
 
 - **4 : System Customization**
 
-Now we jump to Customization section. Just select option **x. XeroLinux's Layan Plasma 6 Rice**, enter your `sudo` password, and watch it do its thing.. Once it's done, we will be prompted to reboot. Use the AppMenu to do that..
+Now we jump to Customization section. Just select option **XeroLinux's Layan Plasma 6 Rice**, enter your `sudo` password, and watch it do its thing.. Once it's done, we will be prompted to reboot. Use the AppMenu to do that..
+
+### Issues
+
+If you encounter any issues or have questions directly related to this script, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
+
+However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**.
 
 ### Final words
 
-That's it boys n girls. We just got **XeroLinux** back ! The rest is up to you. Go through the toolkit see if you find anything useful. If you encounter any issues or have any questions, feel free to contact me on either **Fosstodon** or **Discord**, all links in the footer.
+That’s it, boys and girls, we’ve officially brought XeroLinux back from the ashes! 🎉 The rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Who knows—you might even stumble upon something that’ll make your setup sing! Just don’t blame me if you get lost in the endless sea of tweaks and options—consider it part of the adventure.
 
-I will do my best to answer. Keep in mind that I might not have all the answers, simply because I only have the hardware I have, might be different than yours, so can't know what works on something I do not own. Though I am and always will open to suggestions...
 
-Best of luck !!!!
+😄 Happy tinkering! 😄
