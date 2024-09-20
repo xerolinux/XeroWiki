@@ -18,7 +18,7 @@ The intention of the **PlasmaInstall** script is *not* to replace **ArchInstall*
 
 ![type:video](https://www.youtube.com/embed/v0UPif52i5A)
 
-The script might change, so please use the above video only as a reference. For example now instead of prompting if you want repos & toolkit it will add them from the beginning as they are requred for best experience.
+The script might change, so please use the above video only as a reference. Please keep that in mind.
 
 <p align="center">
     <img src="https://i.imgur.com/TOZNp4j.png" alt="shot">
@@ -116,13 +116,13 @@ Once you trust it, you can move on. Now, depending on the method that was used, 
 bash -c "$(curl -fsSL https://tinyurl.com/PlasmaInstall)"
 ```
 
-This will execute the script. Just go through the prompts. I would **Highly** recommend option **3) Xero's Curated Set Of Plasma Packages** to avoid any future headaches. I went through all groups with a fine tooth comb as the saying goes making sure we get the best experience. But that's not to say we cannot select any of the other options, it's all up to you in the end.
+This script will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
+
+I *highly* recommend the third option: **Xero's Curated Set of Plasma Packages** to avoid potential future headaches. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
 
 <p align="center">
     <img src="https://i.imgur.com/TOZNp4j.png" alt="shot">
 </p>
-
-At the end, script will prompt us if we want to enable the **XeroLinux** as wells as the **Chaotic-AUR** repos and install the Toolkit, to which we answer with yes, since we will be using it to set everything up later on.
 
 You will notice that, the *multilib* repo was enabled as well. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
 
