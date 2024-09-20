@@ -78,7 +78,7 @@ Now use my toolkit to install any drivers *especially* if you are using an **nVi
 
 If you would like to customize the look, feel free to jump on over to the all-new [**Cosmic-Themes**](https://cosmic-themes.org){:target="_blank"} site, where you will be able to grab a few cool ones, like **Catppuccin**, **Dracula** among others. Keep in mind that those are just color schemes no more no less. They do not apply to everything.
 
-### Issues
+### Complications
 
 If you encounter any issues or have questions directly related to this script, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
 
