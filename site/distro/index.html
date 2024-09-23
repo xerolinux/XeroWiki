@@ -543,11 +543,11 @@
 <p><strong>Bootable Tool</strong></p>
 <p>To boot into the Distro's Live Environment, all you have to do is use the tried and true <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a> to put ISO on &amp; boot, that way you have <strong>Grub</strong> as fallback in case <strong>SystemD-Boot</strong> fails. If you burn using <strong>Etcher</strong> or similar tools there will be nothing to fall back to. Just an FYI.</p>
 <p><strong>Calamares Installer</strong></p>
+<p><a href="https://github.com/calamares/calamares" target="_blank"><strong>Calamares</strong></a> will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the <em>Autologin</em> option, you will be logged in to an <strong>X11/Xorg</strong> session, not <strong>Wayland</strong>, we chose that for compatibility with legacy hardware nothing more.</p>
 <p align="center">
     <a class="glightbox" href="https://i.imgur.com/QsLRWtG.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/QsLRWtG.png" alt="rice"></a>
 </p>
 
-<p><a href="https://github.com/calamares/calamares" target="_blank"><strong>Calamares</strong></a> will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the <em>Autologin</em> option, you will be logged in to an <strong>X11/Xorg</strong> session, not <strong>Wayland</strong>, we chose that for compatibility with legacy hardware nothing more.</p>
 <p>Anyway, the installer is and will always function in offline mode, meaning that while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.</p>
 <p><strong>XeroLinux Toolkit</strong></p>
 <p>You can still switch to <em>Wayland</em> post-install, just use the toolkit, it's under option <strong>System Troubleshooting &amp; Tweaks &gt;&gt; Change Autologin Session X11/Wayland (SDDM)</strong> and select <em>Wayland</em>, reboot, done.</p>
@@ -555,7 +555,7 @@
     <a class="glightbox" href="https://i.imgur.com/yym6CPo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/yym6CPo.png" alt="rice"></a>
 </p>
 
-<p><strong>Included Filesystems</strong></p>
+<p><strong>Supported Filesystems</strong></p>
 <p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code>, <code>btrfs</code> and <code>xfs</code>. I don't know much about <code>btrfs</code> so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry.</p>
 <h2 id="complications">Complications<a class="headerlink" href="#complications" title="Permanent link">¶</a></h2>
 <p>We have had no choice but to disable the <strong>Swap±Hibernate</strong> options due to an ongoing issue with latest version of <strong>Calamares</strong>. Will be re-added at some point in the future. Until then you can still use <strong>Swap File</strong> only if you have <em>8GB</em> or less RAM otherwise it would be a waste of space.</p>

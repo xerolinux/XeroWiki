@@ -48,11 +48,11 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 **Calamares Installer**
 
+[**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more.
+
 <p align="center">
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
 </p>
-
-[**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more.
 
 Anyway, the installer is and will always function in offline mode, meaning that while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.
 
@@ -64,7 +64,7 @@ You can still switch to *Wayland* post-install, just use the toolkit, it's under
     <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
 </p>
 
-**Included Filesystems**
+**Supported Filesystems**
 
 Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry.
 
