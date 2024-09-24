@@ -80,12 +80,14 @@ Additionally, I'd like to point out that no *GUI package managers* are included 
 
 We have had no choice but to disable the **Swap+/-Hibernate** options due to an ongoing issue with latest version of **Calamares**. Will be re-added at some point in the future. Until then you can still use **Swap File** only if you have *8GB* or less RAM otherwise it would be a waste of space.
 
-If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you. Please do not report any **KDE** issues to me, do so over on the [**KDE Bugtracker**](https://bugs.kde.org){:target="_blank"}
+If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
 
 <p align="center">
     <img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice">
 </p>
 
 However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**.
+
+As for any **KDE** related issues, you are kindly requested to report them over on the [**KDE Bugtracker**](https://bugs.kde.org){:target="_blank"}.
 
 That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉
