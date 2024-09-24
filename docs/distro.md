@@ -30,13 +30,13 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma**, a powerful and feature-rich desktop environment. While it’s designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, it can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!
 
-**Minimum**
+*Minimum*
 
 - 4GB RAM (DDR3+)
 - 16GB HDD/SSD Storage
 - Modern iGPU (512MB vRAM)
 
-**Recommended**
+*Recommended*
 
 - 8GB+ RAM (DDR3+)
 - 32GB+ HDD/SSD Storage
@@ -50,6 +50,8 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 [**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more.
 
+You can still switch to *Wayland* post-install, just use the toolkit, it's under option **System Troubleshooting & Tweaks >> Change Autologin Session X11/Wayland (SDDM)** and select *Wayland*, reboot, done.
+
 <p align="center">
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
 </p>
@@ -58,7 +60,7 @@ Anyway, the installer is and will always function in offline mode, meaning that 
 
 **XeroLinux Toolkit**
 
-You can still switch to *Wayland* post-install, just use the toolkit, it's under option **System Troubleshooting & Tweaks >> Change Autologin Session X11/Wayland (SDDM)** and select *Wayland*, reboot, done.
+I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials. As noted earlier, this toolkit was originally built for *Vanilla Arch*, so some features are already included in the ISO, meaning there's no need to reapply them.
 
 <p align="center">
     <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
@@ -67,6 +69,10 @@ You can still switch to *Wayland* post-install, just use the toolkit, it's under
 **Supported Filesystems**
 
 Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry.
+
+**GUI Package Managers**
+
+Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **PacSeekTUI**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
 
 ## Complications
 

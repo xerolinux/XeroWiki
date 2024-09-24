@@ -528,13 +528,13 @@
 <p>When it comes to <strong>Encryption</strong>, I haven't tested it thoroughly. Use at your own Risk! <strong>Calamares</strong> is meh when it comes to that. All I know is it's extremely limited. It can't ecrypt both <code>boot</code> n <code>root</code>, just one or the other. Am sorry I test what I can. Please report any findings to me on <a href="https://discord.gg/HPkEc38AcB" target="_blank"><strong>Discord</strong></a>.</p>
 </div>
 <p>Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong>, a powerful and feature-rich desktop environment. While it’s designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, it can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!</p>
-<p><strong>Minimum</strong></p>
+<p><em>Minimum</em></p>
 <ul>
 <li>4GB RAM (DDR3+)</li>
 <li>16GB HDD/SSD Storage</li>
 <li>Modern iGPU (512MB vRAM)</li>
 </ul>
-<p><strong>Recommended</strong></p>
+<p><em>Recommended</em></p>
 <ul>
 <li>8GB+ RAM (DDR3+)</li>
 <li>32GB+ HDD/SSD Storage</li>
@@ -544,19 +544,22 @@
 <p>To boot into the Distro's Live Environment, all you have to do is use the tried and true <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a> to put ISO on &amp; boot, that way you have <strong>Grub</strong> as fallback in case <strong>SystemD-Boot</strong> fails. If you burn using <strong>Etcher</strong> or similar tools there will be nothing to fall back to. Just an FYI.</p>
 <p><strong>Calamares Installer</strong></p>
 <p><a href="https://github.com/calamares/calamares" target="_blank"><strong>Calamares</strong></a> will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the <em>Autologin</em> option, you will be logged in to an <strong>X11/Xorg</strong> session, not <strong>Wayland</strong>, we chose that for compatibility with legacy hardware nothing more.</p>
+<p>You can still switch to <em>Wayland</em> post-install, just use the toolkit, it's under option <strong>System Troubleshooting &amp; Tweaks &gt;&gt; Change Autologin Session X11/Wayland (SDDM)</strong> and select <em>Wayland</em>, reboot, done.</p>
 <p align="center">
     <a class="glightbox" href="https://i.imgur.com/QsLRWtG.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/QsLRWtG.png" alt="rice"></a>
 </p>
 
 <p>Anyway, the installer is and will always function in offline mode, meaning that while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.</p>
 <p><strong>XeroLinux Toolkit</strong></p>
-<p>You can still switch to <em>Wayland</em> post-install, just use the toolkit, it's under option <strong>System Troubleshooting &amp; Tweaks &gt;&gt; Change Autologin Session X11/Wayland (SDDM)</strong> and select <em>Wayland</em>, reboot, done.</p>
+<p>I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials. As noted earlier, this toolkit was originally built for <em>Vanilla Arch</em>, so some features are already included in the ISO, meaning there's no need to reapply them.</p>
 <p align="center">
     <a class="glightbox" href="https://i.imgur.com/yym6CPo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/yym6CPo.png" alt="rice"></a>
 </p>
 
 <p><strong>Supported Filesystems</strong></p>
 <p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code>, <code>btrfs</code> and <code>xfs</code>. I don't know much about <code>btrfs</code> so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry.</p>
+<p><strong>GUI Package Managers</strong></p>
+<p>Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, <strong>PacSeekTUI</strong>, or <strong>Bauh</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.</p>
 <h2 id="complications">Complications<a class="headerlink" href="#complications" title="Permanent link">¶</a></h2>
 <p>We have had no choice but to disable the <strong>Swap±Hibernate</strong> options due to an ongoing issue with latest version of <strong>Calamares</strong>. Will be re-added at some point in the future. Until then you can still use <strong>Swap File</strong> only if you have <em>8GB</em> or less RAM otherwise it would be a waste of space.</p>
 <p>If you encounter any <em>other</em> issues or have questions directly related to the installation, feel free to reach out to me on <strong>Fosstodon</strong> or <strong>Discord</strong>. All relevant links are provided in the footer, and I'll do my best to assist you.</p>
