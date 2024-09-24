@@ -60,7 +60,9 @@ Anyway, the installer is and will always function in offline mode, meaning that 
 
 **XeroLinux Toolkit**
 
-I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials. As noted earlier, this toolkit was originally built for *Vanilla Arch*, so some features are already included in the ISO, meaning there's no need to reapply them.
+I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.
+
+For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){:target="_blank"}
 
 <p align="center">
     <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
@@ -74,11 +76,11 @@ Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I 
 
 Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **PacSeekTUI**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
 
-## Complications
+## Support/Issues
 
 We have had no choice but to disable the **Swap+/-Hibernate** options due to an ongoing issue with latest version of **Calamares**. Will be re-added at some point in the future. Until then you can still use **Swap File** only if you have *8GB* or less RAM otherwise it would be a waste of space.
 
-If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
+If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you. Please do not report any **KDE** issues to me, do so over on the [**KDE Bugtracker**](https://bugs.kde.org){:target="_blank"}
 
 <p align="center">
     <img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice">
