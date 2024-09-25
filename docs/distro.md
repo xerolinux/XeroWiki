@@ -18,6 +18,10 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
 
 In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/s/cf9def9630){:target="_blank"}.
 
+<p align="center">
+    <img src="https://i.imgur.com/ejZ1ZQv.png" alt="rice">
+</p>
+
 ---
 
 <h1 align="center">.// The Wiki \\.</h1>
@@ -26,31 +30,33 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 !!! warning
 
-    When it comes to **Encryption**, I haven't tested it thoroughly. Use at your own Risk! **Calamares** is meh when it comes to that. All I know is it's extremely limited. It can't ecrypt both `boot` n `root`, just one or the other. Am sorry I test what I can. Please report any findings to me on [**Discord**](https://discord.gg/HPkEc38AcB){:target="_blank"}.
+    When it comes to **Encryption**, **Calamares** is meh when it comes to that. It's extremely limited. It can't ecrypt both `boot` n `root`, just the latter (I think). I do not use it myself so my knowledge there is extremely limited. **Use at your own RISK**.
 
 Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma**, a powerful and feature-rich desktop environment. While it’s designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, it can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!
 
-*Minimum*
+<center>
 
-- 4GB RAM (DDR3+)
-- 16GB HDD/SSD Storage
-- Modern iGPU (512MB vRAM)
+| **Minimum** 	| **Recommended** 	|
+|---	|---	|
+| 4GB RAM (DDR3+) 	| 8GB+ RAM (DDR3+) 	|
+| 16GB HDD/SSD Storage 	| 32GB+ HDD/SSD Storage 	|
+| Modern iGPU (512MB vRAM) 	| Modern dGPU (4GB+ vRAM) 	|
 
-*Recommended*
-
-- 8GB+ RAM (DDR3+)
-- 32GB+ HDD/SSD Storage
-- Modern dGPU (4GB+ vRAM)
+</center>
 
 **Bootable Tool**
 
 To boot into the Distro's Live Environment, all you have to do is use the tried and true [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"} to put ISO on & boot, that way you have **Grub** as fallback in case **SystemD-Boot** fails. If you burn using **Etcher** or similar tools there will be nothing to fall back to. Just an FYI.
 
+<p align="center">
+    <img src="https://i.imgur.com/LTVLXo3.png" alt="rice">
+</p>
+
 **Calamares Installer**
 
 [**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more.
 
-You can still switch to *Wayland* post-install, just use the toolkit, it's under option **System Troubleshooting & Tweaks >> Change Autologin Session X11/Wayland (SDDM)** and select *Wayland*, reboot, done.
+You can still switch to *Wayland* post-install either via KDE's **SDDM** settings or the included toolkit, choice is yours. I recommend toolkit as system settings tend to be buggy.
 
 <p align="center">
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
@@ -77,8 +83,6 @@ Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I 
 Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **PacSeekTUI**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
 
 ## Support/Issues
-
-We have had no choice but to disable the **Swap+/-Hibernate** options due to an ongoing issue with latest version of **Calamares**. Will be re-added at some point in the future. Until then you can still use **Swap File** only if you have *8GB* or less RAM otherwise it would be a waste of space.
 
 If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
 
