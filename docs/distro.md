@@ -8,9 +8,9 @@ tags:
 
 # <h2 align="center">💿 XeroLinux Distro 💿</h2>
 
-!!! note
+!!! info
 
-    Check out the release notes and issues » [**Here**](https://github.com/XeroLinuxDev/xero-build/#-release-notes-){:target="_blank"}. To access source code, head on over to the » [**XeroLinuxDev Org**](https://github.com/XeroLinuxDev){:target="_blank"}. To know more about the Distro it's all explained on the [**Main Site**](https://xerolinux.xyz/iso/){:target="_blank"}
+    In a nutshell, the **XeroLinux** ISO bundles all my scripts, toolkit, and custom rice into a seamless, easy-to-install package, skipping the hassle of running the ArchInstall script entirely. No more, no less. [**Source Code**](https://github.com/XeroLinuxDev){:target="_blank"}
 
 ### Thank you
 
