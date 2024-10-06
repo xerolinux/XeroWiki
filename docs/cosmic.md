@@ -50,12 +50,12 @@ Using this script is identical to the [**Plasma Installer**](https://wiki.xeroli
 
 Anyway, once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with yes of course since we still have no DE yet.
 
-**Caution :** We do not recommend to blindly execute scripts without inspecting them first. We do it this way so it's much easier to use. Especially in cases like this one. But in the end it's all up to you. Anyway, you can find the code on [**Github**](https://tinyurl.com/CosmicInstall){:target="_blank"}.
+**Caution :** We do not recommend to blindly execute scripts without inspecting them first. We do it this way so it's much easier to use. Especially in cases like this one. But in the end it's all up to you. Anyway, you can find the code on [**Github**](https://xerolinux.xyz/script/xero-cosmic.sh){:target="_blank"}.
 
 Now, we type the following command :
 
 ```Bash
-bash -c "$(curl -fsSL https://tinyurl.com/CosmicInstall)"
+bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-cosmic.sh)"
 ```
 
 This will execute the script. Just go through the prompts. In this case however, I would **Highly** recommend option **Complete Cosmic Install** to avoid any future headaches. But that's not to say we cannot select any of the other option, it's all up to you in the end.
