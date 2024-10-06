@@ -104,7 +104,7 @@ Once that's all done, we will be prompted if we want to `chroot` into our new in
 
 !!! tip
 
-    **Inspection**. We do not recommend to blindly execute scripts without inspecting them first. Check out the code >> [**Here**](https://xerolinux.xyz/script/xero-plasma.sh){:target="_blank"}
+    **Inspection**. We do not recommend to blindly execute scripts without inspecting them first. Check out the code >> [**Here**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh){:target="_blank"}
 
 Once you trust it, you can move on. Now, depending on the method that was used, `ssh` or not, we either copy paste the command below or type it manually :
 

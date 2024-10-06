@@ -27,7 +27,7 @@ First off let me say that everything this awesome toolkit provides is and will f
 
 !!! tip
 
-    Don't just run script, without inspecting it first. So before using _Curl_ command below you can examine it => [**HERE**](https://raw.githubusercontent.com/xerolinux/xerocurl/main/xapi.sh){:target="_blank"}. It will always be provided as is without any **Warranty** of any kind. If you need support you know where to find me. Hint : "check the footer for links".
+    Don't just run script, without inspecting it first. So before using _Curl_ command below you can examine it => [**HERE**](https://github.com/xerolinux/xlapit-cli/tree/main/xero-scripts/scripts){:target="_blank"}. It will always be provided as is without any **Warranty** of any kind. If you need support you know where to find me. Hint : "check the footer for links".
 
 Now, once you have inspected the code, just run this simple curl command to get started :
 
