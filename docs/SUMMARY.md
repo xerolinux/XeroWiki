@@ -2,6 +2,7 @@
 - [💿The Distro](distro.md)
 - [🐧The Toolkit](xlapit.md)
 - [💻Plasma Install](plasma.md)
+- [👣Gnome Install](gnome.md)
+- [🔐Cosmic Install](cosmic.md)
 - [🎨Layan KDE Rice](rice.md)
 - [🎭The Grub Themes](grub.md)
-- [✴️Cosmic Install (Alpha)](cosmic.md)
