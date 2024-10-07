@@ -88,7 +88,7 @@ That's why we will be using the **Best Guess** option, carefully selecting the c
 
     **User Data** : I will not be held responsible for any data loss resulting from selection of the wrong drive. **BE VERY CAREFUL HERE**.
 
-Anyway, let's make sure we skip the parts I mentioned in the video, since everything will now be done **Post-Install** via my Toolkit. Don't forget to set parallel downloads to as many as you like for faster downloads. Also as mentioned, we do not need to enable any extra repos like *multilib* since my script will do that for us later on.
+Anyway, let's make sure we skip the parts I mentioned in the video, like *Profiles*, *Drivers*, *Extra Packages* and *Extra Repos*, since everything will now be done **Post-Install** via my Toolkit. Don't forget to set parallel downloads to as many as you like for faster downloads. Also as mentioned, we do not need to enable any extra repos like *multilib* since my script will do that for us later on.
 
 Now once everything is configured and set, hit install, sit back, grab a cup of Tea/Coffee and watch it do its thing. Might take a while it all depends on Internet connection...
 
@@ -143,7 +143,7 @@ So to avoid the headaches, I decided to block the execution. Better for everyone
     <img src="https://i.imgur.com/mAKjEWQ.png" alt="shot">
 </p>
 
-I *highly* recommend the third option: **Xero's Curated Set of Packages** to avoid potential future headaches. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
+I *highly* recommend the option: **Xero's Curated Set of Packages** for all of the DEs, to avoid potential future headaches. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
 
 You will notice that, the *multilib* repo was enabled as well. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
 
