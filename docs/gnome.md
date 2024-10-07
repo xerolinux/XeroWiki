@@ -113,13 +113,13 @@ bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-gnome.sh)"
 This script will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
 
 <p align="center">
-    <img src="https://i.imgur.com/VCSAdRp.png" alt="shot">
+    <img src="https://i.imgur.com/mAKjEWQ.png" alt="shot">
 </p>
 
 I *highly* recommend the second option: **Xero's Curated Set of Gnome Packages** to avoid potential future headaches. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
 
 <p align="center">
-    <img src="https://i.imgur.com/TOZNp4j.png" alt="shot">
+    <img src="https://i.imgur.com/VCSAdRp.png" alt="shot">
 </p>
 
 You will notice that, the *multilib* repo was enabled as well. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
