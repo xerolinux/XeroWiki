@@ -99,7 +99,7 @@ That's where the fun stuff begin, yep as you might have realized by now, I love 
 | option | description |
 | ------ | ------ |
 | Fastfetch | Installs [**Fastfetch**](https://github.com/fastfetch-cli/fastfetch){:target="_blank"} with Custom settings. |
-| Fish Shell | Installs the [**Fish Shell**](https://fishshell.com){:target="_blank"} with stock settings. |
+| ble.sh for BASH | Installs the [**ble.sh**](https://github.com/akinomyoga/ble.sh){:target="_blank"} extending BASH. |
 | OhMyPosh | Installs [**OhMyPosh**](https://xerolinux.xyz/posts/ohmyposh-p10k-replacement/){:target="_blank"} with Custom settings. |
 | ZSH AlinOne | Installs [**ZSH**](https://www.zsh.org){:target="_blank"} with [**OhMyZSH**](https://ohmyz.sh){:target="_blank"} and **OhMyPosh** and plugins. |
 | Gnome Extenstion Tools | Installs Gnome's [**Extension Manager**](https://mattjakeman.com/apps/extension-manager){:target="_blank"}. |
