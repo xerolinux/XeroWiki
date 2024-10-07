@@ -24,7 +24,7 @@ These scripts are subject to change over time, so please treat the video above a
 
 <h1 align="center">.// The Wiki \\.</h1>
 
-### The Guide
+### Installation Guide
 
 #### System Preparation
 
@@ -116,11 +116,18 @@ bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-gnome.sh)"
 
 ##### 🪐 Cosmic-Alpha
 
+!!! warning
+
+    The script shared herein is work-in-progress. **Cosmic** is still in Alpha stages; so it needs time to reach full maturity. Please do not use it on your production machine. If you want to test in a VM, for best performance I would highly recommend [**ProxmoxVe**](https://www.proxmox.com/en/proxmox-virtual-environment/overview){:target="_blank"}.
+
+
+The **Cosmic** group on **Arch** does not include the `xdg-user-dirs` package which creates the `Documents, Music, Pictures, Downloads & Videos` folders in your `home` & `system76-power` is missing which the `Cosmic Settings` will prompt you for; so I added them.
+
 ```Bash
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-cosmic.sh)"
 ```
 
-This script will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
+These scripts will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
 
 #### The exec Blockers
 

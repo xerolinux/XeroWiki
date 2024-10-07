@@ -358,13 +358,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-guide" class="md-nav__link">
+  <a href="#installation-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      The Guide
+      Installation Guide
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Guide">
+    <nav class="md-nav" aria-label="Installation Guide">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -552,13 +552,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-guide" class="md-nav__link">
+  <a href="#installation-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      The Guide
+      Installation Guide
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="The Guide">
+    <nav class="md-nav" aria-label="Installation Guide">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -689,7 +689,7 @@
 <hr>
 <h1 align="center">.// The Wiki \\.</h1>
 
-<h3 id="the-guide">The Guide<a class="headerlink" href="#the-guide" title="Permanent link">¶</a></h3>
+<h3 id="installation-guide">Installation Guide<a class="headerlink" href="#installation-guide" title="Permanent link">¶</a></h3>
 <h4 id="system-preparation">System Preparation<a class="headerlink" href="#system-preparation" title="Permanent link">¶</a></h4>
 <p>Let's start off by knowing what we need to get started. First off, we will need the latest version of the &gt;&gt; <a href="https://archlinux.org/download/" target="_blank"><strong>ArchLinux ISO</strong></a>, a USB stick to burn ISO onto, we can either use &gt;&gt; <a href="https://etcher.balena.io/#download-etcher" target="_blank"><strong>Balena Etcher</strong></a> or the highly recommended &gt;&gt; <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a>.</p>
 <p>Those are the essentials. As to my <strong>Plasma Install</strong> script will get to that a bit later down the line. Once we got everything, we shall begin...</p>
@@ -747,9 +747,14 @@
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-gnome.sh<span class="k">)</span><span class="s2">"</span>
 </span></code></pre></div>
 <h5 id="cosmic-alpha">🪐 Cosmic-Alpha<a class="headerlink" href="#cosmic-alpha" title="Permanent link">¶</a></h5>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The script shared herein is work-in-progress. <strong>Cosmic</strong> is still in Alpha stages; so it needs time to reach full maturity. Please do not use it on your production machine. If you want to test in a VM, for best performance I would highly recommend <a href="https://www.proxmox.com/en/proxmox-virtual-environment/overview" target="_blank"><strong>ProxmoxVe</strong></a>.</p>
+</div>
+<p>The <strong>Cosmic</strong> group on <strong>Arch</strong> does not include the <code>xdg-user-dirs</code> package which creates the <code>Documents, Music, Pictures, Downloads &amp; Videos</code> folders in your <code>home</code> &amp; <code>system76-power</code> is missing which the <code>Cosmic Settings</code> will prompt you for; so I added them.</p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-cosmic.sh<span class="k">)</span><span class="s2">"</span>
 </span></code></pre></div>
-<p>This script will perform several checks and then prompt you to confirm the addition of the <strong>XeroLinux</strong> and <strong>Chaotic-AUR</strong> repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.</p>
+<p>These scripts will perform several checks and then prompt you to confirm the addition of the <strong>XeroLinux</strong> and <strong>Chaotic-AUR</strong> repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.</p>
 <h4 id="the-exec-blockers">The exec Blockers<a class="headerlink" href="#the-exec-blockers" title="Permanent link">¶</a></h4>
 <p>I have also implemented some checks making sure script is being run in <em>chroot</em> and on <em>ArchLinux</em> blocking execution anywhere else. This helps me in the long run not having to bang my head against the wall trying to provide support in case it was run on Distros I have no control over.</p>
 <p align="center">
