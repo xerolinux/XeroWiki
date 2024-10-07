@@ -12,7 +12,7 @@ tags:
 
     **Distro is Back** : If you want to skip all this, you can just *Donate* and grab the **XeroLinux KDE** pre-built ISO from 👉 [**Re-Release Post**](https://xerolinux.xyz/iso/){:target="_blank"}
 
-### What this script is
+### What these scripts do
 
 The intention of these scripts is *not* to replace **ArchInstall** but to fix some of its profiles while extending them further nothing more. The Toolkit can be used on any DE or WM it's agnostic.
 
