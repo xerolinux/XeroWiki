@@ -128,7 +128,7 @@ Installation might take a while, it all depends on the speed of your Internet co
 
 Finally, for now at least, once script is done, we will be prompted to exit and reboot the system. We do that by typing `exit` then `reboot`, and that's it for this part anyway...
 
-#### Setting up the system
+#### System Setup
 
 If all went smoothly, we should now be greeted with `GDM`, **Gnome**'s login page. Once logged in, there are a few things we need to take care of first. Open Terminal, as shown in video, and update the system
 
