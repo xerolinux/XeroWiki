@@ -130,13 +130,13 @@ Finally, for now at least, once script is done, we will be prompted to exit and 
 
 #### System Setup
 
-If all went smoothly, we should now be greeted with `GDM`, **Gnome**'s login page. Once logged in, there are a few things we need to take care of first. Open Terminal, as shown in video, and update the system
+If all went smoothly, we should now be greeted with `GDM`, **Gnome**'s login page. Once logged in, there are a few things we need to take care of first. Open Terminal, and update the system.
 
 ```Bash
 sudo pacman -Syyu
 ```
 
-Then we launch the **XeroLinux Post Installation Toolkit** from the AppMenu, under **System**. That's what we will be using from here on in.
+Then we launch the **XeroLinux Post Installation Toolkit** from the App Launcher. That's it.
 
 <p align="center">
     <img src="https://i.imgur.com/JuWceYE.png" alt="shot">
