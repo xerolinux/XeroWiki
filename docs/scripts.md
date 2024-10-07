@@ -1,30 +1,28 @@
 ---
-title: Plasma-Install Script
+title: Xero Install Scripts
 tags:
   - Linux
   - Plasma
   - XeroLinux
   - ArchLinux
 ---
-# <h2 align="center">💻 Plasma-Install Script 💻</h2>
+# <h2 align="center">💻 Xero Install Scripts 💻</h2>
 
 !!! note
 
-    **Distro is Back** : If you want to skip all this, you can just *Donate* and grab the **XeroLinux** pre-built ISO from 👉 [**Re-Release Post**](https://xerolinux.xyz/iso/){:target="_blank"}
+    **Distro is Back** : If you want to skip all this, you can just *Donate* and grab the **XeroLinux KDE** pre-built ISO from 👉 [**Re-Release Post**](https://xerolinux.xyz/iso/){:target="_blank"}
 
 ### What this script is
 
-The intention of the **PlasmaInstall** script is *not* to replace **ArchInstall** but to fix its **KDE Plasma** profile while extending it further nothing more. The Toolkit can be used on any DE or WM it's agnostic.
+The intention of these scripts is *not* to replace **ArchInstall** but to fix some of its profiles while extending them further nothing more. The Toolkit can be used on any DE or WM it's agnostic.
 
 ![type:video](https://www.youtube.com/embed/v0UPif52i5A)
 
-The script is subject to change over time, so please treat the video above as a general reference rather than an exact guide. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version of this guide for the best results.
+These scripts are subject to change over time, so please treat the video above as a general reference rather than an exact guide. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version of this guide for the best results.
 
 ---
 
 <h1 align="center">.// The Wiki \\.</h1>
-
-In this super detailed guide I will be showing off how we can easily replicate the **XeroLinux** setup using **ArchInstall**.
 
 ### The Guide
 
@@ -82,10 +80,6 @@ pacman -Syy archinstall && archinstall --advanced
 
 Now some of you might be asking me, "why the `--advanced` flag ?", to which I answer, simply because devs still hide the *parallel downloads* behind it for whatever reason. It's fine at least now you know.
 
-<p align="center">
-    <img src="https://i.imgur.com/OVzwVYt.png" alt="shot">
-</p>
-
 Ok, now that we have the installer running, am not going to go through each and every option one by one, just the important ones. Those are explained in the video. Am also not gonna bother with *manual partitioning* since the guide is intended for single OS easy install.
 
 That's why we will be using the **Best Guess** option, carefully selecting the correct drive we want install **ArchLinux** onto.
@@ -98,21 +92,45 @@ Anyway, let's make sure we skip the parts I mentioned in the video, since everyt
 
 Now once everything is configured and set, hit install, sit back, grab a cup of Tea/Coffee and watch it do its thing. Might take a while it all depends on Internet connection...
 
-#### Installing KDE Plasma
+#### Installing Desktops
 
 Once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with yes of course since we still have no DE yet.
 
 !!! tip
 
-    **Inspection**. We do not recommend to blindly execute scripts without inspecting them first. Check out the code >> [**Here**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh){:target="_blank"}
+    **Inspection**. We do not recommend to blindly execute scripts without inspecting them first. Check out the code >> [**Plasma**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh){:target="_blank"}, [**Gnome**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-gnome.sh){:target="_blank"} or [**Cosmic-Alpha**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-cosmic.sh){:target="_blank"}
 
-Once you trust it, you can move on. Now, depending on the method that was used, `ssh` or not, we either copy paste the command below or type it manually :
+Once you trust it/them, you can move on. Now, depending on the method that was used, `ssh` or not, we either copy paste one of the commands below or type it manually :
+
+##### 🚀 KDE Plasma
 
 ```Bash
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-plasma.sh)"
 ```
 
+##### 👣 Gnome (WiP)
+
+```Bash
+bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-gnome.sh)"
+```
+
+##### 🪐 Cosmic-Alpha
+
+```Bash
+bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-cosmic.sh)"
+```
+
 This script will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
+
+#### The exec Blockers
+
+I have also implemented some checks making sure script is being run in *chroot* and on *ArchLinux* blocking execution anywhere else. This helps me in the long run not having to bang my head against the wall trying to provide support in case it was run on Distros I have no control over.
+
+<p align="center">
+  <img width="360" src="https://i.imgur.com/JlFRZRd.png">  <img width="360" src="https://i.imgur.com/uNilqW8.png">
+</p>
+
+So to avoid the headaches, I decided to block the execution. Better for everyone. This will allow me to concentrate on the distro and other current/future projects, with support being limited within **XeroLinux**.
 
 <p align="center">
     <img src="https://i.imgur.com/mAKjEWQ.png" alt="shot">
@@ -130,37 +148,23 @@ Installation might take a while, it all depends on the speed of your Internet co
 
 Finally, for now at least, once script is done, we will be prompted to exit and reboot the system. We do that by typing `exit` then `reboot`, and that's it for this part anyway...
 
-#### Setting up the system
+#### System Configuration
 
-If all went smoothly, we should now be greeted with `SDDM`, **KDE**'s login page. Once logged in, there are a few things we need to take care of first. Open Terminal, as shown in video, and update the system
+If all went smoothly, we should now be greeted with the login page. Once logged in, open Terminal, and update the system. Done !
 
 ```Bash
 sudo pacman -Syyu
 ```
 
-Then we launch the **XeroLinux Post Installation Toolkit** from the AppMenu, under **System**. That's what we will be using from here on in.
+Then we launch the **XeroLinux Post Installation Toolkit** from the App Launcher. That's it.
 
 <p align="center">
     <img src="https://i.imgur.com/JuWceYE.png" alt="shot">
 </p>
 
-It's up to you to discover all the options, that's why I did not mention them all in video, nor will I here. The whole point of this guide is how to get **XeroLinux** back not to set up the system from A to Z. For more info, check out the [**Toolkit Wiki**](https://wiki.xerolinux.xyz/xlapit/)
+It's up to you to discover all the options. The whole point of this guide is how to get **Gnome** the right way not to set up the system from A to Z. For more info, check out the [**Toolkit Wiki**](https://wiki.xerolinux.xyz/xlapit/)
 
-- **1 : System Setup**
-
-There's nothing to do here except select **Install 3rd-Party GUI Package Manager(s)** or **Add & Enable the ChaoticAUR Repository**, since my **Plasma Script** took care of the rest for us. Neat eh ?
-
-- **2 : System Drivers**
-
-This is the part where you select drivers you need for our hardware. Toolkit does not and will not support Hybrid (iGPU+dGPU) setups as I do not own any, just Single GPU ones. Just know that selecting the wrong ones will break the system, so that's where you need to understand what works for you.
-
-I did my best to cover most *Single GPU* scenarios, I cannot cover all. Also the whole point of the distro, is for me *not* to do everything for you. In my humble opinion if I did, you wouldn't be learning anything.
-
-- **4 : System Customization**
-
-Now we jump to Customization section. Just select option **XeroLinux's Layan Plasma 6 Rice**, enter your `sudo` password, and watch it do its thing.. Once it's done, we will be prompted to reboot. Use the AppMenu to do that..
-
-### Issues
+### Install Issues
 
 If you encounter any issues or have questions directly related to this script, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
 
@@ -168,7 +172,6 @@ However, if your questions are related to your specific hardware, I may not have
 
 ### Final words
 
-That’s it, boys and girls, we’ve officially brought XeroLinux back from the ashes! 🎉 The rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Who knows—you might even stumble upon something that’ll make your setup sing! Just don’t blame me if you get lost in the endless sea of tweaks and options—consider it part of the adventure.
-
+That’s it, boys and girls, we’ve successfully installed our system! 🎉 The rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Who knows—you might even stumble upon something that’ll make your setup sing! Just don’t blame me if you get lost in the endless sea of tweaks and options—consider it part of the adventure.
 
 😄 Happy tinkering! 😄
