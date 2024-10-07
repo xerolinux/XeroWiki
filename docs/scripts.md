@@ -136,11 +136,7 @@ So to avoid the headaches, I decided to block the execution. Better for everyone
     <img src="https://i.imgur.com/mAKjEWQ.png" alt="shot">
 </p>
 
-I *highly* recommend the third option: **Xero's Curated Set of Plasma Packages** to avoid potential future headaches. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
-
-<p align="center">
-    <img src="https://i.imgur.com/TOZNp4j.png" alt="shot">
-</p>
+I *highly* recommend the third option: **Xero's Curated Set of Packages** to avoid potential future headaches. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
 
 You will notice that, the *multilib* repo was enabled as well. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
 
