@@ -143,7 +143,7 @@ So to avoid the headaches, I decided to block the execution. Better for everyone
     <img src="https://i.imgur.com/mAKjEWQ.png" alt="shot">
 </p>
 
-I *highly* recommend the option: **Xero's Curated Set of Packages** for all of the DEs, to avoid potential future headaches. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
+I *highly* recommend the option: **Xero's Curated Set of Packages** for all of the DEs. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
 
 You will notice that, the *multilib* repo was enabled as well. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
 
@@ -165,7 +165,7 @@ Then we launch the **XeroLinux Post Installation Toolkit** from the App Launcher
     <img src="https://i.imgur.com/JuWceYE.png" alt="shot">
 </p>
 
-It's up to you to discover all the options. The whole point of this guide is how to get **Gnome** the right way not to set up the system from A to Z. For more info, check out the [**Toolkit Wiki**](https://wiki.xerolinux.xyz/xlapit/)
+It's up to you to discover all the options. The whole point of this guide is how to get included DEs installed the right way while expanding them a little, not to set up the system from A to Z. For more info, check out the [**Toolkit Wiki**](https://wiki.xerolinux.xyz/xlapit/)
 
 ### Install Issues
 
