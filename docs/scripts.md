@@ -16,11 +16,13 @@ tags:
 
 ### What these scripts do
 
-The intention of these scripts is *not* to replace **ArchInstall** but to fix some of its profiles while extending them further nothing more. The Toolkit can be used on any DE or WM it's agnostic.
+The intention of these scripts is *not* to replace **ArchInstall** but to fix some of its profiles while extending them further nothing more. Most features of the Toolkit can be used on any DE or WM it's agnostic.
 
 ![type:video](https://www.youtube.com/embed/v0UPif52i5A)
 
 These scripts are subject to change over time, so please treat the video above as a general reference rather than an exact guide. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version of this guide for the best results.
+
+Finally, before we begin, none of these scripts will install a customized/riced version of the DEs keeping them *Vanilla*. It's all about the freedom of choice, leaving final setup up to you. I just included tools you might need taking care of all the dependencies and tools, making it a little bit easier to setup your system.
 
 ---
 
