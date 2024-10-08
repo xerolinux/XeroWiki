@@ -22,7 +22,7 @@ The intention of these scripts is *not* to replace **ArchInstall** but to fix so
 
 These scripts are subject to change over time, so please treat the video above as a general reference rather than an exact guide. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version of this guide for the best results.
 
-Finally, before we begin, none of these scripts will install a customized/riced version of the DEs keeping them *Vanilla*. It's all about the freedom of choice, leaving final setup up to you. I just included tools you might need taking care of all the dependencies and tools, making it a little bit easier to setup your system.
+Finally, before we begin, none of these scripts will install a customized/riced version of the DEs keeping them *Vanilla*. It's all about the freedom of choice, leaving final setup up to you. I just included the tools you might need while taking care of all the dependencies, making it a little bit easier to setup your system.
 
 ---
 
@@ -147,11 +147,9 @@ So to avoid the headaches, I decided to block the execution. Better for everyone
     <img src="https://i.imgur.com/mAKjEWQ.png" alt="shot">
 </p>
 
-I *highly* recommend the option: **Xero's Curated Set of Packages** for all of the DEs. I've meticulously reviewed all package groups to ensure the best experience. However, you're free to choose any of the other options, it's entirely up to you in the end.
+While I've meticulously reviewed all packages and groups to ensure the best experience via my **Curated list**, you are free to choose any of the other options. You will also notice that the *multilib* repo was enabled. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
 
-You will notice that, the *multilib* repo was enabled as well. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
-
-Installation might take a while, it all depends on the speed of your Internet connection. I have included quite a few quality-of-life packages which should make your experience as Seamless as possible. I have also taken care of a few dependencies that might be required down the line.
+Now, installation might take a while, it all depends on the speed of your Internet connection. I have included quite a few quality-of-life packages which should make your experience as Seamless as possible.
 
 Finally, for now at least, once script is done, we will be prompted to exit and reboot the system. We do that by typing `exit` then `reboot`, and that's it for this part anyway...
 
@@ -179,6 +177,6 @@ However, if your questions are related to your specific hardware, I may not have
 
 ### Final words
 
-That’s it, boys and girls, we’ve successfully installed our system! 🎉 The rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Who knows—you might even stumble upon something that’ll make your setup sing! Just don’t blame me if you get lost in the endless sea of tweaks and options—consider it part of the adventure.
+That’s it, boys and girls, we’ve successfully installed our system! 🎉 The rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Who knows, you might even stumble upon something that’ll make your setup sing! Just don’t blame me if you get lost in the endless sea of tweaks and options, consider it part of the adventure.
 
 😄 Happy tinkering! 😄
