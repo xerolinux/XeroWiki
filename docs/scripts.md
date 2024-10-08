@@ -3,6 +3,8 @@ title: Xero Install Scripts
 tags:
   - Linux
   - Plasma
+  - Gnome
+  - Cosmic
   - XeroLinux
   - ArchLinux
 ---
