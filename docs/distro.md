@@ -86,6 +86,10 @@ Additionally, I'd like to point out that no *GUI package managers* are included 
 
 The **KDE Plasma** version is and always will be the main edition. I call it the **Flagship** simply because  it's the DE I love and contribute to the most. It can be unstable at times however, since it's constantly evolving and keeps getting new features non stop making the most customizable/riceable DE out there. That's why I love it so much. So it's targeted to anyone who likes that sort of stuff and don't mind a few bugs here n there...
 
+<p align="center">
+  <img width="360" src="https://i.imgur.com/X0tqq1R.jpeg">  <img width="360" src="https://i.imgur.com/QiB1mxk.jpeg">
+</p>
+
 As of February of 2025, a new **Gnome** Dev-Spin has been added to the mix. The key differences between it and the **KDE Flagship** is that it's more oriented to those of you who do not game much, and prefer to have a stable system that stays out of your way while you do your work. It also hasn't been riced, eg no custom theme has been used, following the **Gnome Guidelines**. All I did was use the Accent color feature to enable the Purple colors, and for consistency, I applied the **Tela Circle Purple** icon theme, while including just enough extensions making it more functional.
 
 **Gnome Note :** 
