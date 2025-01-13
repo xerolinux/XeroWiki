@@ -82,6 +82,16 @@ Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I 
 
 Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **PacSeekTUI**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
 
+## ISO Differences
+
+The **KDE Plasma** version is and always will be the main edition. I call it the **Flagship** simply because  it's the DE I love and contribute to the most. It can be unstable at times however, since it's constantly evolving and keeps getting new features non stop making the most customizable/riceable DE out there. That's why I love it so much. So it's targeted to anyone who likes that sort of stuff and don't mind a few bugs here n there...
+
+As of February of 2025, a new **Gnome** Dev-Spin has been added to the mix. The key differences between it and the **KDE Flagship** is that it's more oriented to those of you who do not game much, and prefer to have a stable system that stays out of your way while you do your work. It also hasn't been riced, eg no custom theme has been used, following the **Gnome Guidelines**. All I did was use the Accent color feature to enable the Purple colors, and for consistency, I applied the **Tela Circle Purple** icon theme, while including just enough extensions making it more functional.
+
+**Gnome Note :** 
+
+> I highly recommend against installing too many extensions if you want to keep your system stable. Also, please avoid using any themes, as they might cause overall issues since the Gnome devs do not like it when you do. In the end it's all up to you. You have been warned ;)
+
 ## Support/Issues
 
 If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
