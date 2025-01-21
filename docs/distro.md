@@ -44,7 +44,7 @@ Before we dive in, it's important to note that **XeroLinux** features **KDE Plas
 
 </center>
 
-**Bootable Tool**
+## Bootable Tool
 
 To boot into the Distro's Live Environment, all you have to do is use the tried and true [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"} to put ISO on & boot, that way you have **Grub** as fallback in case **SystemD-Boot** fails. If you burn using **Etcher** or similar tools there will be nothing to fall back to. Just an FYI.
 
@@ -52,7 +52,7 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
     <img src="https://i.imgur.com/LTVLXo3.png" alt="rice">
 </p>
 
-**Calamares Installer**
+## Calamares Installer
 
 [**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more.
 
@@ -64,7 +64,7 @@ You can still switch to *Wayland* post-install either via KDE's **SDDM** setting
 
 Anyway, the installer is and will always function in offline mode, meaning that while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.
 
-**XeroLinux Toolkit**
+## XeroLinux Toolkit
 
 I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.
 
@@ -74,11 +74,11 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
     <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
 </p>
 
-**Supported Filesystems**
+## Supported Filesystems
 
 Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry.
 
-**GUI Package Managers**
+## GUI Package Managers
 
 Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **PacSeekTUI**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
 
@@ -95,6 +95,12 @@ As of February of 2025, a new **Gnome** Dev-Spin has been/will be added to the m
 **Gnome Note :** 
 
 > I highly recommend against installing too many extensions if you want to keep your system stable. Also, please avoid using any themes, as they might cause overall issues since the Gnome devs do not like it when you do. In the end it's all up to you. You have been warned ;)
+
+## Hybrid/Dual GPUs
+
+Hybrid laptops with both integrated graphics (iGPU) and dedicated graphics cards (dGPU) can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
+
+We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
 
 ## Support/Issues
 

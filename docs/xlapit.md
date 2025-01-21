@@ -80,6 +80,9 @@ Well this section is dedicated to Drivers like GPU, Printer, Samba, Scanner & Ga
 | Scanner | Installs a meta package by myself for most people. Check **AUR** for others. |
 | Tailscale | Installs [**Tailscale**](https://tailscale.com/){:target="_blank"} with fix for XeroLinux. |
 | DeckLink & StreamDeck | Installs driver for [**Decklink**](https://aur.archlinux.org/packages/decklink){:target="_blank"}, [**DeckMaster**](https://github.com/muesli/deckmaster){:target="_blank"} or [**StreamDeckUI**](https://streamdeck-linux-gui.github.io/streamdeck-linux-gui/){:target="_blank"} (**AUR**). |
+| ASUS Laptop Tools | Installs tools for ASUS & ASUS ROG Laptops to control RGB, Fans and other features they might have. Tools have been developed by the [**ASUS-Linux**](https://asus-linux.org){:target="_blank"} Team. |
+| nVidia GSP Firmware Fix | Allows you to disable the GSP firmware of your nVidia card if you are having issues. Closed drivers only. |
+| Arch Kernel Manager | Installs the **Arch Kernel Manager** developed by guys over at [**ArcoLinux**](https://arcolinux.info){:target="_blank"} to manage your Kernels. |
 
 ### Distrobox / Docker
 
@@ -101,8 +104,7 @@ That's where the fun stuff begin, yep as you might have realized by now, I love 
 | Fastfetch | Installs [**Fastfetch**](https://github.com/fastfetch-cli/fastfetch){:target="_blank"} with Custom settings. |
 | ble.sh for BASH | Installs the [**ble.sh**](https://github.com/akinomyoga/ble.sh){:target="_blank"} extending BASH. |
 | OhMyPosh | Installs [**OhMyPosh**](https://xerolinux.xyz/posts/ohmyposh-p10k-replacement/){:target="_blank"} with Custom settings. |
-| ZSH AlinOne | Installs [**ZSH**](https://www.zsh.org){:target="_blank"} with [**OhMyZSH**](https://ohmyz.sh){:target="_blank"} and **OhMyPosh** and plugins. |
-| Gnome Extenstion Tools | Installs Gnome's [**Extension Manager**](https://mattjakeman.com/apps/extension-manager){:target="_blank"}. |
+| ZSH Al-in-One | Installs [**ZSH**](https://www.zsh.org){:target="_blank"} with [**OhMyZSH**](https://ohmyz.sh){:target="_blank"} and **OhMyPosh** and plugins. |
 
 
 **- DE/WM Ricing**
@@ -110,7 +112,6 @@ That's where the fun stuff begin, yep as you might have realized by now, I love 
 | option | description |
 | ------ | ------ |
 | XeroLinux KDE Rices | Will let you apply my [**Layan**](https://github.com/xerolinux/xero-layan-git){:target="_blank"} KDE Rice. Theme has been ported to **Plasma 6** |
-| Hyprland Dot Files | Will offer you 3 [**Hyprland**](https://github.com/hyprwm/Hyprland){:target="_blank"} dots to choose from, linking you to their respective Git. |
 
 In closing, this section will be updated to include some useful customization features as time goes by..
 
@@ -148,18 +149,13 @@ Are you an avid gamer ? That section has you covered, allowing you to install th
 | ------ | ------ |
 | LibreOffice | Installs [**LibreOffice**](https://libreoffice.org/){:target="_blank"} Fresh version. |
 | Web Browsers | A selection of Web-Browsers. |
-| System Tools | Installs a "set of packages" essential for a fully functional system. |
 | Development Tools | Installs your choice of Development tools. |
 | Photography & 3D | Installs your choice of Image and 3D Tools. |
 | Music/Audio | Installs your choice of Audio & Video Tools. |
 | Social-Media | Installs your choice of Chat clients. |
 | Virtualization | Installs either [**VirtualBox**](https://www.virtualbox.org/){:target="_blank"} or [**Virt-Manager**](https://virt-manager.org/){:target="_blank"}. |
 | Video & Editing | Installs any of Video tools. **OBS-Studio** includes a list of commonly used plugins. |
-
-System Packages list :
-```
-linux-headers downgrade mkinitcpio-firmware hw-probe pkgstats alsi update-grub expac linux-firmware-marvell eza numlockx lm_sensors appstream-glib bat bat-extras pacman-contrib pacman-bintrans yt-dlp gnustep-base parallel dex make libxinerama logrotate bash-completion gtk-update-icon-cache gnome-disk-utility appmenu-gtk-module dconf-editor dbus-python lsb-release asciinema playerctl s3fs-fuse vi duf gcc yad zip xdo inxi lzop nmon mkinitcpio-archiso mkinitcpio-nfs-utils tree vala btop lshw expac fuse3 meson unace unrar unzip p7zip rhash sshfs vnstat nodejs cronie hwinfo hardinfo2 arandr assimp netpbm wmctrl grsync libmtp polkit sysprof gparted hddtemp mlocate fuseiso gettext node-gyp graphviz inetutils appstream cifs-utils ntfs-3g nvme-cli exfatprogs f2fs-tools man-db man-pages tldr python-pip python-cffi python-numpy python-docopt python-pyaudio xdg-desktop-portal-gtk
-```
+| System Tools | Installs a "set of packages" essential for a fully functional system. |
 
 ### Troubleshooting
 
@@ -170,9 +166,10 @@ Now am not gonna go over everything this section does, suffice it to say that th
 3.  Unlock Pacman DB (In case of DB error).
 4.  Activate v4l2loopback for OBS-VirtualCam.
 5.  Change Autologin Session X11/Wayland (SDDM).
+6.  Disable Debug flag in MAKEPKG (Package Devs).
 
 a.  Build Updated Arch ISO.
-r.  Reset Distro back to Factory.
+s.  Reset Distro back to Factory.
 w.  WayDroid Installation Guide (link).
 m.  Update Arch Mirrorlist, for faster download speeds.
 g.  Fix Arch GnuPG Keyring in case of pkg signature issues.
@@ -181,11 +178,7 @@ g.  Fix Arch GnuPG Keyring in case of pkg signature issues.
 
 ### GPU Driver Notes
 
-When it comes to **GPU Drivers**, toolkit covers most common setups. It currently does **NOT** cover Hybrid ones. For those you will have to consult online documentation, sorry. Anyway, by answering the prompts correctly you will have your system(s) up and running in no time at all. Even Kernel modules will load for **nVidia**. If you have any issues let me know here...
-
-### 3rd Party Kernel Support
-
-No 3rd party Kernels are provided by this toolkit. So if you install any, please remember to include their headers for seamless functionality of anything that relies on *DKMS* (Dynamic Kernel Modules).
+When it comes to **GPU Drivers**, toolkit covers most common setups. It should cover most cases, but there's no one solution for all, especially for **Hybrid** setups, so if you have any issues let me know...
 
 ### How to Contribute
 
