@@ -386,32 +386,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-desktops" class="md-nav__link">
+  <a href="#using-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Desktops
+      Using Script
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installing Desktops">
+    <nav class="md-nav" aria-label="Using Script">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kde-plasma" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 KDE Plasma
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gnome-wip" class="md-nav__link">
-    <span class="md-ellipsis">
-      👣 Gnome (WiP)
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#cosmic-alpha" class="md-nav__link">
@@ -580,32 +562,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-desktops" class="md-nav__link">
+  <a href="#using-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Desktops
+      Using Script
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installing Desktops">
+    <nav class="md-nav" aria-label="Using Script">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#kde-plasma" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 KDE Plasma
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gnome-wip" class="md-nav__link">
-    <span class="md-ellipsis">
-      👣 Gnome (WiP)
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#cosmic-alpha" class="md-nav__link">
@@ -734,28 +698,22 @@
 </div>
 <p>Anyway, let's make sure we skip the parts I mentioned in the video, like <em>Profiles</em>, <em>Drivers</em>, <em>Extra Packages</em> and <em>Extra Repos</em>, since everything will now be done <strong>Post-Install</strong> via my Toolkit. Don't forget to set parallel downloads to as many as you like for faster downloads. Also as mentioned, we do not need to enable any extra repos like <em>multilib</em> since my script will do that for us later on.</p>
 <p>Now once everything is configured and set, hit install, sit back, grab a cup of Tea/Coffee and watch it do its thing. Might take a while it all depends on Internet connection...</p>
-<h4 id="installing-desktops">Installing Desktops<a class="headerlink" href="#installing-desktops" title="Permanent link">¶</a></h4>
+<h4 id="using-script">Using Script<a class="headerlink" href="#using-script" title="Permanent link">¶</a></h4>
 <p>Once that's all done, we will be prompted if we want to <code>chroot</code> into our new install, we answer with yes of course since we still have no DE yet.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>Inspection</strong>. We do not recommend to blindly execute scripts without inspecting them first. Check out the code &gt;&gt; <a href="https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh" target="_blank"><strong>Plasma</strong></a>, <a href="https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-gnome.sh" target="_blank"><strong>Gnome</strong></a> or <a href="https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-cosmic.sh" target="_blank"><strong>Cosmic-Alpha</strong></a></p>
 </div>
-<p>Once you trust it/them, you can move on. Now, depending on the method that was used, <code>ssh</code> or not, we either copy paste one of the commands below or type it manually :</p>
-<h5 id="kde-plasma">🚀 KDE Plasma<a class="headerlink" href="#kde-plasma" title="Permanent link">¶</a></h5>
-<div class="language-Bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-plasma.sh<span class="k">)</span><span class="s2">"</span>
-</span></code></pre></div>
-<h5 id="gnome-wip">👣 Gnome (WiP)<a class="headerlink" href="#gnome-wip" title="Permanent link">¶</a></h5>
-<div class="language-Bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-gnome.sh<span class="k">)</span><span class="s2">"</span>
-</span></code></pre></div>
+<p>Once you trust it, you can move on. Now, depending on the method that was used, <code>ssh</code> or not, we either copy paste one of the commands below or type it manually :</p>
 <h5 id="cosmic-alpha">🪐 Cosmic-Alpha<a class="headerlink" href="#cosmic-alpha" title="Permanent link">¶</a></h5>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The script shared herein is work-in-progress. <strong>Cosmic</strong> is still in Alpha stages; so it needs time to reach full maturity. Might contain major issues. Please do not use it on your production machine. If you want to test in a VM, for best performance I would highly recommend <a href="https://www.proxmox.com/en/proxmox-virtual-environment/overview" target="_blank"><strong>ProxmoxVe</strong></a>.</p>
 </div>
 <p>The <strong>Cosmic</strong> group on <strong>Arch</strong> does not include the <code>xdg-user-dirs</code> package which creates the <code>Documents, Music, Pictures, Downloads &amp; Videos</code> folders in your <code>home</code> &amp; <code>system76-power</code> is missing which the <code>Cosmic Settings</code> will prompt you for; so I added them.</p>
-<div class="language-Bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-cosmic.sh<span class="k">)</span><span class="s2">"</span>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-cosmic.sh<span class="k">)</span><span class="s2">"</span>
 </span></code></pre></div>
-<p>These scripts will perform several checks and then prompt you to confirm the addition of the <strong>XeroLinux</strong> and <strong>Chaotic-AUR</strong> repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.</p>
+<p>This script will perform several checks and then prompt you to confirm the addition of the <strong>XeroLinux</strong> and <strong>Chaotic-AUR</strong> repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.</p>
 <h4 id="the-exec-blockers">The exec Blockers<a class="headerlink" href="#the-exec-blockers" title="Permanent link">¶</a></h4>
 <p>I have also implemented some checks making sure script is being run in <em>chroot</em> and on <em>ArchLinux</em> blocking execution anywhere else. This helps me in the long run not having to bang my head against the wall trying to provide support in case it was run on Distros I have no control over.</p>
 <p align="center">
@@ -772,7 +730,7 @@
 <p>Finally, for now at least, once script is done, we will be prompted to exit and reboot the system. We do that by typing <code>exit</code> then <code>reboot</code>, and that's it for this part anyway...</p>
 <h4 id="system-configuration">System Configuration<a class="headerlink" href="#system-configuration" title="Permanent link">¶</a></h4>
 <p>If all went smoothly, we should now be greeted with the login page. Once logged in, open Terminal, and update the system. Done !</p>
-<div class="language-Bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syyu
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syyu
 </span></code></pre></div>
 <p>Then we launch the <strong>XeroLinux Post Installation Toolkit</strong> from the App Launcher. That's it.</p>
 <p align="center">
@@ -785,6 +743,7 @@
 <p>However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the <a href="https://wiki.archlinux.org" target="_blank"><strong>ArchWiki</strong></a>, or our custom <strong>ChatGPT A.I.</strong> available on <strong>Discord</strong>.</p>
 <h3 id="final-words">Final words<a class="headerlink" href="#final-words" title="Permanent link">¶</a></h3>
 <p>That’s it, boys and girls, we’ve successfully installed our system! 🎉 The rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Who knows, you might even stumble upon something that’ll make your setup sing! Just don’t blame me if you get lost in the endless sea of tweaks and options, consider it part of the adventure.</p>
+<p><a href="https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh" target="_blank"><strong>KDE Plasma</strong></a> &amp; <a href="https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-gnome.sh" target="_blank"><strong>Gnome</strong></a> install scripts have been archived and will no longer be getting any updates since they have now become full ISOs. You can still use them should you want to, just know that I will not be providing any support for them going forward.. </p>
 <p>😄 Happy tinkering! 😄</p></div>
 
 

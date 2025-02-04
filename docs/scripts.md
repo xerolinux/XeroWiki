@@ -96,7 +96,7 @@ Anyway, let's make sure we skip the parts I mentioned in the video, like *Profil
 
 Now once everything is configured and set, hit install, sit back, grab a cup of Tea/Coffee and watch it do its thing. Might take a while it all depends on Internet connection...
 
-#### Installing Desktops
+#### Using Script
 
 Once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with yes of course since we still have no DE yet.
 
@@ -104,19 +104,7 @@ Once that's all done, we will be prompted if we want to `chroot` into our new in
 
     **Inspection**. We do not recommend to blindly execute scripts without inspecting them first. Check out the code >> [**Plasma**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh){:target="_blank"}, [**Gnome**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-gnome.sh){:target="_blank"} or [**Cosmic-Alpha**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-cosmic.sh){:target="_blank"}
 
-Once you trust it/them, you can move on. Now, depending on the method that was used, `ssh` or not, we either copy paste one of the commands below or type it manually :
-
-##### 🚀 KDE Plasma
-
-```Bash
-bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-plasma.sh)"
-```
-
-##### 👣 Gnome (WiP)
-
-```Bash
-bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-gnome.sh)"
-```
+Once you trust it, you can move on. Now, depending on the method that was used, `ssh` or not, we either copy paste one of the commands below or type it manually :
 
 ##### 🪐 Cosmic-Alpha
 
@@ -131,7 +119,7 @@ The **Cosmic** group on **Arch** does not include the `xdg-user-dirs` package wh
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-cosmic.sh)"
 ```
 
-These scripts will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
+This script will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
 
 #### The exec Blockers
 
@@ -178,5 +166,7 @@ However, if your questions are related to your specific hardware, I may not have
 ### Final words
 
 That’s it, boys and girls, we’ve successfully installed our system! 🎉 The rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Who knows, you might even stumble upon something that’ll make your setup sing! Just don’t blame me if you get lost in the endless sea of tweaks and options, consider it part of the adventure.
+
+[**KDE Plasma**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh){:target="_blank"} & [**Gnome**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-gnome.sh){:target="_blank"} install scripts have been archived and will no longer be getting any updates since they have now become full ISOs. You can still use them should you want to, just know that I will not be providing any support for them going forward.. 
 
 😄 Happy tinkering! 😄
