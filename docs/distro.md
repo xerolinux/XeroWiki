@@ -110,6 +110,8 @@ If you already are on **XeroLinux**, any version, all you have to do, to get new
     <img width="750" src="https://i.imgur.com/Ok6Re2z.png" alt="xlapit">
 </p>
 
+No need to run this all the time. Just once every new ISO release, if and when I announce new features. Usually it's just updated packages. To know more, you can either follow updates on **Discord** or on [**Fosstodon**](https://fosstodon.org/@XeroLinux){:target="_blank"}. 
+
 ## Support/Issues
 
 If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
