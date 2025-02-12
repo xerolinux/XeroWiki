@@ -102,6 +102,14 @@ Hybrid laptops with both integrated graphics (iGPU) and dedicated graphics cards
 
 We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
 
+## Get new features
+
+If you already are on **XeroLinux**, any version, all you have to do, to get new changes in, is to run option **Apply latest XeroLinux specific changes/updates.** under 1st option in the toolkit. That way you do not need to grab new ISO n reinstall to get them. As shown in image below...
+
+<p align="center">
+    <img width="750" src="https://i.imgur.com/Ok6Re2z.png" alt="xlapit">
+</p>
+
 ## Support/Issues
 
 If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
