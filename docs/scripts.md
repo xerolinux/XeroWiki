@@ -163,10 +163,26 @@ If you encounter any issues or have questions directly related to these scripts,
 
 However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**.
 
+### Archived Scripts
+
+[**KDE Plasma**](https://kde.org){:target="_blank"} & [**Gnome**](https://gnome.org){:target="_blank"} install scripts have been archived and will no longer be getting any updates since they have now become full ISOs.
+
+However, you can still get the **XeroLinux** KDE look by installing **Arch** + **KDE Plasma** via the *ArchInstall* script and grabbing my toolkit and applying rice from there.
+
+If you still want to use them because you can't afford to support me, or any other reason, you can, but it will be done **AT YOUR OWN RISK** (no support), use commands below in *chroot* same as you would for [**Cosmic**](https://system76.com/cosmic/){:target="_blank"} (above) :
+
+- KDE Plasma
+```Bash
+bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-plasma.sh)"
+```
+
+- Gnome
+```Bash
+bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-gnome.sh)"
+```
+
 ### Final words
 
 That’s it, boys and girls, we’ve successfully installed our system! 🎉 The rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Who knows, you might even stumble upon something that’ll make your setup sing! Just don’t blame me if you get lost in the endless sea of tweaks and options, consider it part of the adventure.
-
-[**KDE Plasma**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh){:target="_blank"} & [**Gnome**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-gnome.sh){:target="_blank"} install scripts have been archived and will no longer be getting any updates since they have now become full ISOs. You can still use them should you want to, just know that I will not be providing any support for them going forward.. 
 
 😄 Happy tinkering! 😄
