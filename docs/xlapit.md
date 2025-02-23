@@ -19,7 +19,7 @@ This toolkit aims to be an all-in-one solution for post-installation, expediting
 
 ![type:video](https://www.youtube.com/embed/bEFBO2QRN8E)
 
-Toolkit recieves a lot of updates on almost a daily basis. Use above video just as a reference not an absolute lol. I keep getting ideas which I immediately implement. Due to the amount of changes I cannot keep a changelog, sorry. Too many to keep up with.
+Toolkit recieves a lot of updates on almost a daily basis. Use above video just as a reference not an absolute lol. I keep getting ideas which I immediately implement. Due to the amount of changes I cannot keep a changelog, sorry. Too many to keep up with. **Feel free to fork it, modify what you need to make it work better for you, it's FOSS !**
 
 ### How to get it
 

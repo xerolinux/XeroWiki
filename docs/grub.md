@@ -33,4 +33,6 @@ cd xero-grubs/ && sudo ./install.sh
 2- Select one of the 8 themes, watch the magic.<br />
 3- Reboot your system and see the theme in action !<br />
 
+Or, alternatively, you can do so from the toolkit, if you are using it, or on **XeroLinux**.
+
 Be very careful playing with your bootloader. I made sure they work. Beyond that it's on you. This is provided as is with no warranty whatsoever...

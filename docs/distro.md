@@ -72,7 +72,9 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
 
 ## Supported Filesystems
 
-Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry. Also `xfs` currently has a minor issue where it will show a very quick error message before `Grub` is shown, I have no clue how to fix that, if you do please do let me know. 
+Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry. 
+
+Additionally, `xfs` has a minor issue where it will show a very quick error message before `Grub` appears, I have no clue how to fix that, if you do please do let me know. Working together to squash bugs would allow me to do so at a much quicker pace.
 
 ## GUI Package Managers
 
@@ -86,7 +88,7 @@ The **KDE Plasma** version is and always will be the main edition. I call it the
   <img width="360" src="https://i.imgur.com/X0tqq1R.jpeg">  <img width="360" src="https://i.imgur.com/QiB1mxk.jpeg">
 </p>
 
-As of February of 2025, a new **Gnome** Dev-Spin has been added to the mix. The key differences between it and the **KDE Flagship** is that it's more oriented to those of you who do not game much, and prefer to have a stable system that stays out of your way while you do your work. It also hasn't been riced, eg no custom theme has been used, following the **Gnome Guidelines**. All I did was use the Accent color feature to enable the Purple colors, and for consistency, I applied the **Tela Circle Purple** icon theme, while including just enough extensions making it more functional.
+As of February 2025, a new **Gnome** Dev-Spin has been added to the mix. The key differences between it and the **KDE Flagship** is that it's more oriented to those of you who do not game much, and prefer to have a stable system that stays out of your way while you do your work. It also hasn't been riced, eg no custom theme has been used, following the **Gnome Guidelines**. All I did was use the Accent color feature to enable the Purple colors, and for consistency, I applied the **Tela Circle Purple** icon theme, while including just enough extensions making it more functional.
 
 **Gnome Note :** 
 
