@@ -16,7 +16,7 @@ tags:
 
 Before we begin, I would like to tell everyone of you who has supported the **XeroLinux** project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️
 
-In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/s/cf9def9630){:target="_blank"}.
+In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/xerolinux/shop){:target="_blank"}.
 
 <p align="center">
     <img src="https://i.imgur.com/ejZ1ZQv.png" alt="rice">
@@ -28,11 +28,7 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 ## Installation
 
-!!! warning
-
-    When it comes to **Encryption**, **Calamares** is meh when it comes to that. It's extremely limited. It can't ecrypt both `boot` n `root`, just the latter (I think). I do not use it myself so my knowledge there is extremely limited. **Use at your own RISK**.
-
-Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma**, a powerful and feature-rich desktop environment. While it’s designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, it can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!
+Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** & **GNOME**, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!
 
 <center>
 
@@ -54,7 +50,7 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 ## Calamares Installer
 
-[**Calamares**](https://github.com/calamares/calamares){:target="_blank"} will auto-launch on boot. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more.
+Launch the [**Calamares**](https://github.com/calamares/calamares){:target="_blank"} installer from our new **Welcome App**. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more.
 
 You can still switch to *Wayland* post-install either via KDE's **SDDM** settings or the included toolkit, choice is yours. I recommend toolkit as system settings tend to be buggy.
 
@@ -76,7 +72,7 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
 
 ## Supported Filesystems
 
-Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry.
+Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry. Also `xfs` currently has a minor issue where it will show a very quick error message before `Grub` is shown, I have no clue how to fix that, if you do please do let me know. 
 
 ## GUI Package Managers
 
@@ -90,7 +86,7 @@ The **KDE Plasma** version is and always will be the main edition. I call it the
   <img width="360" src="https://i.imgur.com/X0tqq1R.jpeg">  <img width="360" src="https://i.imgur.com/QiB1mxk.jpeg">
 </p>
 
-As of February of 2025, a new **Gnome** Dev-Spin has been/will be added to the mix. The key differences between it and the **KDE Flagship** is that it's more oriented to those of you who do not game much, and prefer to have a stable system that stays out of your way while you do your work. It also hasn't been riced, eg no custom theme has been used, following the **Gnome Guidelines**. All I did was use the Accent color feature to enable the Purple colors, and for consistency, I applied the **Tela Circle Purple** icon theme, while including just enough extensions making it more functional.
+As of February of 2025, a new **Gnome** Dev-Spin has been added to the mix. The key differences between it and the **KDE Flagship** is that it's more oriented to those of you who do not game much, and prefer to have a stable system that stays out of your way while you do your work. It also hasn't been riced, eg no custom theme has been used, following the **Gnome Guidelines**. All I did was use the Accent color feature to enable the Purple colors, and for consistency, I applied the **Tela Circle Purple** icon theme, while including just enough extensions making it more functional.
 
 **Gnome Note :** 
 
@@ -98,7 +94,7 @@ As of February of 2025, a new **Gnome** Dev-Spin has been/will be added to the m
 
 ## Hybrid/Dual GPUs
 
-Hybrid laptops with both integrated graphics (iGPU) and dedicated graphics cards (dGPU) can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
+Although **XeroLinux** now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
 
 We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
 
@@ -114,7 +110,7 @@ No need to run this all the time. Just once every new ISO release, if and when I
 
 ## Support/Issues
 
-If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
+If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. Please do not ask ok **Ko-Fi**. All relevant links are provided in the footer, and I'll do my best to assist you.
 
 <p align="center">
     <img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice">
@@ -122,6 +118,6 @@ If you encounter any *other* issues or have questions directly related to the in
 
 However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**.
 
-As for any **KDE** related issues, you are kindly requested to report them over on the [**KDE Bugtracker**](https://bugs.kde.org){:target="_blank"}.
+As for any **KDE** or **GNOME** related issues, you are kindly requested to report them over on the [**KDE Bugtracker**](https://bugs.kde.org){:target="_blank"} & [**GNOME BugZilla**](https://gitlab.gnome.org/GNOME){:target="_blank"}.
 
 That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉
