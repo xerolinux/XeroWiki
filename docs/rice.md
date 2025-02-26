@@ -32,7 +32,7 @@ As mentioned, this rice has been throughly optimized for best performance on hig
 
 !!! warning
 
-    Before you proceed, kindly note that in order for the rice to work, you will need to add and activate the **XeroLinux Repo**. For guide please [**Click Here**](https://xerolinux.xyz/updates/add-our-repo/){:target="_blank"}
+    Before you proceed, kindly note that in order for the rice to work, you will need to add and activate the **XeroLinux Repo**. Some required packages for example wallpapers come from it and do not exist elsewhere. For How-To guide please [**Click Here**](https://xerolinux.xyz/updates/add-our-repo/){:target="_blank"}
 
 **Install At Own Risk!!!**. As of now it supports **Plasma 6.x.x**. If you notice any issues and report them via issue tracker on here and I will do my best to address them. To apply the rice, please follow the commands posted below. You will need either **Paru** or **Yay** (installed via my toolkit). Keep in mind that this will replace some files. Read below...
 
