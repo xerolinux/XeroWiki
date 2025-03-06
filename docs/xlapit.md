@@ -83,7 +83,7 @@ This section mostly covers **KDE Plasma** since **Gnome** do not take too kindly
 
 ### Game Launchers
 
-Are you an avid gamer ? That section has you covered, allowing you to install the launcher(s) you need to get up and running in no time. Now you will have a choice of installing either the **Flathub** version officially supported by the devs or the unofficial **Native** version.
+Are you an avid gamer ? That section has you covered, allowing you to install the launcher(s) you need to get up and running in no time. This also offers some Game controller drivers as well as a GPU overclock tool should you want to go bonkers !
 
 !!! tip
 
