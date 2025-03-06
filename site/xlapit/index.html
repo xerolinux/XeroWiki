@@ -704,282 +704,61 @@
 <h1 align="center">.// The Wiki \\.</h1>
 
 <h3 id="system-setup">System Setup<a class="headerlink" href="#system-setup" title="Permanent link">¶</a></h3>
-<p>This is the initial setup part where you set the most common things up and/or install Package managers...</p>
-<p><strong>- Initial Setup Section</strong></p>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Update System</td>
-<td>Will guide you through system update via 1 of 3 methods.</td>
-</tr>
-<tr>
-<td>PipeWire/Bluetooth</td>
-<td>Missing <strong>PipeWire/Bluetooth</strong> Packages not offered by <strong>ArchInstall</strong>.</td>
-</tr>
-<tr>
-<td>Activate Flathub</td>
-<td>Enables <strong>Flathub</strong> which is required by the toolkit.</td>
-</tr>
-<tr>
-<td>Enable multithread compilation.</td>
-<td>Sets compilation to use all Cores/Threads for faster building.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>- GUI Package Managers</strong></p>
-<p>Although some DEs like <a href="https://apps.gnome.org/Software/" target="_blank"><strong>Gnome</strong></a> and <a href="https://apps.kde.org/discover/" target="_blank"><strong>KDE Plasma</strong></a> come with their own GUI package manager, they have some limitations. That's why I decided to include others that give us more freedom. See below...</p>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>OctoPi</td>
-<td>Installs <a href="https://tintaescura.com/projects/octopi/" target="_blank"><strong>Octopi</strong></a>.</td>
-</tr>
-<tr>
-<td>PacSeek</td>
-<td>Installs <a href="https://github.com/moson-mo/pacseek" target="_blank"><strong>PacSeek</strong></a> Incl. <a href="https://github.com/stevenbenner/pacfinder" target="_blank"><strong>PacFinder</strong></a>.</td>
-</tr>
-<tr>
-<td>Bauh</td>
-<td>Installs <a href="https://github.com/vinifmor/bauh" target="_blank"><strong>Bauh</strong></a>.</td>
-</tr>
-</tbody>
-</table>
+<p>This is the initial setup part where you set the most common things up and/or install Package managers. Anything labeled with <strong>Vanilla Arch</strong> means that it's already applied/included on <strong>XeroLinux</strong>, so you can skip.</p>
+<p align="center">
+    <a class="glightbox" href="https://i.imgur.com/L4cwKF6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/L4cwKF6.png" alt="rice"></a>
+</p>
+
 <h3 id="system-drivers">System Drivers<a class="headerlink" href="#system-drivers" title="Permanent link">¶</a></h3>
 <p>Well this section is dedicated to Drivers like GPU, Printer, Samba, Scanner &amp; Game controllers. Below are more details on various options.</p>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GPU</td>
-<td>Will guide you prompts to set up your GPU drivers.</td>
-</tr>
-<tr>
-<td>Printer</td>
-<td>Installs all the necessary ones that will cover most cases. Check <strong>AUR</strong> for others.</td>
-</tr>
-<tr>
-<td>Samba</td>
-<td>Installs a meta package I have created that covers most cases.</td>
-</tr>
-<tr>
-<td>Scanner</td>
-<td>Installs a meta package by myself for most people. Check <strong>AUR</strong> for others.</td>
-</tr>
-<tr>
-<td>Tailscale</td>
-<td>Installs <a href="https://tailscale.com/" target="_blank"><strong>Tailscale</strong></a> with fix for XeroLinux.</td>
-</tr>
-<tr>
-<td>DeckLink &amp; StreamDeck</td>
-<td>Installs driver for <a href="https://aur.archlinux.org/packages/decklink" target="_blank"><strong>Decklink</strong></a>, <a href="https://github.com/muesli/deckmaster" target="_blank"><strong>DeckMaster</strong></a> or <a href="https://streamdeck-linux-gui.github.io/streamdeck-linux-gui/" target="_blank"><strong>StreamDeckUI</strong></a> (<strong>AUR</strong>).</td>
-</tr>
-<tr>
-<td>ASUS Laptop Tools</td>
-<td>Installs tools for ASUS &amp; ASUS ROG Laptops to control RGB, Fans and other features they might have. Tools have been developed by the <a href="https://asus-linux.org" target="_blank"><strong>ASUS-Linux</strong></a> Team.</td>
-</tr>
-<tr>
-<td>nVidia GSP Firmware Fix</td>
-<td>Allows you to disable the GSP firmware of your nVidia card if you are having issues. Closed drivers only.</td>
-</tr>
-<tr>
-<td>Arch Kernel Manager</td>
-<td>Installs the <strong>Arch Kernel Manager</strong> developed by guys over at <a href="https://arcolinux.info" target="_blank"><strong>ArcoLinux</strong></a> to manage your Kernels.</td>
-</tr>
-</tbody>
-</table>
+<p align="center">
+    <a class="glightbox" href="https://i.imgur.com/J8WQyXC.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/J8WQyXC.png" alt="rice"></a>
+</p>
+
 <h3 id="distrobox-docker">Distrobox / Docker<a class="headerlink" href="#distrobox-docker" title="Permanent link">¶</a></h3>
-<p>This will allow you to set either one up in case you want to test one or all of the Distros offered or use containerized apps for self-hosting.</p>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Docker</td>
-<td>Installs and configures <a href="https://docs.docker.com" target="_blank"><strong>Docker</strong></a>, <a href="https://docs.docker.com/compose/" target="_blank"><strong>Docker-Compose</strong></a>, <a href="https://docs.docker.com/engine/reference/commandline/buildx/" target="_blank"><strong>Docker-BuildX</strong></a> and <a href="https://github.com/jesseduffield/lazydocker" target="_blank"><strong>LazyDocker</strong></a>. Will be prompted if you want <a href="https://podman-desktop.io" target="_blank"><strong>Podman Desktop</strong></a></td>
-</tr>
-<tr>
-<td>Distrobox</td>
-<td>Installs <a href="https://github.com/89luca89/distrobox" target="_blank"><strong>Distrobox</strong></a> with <a href="https://github.com/Dvlv/BoxBuddyRS" target="_blank"><strong>BoxBuddy</strong></a> which will allow you to deploy the offered Distro containers.</td>
-</tr>
-</tbody>
-</table>
+<p>This will allow you to set either one up in case you want to test one or all of the Distros offered or use containerized apps for development.</p>
+<p align="center">
+    <a class="glightbox" href="https://i.imgur.com/866UqVN.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/866UqVN.png" alt="rice"></a>
+</p>
+
+<p>It also offers options to set up either <strong>Docker</strong> or <strong>Podman</strong> in case you want to set up a home-lab for your various Self-Hosted services. Select the one you prefer and toolkit will take care of the rest.</p>
 <h3 id="system-customization">System Customization<a class="headerlink" href="#system-customization" title="Permanent link">¶</a></h3>
 <p>That's where the fun stuff begin, yep as you might have realized by now, I love customizing my DE that's why I use <strong>KDE Plasma</strong>. So if you want to customize your experience that's where you do it from.</p>
-<p><strong>- Shell / Prompts</strong></p>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fastfetch</td>
-<td>Installs <a href="https://github.com/fastfetch-cli/fastfetch" target="_blank"><strong>Fastfetch</strong></a> with Custom settings.</td>
-</tr>
-<tr>
-<td>ble.sh for BASH</td>
-<td>Installs the <a href="https://github.com/akinomyoga/ble.sh" target="_blank"><strong>ble.sh</strong></a> extending BASH.</td>
-</tr>
-<tr>
-<td>OhMyPosh</td>
-<td>Installs <a href="https://xerolinux.xyz/posts/ohmyposh-p10k-replacement/" target="_blank"><strong>OhMyPosh</strong></a> with Custom settings.</td>
-</tr>
-<tr>
-<td>ZSH Al-in-One</td>
-<td>Installs <a href="https://www.zsh.org" target="_blank"><strong>ZSH</strong></a> with <a href="https://ohmyz.sh" target="_blank"><strong>OhMyZSH</strong></a> and <strong>OhMyPosh</strong> and plugins.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>- DE/WM Ricing</strong></p>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>XeroLinux KDE Rices</td>
-<td>Will let you apply my <a href="https://github.com/xerolinux/xero-layan-git" target="_blank"><strong>Layan</strong></a> KDE Rice. Theme has been ported to <strong>Plasma 6</strong></td>
-</tr>
-</tbody>
-</table>
-<p>In closing, this section will be updated to include some useful customization features as time goes by..</p>
+<p align="center">
+    <a class="glightbox" href="https://i.imgur.com/7fy8Kqw.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/7fy8Kqw.png" alt="rice"></a>
+</p>
+
+<p>This section mostly covers <strong>KDE Plasma</strong> since <strong>Gnome</strong> do not take too kindly to <em>ricing/theming</em>. It's out of our hands. We prefer stability any day of the week. However you are free to do whatever you want later on, it's your system...</p>
 <h3 id="game-launchers">Game Launchers<a class="headerlink" href="#game-launchers" title="Permanent link">¶</a></h3>
 <p>Are you an avid gamer ? That section has you covered, allowing you to install the launcher(s) you need to get up and running in no time. Now you will have a choice of installing either the <strong>Flathub</strong> version officially supported by the devs or the unofficial <strong>Native</strong> version.</p>
-<p><strong>- Game Launchers</strong></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>For <strong>Steam</strong> it will also apply the <em>Fast Download Patch</em> which will allow you to download games using the entirety of your connection. Keep in mind that this might choke it a bit so better wait for download to be done before attempting to watch any YouTube videos lol...</p>
 </div>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Steam</td>
-<td>Installs <strong>Steam</strong> All-in-One with <a href="https://github.com/flightlessmango/MangoHud" target="_blank"><strong>Mangohud</strong></a>, <a href="https://github.com/benjamimgois/goverlay" target="_blank"><strong>Goverlay</strong></a> &amp; <strong>Gamemode</strong>.</td>
-</tr>
-<tr>
-<td>Game Controller</td>
-<td>Installs any of <a href="https://github.com/chrippa/ds4drv" target="_blank"><strong>ds4drv</strong></a> for PS4 Controller, <a href="https://github.com/nowrep/dualsensectl" target="_blank"><strong>dualsensectl</strong></a> for PS5's DualSense Controller or <a href="https://github.com/medusalix/xone" target="_blank"><strong>xone-dkms</strong></a> for the XBox-One Controller.</td>
-</tr>
-<tr>
-<td>Lutris</td>
-<td>Installs <a href="https://lutris.net" target="_blank"><strong>Lutris</strong></a>.</td>
-</tr>
-<tr>
-<td>Heroic</td>
-<td>Installs <a href="https://heroicgameslauncher.com" target="_blank"><strong>Heroic</strong></a>.</td>
-</tr>
-<tr>
-<td>Bottles</td>
-<td>Installs <a href="https://usebottles.com" target="_blank"><strong>Bottles</strong></a>.</td>
-</tr>
-<tr>
-<td>Protonup-qt</td>
-<td>Installs <a href="https://davidotek.github.io/protonup-qt/" target="_blank"><strong>Protonup-qt</strong></a>.</td>
-</tr>
-</tbody>
-</table>
+<p align="center">
+    <a class="glightbox" href="https://i.imgur.com/Gx5MnlQ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/Gx5MnlQ.png" alt="rice"></a>
+</p>
 
+<p>In case you dislike flatpaks, you are on your own as you will not get any support from app devs if you install as <em>Native</em> package. We, here at XeroHQ only provide recommended package formats by the devs themselves.</p>
 <h3 id="recommended-packages">Recommended Packages<a class="headerlink" href="#recommended-packages" title="Permanent link">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The <strong>System Tools</strong> option will just go ahead and install everything in it. I only selected the important stuff nothing big or unnecessary from both Arch Repos and the AUR, so might take abit to install everything depending on your specs. For transparency I included the list below the table so you know what's gonna be installed on your system should you opt to install.</p>
 </div>
-<p><strong>- Various Extra Pkgs</strong></p>
-<table>
-<thead>
-<tr>
-<th>option</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LibreOffice</td>
-<td>Installs <a href="https://libreoffice.org/" target="_blank"><strong>LibreOffice</strong></a> Fresh version.</td>
-</tr>
-<tr>
-<td>Web Browsers</td>
-<td>A selection of Web-Browsers.</td>
-</tr>
-<tr>
-<td>Development Tools</td>
-<td>Installs your choice of Development tools.</td>
-</tr>
-<tr>
-<td>Photography &amp; 3D</td>
-<td>Installs your choice of Image and 3D Tools.</td>
-</tr>
-<tr>
-<td>Music/Audio</td>
-<td>Installs your choice of Audio &amp; Video Tools.</td>
-</tr>
-<tr>
-<td>Social-Media</td>
-<td>Installs your choice of Chat clients.</td>
-</tr>
-<tr>
-<td>Virtualization</td>
-<td>Installs either <a href="https://www.virtualbox.org/" target="_blank"><strong>VirtualBox</strong></a> or <a href="https://virt-manager.org/" target="_blank"><strong>Virt-Manager</strong></a>.</td>
-</tr>
-<tr>
-<td>Video &amp; Editing</td>
-<td>Installs any of Video tools. <strong>OBS-Studio</strong> includes a list of commonly used plugins.</td>
-</tr>
-<tr>
-<td>System Tools</td>
-<td>Installs a "set of packages" essential for a fully functional system.</td>
-</tr>
-</tbody>
-</table>
+<p align="center">
+    <a class="glightbox" href="https://i.imgur.com/7poISv1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/7poISv1.png" alt="rice"></a>
+</p>
+
+<p>The provided package list here is a non-exhaustive one, you want more, either install a GUI Package manager from the toolkit or check the <strong>AUR</strong> or <strong>Arch Repos</strong>, it's just a small selection/curated list of what's available out there...</p>
 <h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">¶</a></h3>
-<p>Now am not gonna go over everything this section does, suffice it to say that this is a place that contains most troubleshooting options. Here's a list...
-</p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>1.  Install &amp; Activate Firewalld.
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2.  Clear Pacman Cache (Free Space).
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>3.  Unlock Pacman DB (In case of DB error).
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>4.  Activate v4l2loopback for OBS-VirtualCam.
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>5.  Change Autologin Session X11/Wayland (SDDM).
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>6.  Disable Debug flag in MAKEPKG (Package Devs).
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>a.  Build Updated Arch ISO.
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>s.  Reset Distro back to Factory.
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>w.  WayDroid Installation Guide (link).
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>m.  Update Arch Mirrorlist, for faster download speeds.
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>g.  Fix Arch GnuPG Keyring in case of pkg signature issues.
-</span></code></pre></div>
+<p>Now am not gonna go over everything this section does, suffice it to say that this is a place that contains most troubleshooting options. Here's a list...</p>
+<p align="center">
+    <a class="glightbox" href="https://i.imgur.com/Ab9FKiV.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/Ab9FKiV.png" alt="rice"></a>
+</p>
+
+<p>I hope this will help you during your <strong>ArchLinux</strong> / <strong>XeroLinux</strong> journey. Make sure to check it out. I will be adding more options as time goes by, making it as easy as possible to solve <em>most</em> of the issues you may encounter...</p>
 <h3 id="gpu-driver-notes">GPU Driver Notes<a class="headerlink" href="#gpu-driver-notes" title="Permanent link">¶</a></h3>
-<p>When it comes to <strong>GPU Drivers</strong>, toolkit covers most common setups. It should cover most cases, but there's no one solution for all, especially for <strong>Hybrid</strong> setups, so if you have any issues let me know...</p>
+<p>When it comes to <strong>GPU Drivers</strong>, toolkit covers most common setups. It should cover most of them, but there's no one solution for all, especially for <strong>Hybrid</strong> setups, so if you have any issues let me know...</p>
 <h3 id="how-to-contribute">How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">¶</a></h3>
 <p>If you can/want to Contribute your knowledge improving this toolkit taking it above and beyond, making it the defacto for every <strong>Arch</strong> user, please see <a href="https://github.com/xerolinux/xlapit-cli/wiki/User-Contribution" target="_blank"><strong>Here</strong></a> for more information.</p>
 <h3 id="toolkit-credits">Toolkit Credits<a class="headerlink" href="#toolkit-credits" title="Permanent link">¶</a></h3>

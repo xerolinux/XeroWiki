@@ -47,95 +47,53 @@ You can access toolkit by either typing `xero-cli -m` in terminal or from the ap
 
 ### System Setup
 
-This is the initial setup part where you set the most common things up and/or install Package managers...
+This is the initial setup part where you set the most common things up and/or install Package managers. Anything labeled with **Vanilla Arch** means that it's already applied/included on **XeroLinux**, so you can skip.
 
-**- Initial Setup Section**
-
-| option | description |
-| ------ | ------ |
-| Update System | Will guide you through system update via 1 of 3 methods. |
-| PipeWire/Bluetooth | Missing **PipeWire/Bluetooth** Packages not offered by **ArchInstall**. |
-| Activate Flathub | Enables **Flathub** which is required by the toolkit. |
-| Enable multithread compilation. | Sets compilation to use all Cores/Threads for faster building. |
-
-**- GUI Package Managers**
-
-Although some DEs like [**Gnome**](https://apps.gnome.org/Software/){:target="_blank"} and [**KDE Plasma**](https://apps.kde.org/discover/){:target="_blank"} come with their own GUI package manager, they have some limitations. That's why I decided to include others that give us more freedom. See below...
-
-| option | description |
-| ------ | ------ |
-| OctoPi | Installs [**Octopi**](https://tintaescura.com/projects/octopi/){:target="_blank"}. |
-| PacSeek | Installs [**PacSeek**](https://github.com/moson-mo/pacseek){:target="_blank"} Incl. [**PacFinder**](https://github.com/stevenbenner/pacfinder){:target="_blank"}. |
-| Bauh | Installs [**Bauh**](https://github.com/vinifmor/bauh){:target="_blank"}. |
+<p align="center">
+    <img src="https://i.imgur.com/L4cwKF6.png" alt="rice">
+</p>
 
 ### System Drivers
 
 Well this section is dedicated to Drivers like GPU, Printer, Samba, Scanner & Game controllers. Below are more details on various options.
 
-| option | description |
-| ------ | ------ |
-| GPU | Will guide you prompts to set up your GPU drivers. |
-| Printer | Installs all the necessary ones that will cover most cases. Check **AUR** for others. |
-| Samba | Installs a meta package I have created that covers most cases. |
-| Scanner | Installs a meta package by myself for most people. Check **AUR** for others. |
-| Tailscale | Installs [**Tailscale**](https://tailscale.com/){:target="_blank"} with fix for XeroLinux. |
-| DeckLink & StreamDeck | Installs driver for [**Decklink**](https://aur.archlinux.org/packages/decklink){:target="_blank"}, [**DeckMaster**](https://github.com/muesli/deckmaster){:target="_blank"} or [**StreamDeckUI**](https://streamdeck-linux-gui.github.io/streamdeck-linux-gui/){:target="_blank"} (**AUR**). |
-| ASUS Laptop Tools | Installs tools for ASUS & ASUS ROG Laptops to control RGB, Fans and other features they might have. Tools have been developed by the [**ASUS-Linux**](https://asus-linux.org){:target="_blank"} Team. |
-| nVidia GSP Firmware Fix | Allows you to disable the GSP firmware of your nVidia card if you are having issues. Closed drivers only. |
-| Arch Kernel Manager | Installs the **Arch Kernel Manager** developed by guys over at [**ArcoLinux**](https://arcolinux.info){:target="_blank"} to manage your Kernels. |
+<p align="center">
+    <img src="https://i.imgur.com/J8WQyXC.png" alt="rice">
+</p>
 
 ### Distrobox / Docker
 
-This will allow you to set either one up in case you want to test one or all of the Distros offered or use containerized apps for self-hosting.
+This will allow you to set either one up in case you want to test one or all of the Distros offered or use containerized apps for development.
 
-| option | description |
-| ------ | ------ |
-| Docker | Installs and configures [**Docker**](https://docs.docker.com){:target="_blank"}, [**Docker-Compose**](https://docs.docker.com/compose/){:target="_blank"}, [**Docker-BuildX**](https://docs.docker.com/engine/reference/commandline/buildx/){:target="_blank"} and [**LazyDocker**](https://github.com/jesseduffield/lazydocker){:target="_blank"}. Will be prompted if you want [**Podman Desktop**](https://podman-desktop.io){:target="_blank"} |
-| Distrobox | Installs [**Distrobox**](https://github.com/89luca89/distrobox){:target="_blank"} with [**BoxBuddy**](https://github.com/Dvlv/BoxBuddyRS){:target="_blank"} which will allow you to deploy the offered Distro containers. |
+<p align="center">
+    <img src="https://i.imgur.com/866UqVN.png" alt="rice">
+</p>
+
+It also offers options to set up either **Docker** or **Podman** in case you want to set up a home-lab for your various Self-Hosted services. Select the one you prefer and toolkit will take care of the rest.
 
 ### System Customization
 
 That's where the fun stuff begin, yep as you might have realized by now, I love customizing my DE that's why I use **KDE Plasma**. So if you want to customize your experience that's where you do it from.
 
-**- Shell / Prompts**
+<p align="center">
+    <img src="https://i.imgur.com/7fy8Kqw.png" alt="rice">
+</p>
 
-| option | description |
-| ------ | ------ |
-| Fastfetch | Installs [**Fastfetch**](https://github.com/fastfetch-cli/fastfetch){:target="_blank"} with Custom settings. |
-| ble.sh for BASH | Installs the [**ble.sh**](https://github.com/akinomyoga/ble.sh){:target="_blank"} extending BASH. |
-| OhMyPosh | Installs [**OhMyPosh**](https://xerolinux.xyz/posts/ohmyposh-p10k-replacement/){:target="_blank"} with Custom settings. |
-| ZSH Al-in-One | Installs [**ZSH**](https://www.zsh.org){:target="_blank"} with [**OhMyZSH**](https://ohmyz.sh){:target="_blank"} and **OhMyPosh** and plugins. |
-
-
-**- DE/WM Ricing**
-
-| option | description |
-| ------ | ------ |
-| XeroLinux KDE Rices | Will let you apply my [**Layan**](https://github.com/xerolinux/xero-layan-git){:target="_blank"} KDE Rice. Theme has been ported to **Plasma 6** |
-
-In closing, this section will be updated to include some useful customization features as time goes by..
+This section mostly covers **KDE Plasma** since **Gnome** do not take too kindly to *ricing/theming*. It's out of our hands. We prefer stability any day of the week. However you are free to do whatever you want later on, it's your system...
 
 ### Game Launchers
 
 Are you an avid gamer ? That section has you covered, allowing you to install the launcher(s) you need to get up and running in no time. Now you will have a choice of installing either the **Flathub** version officially supported by the devs or the unofficial **Native** version.
 
-**- Game Launchers**
-
 !!! tip
 
     For **Steam** it will also apply the *Fast Download Patch* which will allow you to download games using the entirety of your connection. Keep in mind that this might choke it a bit so better wait for download to be done before attempting to watch any YouTube videos lol...
 
-| option | description |
-| ------ | ------ |
-| Steam           | Installs **Steam** All-in-One with [**Mangohud**](https://github.com/flightlessmango/MangoHud){:target="_blank"}, [**Goverlay**](https://github.com/benjamimgois/goverlay){:target="_blank"} & **Gamemode**. |
-| Game Controller | Installs any of [**ds4drv**](https://github.com/chrippa/ds4drv){:target="_blank"} for PS4 Controller, [**dualsensectl**](https://github.com/nowrep/dualsensectl){:target="_blank"} for PS5's DualSense Controller or [**xone-dkms**](https://github.com/medusalix/xone){:target="_blank"} for the XBox-One Controller. |
-| Lutris          | Installs [**Lutris**](https://lutris.net){:target="_blank"}. |
-| Heroic          | Installs [**Heroic**](https://heroicgameslauncher.com){:target="_blank"}. |
-| Bottles         | Installs [**Bottles**](https://usebottles.com){:target="_blank"}. |
-| Protonup-qt     | Installs [**Protonup-qt**](https://davidotek.github.io/protonup-qt/){:target="_blank"}. |
+<p align="center">
+    <img src="https://i.imgur.com/Gx5MnlQ.png" alt="rice">
+</p>
 
-
-</div>
+In case you dislike flatpaks, you are on your own as you will not get any support from app devs if you install as *Native* package. We, here at XeroHQ only provide recommended package formats by the devs themselves.
 
 ### Recommended Packages
 
@@ -143,42 +101,25 @@ Are you an avid gamer ? That section has you covered, allowing you to install th
 
     The **System Tools** option will just go ahead and install everything in it. I only selected the important stuff nothing big or unnecessary from both Arch Repos and the AUR, so might take abit to install everything depending on your specs. For transparency I included the list below the table so you know what's gonna be installed on your system should you opt to install.
 
-**- Various Extra Pkgs**
+<p align="center">
+    <img src="https://i.imgur.com/7poISv1.png" alt="rice">
+</p>
 
-| option | description |
-| ------ | ------ |
-| LibreOffice | Installs [**LibreOffice**](https://libreoffice.org/){:target="_blank"} Fresh version. |
-| Web Browsers | A selection of Web-Browsers. |
-| Development Tools | Installs your choice of Development tools. |
-| Photography & 3D | Installs your choice of Image and 3D Tools. |
-| Music/Audio | Installs your choice of Audio & Video Tools. |
-| Social-Media | Installs your choice of Chat clients. |
-| Virtualization | Installs either [**VirtualBox**](https://www.virtualbox.org/){:target="_blank"} or [**Virt-Manager**](https://virt-manager.org/){:target="_blank"}. |
-| Video & Editing | Installs any of Video tools. **OBS-Studio** includes a list of commonly used plugins. |
-| System Tools | Installs a "set of packages" essential for a fully functional system. |
+The provided package list here is a non-exhaustive one, you want more, either install a GUI Package manager from the toolkit or check the **AUR** or **Arch Repos**, it's just a small selection/curated list of what's available out there...
 
 ### Troubleshooting
 
 Now am not gonna go over everything this section does, suffice it to say that this is a place that contains most troubleshooting options. Here's a list...
-```
-1.  Install & Activate Firewalld.
-2.  Clear Pacman Cache (Free Space).
-3.  Unlock Pacman DB (In case of DB error).
-4.  Activate v4l2loopback for OBS-VirtualCam.
-5.  Change Autologin Session X11/Wayland (SDDM).
-6.  Disable Debug flag in MAKEPKG (Package Devs).
 
-a.  Build Updated Arch ISO.
-s.  Reset Distro back to Factory.
-w.  WayDroid Installation Guide (link).
-m.  Update Arch Mirrorlist, for faster download speeds.
-g.  Fix Arch GnuPG Keyring in case of pkg signature issues.
+<p align="center">
+    <img src="https://i.imgur.com/Ab9FKiV.png" alt="rice">
+</p>
 
-```
+I hope this will help you during your **ArchLinux** / **XeroLinux** journey. Make sure to check it out. I will be adding more options as time goes by, making it as easy as possible to solve *most* of the issues you may encounter...
 
 ### GPU Driver Notes
 
-When it comes to **GPU Drivers**, toolkit covers most common setups. It should cover most cases, but there's no one solution for all, especially for **Hybrid** setups, so if you have any issues let me know...
+When it comes to **GPU Drivers**, toolkit covers most common setups. It should cover most of them, but there's no one solution for all, especially for **Hybrid** setups, so if you have any issues let me know...
 
 ### How to Contribute
 
