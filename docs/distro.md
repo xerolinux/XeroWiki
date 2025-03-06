@@ -35,8 +35,10 @@ Before we dive in, it's important to note that **XeroLinux** features **KDE Plas
 | **Minimum** 	| **Recommended** 	|
 |---	|---	|
 | 4GB RAM (DDR3+) 	| 8GB+ RAM (DDR3+) 	|
-| 16GB HDD/SSD Storage 	| 32GB+ HDD/SSD Storage 	|
+| 64GB HDD/SSD Storage 	| 64GB+ HDD/SSD Storage 	|
 | Modern iGPU (512MB vRAM) 	| Modern dGPU (4GB+ vRAM) 	|
+
+P.S : VM Performance without *GPU Passthrough* may be underwhelming, please keep that in mind !
 
 </center>
 
