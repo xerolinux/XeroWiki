@@ -14,9 +14,9 @@ tags:
 
     **Distro is Back** : If you want to skip all this, you can just *Donate* and grab the **XeroLinux KDE** pre-built ISO from 👉 [**Re-Release Post**](https://xerolinux.xyz/iso/){:target="_blank"}
 
-### What these scripts do
+### Scripts Prupse
 
-The intention of these scripts is *not* to replace **ArchInstall** but to fix some of its profiles while extending them further nothing more. Most features of the Toolkit can be used on any DE or WM it's agnostic.
+The whole reason they were created was to fix the badly implemented **ArchInstall** profiles which do not provide a solid enough base, while extending them further nothing more. For customizations and other stuff, please use the included toolkit found in the app menu/launcher.
 
 ![type:video](https://www.youtube.com/embed/v0UPif52i5A)
 
@@ -32,9 +32,9 @@ Finally, before we begin, none of these scripts will install a customized/riced 
 
 #### System Preparation
 
-Let's start off by knowing what we need to get started. First off, we will need the latest version of the >> [**ArchLinux ISO**](https://archlinux.org/download/){:target="_blank"}, a USB stick to burn ISO onto, we can either use >> [**Balena Etcher**](https://etcher.balena.io/#download-etcher){:target="_blank"} or the highly recommended >> [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"}.
+Let's start off by knowing what we need to get started. First off, we will need the latest version of the >> [**ArchLinux ISO**](https://archlinux.org/download/){:target="_blank"}, a USB stick to burn ISO onto, we can either use >> [**BaleAlso do not expect the scripts to provide a pre-customized version of each desktop. The whole reason I created them was to fix the badly implemented ArchInstall profiles which do not provide a solid enough base. For customizations, please use the included toolkit found in the app menu/launcher.na Etcher**](https://etcher.balena.io/#download-etcher){:target="_blank"} or the highly recommended >> [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"}.
 
-Those are the essentials. As to my **Plasma Install** script will get to that a bit later down the line. Once we got everything, we shall begin...
+Those are the essentials. As to my **Plasma Install** script will get to that a bit later down the line. Once we got everything, As for the Multi-DE script, it only installs *Vanilla* version of **Plasma**, **Gnome** & **XFCE**. If you want customizations use the toolkit.we shall begin...
 
 #### Installing ArchLinux
 
@@ -96,22 +96,21 @@ Anyway, let's make sure we skip the parts I mentioned in the video, like *Profil
 
 Now once everything is configured and set, hit install, sit back, grab a cup of Tea/Coffee and watch it do its thing. Might take a while it all depends on Internet connection...
 
-#### Using Script
-
-Once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with yes of course since we still have no DE yet.
+#### The scripts
 
 !!! tip
 
-    **Inspection**. We do not recommend to blindly execute scripts without inspecting them first. Check out the code >> [**Plasma**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh){:target="_blank"}, [**Gnome**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-gnome.sh){:target="_blank"} or [**Cosmic-Alpha**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-cosmic.sh){:target="_blank"}
+    **Inspection**. We do not recommend to blindly execute scripts without inspecting them first. Check out the code >> [**Multi-DE**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-install.sh){:target="_blank"}, or [**Cosmic-Alpha**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-cosmic.sh){:target="_blank"}.
+
+We have combined previous ones into a single *Multi-DE* installer since they were all similar. Easier for everyone. We just kept the **Cosmic** one separate simply because it's still in *Alpha* stages and shouldn't be combined with stable ones. Still needs time to bake as the saying goes.
+
+Anyway, once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with yes of course since we still have no DE yet.
 
 Once you trust it, you can move on. Now, depending on the method that was used, `ssh` or not, we either copy paste one of the commands below or type it manually :
 
-##### 🪐 Install Scripts
-
 !!! warning
 
-    The scripts shared herein is work-in-progress. Especially **Cosmic** which is still in Alpha stages; so it needs time to reach full maturity. Please do not use it on your production machine. As for the Multi-DE script, it only installs *Vanilla* version of Plasma, Gnome & XFCE. If you want customizations use the toolkit.
-
+    The scripts shared herein is work-in-progress. Especially the **Cosmic** which is still in Alpha stages. Please do not use it on your production machine. Either use in a VM (bad idea) or on a test machine, like a side laptop or something.
 
 - Cosmic Alpha :
 
