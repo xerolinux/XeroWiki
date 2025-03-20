@@ -106,20 +106,26 @@ Once that's all done, we will be prompted if we want to `chroot` into our new in
 
 Once you trust it, you can move on. Now, depending on the method that was used, `ssh` or not, we either copy paste one of the commands below or type it manually :
 
-##### 🪐 Cosmic-Alpha
+##### 🪐 Install Scripts
 
 !!! warning
 
-    The script shared herein is work-in-progress. **Cosmic** is still in Alpha stages; so it needs time to reach full maturity. Might contain major issues. Please do not use it on your production machine. If you want to test in a VM, for best performance I would highly recommend [**ProxmoxVe**](https://www.proxmox.com/en/proxmox-virtual-environment/overview){:target="_blank"}.
+    The scripts shared herein is work-in-progress. Especially **Cosmic** which is still in Alpha stages; so it needs time to reach full maturity. Please do not use it on your production machine. As for the Multi-DE script, it only installs *Vanilla* version of Plasma, Gnome & XFCE. If you want customizations use the toolkit.
 
 
-The **Cosmic** group on **Arch** does not include the `xdg-user-dirs` package which creates the `Documents, Music, Pictures, Downloads & Videos` folders in your `home` & `system76-power` is missing which the `Cosmic Settings` will prompt you for; so I added them.
+- Cosmic Alpha :
 
 ```Bash
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-cosmic.sh)"
 ```
 
-This script will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
+- Plasma/Gnome & XFCE
+
+```Bash
+bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-install.sh)"
+```
+
+The scripts will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
 
 #### The exec Blockers
 
@@ -162,24 +168,6 @@ It's up to you to discover all the options. The whole point of this guide is how
 If you encounter any issues or have questions directly related to these scripts, feel free to reach out to me on **Fosstodon** or **Discord**. All relevant links are provided in the footer, and I'll do my best to assist you.
 
 However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**.
-
-### Archived Scripts
-
-[**KDE Plasma**](https://kde.org){:target="_blank"} & [**Gnome**](https://gnome.org){:target="_blank"} install scripts have been archived and will no longer be getting any updates since they have now become full ISOs.
-
-However, you can still get the **XeroLinux** KDE look by installing **Arch** + **KDE Plasma** via the *ArchInstall* script and grabbing my toolkit and applying rice from there.
-
-If you still want to use them because you can't afford to support me, or any other reason, you can, but it will be done **AT YOUR OWN RISK** (no support), use commands below in *chroot* same as you would for [**Cosmic**](https://system76.com/cosmic/){:target="_blank"} (above) :
-
-- KDE Plasma
-```Bash
-bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-plasma.sh)"
-```
-
-- Gnome
-```Bash
-bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-gnome.sh)"
-```
 
 ### Final words
 

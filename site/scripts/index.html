@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
     
     
       
@@ -401,9 +401,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cosmic-alpha" class="md-nav__link">
+  <a href="#install-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      🪐 Cosmic-Alpha
+      🪐 Install Scripts
     </span>
   </a>
   
@@ -441,15 +441,6 @@
   <a href="#install-issues" class="md-nav__link">
     <span class="md-ellipsis">
       Install Issues
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archived-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Archived Scripts
     </span>
   </a>
   
@@ -588,9 +579,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#cosmic-alpha" class="md-nav__link">
+  <a href="#install-scripts" class="md-nav__link">
     <span class="md-ellipsis">
-      🪐 Cosmic-Alpha
+      🪐 Install Scripts
     </span>
   </a>
   
@@ -628,15 +619,6 @@
   <a href="#install-issues" class="md-nav__link">
     <span class="md-ellipsis">
       Install Issues
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#archived-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Archived Scripts
     </span>
   </a>
   
@@ -731,15 +713,22 @@
 <p><strong>Inspection</strong>. We do not recommend to blindly execute scripts without inspecting them first. Check out the code &gt;&gt; <a href="https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-plasma.sh" target="_blank"><strong>Plasma</strong></a>, <a href="https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-gnome.sh" target="_blank"><strong>Gnome</strong></a> or <a href="https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-cosmic.sh" target="_blank"><strong>Cosmic-Alpha</strong></a></p>
 </div>
 <p>Once you trust it, you can move on. Now, depending on the method that was used, <code>ssh</code> or not, we either copy paste one of the commands below or type it manually :</p>
-<h5 id="cosmic-alpha">🪐 Cosmic-Alpha<a class="headerlink" href="#cosmic-alpha" title="Permanent link">¶</a></h5>
+<h5 id="install-scripts">🪐 Install Scripts<a class="headerlink" href="#install-scripts" title="Permanent link">¶</a></h5>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The script shared herein is work-in-progress. <strong>Cosmic</strong> is still in Alpha stages; so it needs time to reach full maturity. Might contain major issues. Please do not use it on your production machine. If you want to test in a VM, for best performance I would highly recommend <a href="https://www.proxmox.com/en/proxmox-virtual-environment/overview" target="_blank"><strong>ProxmoxVe</strong></a>.</p>
+<p>The scripts shared herein is work-in-progress. Especially <strong>Cosmic</strong> which is still in Alpha stages; so it needs time to reach full maturity. Please do not use it on your production machine. As for the Multi-DE script, it only installs <em>Vanilla</em> version of Plasma, Gnome &amp; XFCE. If you want customizations use the toolkit.</p>
 </div>
-<p>The <strong>Cosmic</strong> group on <strong>Arch</strong> does not include the <code>xdg-user-dirs</code> package which creates the <code>Documents, Music, Pictures, Downloads &amp; Videos</code> folders in your <code>home</code> &amp; <code>system76-power</code> is missing which the <code>Cosmic Settings</code> will prompt you for; so I added them.</p>
+<ul>
+<li>Cosmic Alpha :</li>
+</ul>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-cosmic.sh<span class="k">)</span><span class="s2">"</span>
 </span></code></pre></div>
-<p>This script will perform several checks and then prompt you to confirm the addition of the <strong>XeroLinux</strong> and <strong>Chaotic-AUR</strong> repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.</p>
+<ul>
+<li>Plasma/Gnome &amp; XFCE</li>
+</ul>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-install.sh<span class="k">)</span><span class="s2">"</span>
+</span></code></pre></div>
+<p>The scripts will perform several checks and then prompt you to confirm the addition of the <strong>XeroLinux</strong> and <strong>Chaotic-AUR</strong> repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.</p>
 <h4 id="the-exec-blockers">The exec Blockers<a class="headerlink" href="#the-exec-blockers" title="Permanent link">¶</a></h4>
 <p>I have also implemented some checks making sure script is being run in <em>chroot</em> and on <em>ArchLinux</em> blocking execution anywhere else. This helps me in the long run not having to bang my head against the wall trying to provide support in case it was run on Distros I have no control over.</p>
 <p align="center">
@@ -756,7 +745,7 @@
 <p>Finally, for now at least, once script is done, we will be prompted to exit and reboot the system. We do that by typing <code>exit</code> then <code>reboot</code>, and that's it for this part anyway...</p>
 <h4 id="system-configuration">System Configuration<a class="headerlink" href="#system-configuration" title="Permanent link">¶</a></h4>
 <p>If all went smoothly, we should now be greeted with the login page. Once logged in, open Terminal, and update the system. Done !</p>
-<div class="language-Bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syyu
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syyu
 </span></code></pre></div>
 <p>Then we launch the <strong>XeroLinux Post Installation Toolkit</strong> from the App Launcher. That's it.</p>
 <p align="center">
@@ -767,22 +756,6 @@
 <h3 id="install-issues">Install Issues<a class="headerlink" href="#install-issues" title="Permanent link">¶</a></h3>
 <p>If you encounter any issues or have questions directly related to these scripts, feel free to reach out to me on <strong>Fosstodon</strong> or <strong>Discord</strong>. All relevant links are provided in the footer, and I'll do my best to assist you.</p>
 <p>However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the <a href="https://wiki.archlinux.org" target="_blank"><strong>ArchWiki</strong></a>, or our custom <strong>ChatGPT A.I.</strong> available on <strong>Discord</strong>.</p>
-<h3 id="archived-scripts">Archived Scripts<a class="headerlink" href="#archived-scripts" title="Permanent link">¶</a></h3>
-<p><a href="https://kde.org" target="_blank"><strong>KDE Plasma</strong></a> &amp; <a href="https://gnome.org" target="_blank"><strong>Gnome</strong></a> install scripts have been archived and will no longer be getting any updates since they have now become full ISOs.</p>
-<p>However, you can still get the <strong>XeroLinux</strong> KDE look by installing <strong>Arch</strong> + <strong>KDE Plasma</strong> via the <em>ArchInstall</em> script and grabbing my toolkit and applying rice from there.</p>
-<p>If you still want to use them because you can't afford to support me, or any other reason, you can, but it will be done <strong>AT YOUR OWN RISK</strong> (no support), use commands below in <em>chroot</em> same as you would for <a href="https://system76.com/cosmic/" target="_blank"><strong>Cosmic</strong></a> (above) :</p>
-<ul>
-<li>
-<p>KDE Plasma
-</p><div class="language-Bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-plasma.sh<span class="k">)</span><span class="s2">"</span>
-</span></code></pre></div>
-</li>
-<li>
-<p>Gnome
-</p><div class="language-Bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-gnome.sh<span class="k">)</span><span class="s2">"</span>
-</span></code></pre></div>
-</li>
-</ul>
 <h3 id="final-words">Final words<a class="headerlink" href="#final-words" title="Permanent link">¶</a></h3>
 <p>That’s it, boys and girls, we’ve successfully installed our system! 🎉 The rest is in your capable hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Who knows, you might even stumble upon something that’ll make your setup sing! Just don’t blame me if you get lost in the endless sea of tweaks and options, consider it part of the adventure.</p>
 <p>😄 Happy tinkering! 😄</p></div>
