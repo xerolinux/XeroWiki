@@ -34,7 +34,7 @@ Finally, before we begin, none of these scripts will install a customized/riced 
 
 Let's start off by knowing what we need to get started. First off, we will need the latest version of the >> [**ArchLinux ISO**](https://archlinux.org/download/){:target="_blank"}, a USB stick to burn ISO onto, we can either use >> [**Balena Etcher**](https://etcher.balena.io/#download-etcher){:target="_blank"} or the highly recommended >> [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"}.
 
-Those are the essentials. As to my **Plasma Install** script will get to that a bit later down the line. Once we got everything, As for the Multi-DE script, it only installs *Vanilla* version of **Plasma**, **Gnome** & **XFCE**. If you want customizations use the toolkit.we shall begin...
+Those are the essentials. Let's begin...
 
 #### Installing ArchLinux
 
@@ -110,7 +110,7 @@ Once you trust it, you can move on. Now, depending on the method that was used, 
 
 !!! warning
 
-    The scripts shared herein is work-in-progress. Especially the **Cosmic** which is still in Alpha stages. Please do not use it on your production machine. Either use in a VM (bad idea) or on a test machine, like a side laptop or something.
+    The scripts shared herein are work-in-progress, especially the **Cosmic** which is still in Alpha stages. Please do not use it on your production machine. Either use in a VM (bad idea) or on a test machine, like a side laptop or something.
 
 - Cosmic Alpha :
 
