@@ -12,7 +12,7 @@ tags:
 
 !!! note
 
-    **Distro is Back** : If you want to skip all this, you can just *Donate* and grab the **XeroLinux KDE** pre-built ISO from 👉 [**Re-Release Post**](https://xerolinux.xyz/){:target="_blank"}
+    **Distro is Back** : If you want to skip all this, you can just *Donate* and grab the **XeroLinux KDE** pre-built ISO from 👉 [**Official Site**](https://xerolinux.xyz/){:target="_blank"}
 
 ### Scripts Purpose
 
