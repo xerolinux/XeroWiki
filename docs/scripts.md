@@ -32,7 +32,7 @@ Finally, before we begin, none of these scripts will install a customized/riced 
 
 #### System Preparation
 
-Let's start off by knowing what we need to get started. First off, we will need the latest version of the >> [**ArchLinux ISO**](https://archlinux.org/download/){:target="_blank"}, a USB stick to burn ISO onto, we can either use >> [**BaleAlso do not expect the scripts to provide a pre-customized version of each desktop. The whole reason I created them was to fix the badly implemented ArchInstall profiles which do not provide a solid enough base. For customizations, please use the included toolkit found in the app menu/launcher.na Etcher**](https://etcher.balena.io/#download-etcher){:target="_blank"} or the highly recommended >> [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"}.
+Let's start off by knowing what we need to get started. First off, we will need the latest version of the >> [**ArchLinux ISO**](https://archlinux.org/download/){:target="_blank"}, a USB stick to burn ISO onto, we can either use >> [**Balena Etcher**](https://etcher.balena.io/#download-etcher){:target="_blank"} or the highly recommended >> [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"}.
 
 Those are the essentials. As to my **Plasma Install** script will get to that a bit later down the line. Once we got everything, As for the Multi-DE script, it only installs *Vanilla* version of **Plasma**, **Gnome** & **XFCE**. If you want customizations use the toolkit.we shall begin...
 
