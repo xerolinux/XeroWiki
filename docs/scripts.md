@@ -102,7 +102,7 @@ Now once everything is configured and set, hit install, sit back, grab a cup of 
 
     **Inspection**. We do not recommend to blindly execute scripts without inspecting them first. Check out the code >> [**Multi-DE**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-install.sh){:target="_blank"}, or [**Cosmic-Alpha**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-cosmic.sh){:target="_blank"}.
 
-We have combined previous ones into a single *Multi-DE* installer since they were all similar. Easier for everyone. We just kept the **Cosmic** one separate simply because it's still in *Alpha* stages and shouldn't be combined with stable ones. Still needs time to bake as the saying goes.
+We have combined previous ones into a single *Multi-DE* installer since they were all similar. Easier for everyone. Thanks to [**SpiderPunkXL**](https://github.com/SpiderPunkXL){:target="_blank"} for the idea. We just kept the **Cosmic** one separate simply because it's still in *Alpha* stages and shouldn't be combined with stable ones. Still needs time to bake as the saying goes.
 
 Anyway, once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with yes of course since we still have no DE yet.
 
