@@ -12,9 +12,9 @@ tags:
 
 !!! note
 
-    **Distro is Back** : If you want to skip all this, you can just *Donate* and grab the **XeroLinux KDE** pre-built ISO from 👉 [**Re-Release Post**](https://xerolinux.xyz/iso/){:target="_blank"}
+    **Distro is Back** : If you want to skip all this, you can just *Donate* and grab the **XeroLinux KDE** pre-built ISO from 👉 [**Re-Release Post**](https://xerolinux.xyz/){:target="_blank"}
 
-### Scripts Prupose
+### Scripts Purpose
 
 The whole reason they were created was to fix the badly implemented **ArchInstall** profiles which do not provide a solid enough base, while extending them further nothing more. For customizations and other stuff, please use the included toolkit found in the app menu/launcher.
 
