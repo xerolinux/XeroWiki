@@ -140,7 +140,7 @@ So to avoid the headaches, I decided to block the execution. Better for everyone
     <img src="https://i.imgur.com/mAKjEWQ.png" alt="shot">
 </p>
 
-While I've meticulously reviewed all packages and groups to ensure the best experience via my **Curated list**, you are free to choose any of the other options. You will also notice that the *multilib* repo was enabled. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
+I've meticulously reviewed all packages and groups to ensure the best experience via a **Curated list**. You will also notice that the *multilib* repo was enabled. I made sure of that since most newcomers forget to do it. It's an essential repo required for the likes of **Steam**, and various drivers.
 
 Now, installation might take a while, it all depends on the speed of your Internet connection. I have included quite a few quality-of-life packages which should make your experience as Seamless as possible.
 
