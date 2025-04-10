@@ -112,17 +112,25 @@ Once you trust it, you can move on. Now, depending on the method that was used, 
 
     The scripts shared herein are work-in-progress, especially the **Cosmic** which is still in Alpha stages. Please do not use it on your production machine. Either use in a VM (bad idea) or on a test machine, like a side laptop or something.
 
+- Plasma/Gnome & XFCE
+
+```Bash
+bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-install.sh)"
+```
+
 - Cosmic Alpha :
 
 ```Bash
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-cosmic.sh)"
 ```
 
-- Plasma/Gnome & XFCE
+- Hyprland :
 
 ```Bash
-bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-install.sh)"
+bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-hypr.sh)"
 ```
+
+**Hyprland Note :** When it comes to this script, please make sure to say no when prompted if you want to **chroot**, since this one does not require it. Just exit n reboot once Base-Arch is done installing, login to your user, then run the command from there. And please do not ask me for support either for the WM or the **ML4W Dots** should you install them. I do not use any of them I just created this script to ease the pain a little, nothing more. For the WM check out the [**HyprWiki**](https://wiki.hyprland.org){:target="_blank"}, as for the dots check the [**ML4W Channel**](https://www.youtube.com/@mylinuxforwork/videos){:target="_blank"}
 
 The scripts will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
 

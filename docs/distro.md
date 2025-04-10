@@ -52,9 +52,9 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 ## Calamares Installer
 
-Launch the [**Calamares**](https://github.com/calamares/calamares){:target="_blank"} installer from our new **Welcome App**. Just go through the motions and when you get to the user creation page, if you select the *Autologin* option, you will be logged in to an **X11/Xorg** session, not **Wayland**, we chose that for compatibility with legacy hardware nothing more.
+Launch the [**Calamares**](https://github.com/calamares/calamares){:target="_blank"} installer from the **Welcome App**. We will be (June 2025) moving everything to **Wayland** on the flagship, but fear not as we will keep **X11/Xorg** around for compatibility with legacy hardware. If you have older unsupported hardware, just select **Plasma X11** from login screen and enjoy ;)
 
-You can still switch to *Wayland* post-install either via KDE's **SDDM** settings or the included toolkit, choice is yours. I recommend toolkit as system settings tend to be buggy.
+You can also switch to *X11* post-install in case of autologin either via KDE's **SDDM** settings or the included toolkit, choice is yours. I recommend toolkit as system settings tend to be buggy.
 
 <p align="center">
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
