@@ -122,7 +122,7 @@ A : Simply because we can only include one, limits device support, post-install 
 
 > Q : Why not add a Window Manager like **Hyprland** ?
 
-A : Because they can be too complex maintain, especially **Hyprland** which we consider too volatile and fast moving to keep up with, thus support would be limited. Not to mention that I, as the sole maintainer have no plans on using them.
+A : Because they can be too complex maintain, especially **Hyprland** which we consider too volatile and fast moving to keep up with, thus support would be limited. Not to mention that I, as the sole maintainer have no plans on using them. However we have added a script making it easier to install **Hyprland** ==> [**Here**](https://wiki.xerolinux.xyz/scripts/#the-scripts){:target="_blank"}
 
 > Q : Why not include a well-known browser like **Firefox** or **LibreWolf** ?
 
