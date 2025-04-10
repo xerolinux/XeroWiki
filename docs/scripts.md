@@ -130,7 +130,12 @@ bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-cosmic.sh)"
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-hypr.sh)"
 ```
 
-**Hyprland Note :** When it comes to this script, please make sure to say no when prompted if you want to **chroot**, since this one does not require it. Just exit n reboot once Base-Arch is done installing, login to your user, then run the command from there. And please do not ask me for support either for the WM or the **ML4W Dots** should you install them. I do not use any of them I just created this script to ease the pain a little, nothing more. For the WM check out the [**HyprWiki**](https://wiki.hyprland.org){:target="_blank"}, as for the dots check the [**ML4W Channel**](https://www.youtube.com/@mylinuxforwork/videos){:target="_blank"}
+**Hyprland Note :** 
+
+For this script, please ensure you select "No" if prompted about "chrooting", as this script does not require it. Once the Base-Arch installation is complete, simply exit and reboot your system. After rebooting, log in to your user account and run the specified command from there.
+
+Additionally, please note that I do not provide support for **Hyprland** or the My Linux For Work (**ML4W**) configuration (also known as dotfiles), should you choose to install them. I do not use either of them; I created this script solely to streamline the process—nothing more. For assistance with **Hyprland**, refer to the [**HyprWiki**](https://wiki.hyprland.org){:target="_blank"} or the unofficial [**Discord**](https://discord.com/invite/hQ9XvMUjjr){:target="_blank"} server. For help with the **ML4W** configuration, check out his [**YouTube](https://www.youtube.com/@mylinuxforwork/videos){:target="_blank"} channel or [**Discord**](https://discord.com/invite/c4fJK7Za3g){:target="_blank"} server.
+
 
 The scripts will perform several checks and then prompt you to confirm the addition of the **XeroLinux** and **Chaotic-AUR** repositories, along with my recommended configurations. If you agree, simply follow the prompts. The script will exit if you choose not to proceed.
 
