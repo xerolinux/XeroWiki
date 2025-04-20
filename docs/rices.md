@@ -55,6 +55,9 @@ git clone https://github.com/xerolinux/xero-orchis-dark.git
 cd xero-orchis-dark/ && ./install.sh
 ```
 
+- Firefox Dark Black Theme :
+https://addons.mozilla.org/en-US/firefox/addon/nicedarktheme/
+
 <p align="center">
     <img src="https://i.imgur.com/LhXPFrH.jpeg" alt="rice">
 </p>
