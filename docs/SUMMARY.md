@@ -1,6 +1,6 @@
 - [🏠Home](index.md)
 - [💿The Distro](distro.md)
 - [🐧The Toolkit](xlapit.md)
-- [💻Install Scripts](scripts.md)
 - [🎨Layan KDE Rice](rice.md)
 - [🎭The Grub Themes](grub.md)
+- [💻DE Install Script](script.md)
