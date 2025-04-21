@@ -111,8 +111,7 @@ We have combined older ones into a single *Multi-DE* installer since they were a
 <h3 align="center"><strong>MAKE SURE YOU ARE LOGGED IN WITH NEW CREDENTIALS NOT ROOT !</strong></h3>
 
 <p align="center">
-
-   <img src="https://i.imgur.com/esK1OAO.png" alt="shot">
+  <img width="360" src="https://i.imgur.com/esK1OAO.png">  <img width="360" src="https://i.imgur.com/7Qgypxe.png">
 </p>
 
 !!! warning
