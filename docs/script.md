@@ -21,7 +21,7 @@ tags:
 The whole reason it was created was to fix the badly implemented **ArchInstall** profiles which do not provide a solid enough base, while extending them further nothing more. For customizations and other stuff, please use the included toolkit found in the app menu/launcher.
 
 <p align="center">
-    <img src="https://i.imgur.com/QfdDALC.png" alt="shot">
+    <img src="https://i.imgur.com/B78htpV.png" alt="shot">
 </p>
 
 This script is subject to change over time, so please treat this guide as a general reference rather than an exact one. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version for the best results.
@@ -106,15 +106,20 @@ Now once everything is configured and set, hit install, sit back, grab a cup of 
 
     **Inspection**. We do not recommend to blindly execute scripts without inspecting them first. Check out the code >> [**Multi-DE**](https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-install.sh){:target="_blank"}.
 
-We have combined older ones into a single *Multi-DE* installer since they were all similar. Easier for everyone. Thanks to [**SpiderPunkXL**](https://github.com/SpiderPunkXL){:target="_blank"} for the idea. Anyway, once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with **NO**, reboot and loging with created user in TTY.
+We have combined older ones into a single *Multi-DE* installer since they were all similar. Easier for everyone. Thanks to [**SpiderPunkXL**](https://github.com/SpiderPunkXL){:target="_blank"} for the idea. Anyway, once that's all done, we will be prompted if we want to `chroot` into our new install, we answer with **NO**, reboot and loging with created user in TTY. 
 
-Once you trust it, you can move on. Now, depending on the method that was used, `ssh` or not, we either copy paste the command below or type it manually :
+<h3 align="center"><strong>MAKE SURE YOU ARE LOGGED IN WITH NEW CREDENTIALS NOT ROOT !</strong></h3>
+
+<p align="center">
+
+   <img src="https://i.imgur.com/esK1OAO.png" alt="shot">
+</p>
 
 !!! warning
 
     The script shared herein is a work-in-progress. **Cosmic** is still in Alpha stages. Please do not use it on your production machine. Either use in a VM (bad idea) or on a test machine, like a side laptop or something.
 
-- Execution cmd :
+Once you trust it, you can move on. Now, depending on the method that was used, `ssh` or not, we either copy paste the command below or type it manually :
 
 ```Bash
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-install.sh)"

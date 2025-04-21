@@ -634,7 +634,7 @@
 <h3 id="scripts-purpose">Script's Purpose<a class="headerlink" href="#scripts-purpose" title="Permanent link">¶</a></h3>
 <p>The whole reason it was created was to fix the badly implemented <strong>ArchInstall</strong> profiles which do not provide a solid enough base, while extending them further nothing more. For customizations and other stuff, please use the included toolkit found in the app menu/launcher.</p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/QfdDALC.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/QfdDALC.png" alt="shot"></a>
+    <a class="glightbox" href="https://i.imgur.com/B78htpV.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/B78htpV.png" alt="shot"></a>
 </p>
 
 <p>This script is subject to change over time, so please treat this guide as a general reference rather than an exact one. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version for the best results.</p>
@@ -691,15 +691,19 @@
 <p class="admonition-title">Tip</p>
 <p><strong>Inspection</strong>. We do not recommend to blindly execute scripts without inspecting them first. Check out the code &gt;&gt; <a href="https://github.com/xerolinux/XeroHub/blob/main/content/script/xero-install.sh" target="_blank"><strong>Multi-DE</strong></a>.</p>
 </div>
-<p>We have combined older ones into a single <em>Multi-DE</em> installer since they were all similar. Easier for everyone. Thanks to <a href="https://github.com/SpiderPunkXL" target="_blank"><strong>SpiderPunkXL</strong></a> for the idea. Anyway, once that's all done, we will be prompted if we want to <code>chroot</code> into our new install, we answer with <strong>NO</strong>, reboot and loging with created user in TTY.</p>
-<p>Once you trust it, you can move on. Now, depending on the method that was used, <code>ssh</code> or not, we either copy paste the command below or type it manually :</p>
+<p>We have combined older ones into a single <em>Multi-DE</em> installer since they were all similar. Easier for everyone. Thanks to <a href="https://github.com/SpiderPunkXL" target="_blank"><strong>SpiderPunkXL</strong></a> for the idea. Anyway, once that's all done, we will be prompted if we want to <code>chroot</code> into our new install, we answer with <strong>NO</strong>, reboot and loging with created user in TTY. </p>
+<h3 align="center"><strong>MAKE SURE YOU ARE LOGGED IN WITH NEW CREDENTIALS NOT ROOT !</strong></h3>
+
+<p align="center">
+
+   <a class="glightbox" href="https://i.imgur.com/esK1OAO.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/esK1OAO.png" alt="shot"></a>
+</p>
+
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The script shared herein is a work-in-progress. <strong>Cosmic</strong> is still in Alpha stages. Please do not use it on your production machine. Either use in a VM (bad idea) or on a test machine, like a side laptop or something.</p>
 </div>
-<ul>
-<li>Execution cmd :</li>
-</ul>
+<p>Once you trust it, you can move on. Now, depending on the method that was used, <code>ssh</code> or not, we either copy paste the command below or type it manually :</p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-install.sh<span class="k">)</span><span class="s2">"</span>
 </span></code></pre></div>
 <p><strong>Hyprland/Cosmic VM Note :</strong> </p>
