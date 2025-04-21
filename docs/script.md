@@ -124,9 +124,13 @@ Once you trust it, you can move on. Now, depending on the method that was used, 
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-install.sh)"
 ```
 
-**Hyprland/Cosmic VM Note :** 
+**Virtual Machine Note :** 
 
-If you want to test them inside a VM, please make sure you have 3D acceleration turned on in the VM or **VirtGL** in the case to **KVM** for best experience. Anyway, you will see such a message when selecting them via the script. They heavily rely on it due to all the effects and with them being **Wayland** only.. 
+If you want to test them inside a VM, please make sure you have 3D acceleration turned on in the VM or **VirtGL** in the case to **KVM** for best experience. Anyway, you will see such a message when selecting them via the script. Especially for **Hyprland** and **Cosmic** since they heavily rely on it due to all the effects and with them being **Wayland** only.. 
+
+**Hyprland Install note :**
+
+When it comes to that WM, you will notice that it's bare bones. We decided to ship it that way so you have the freedom to choose things like what file manager, panels, docks and other tools you want without having to be forced by our choices. At the end of the day that's the WM's strongsuite, customizability. You are free to go crazy with it. Also due to its volatile nature it's **NOT FOR THE LIGHT-HEARTED !**
 
 <p align="center">
     <img src="https://i.imgur.com/sIJsyD2.png" alt="shot">
