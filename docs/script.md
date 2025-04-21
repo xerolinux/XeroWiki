@@ -21,7 +21,7 @@ tags:
 The whole reason it was created was to fix the badly implemented **ArchInstall** profiles which do not provide a solid enough base, while extending them further nothing more. For customizations and other stuff, please use the included toolkit found in the app menu/launcher.
 
 <p align="center">
-    <img src="https://i.imgur.com/B78htpV.png" alt="shot">
+    <img src="https://i.imgur.com/PIm3TsZ.png" alt="shot">
 </p>
 
 This script is subject to change over time, so please treat this guide as a general reference rather than an exact one. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version for the best results.
