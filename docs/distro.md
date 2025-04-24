@@ -26,6 +26,9 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 <h1 align="center">.// The Wiki \\.</h1>
 
+<h2 align="center">⚠️ <strong>ISO will NOT (yet) boot on nVidia 50 Series cards.</strong> ⚠️</h2>
+<h4 align="center">"nouveau" Open Source Kernel Driver needs to support them first.</h4>
+
 ## Installation
 
 Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** & **GNOME**, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!
