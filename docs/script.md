@@ -130,7 +130,7 @@ If you want to test them inside a VM, please make sure you have 3D acceleration 
 
 **Hyprland Install note :**
 
-When it comes to that WM, you will notice that it's bare bones. We decided to ship it that way so you have the freedom to choose things like what file manager, panels, docks and other tools you want without having to be forced by our choices. At the end of the day that's the WM's strongsuite, customizability. You are free to go crazy with it. Also due to its volatile nature it's **NOT FOR THE LIGHT-HEARTED !**
+When it comes to that WM, you will notice that it's bare bones, as in it just ships with a Terminal ([**Kitty**](https://sw.kovidgoyal.net/kitty/){:target="_blank"}) and a filemanager ([**Thunar**](https://docs.xfce.org/xfce/thunar/start){:target="_blank"}). We decided to ship it that way so you have the freedom to choose things like what panels, docks and other tools you want without having to be forced by our choices. At the end of the day that's the WM's strongsuite, customizability. You are free to go crazy with it. Also due to its volatile nature it's **NOT FOR THE LIGHT-HEARTED !**
 
 <p align="center">
     <img src="https://i.imgur.com/UKeOaIL.png" alt="shot">
