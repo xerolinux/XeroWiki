@@ -28,6 +28,7 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 <h2 align="center">⚠️ <strong>ISO will NOT (yet) boot on nVidia 50 Series cards.</strong> ⚠️</h2>
 <h4 align="center">"nouveau" Open Source Kernel Driver needs to support them first.</h4>
+<h4 align="center">Always update & Reboot post-install before using.</h4>
 
 ## Installation
 
