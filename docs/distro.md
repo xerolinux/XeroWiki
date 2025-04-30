@@ -108,16 +108,6 @@ Although **XeroLinux** now supports Hybrid laptops with both integrated (iGPU) a
 
 We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
 
-## Get new features
-
-If you already are on **XeroLinux**, any version, all you have to do, to get new changes in, is to run option **Apply latest XeroLinux specific changes/updates.** under 1st option in the toolkit. That way you do not need to grab new ISO n reinstall to get them. As shown in image below...
-
-<p align="center">
-    <img width="750" src="https://i.imgur.com/Ok6Re2z.png" alt="xlapit">
-</p>
-
-No need to run this all the time. Just once every new ISO release, if and when I announce new features. Usually it's just updated packages. To know more, you can either follow updates on **Discord** or on [**Fosstodon**](https://fosstodon.org/@XeroLinux){:target="_blank"}.
-
 ## FAQ & Answers
 
 > Q : Why not include **nVidia** GPU Drivers on the ISO ?
