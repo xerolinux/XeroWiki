@@ -116,7 +116,7 @@ A : Simply because we can only include one, limits device support, post-install 
 
 > Q : Why not add a Window Manager like **Hyprland** ?
 
-A : Because they can be too complex maintain, especially **Hyprland** which we consider too volatile and fast moving to keep up with, thus support would be limited. Not to mention that I, as the sole maintainer have no plans on using them. However we have added a script making it easier to install **Hyprland** ==> [**Here**](https://wiki.xerolinux.xyz/scripts/#the-scripts){:target="_blank"}
+A : Because they can be too complex maintain, especially **Hyprland** which I think is moving way too fast for me to keep up with. Not to mention that I, as the sole maintainer have no plans on using it on the daily.
 
 > Q : Why not include a well-known browser like **Firefox** or **LibreWolf** ?
 
@@ -128,7 +128,7 @@ A : You can convert Vanilla Arch with either **Gnome** or **KDE Plasma** to *mim
 
 > Q : I dislike the way **ArchInstall** installs some DEs is there a better way to install them ?
 
-A : Yep, we have written a script that installs any of **Gnome**, **KDE Plasma** or even **XFCE** ==> [**Here**](https://wiki.xerolinux.xyz/scripts/){:target="_blank"}
+A : Yep, we have written a script that installs any of **Gnome**, **KDE Plasma**, **XFCE**, **Hyprland** or even **Cosmic Alpha** ==> [**Here**](https://wiki.xerolinux.xyz/script/){:target="_blank"}
 
 > Q : Why doesn't the Distro include more tools for Gaming, Production and so on out the box ?
 
