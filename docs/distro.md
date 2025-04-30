@@ -56,9 +56,9 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 ## Calamares Installer
 
-The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer will auto start. We will be (June 2025) moving everything to **Wayland** on the flagship, but fear not as we will keep **X11/Xorg** around for compatibility with legacy hardware. If you have older unsupported hardware, just select **Plasma X11** from login screen and enjoy ;)
+The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer will auto start. We will be (June 2025) moving everything to **Wayland** on the flagship, as we have on the **Gnome Dev Spin**, but fear not as we will keep **X11/Xorg** around for compatibility with legacy hardware. If you have older unsupported hardware, just select **Plasma X11** from login screen and enjoy ;)
 
-You can also switch to *X11* post-install in case of autologin either via KDE's **SDDM** settings or the included toolkit, choice is yours. I recommend toolkit as system settings tend to be buggy.
+You can also switch to *X11* post-install in case of autologin either via KDE's **SDDM** settings or Gnome's **GDM** settings.
 
 <p align="center">
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
