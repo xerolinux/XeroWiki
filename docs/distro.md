@@ -26,7 +26,7 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 <h1 align="center">.// The Wiki \\.</h1>
 
-<h2 align="center">⚠️ <strong>ISO will NOT (yet) boot on nVidia 50 Series cards.</strong> ⚠️</h2>
+<h2 align="center">⚠️ <strong>ISO does NOT (yet) boot on nVidia 50 Series cards.</strong> ⚠️</h2>
 <h4 align="center">Always update & Reboot post-install before using the Distro.</h4>
 
 !!! warning
