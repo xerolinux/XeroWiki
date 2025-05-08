@@ -27,8 +27,11 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 <h1 align="center">.// The Wiki \\.</h1>
 
 <h2 align="center">⚠️ <strong>ISO will NOT (yet) boot on nVidia 50 Series cards.</strong> ⚠️</h2>
-<h4 align="center">"nouveau" Open Source Kernel Driver needs to support them first.</h4>
-<h4 align="center">Always update & Reboot post-install before using.</h4>
+<h4 align="center">Always update & Reboot post-install before using the Distro.</h4>
+
+!!! warning
+
+    The "*nouveau*" Open Source Kernel Driver currently does not have support for the new 50 Series nVidia cards. Sorry, all we can do is wait. For a non-exhaustive list of currently supported **nVidia** GPUs by this driver, used to boot the ISO(s), please click [**Here**](https://nouveau.freedesktop.org/CodeNames.html){:target="_blank"} or [**Here**](https://nouveau.freedesktop.org/FeatureMatrix.html){:target="_blank"}.
 
 ## Installation
 
