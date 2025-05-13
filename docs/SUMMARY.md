@@ -4,3 +4,4 @@
 - [💻DE Install Script](script.md)
 - [🎭The Grub Themes](grub.md)
 - [🎨KDE Plasma Rices](rices.md)
+- [🎨Hyprland Config/Rice](hyprxero.md)

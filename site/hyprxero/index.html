@@ -10,8 +10,10 @@
       
       
       
-        <link rel="canonical" href="https://wiki.xerolinux.xyz/SUMMARY/">
+        <link rel="canonical" href="https://wiki.xerolinux.xyz/hyprxero/">
       
+      
+        <link rel="prev" href="../rices/">
       
       
       
@@ -20,7 +22,7 @@
     
     
       
-        <title>SUMMARY - The XeroLinux Wiki</title>
+        <title>XeroLinux Hyprland Config - The XeroLinux Wiki</title>
       
     
     
@@ -55,11 +57,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="SUMMARY - The XeroLinux Wiki" >
+        <meta  property="og:title"  content="XeroLinux Hyprland Config - The XeroLinux Wiki" >
       
         <meta  property="og:description"  content="XeroLinux Project Documentation." >
       
-        <meta  property="og:image"  content="https://wiki.xerolinux.xyz/assets/images/social/SUMMARY.png" >
+        <meta  property="og:image"  content="https://wiki.xerolinux.xyz/assets/images/social/hyprxero.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -67,15 +69,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://wiki.xerolinux.xyz/SUMMARY/" >
+        <meta  property="og:url"  content="https://wiki.xerolinux.xyz/hyprxero/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="SUMMARY - The XeroLinux Wiki" >
+        <meta  name="twitter:title"  content="XeroLinux Hyprland Config - The XeroLinux Wiki" >
       
         <meta  name="twitter:description"  content="XeroLinux Project Documentation." >
       
-        <meta  name="twitter:image"  content="https://wiki.xerolinux.xyz/assets/images/social/SUMMARY.png" >
+        <meta  name="twitter:image"  content="https://wiki.xerolinux.xyz/assets/images/social/hyprxero.png" >
       
     
     
@@ -103,6 +105,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#xerolinux-kde-rice-now-on-hyprland" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -135,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SUMMARY
+              XeroLinux Hyprland Config
             
           </span>
         </div>
@@ -366,10 +373,32 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../hyprxero/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    🎨Hyprland Config/Rice
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -380,6 +409,167 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      ℹ️ Info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❤️‍🔥 Credits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📜 Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keybinds" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⌨️ Keybinds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⌨️ Keybinds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app-launching" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 App Launching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪟 Window Actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiling-floating" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Tiling &amp; Floating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-cycling" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Window Cycling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      ↔️ Focus Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Move Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-resize" class="md-nav__link">
+    <span class="md-ellipsis">
+      📐 Window Resize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouse-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖱️ Mouse Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Workspaces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ FAQ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗨️ Wrap up
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -401,6 +591,157 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      ℹ️ Info
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❤️‍🔥 Credits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📜 Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keybinds" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⌨️ Keybinds
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⌨️ Keybinds">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app-launching" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 App Launching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪟 Window Actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tiling-floating" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Tiling &amp; Floating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-cycling" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Window Cycling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#focus-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      ↔️ Focus Movement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Move Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-resize" class="md-nav__link">
+    <span class="md-ellipsis">
+      📐 Window Resize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouse-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖱️ Mouse Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Workspaces
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ FAQ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗨️ Wrap up
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -416,17 +757,120 @@
 
 
 
-  <h1>SUMMARY</h1>
+<div><h1 id="xerolinux-kde-rice-now-on-hyprland"><h2 align="center">🎨 XeroLinux KDE Rice — now on Hyprland 🎨</h2><a class="headerlink" href="#xerolinux-kde-rice-now-on-hyprland" title="Permanent link">¶</a></h1>
+<h3 id="i-info">ℹ️ Info<a class="headerlink" href="#i-info" title="Permanent link">¶</a></h3>
+<p><strong>HyprXero</strong> brings the stylish, polished feel of <a href="https://github.com/xerolinux/xero-layan-git" target="_blank"><strong>XeroLinux KDE</strong></a> to <strong>Hyprland</strong>, not as a full distro, but as a lightweight config you can drop into your setup. You get the same attention to design and user experience, paired with <strong>Hyprland</strong>’s smooth animations, low resource usage, and modern Wayland features. It’s a clean, fast, and good-looking way to enjoy the Xero vibe <em>without</em> needing a full ISO.</p>
+<p align="center">
+    <a class="glightbox" href="https://i.imgur.com/iveWUu8.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/iveWUu8.jpeg" alt="rice"></a>
+</p>
 
+<h3 id="credits">❤️‍🔥 Credits<a class="headerlink" href="#credits" title="Permanent link">¶</a></h3>
+<p>This project was a real labor of love, built with the help of two great people I’ve come to respect: <a href="hhttps://github.com/aellas" target="_blank"><strong>@Array</strong></a> (Config) and <a href="https://github.com/dwilliam62" target="_blank"><strong>DDubs</strong></a> (Advisor). Their input and support were crucial at every step, and without their contributions, this wouldn’t have come together the way it did. I’m glad to have worked with them on this.</p>
+<hr>
+<h1 align="center">.// The Wiki \\.</h1>
+<h3 align="center">⚠️ <strong>HyprLand support will not be provided</strong> ⚠️</h3>
+
+<h3 id="installation">📜 Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Hyprland</strong> can be complex in and by itself, for support please check their <a href="https://wiki.hyprland.org" target="_blank"><strong>HyprWiki</strong></a>. If you do not have any prior Linux knowledge, please do not use it or this config. We will not be held responsible in case you break your system. It's yours, you are responsible for everything that happens to it.</p>
+</div>
 <ul>
-<li><a href="../">🏠Home</a></li>
-<li><a href="../distro/">💿The Distro</a></li>
-<li><a href="../xlapit/">🐧The Toolkit</a></li>
-<li><a href="../script/">💻DE Install Script</a></li>
-<li><a href="../grub/">🎭The Grub Themes</a></li>
-<li><a href="../rices/">🎨KDE Plasma Rices</a></li>
-<li><a href="../hyprxero/">🎨Hyprland Config/Rice</a></li>
+<li><strong>⚙️ Supported Platforms :</strong></li>
 </ul>
+<p>It is <em>Highly</em> recommended to only use this config on a fresh <em>Arch + Hyprland</em> install. However you can install it however you want, but the only supported platform is <strong>ArchLinux</strong>. There are currently no plans to support others, so please do not ask. </p>
+<ul>
+<li><strong>🚀 Installation :</strong></li>
+</ul>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>To<span class="w"> </span>be<span class="w"> </span>released<span class="w"> </span>soon<span class="w"> </span>!
+</span></code></pre></div>
+<p><strong>Elements Used :</strong></p>
+<ul>
+<li><strong>Terminal</strong> ➤ Kitty</li>
+<li><strong>Editor</strong> ➤ VSCode / Neovim</li>
+<li><strong>Wallpaper</strong> ➤ Waypaper</li>
+<li><strong>Icons</strong> ➤ Tela Circle Purple</li>
+<li><strong>Theme</strong> ➤ Layan-dark</li>
+<li><strong>Menu</strong> ➤ Rofi (Wayland)</li>
+<li><strong>Dock</strong> ➤ nwg-dock-hyprland</li>
+<li><strong>File Manager</strong> ➤ Thunar</li>
+<li><strong>Bar</strong> ➤ Waybar</li>
+<li><strong>Screen Lock</strong> ➤ Hyprlock</li>
+<li><strong>Idle Manager</strong> ➤ Hypridle</li>
+<li><strong>Logout</strong> ➤ Wlogout</li>
+<li><strong>Screenshot</strong> ➤ Grim/Slurp + Satty</li>
+</ul>
+<h3 id="keybinds">⌨️ Keybinds<a class="headerlink" href="#keybinds" title="Permanent link">¶</a></h3>
+<p>All keybindings follow the <code>$mainMod</code> convention (<code>$mainMod</code> = <strong>Super/Windows key</strong>)</p>
+<h4 id="app-launching">🚀 App Launching<a class="headerlink" href="#app-launching" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>$mainMod + Return</code> ➤ Launch terminal (Kitty)</li>
+<li><code>$mainMod + Space</code> ➤ Open application launcher (Rofi)</li>
+<li><code>$mainMod + B</code> ➤ Open web browser (Falkon)</li>
+<li><code>$mainMod + A</code> ➤ Take a screenshot of a region (Grim/Slurp)</li>
+<li><code>$mainMod + N</code> ➤ Open file manager (Thunar)</li>
+<li><code>$mainMod + C</code> ➤ Pick a color (hex code)</li>
+<li><code>$mainMod + Shift + T</code> ➤ Toggle scratchpad terminal</li>
+<li><code>Ctrl + Alt + Delete</code> ➤ Lock screen (Hyprlock)</li>
+</ul>
+<h4 id="window-actions">🪟 Window Actions<a class="headerlink" href="#window-actions" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>$mainMod + Q</code> ➤ Close the active window</li>
+</ul>
+<h4 id="tiling-floating">🧱 Tiling &amp; Floating<a class="headerlink" href="#tiling-floating" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>$mainMod + V</code> ➤ Toggle floating mode for the active window</li>
+<li><code>$mainMod + F</code> ➤ Toggle fullscreen mode for the active window</li>
+<li><code>$mainMod + Y</code> ➤ Pin the active window (always visible on top)</li>
+<li><code>$mainMod + J</code> ➤ Toggle split mode (dwindle layout)</li>
+<li><code>$mainMod + Shift + M</code> ➤ Swap the Hyprland layout (master layout or dwindle)</li>
+</ul>
+<h4 id="window-cycling">🔄 Window Cycling<a class="headerlink" href="#window-cycling" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>Alt + Tab</code> ➤ Cycle through the next windows</li>
+<li><code>Alt + Tab</code> ➤ Bring the active window to the top</li>
+<li><code>Alt + Tab</code> ➤ Swap the active window with the master window (if the master layout is active)</li>
+</ul>
+<h4 id="focus-movement">↔️ Focus Movement<a class="headerlink" href="#focus-movement" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>$mainMod + Left Arrow</code> ➤ Focus on the window to the left</li>
+<li><code>$mainMod + Right Arrow</code> ➤ Focus on the window to the right</li>
+<li><code>$mainMod + Up Arrow</code> ➤ Focus on the window above</li>
+<li><code>$mainMod + Down Arrow</code> ➤ Focus on the window below</li>
+</ul>
+<h4 id="move-windows">🔄 Move Windows<a class="headerlink" href="#move-windows" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>$mainMod + Shift + Left Arrow</code> ➤ Move the active window to the left</li>
+<li><code>$mainMod + Shift + Right Arrow</code> ➤ Move the active window to the right</li>
+<li><code>$mainMod + Shift + Up Arrow</code> ➤ Move the active window upwards</li>
+<li><code>$mainMod + Shift + Down Arrow</code> ➤ Move the active window downwards</li>
+</ul>
+<h4 id="window-resize">📐 Window Resize<a class="headerlink" href="#window-resize" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>$mainMod + Ctrl + Shift + H/Left Arrow</code> ➤ Resize the active window to the left</li>
+<li><code>$mainMod + Ctrl + Shift + L/Right Arrow</code> ➤ Resize the active window to the right</li>
+<li><code>$mainMod + Ctrl + Shift + K/Up Arrow</code> ➤ Resize the active window upwards</li>
+<li><code>$mainMod + Ctrl + Shift + J/Down Arrow</code> ➤ Resize the active window downwards</li>
+<li><code>$mainMod + R</code> then <code>H/J/K/L</code> or <code>Arrow Keys</code> ➤ Enter resize mode, press <code>Esc</code> to exit</li>
+</ul>
+<h4 id="mouse-controls">🖱️ Mouse Controls<a class="headerlink" href="#mouse-controls" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>$mainMod + Left Mouse Button</code> ➤ Move the active window</li>
+<li><code>$mainMod + Right Mouse Button</code> v Resize the active window</li>
+</ul>
+<h4 id="workspaces">🖥️ Workspaces<a class="headerlink" href="#workspaces" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>$mainMod + [1-9, 0]</code> ➤ Switch to workspace [1-9]</li>
+<li><code>$mainMod + Ctrl + [1-9, 0]</code> ➤ Move the active window to workspace [1-9, 0] and switch to it</li>
+<li><code>$mainMod + Shift + [1-9, 0]</code> ➤ Move the active window silently to workspace [1-9, 0]</li>
+<li><code>$mainMod + Ctrl + Left Arrow</code> ➤ Move to the previous workspace</li>
+<li><code>$mainMod + Ctrl + Right Arrow</code>➤ Move to the next workspace</li>
+</ul>
+<h3 id="faq">❓ FAQ<a class="headerlink" href="#faq" title="Permanent link">¶</a></h3>
+<p>⚙️<strong>Changing Default Applications</strong></p>
+<p>You can easily customize the default applications Hyprland uses by editing the <code>~/.config/hypr/config/defaults.conf</code> file. Open this file in your preferred text editor and modify the lines corresponding to the application you want to change (e.g., <code>file_manager = thunar</code>, <code>terminal = kitty</code>, <code>browser = falkon</code>).</p>
+<h3 id="wrap-up">🗨️ Wrap up<a class="headerlink" href="#wrap-up" title="Permanent link">¶</a></h3>
+<p>The install script will backup some app settings &amp; all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues specific to this config please find us on our <a href="https://discord.gg/5sqxTSuKZu" target="_blank"><strong>Discord</strong></a>. Best of luck !</p></div>
 
 
 
@@ -462,6 +906,28 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../rices/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🎨KDE Plasma Rices">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                🎨KDE Plasma Rices
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
