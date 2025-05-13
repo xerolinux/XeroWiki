@@ -18,7 +18,7 @@ tags:
 
 ### ❤️‍🔥 Credits
 
-This project was a real labor of love, built with the help of two great people I’ve come to respect: [**@Array**](hhttps://github.com/aellas){:target="_blank"} (Config) and [**DDubs**](https://github.com/dwilliam62){:target="_blank"} (Advisor). Their input and support were crucial at every step, and without their contributions, this wouldn’t have come together the way it did. I’m glad to have worked with them on this.
+This project was a real labor of love, built with the help of two **Legendary** people I’ve come to respect: [**@Array**](hhttps://github.com/aellas){:target="_blank"} (Config) and [**DDubs**](https://github.com/dwilliam62){:target="_blank"} (Advisor). Their input and support were crucial at every step, and without their contributions, this wouldn’t have come together the way it did. I’m glad to have worked with them on this. I just created the install script 😇
 
 ---
 
@@ -41,7 +41,7 @@ It is *Highly* recommended to only use this config on a fresh *Arch + Hyprland* 
 To be released soon !
 ```
 
-**Elements Used :**
+**🛒 Elements Used :**
 
 - **Terminal** ➤ Kitty
 - **Editor** ➤ VSCode / Neovim
@@ -118,7 +118,7 @@ All keybindings follow the `$mainMod` convention (`$mainMod` = **Super/Windows k
 
 ### ❓ FAQ
 
-⚙️**Changing Default Applications**
+**⚙️ Changing Default Applications**
 
 You can easily customize the default applications Hyprland uses by editing the `~/.config/hypr/config/defaults.conf` file. Open this file in your preferred text editor and modify the lines corresponding to the application you want to change (e.g., `file_manager = thunar`, `terminal = kitty`, `browser = falkon`).
 
