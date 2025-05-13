@@ -33,7 +33,7 @@ This project was a real labor of love, built with the help of two great people I
     
 - **⚙️ Supported Platforms :**
 
-It is *Highly* recommended to only use this config on a fresh *Arch + Hyprland* install. However you can install it however you want, but the only supported platform is **ArchLinux**. There are currently no plans to support others, so please do not ask. 
+It is *Highly* recommended to only use this config on a fresh *Arch + Hyprland* install, support will not be provided if you don't do that. However you can install it however you want, but the only supported platform is **ArchLinux**. There are currently no plans to support others, so please do not ask. 
 
 - **🚀 Installation :**
 
