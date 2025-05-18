@@ -12,6 +12,8 @@ tags:
 
 **HyprXero** brings the stylish, polished feel of [**XeroLinux KDE**](https://github.com/xerolinux/xero-layan-git){:target="_blank"} to **Hyprland**, not as a full distro, but as a lightweight config you can drop into your setup. You get the same attention to design and user experience, paired with **Hyprland**’s smooth animations, low resource usage, and modern Wayland features. It’s a clean, fast, and good-looking way to enjoy the Xero vibe *without* needing a full ISO.
 
+This config aims for simplicity and minimalism unlike many others out there that go overboard in my humble opinion. It's a good place to start with **Hyprland**. It's meant to be a *sane* base you can build on top of till your heart's content. You can either use it as is, or take it to another level, it's all up to you from here...
+
 <p align="center">
     <img src="https://i.imgur.com/iveWUu8.jpeg" alt="rice">
 </p>
