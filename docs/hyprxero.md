@@ -41,7 +41,7 @@ It is *Highly* recommended to only use this config on a fresh *Arch + Hyprland* 
 To be released soon !
 ```
 
-The script will install **Hyprland** and all required components, that way you can install it fresh or on top of **KDE Plasma** even **Gnome**. But as mentioned earlier, if you do that no support will be provided, you are on your own. We did it that way so you can use it as a *Post-Install* script. It will also prompt you as to which **AUR-Helper** you want to use for packages coming from there. It will work with either `yay` or `paru` so doesn't matter which you choose. Below is a list of what's used in this config.
+The script will add the **XeroLinux** repository for the toolkit, then go ahead and install **Hyprland** and all required components, that way you can install it fresh or on top of **KDE Plasma** even **Gnome**. But as mentioned earlier, if you do that no support will be provided, you are on your own. We did it that way so you can use it as a *Post-Install* script. It will also prompt you as to which **AUR-Helper** you want to use for packages coming from there. It will work with either `yay` or `paru` so doesn't matter which you choose. Below is a list of what's used in this config.
 
 **🛒 Elements Used :**
 
