@@ -44,12 +44,14 @@ git clone https://github.com/xerolinux/HyprXero-git
 cd HyprXero-git/ && ./install.sh
 ```
 
-The script will add the **XeroLinux** repository for the toolkit, then go ahead and install **Hyprland** and all required components. We did it that way so you can use it as a *Post-Install* script. It will also prompt you as to which **AUR-Helper** you want to use for packages coming from there. It will work with either `yay` or `paru` so doesn't matter which you choose. Below is a list of what's used in this config.
+The script will add the **XeroLinux** repository for the toolkit, then go ahead and install **Hyprland** and all required components. We did it that way so you can use it as a *Post-Install* script. It will also prompt you as to which **AUR-Helper** you want to use for packages coming from there. It will work with either `yay` or `paru` so doesn't matter which you choose.
+
+Just a heads-up: it will **NOT** install any drivers or tools to get your hardware working-that part’s all on you. Think of it like a helpful sidekick that sets up your config and gets everything running smoothly, but it won’t handle the hardware magic. So, roll up your sleeves and get ready to tinker!
 
 **🛒 Elements Used :**
 
 - **Terminal** ➤ Kitty
-- **Editor** ➤ VSCode / Neovim
+- **Editor** ➤ Nano
 - **Wallpaper** ➤ Waypaper
 - **Icons** ➤ Tela Circle Purple
 - **Theme** ➤ Layan-dark
