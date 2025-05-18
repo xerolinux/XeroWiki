@@ -18,7 +18,7 @@ tags:
 
 ### ❤️‍🔥 Credits
 
-This project was a real labor of love, built with the help of two **Legendary** people I’ve come to respect: [**@Array**](hhttps://github.com/aellas){:target="_blank"} (Config) and [**DDubs**](https://github.com/dwilliam62){:target="_blank"} (Advisor). Their input and support were crucial at every step, and without their contributions, this wouldn’t have come together the way it did. I’m glad to have worked with them on this. I just created the install script 😇
+This project was a real labor of love, built with the help of two **Legendary** people I’ve come to respect: [**Array**](https://github.com/aellas){:target="_blank"} (Config) and [**DDubs**](https://github.com/dwilliam62){:target="_blank"} (Advisor). Their input and support were crucial at every step, and without their contributions, this wouldn’t have come together the way it did. I’m glad to have worked with them on this. I just created the install script 😇
 
 ---
 
@@ -38,7 +38,8 @@ It is *Highly* recommended to only use this config on a fresh *Arch + Hyprland* 
 - **🚀 Installation :**
 
 ```Bash
-To be released soon !
+git clone https://github.com/xerolinux/HyprXero-git
+cd HyprXero-git/ && ./install.sh
 ```
 
 The script will add the **XeroLinux** repository for the toolkit, then go ahead and install **Hyprland** and all required components, that way you can install it fresh or on top of **KDE Plasma** even **Gnome**. But as mentioned earlier, if you do that no support will be provided, you are on your own. We did it that way so you can use it as a *Post-Install* script. It will also prompt you as to which **AUR-Helper** you want to use for packages coming from there. It will work with either `yay` or `paru` so doesn't matter which you choose. Below is a list of what's used in this config.
