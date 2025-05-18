@@ -6,7 +6,7 @@ tags:
   - Hyprland
 ---
 
-# <h2 align="center">🎨 XeroLinux KDE Rice — now on Hyprland 🎨</h2>
+# <h2 align="center">🎨 XeroLayan — now on Hyprland 🎨</h2>
 
 ### ℹ️ Info
 
