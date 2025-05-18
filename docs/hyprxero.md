@@ -23,7 +23,7 @@ This project was a real labor of love, built with the help of two **Legendary** 
 ---
 
 <h1 align="center">.// The Wiki \\.</h1>
-<h3 align="center">⚠️ <strong>HyprLand support will not be provided</strong> ⚠️</h3>
+<h3 align="center">⚠️ <strong>HyprLand support NOT provided</strong> ⚠️</h3>
 
 ### 📜 Installation
 
@@ -40,6 +40,8 @@ It is *Highly* recommended to only use this config on a fresh *Arch + Hyprland* 
 ```Bash
 To be released soon !
 ```
+
+The script will install **Hyprland** and all required components, that way you can install it fresh or on top of **KDE Plasma** even **Gnome**. But as mentioned earlier, if you do that no support will be provided, you are on your own. We did it that way so you can use it as a *Post-Install* script. It will also prompt you as to which **AUR-Helper** you want to use for packages coming from there. It will work with either `yay` or `paru` so doesn't matter which you choose. Below is a list of what's used in this config.
 
 **🛒 Elements Used :**
 
