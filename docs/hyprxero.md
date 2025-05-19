@@ -131,7 +131,7 @@ You can easily customize the default applications Hyprland uses by editing the `
 
 **⚙️ Applying a different theme**
 
-If you want to apply a different theme in case you are not a fan of **Layan**, you can do that, however it's not as easy as it is on the likes of **KDE Plasma** or **Gnome** to name a couple. It's way more involved on **Hyprland**, where you apply QT/GTK ones via either **GTK Settings** or **Kvantum** apps available with this config, then for things like **Waybar**, **Kitty**, **SwayNC**, among others, you will have to manually edit their individual stylesheets. We currently do not use tools like **Pywall** or **Matugen** like other configs do. So be ready to hack around ;)
+If you want to use a different theme instead of **Layan**, you certainly can, but it’s not as simple as on **KDE Plasma** or **Gnome**. For **QT** and **GTK** apps, you’ll use **GTK Settings** or **Kvantum** included here. For things like **Waybar**, **Kitty**, or **SwayNC**, you’ll need to manually edit their style files. We don’t use automatic tools like **Pywal** or **Matugen**, so expect to do some manual tweaking. It’s a bit more hands-on, but definitely doable if you enjoy customizing!
 
 ### 🗨️ Wrap up
 
