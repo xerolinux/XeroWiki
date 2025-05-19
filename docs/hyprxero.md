@@ -39,7 +39,7 @@ It is *Highly* recommended to only use this config on a fresh *Arch* install, me
 
 - **🚀 Installation :**
 
-If you do not already have it please make sure you already have `git` installed in order for this to work.
+If you do not already have it please make sure you have `git` installed in order for this to work.
 
 ```Bash
 git clone https://github.com/xerolinux/HyprXero-git
