@@ -35,9 +35,11 @@ This project was a real labor of love, built with the help of two **Legendary** 
     
 - **⚙️ Supported Platforms :**
 
-It is *Highly* recommended to only use this config on a fresh *Arch + Hyprland* install, support will not be provided if you don't do that. However you can install it any way you like, but the only supported platform is **ArchLinux**. There are currently no plans to support others, so please do not ask. 
+It is *Highly* recommended to only use this config on a fresh *Arch* install, meaning install base Arch using the ArchISO skipping profiles section entirely, once done, reboot and login to your newly created install/user in TTY then run the command below. You can, however install this on top of either **KDE Plasma** or **Gnome** if you really feel adventurous enough, it's up to you and your knowledge level.
 
 - **🚀 Installation :**
+
+If you do not already have it please make sure you already have `git` installed in order for this to work.
 
 ```Bash
 git clone https://github.com/xerolinux/HyprXero-git
