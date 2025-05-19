@@ -113,6 +113,10 @@ We’re keeping it simple by providing the essential drivers to help everything 
 
 ## FAQ & Answers
 
+> Q : Theming broke after update how do I get it back ?
+
+A : That happens from time to time due to chamges. Just launch toolkit from the dock, option `7` for service then `s` to reset. This will reset to out of box settings, so only do it after fresh install/update. If it happens after you changed things just re-apply theme/icon pack and you should be good to go.
+
 > Q : Why not include **nVidia** GPU Drivers on the ISO ?
 
 A : Simply because we can only include one, limits device support, post-install covers a wider range of configs.
