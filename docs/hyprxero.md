@@ -129,6 +129,10 @@ All keybindings follow the `$mainMod` convention (`$mainMod` = **Super/Windows k
 
 You can easily customize the default applications Hyprland uses by editing the `~/.config/hypr/config/defaults.conf` file. Open this file in your preferred text editor and modify the lines corresponding to the application you want to change (e.g., `file_manager = thunar`, `terminal = kitty`, `browser = falkon`).
 
+**⚙️ Applying a different theme**
+
+If you want to apply a different theme in case you are not a fan of **Layan**, you can do that, however it's not as easy as it is on the likes of **KDE Plasma** or **Gnome** to name a couple. It's way more involved on **Hyprland**, where you apply QT/GTK ones via either **GTK Settings** or **Kvantum** apps available with this config, then for things like **Waybar**, **Kitty**, **SwayNC**, among others, you will have to manually edit their individual stylesheets. We currently do not use tools like **Pywall** or **Matugen** like other configs do. So be ready to hack around ;)
+
 ### 🗨️ Wrap up
 
 The install script will backup some app settings & all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues specific to this config please find us on our [**Discord**](https://discord.gg/5sqxTSuKZu){:target="_blank"}. Best of luck !
