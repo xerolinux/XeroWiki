@@ -88,7 +88,7 @@ pacman -Syy archinstall && archinstall --advanced
 
 Now some of you might be asking me, "why the `--advanced` flag ?", to which I answer, simply because devs still hide the *parallel downloads* behind it for whatever reason. It's fine at least now you know.
 
-Ok, now that we have the installer running, am not going to go through each and every option one by one, just the important ones. Those are explained in the video. Am also not gonna bother with *manual partitioning* since the guide is intended for single OS easy install.
+Ok, now that we have the installer running, am not going to go through each and every option one by one, just the important ones. Am also not gonna bother with *manual partitioning* since the guide is intended for single OS easy install.
 
 That's why we will be using the **Best Guess** option, carefully selecting the correct drive we want install **ArchLinux** onto.
 
@@ -96,7 +96,7 @@ That's why we will be using the **Best Guess** option, carefully selecting the c
 
     **User Data** : I will not be held responsible for any data loss resulting from selection of the wrong drive. **BE VERY CAREFUL HERE**.
 
-Anyway, let's make sure we skip the parts I mentioned in the video, like *Profiles*, *Drivers*, *Extra Packages* and *Extra Repos*, since everything will now be done **Post-Install** via my Toolkit. Don't forget to set parallel downloads to as many as you like for faster downloads. Also as mentioned, we do not need to enable any extra repos like *multilib* since my script will do that for us later on.
+Anyway, let's make sure we skip the parts like *Profiles*, *Drivers*, *Extra Packages* and *Extra Repos*, since everything will now be done **Post-Install** via my Toolkit. Don't forget to set parallel downloads to as many as you like for faster downloads. Also as mentioned, we do not need to enable any extra repos like *multilib* since my script will do that for us later on.
 
 Now once everything is configured and set, hit install, sit back, grab a cup of Tea/Coffee and watch it do its thing. Might take a while it all depends on Internet connection...
 
