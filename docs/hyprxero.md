@@ -35,7 +35,7 @@ This project was a real labor of love, built with the help of two **Legendary** 
     
 - **⚙️ Supported Platforms :**
 
-It is *Highly* recommended to only use this config on a fresh *Arch* install, meaning install base Arch using the ArchISO skipping profiles section entirely, once done, reboot and login to your newly created install/user in TTY then run the command below. You can, however install this on top of either **KDE Plasma** or **Gnome** if you really feel adventurous enough, it's up to you and your knowledge level.
+It is *Highly* recommended to only use this config on a fresh *Arch* install, meaning install base Arch using the ArchISO skipping profiles section entirely, once done, reboot and login to your newly created install/user in TTY then run the command below. In case you don't know how to do that, please follow the [**Installing ArchLinux**](https://wiki.xerolinux.xyz/script/#installing-archlinux){:target="_blank"} section of our previous guide. You can, however install this on top of either **KDE Plasma** or **Gnome** if you really feel adventurous enough, it's up to you and your knowledge level.
 
 - **🚀 Installation :**
 
