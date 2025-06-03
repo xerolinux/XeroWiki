@@ -43,7 +43,7 @@ Script will install the required `figlet` and `fuse2` packages in case they are 
 
 Select the version you want to use. Once download is done, it will extract and run the **DaVinci** installer. Go through it as you would on a **Windows** machine and click finish. Then the script will ask you what GPU you have, be it **nVidia** or **AMD** select the appropriate one, at which point the script will take care of the rest. Once it's all done, just launch the app, either from the newly created desktop shortcut or the App Launcher.
 
-### 🔄 Version differences
+### 🔄 Differences
 
 **DaVinci Resolve** (free) provides a robust set of editing, color grading, and audio tools suitable for most users, but it is limited to 4K output and lacks advanced features like multi-GPU support and AI-powered effects. It covers the essentials for independent creators and small projects.
 
