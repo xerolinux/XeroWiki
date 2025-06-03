@@ -13,7 +13,7 @@ tags:
 This script will install **DaVinci Resolve** software as well as additional software for remote monitoring and utilities for setting up hardware control panels. It also installs Blackmagic RAW Player and Blackmagic Proxy Generator into the applications folder.
 
 <p align="center">
-    <img src="https://i.imgur.com/EgULGgW.png" alt="DaVinci">
+    <img src="https://i.imgur.com/Krx7xqc.png" alt="DaVinci">
 </p>
 
 ---
