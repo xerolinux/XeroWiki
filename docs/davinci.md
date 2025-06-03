@@ -41,10 +41,10 @@ Run this command in Terminal :
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/davinci.sh)"
 ```
 
-Script will install the required `figlet` and `fuse2` packages in case they are missing before running, once that's taken care of it will resume.
+Script will install the required `figlet` and `fuse2` packages in case they are missing before running, then it will resume.
 
 Select the version you want to use. Once download is done, it will extract and run the **DaVinci** installer. Go through it as you would on a **Windows** machine and click finish. Then the script will ask you what GPU you have, be it **nVidia** or **AMD** select the appropriate one, at which point the script will take care of the rest. Once it's all done, just launch the app, either from the newly created desktop shortcut or the App Launcher.
 
 ### 🗨️ Wrap up
 
-In case the script fails please do let me know on **Discord**. I will try to fix it. Download might fail in case a new version gets released, I will try my best to keep it up-to-date. I have to manually update it, no other way. I hope this made your life easier. Enjoy ;)
+In case the script fails please do let me know on **Discord**. I will try to fix it. Download might fail in case a new version gets released, I will try my best to keep it up-to-date. I have to manually update links, no other way. I hope this made your life easier. Enjoy ;)
