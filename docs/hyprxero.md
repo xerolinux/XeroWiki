@@ -31,11 +31,15 @@ This project was a real labor of love, built with the help of two **Legendary** 
 
 !!! warning
 
-    **Hyprland** can be complex in and by itself, for support please check their [**HyprWiki**](https://wiki.hyprland.org){:target="_blank"}. If you do not have any prior Linux knowledge, please do not use it or this config. We will not be held responsible in case you break your system. It's yours, you are responsible for everything that happens to it.
+    **Hyprland** can be complex in and of itself, for support please check their [**HyprWiki**](https://wiki.hyprland.org){:target="_blank"}. If you do not have any prior Linux knowledge, please do not use it or this config. We will not be held responsible in case you break your system. It's yours, you are responsible for everything that happens to it.
     
-- **⚙️ Supported Platforms :**
+- **⚙️ Supported Platform :**
 
-It is *Highly* recommended to only use this config on a fresh *Arch* install, meaning install base Arch using the ArchISO skipping profiles section entirely, once done, reboot and login to your newly created install/user in TTY then run the command below. In case you don't know how to do that, please follow the [**Installing ArchLinux**](https://wiki.xerolinux.xyz/script/#installing-archlinux){:target="_blank"} section of our previous guide. **Don't install on top of an existing DE/WM !**
+Only use this config on a fresh *Arch* install, once done, reboot and login to your newly created user, then run the command below. In case you don't know how to do that, please follow the [**Installing ArchLinux**](https://wiki.xerolinux.xyz/script/#installing-archlinux){:target="_blank"} section of our previous guide. **Don't install on top of an existing DE/WM !**
+
+<p align="center">
+  <img width="360" src="https://i.imgur.com/esK1OAO.png">  <img width="360" src="https://i.imgur.com/I8sNnw6.png">
+</p>
 
 - **🚀 Installation :**
 
@@ -46,14 +50,14 @@ git clone https://github.com/xerolinux/HyprXero-git
 cd HyprXero-git/ && ./install.sh
 ```
 
-The script will add the **XeroLinux** repository for the toolkit, then go ahead and install **Hyprland** and all required components. We did it that way so you can use it as a *Post-Install* script. It will also prompt you as to which **AUR-Helper** you want to use for packages coming from there. It will work with either `yay` or `paru` so doesn't matter which you choose.
+The script will add the **XeroLinux** repository for the toolkit, then go ahead and install **Hyprland** and all the required components. It will also prompt you as to which **AUR-Helper** you want to use for packages coming from there, as many do. Unless you add the [**Chaotic-AUR**](https://xerolinux.xyz/posts/chaotic-aur/){:target="_blank"} Repo.
 
-Just a heads-up: it will **NOT** install any drivers or tools to get your hardware working-that part’s all on you. Think of it like a helpful sidekick that sets up your config and gets everything running smoothly, but it won’t handle the hardware magic. So, roll up your sleeves and get ready to tinker!
+**Just a heads-up:** Script will **NOT** install any drivers or tools to get your hardware working-that part’s all on you. Think of it like a helpful sidekick that sets up your config and gets everything running smoothly, but it won’t handle the hardware magic. So, roll up your sleeves and get ready to tinker!
 
 **🛒 Elements Used :**
 
 - **Terminal** ➤ Kitty
-- **Editor** ➤ Nano
+- **Editor** ➤ NeoVim-Qt
 - **Wallpaper** ➤ Waypaper
 - **Icons** ➤ Tela Circle Purple
 - **Theme** ➤ Layan-dark

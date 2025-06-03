@@ -6,11 +6,12 @@ tags:
   - XeroLinux
 ---
 
-# <h2 align="center">💿 XeroLinux Distro 💿</h2>
+# <h1 align="center">💿 XeroLinux Distro 💿</h1>
+<h2 align="center">Currently available Flavors : KDE Plasma & Gnome</h2>
 
 !!! info
 
-    In a nutshell, the **XeroLinux** ISO bundles all my scripts, toolkit, and custom rice into a seamless, easy-to-install package, skipping the hassle of running the ArchInstall script entirely. No more, no less. [**Source Code**](https://github.com/XeroLinuxDev){:target="_blank"}
+    In a nutshell, the **XeroLinux** ISO bundles all my scripts, toolkit, and custom rice into a seamless, easy-to-install package, skipping the hassle of running the ArchInstall script entirely. No more, no less. [**Source Code**](https://github.com/XeroLinuxDev/xero-build){:target="_blank"}
 
 ### Thank you
 
@@ -37,17 +38,7 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** & **GNOME**, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!
 
-<center>
-
-| **Minimum** 	| **Recommended** 	|
-|---	|---	|
-| 4GB RAM (DDR3+) 	| 8GB+ RAM (DDR3+) 	|
-| 64GB HDD/SSD Storage 	| 64GB+ HDD/SSD Storage 	|
-| Modern iGPU (512MB vRAM) 	| Modern dGPU (4GB+ vRAM) 	|
-
 P.S : VM Performance without *GPU Passthrough* may be underwhelming, please keep that in mind !
-
-</center>
 
 ## Bootable Tool
 
@@ -61,7 +52,7 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer will auto start. We will be (June 2025) moving everything to **Wayland** on the flagship, as we have on the **Gnome Dev Spin**, but fear not as we will keep **X11/Xorg** around for compatibility with legacy hardware. If you have older unsupported hardware, just select **Plasma X11** from login screen and enjoy ;)
 
-You can also switch to *X11* post-install in case of autologin either via KDE's **SDDM** settings or Gnome's **GDM** settings.
+You can also switch to *X11* post-install in case of autologin either via KDE's **SDDM** or Gnome's **GDM**.
 
 <p align="center">
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
@@ -109,7 +100,9 @@ Additionally, we have avoided *ricing* it, e.g: no custom theme was used, follow
 
 Although **XeroLinux** now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
 
-We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
+Sometimes, `mesa` ships updates that break the ability to login to user session, especially for Intel/nVidia setups, resulting in a black screen. To solve that, downgrading it via `sudo downgrade mesa lib32-mesa` selecting a version that works, and adding it to **pacman**'s ignore list would be the best solution. Keep an eye out for `mesa` update, try it by doing `sudo pacman -S mesa lib32-mesa` even though it's being ignored, if that doesn't work then downgrade again, rince n repeat until issue is gone. Only then remove it from ignore list.
+
+That's out of our hands unfortunately. We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
 
 ## FAQ & Answers
 
@@ -123,7 +116,7 @@ A : Simply because we can only include one, limits device support, post-install 
 
 > Q : Why not add a Window Manager like **Hyprland** ?
 
-A : Because they can be too complex maintain, especially **Hyprland** which I think is moving way too fast for me to keep up with. Not to mention that I, as the sole maintainer have no plans on using it on the daily.
+A : We did ! However not as an ISO but in post-install script form  ==> [**Here**](https://wiki.xerolinux.xyz/hyprxero/){:target="_blank"}
 
 > Q : Why not include a well-known browser like **Firefox** or **LibreWolf** ?
 

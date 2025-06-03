@@ -675,10 +675,12 @@
 
 
 
-<div><h1 id="xerolinux-distro"><h2 align="center">💿 XeroLinux Distro 💿</h2><a class="headerlink" href="#xerolinux-distro" title="Permanent link">¶</a></h1>
+<div><h1 id="xerolinux-distro"><h1 align="center">💿 XeroLinux Distro 💿</h1><a class="headerlink" href="#xerolinux-distro" title="Permanent link">¶</a></h1>
+<h2 align="center">Currently available Flavors : KDE Plasma &amp; Gnome</h2>
+
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>In a nutshell, the <strong>XeroLinux</strong> ISO bundles all my scripts, toolkit, and custom rice into a seamless, easy-to-install package, skipping the hassle of running the ArchInstall script entirely. No more, no less. <a href="https://github.com/XeroLinuxDev" target="_blank"><strong>Source Code</strong></a></p>
+<p>In a nutshell, the <strong>XeroLinux</strong> ISO bundles all my scripts, toolkit, and custom rice into a seamless, easy-to-install package, skipping the hassle of running the ArchInstall script entirely. No more, no less. <a href="https://github.com/XeroLinuxDev/xero-build" target="_blank"><strong>Source Code</strong></a></p>
 </div>
 <h3 id="thank-you">Thank you<a class="headerlink" href="#thank-you" title="Permanent link">¶</a></h3>
 <p>Before we begin, I would like to tell everyone of you who has supported the <strong>XeroLinux</strong> project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️</p>
@@ -699,18 +701,7 @@
 </div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong> &amp; <strong>GNOME</strong>, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!</p>
-<center>
-
-| **Minimum**   | **Recommended**   |
-|---    |---    |
-| 4GB RAM (DDR3+)   | 8GB+ RAM (DDR3+)  |
-| 64GB HDD/SSD Storage  | 64GB+ HDD/SSD Storage     |
-| Modern iGPU (512MB vRAM)  | Modern dGPU (4GB+ vRAM)   |
-
-P.S : VM Performance without *GPU Passthrough* may be underwhelming, please keep that in mind !
-
-</center>
-
+<p>P.S : VM Performance without <em>GPU Passthrough</em> may be underwhelming, please keep that in mind !</p>
 <h2 id="bootable-tool">Bootable Tool<a class="headerlink" href="#bootable-tool" title="Permanent link">¶</a></h2>
 <p>To boot into the Distro's Live Environment, all you have to do is use the tried and true <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a> to put ISO on &amp; boot, that way you have <strong>Grub</strong> as fallback in case <strong>SystemD-Boot</strong> fails. If you burn using <strong>Etcher</strong> or similar tools there will be nothing to fall back to. Just an FYI.</p>
 <p align="center">
@@ -719,7 +710,7 @@ P.S : VM Performance without *GPU Passthrough* may be underwhelming, please keep
 
 <h2 id="calamares-installer">Calamares Installer<a class="headerlink" href="#calamares-installer" title="Permanent link">¶</a></h2>
 <p>The <a href="https://codeberg.org/Calamares/calamares" target="_blank"><strong>Calamares</strong></a> installer will auto start. We will be (June 2025) moving everything to <strong>Wayland</strong> on the flagship, as we have on the <strong>Gnome Dev Spin</strong>, but fear not as we will keep <strong>X11/Xorg</strong> around for compatibility with legacy hardware. If you have older unsupported hardware, just select <strong>Plasma X11</strong> from login screen and enjoy ;)</p>
-<p>You can also switch to <em>X11</em> post-install in case of autologin either via KDE's <strong>SDDM</strong> settings or Gnome's <strong>GDM</strong> settings.</p>
+<p>You can also switch to <em>X11</em> post-install in case of autologin either via KDE's <strong>SDDM</strong> or Gnome's <strong>GDM</strong>.</p>
 <p align="center">
     <a class="glightbox" href="https://i.imgur.com/QsLRWtG.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/QsLRWtG.png" alt="rice"></a>
 </p>
@@ -751,7 +742,8 @@ P.S : VM Performance without *GPU Passthrough* may be underwhelming, please keep
 </blockquote>
 <h2 id="hybriddual-gpus">Hybrid/Dual GPUs<a class="headerlink" href="#hybriddual-gpus" title="Permanent link">¶</a></h2>
 <p>Although <strong>XeroLinux</strong> now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.</p>
-<p>We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!</p>
+<p>Sometimes, <code>mesa</code> ships updates that break the ability to login to user session, especially for Intel/nVidia setups, resulting in a black screen. To solve that, downgrading it via <code>sudo downgrade mesa lib32-mesa</code> selecting a version that works, and adding it to <strong>pacman</strong>'s ignore list would be the best solution. Keep an eye out for <code>mesa</code> update, try it by doing <code>sudo pacman -S mesa lib32-mesa</code> even though it's being ignored, if that doesn't work then downgrade again, rince n repeat until issue is gone. Only then remove it from ignore list.</p>
+<p>That's out of our hands unfortunately. We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!</p>
 <h2 id="faq-answers">FAQ &amp; Answers<a class="headerlink" href="#faq-answers" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>Q : Theming broke after update how do I get it back ?</p>
@@ -764,7 +756,7 @@ P.S : VM Performance without *GPU Passthrough* may be underwhelming, please keep
 <blockquote>
 <p>Q : Why not add a Window Manager like <strong>Hyprland</strong> ?</p>
 </blockquote>
-<p>A : Because they can be too complex maintain, especially <strong>Hyprland</strong> which I think is moving way too fast for me to keep up with. Not to mention that I, as the sole maintainer have no plans on using it on the daily.</p>
+<p>A : We did ! However not as an ISO but in post-install script form  ==&gt; <a href="https://wiki.xerolinux.xyz/hyprxero/" target="_blank"><strong>Here</strong></a></p>
 <blockquote>
 <p>Q : Why not include a well-known browser like <strong>Firefox</strong> or <strong>LibreWolf</strong> ?</p>
 </blockquote>
