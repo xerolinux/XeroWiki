@@ -16,8 +16,6 @@ This script will install **DaVinci Resolve** software as well as additional soft
     <img src="https://i.imgur.com/EgULGgW.png" alt="DaVinci">
 </p>
 
-The free version of **DaVinci Resolve** includes all of the same high quality processing as **DaVinci Resolve Studio** and can handle unlimited resolution media files. However it does limit project mastering and output to Ultra HD resolutions or lower and only supports a single processing GPU on Windows and Linux.
-
 ---
 
 <h1 align="center">.// The Wiki \\.</h1>
@@ -45,6 +43,16 @@ Script will install the required `figlet` and `fuse2` packages in case they are 
 
 Select the version you want to use. Once download is done, it will extract and run the **DaVinci** installer. Go through it as you would on a **Windows** machine and click finish. Then the script will ask you what GPU you have, be it **nVidia** or **AMD** select the appropriate one, at which point the script will take care of the rest. Once it's all done, just launch the app, either from the newly created desktop shortcut or the App Launcher.
 
+### 🔄 Version differences
+
+**DaVinci Resolve** (free) provides a robust set of editing, color grading, and audio tools suitable for most users, but it is limited to 4K output and lacks advanced features like multi-GPU support and AI-powered effects. It covers the essentials for independent creators and small projects.
+
+**DaVinci Resolve Studio** (paid) expands on this with higher resolution support, advanced noise reduction, AI-driven tools, multi-GPU acceleration and unlocks hardware-accelerated H.264/5 video encoding and higher resolution exports. It is designed for professionals who need enhanced performance and a wider range of high-end features for complex workflows.
+
+However, whichever version you select, they both lack native **AAC** and **MP3** audio encoding on Linux. meaning you cannot directly export **MP4** files with **AAC** audio from **Resolve** on Linux without using external tools like FFmpeg. Also for a better experience, best use it on an **nVidia** GPU since that's what the software favors.
+
 ### 🗨️ Wrap up
+
+While powerful and stable, Linux users face limitations as mentioned above. Despite this, Resolve remains the top professional video editor available on Linux for users comfortable with extra setup.
 
 In case the script fails please do let me know on **Discord**. I will try to fix it. Download might fail in case a new version gets released, I will try my best to keep it up-to-date. I have to manually update links, no other way. I hope this made your life easier. Enjoy ;)
