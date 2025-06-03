@@ -1,12 +1,13 @@
 ---
-title: DaVinci Reslove Installer
+title: DaVinci Resolve Installer
 tags:
   - Linux
   - DaVinci
   - Editing
 ---
 
-# <h2 align="center">📽️ DaVinci Reslove Installer 📽️</h2>
+# <h1 align="center">📽️ DaVinci Resolve Installer 📽️</h1>
+<h2 align="center">⚠️ <strong>DaVinCi support NOT included</strong> ⚠️</h2>
 
 ### ℹ️ Info
 
@@ -19,7 +20,6 @@ This script will install **DaVinci Resolve** software as well as additional soft
 ---
 
 <h1 align="center">.// The Wiki \\.</h1>
-<h3 align="center">⚠️ <strong>DaVinCi support NOT provided</strong> ⚠️</h3>
 
 ### 📜 Installation
 
