@@ -6,7 +6,7 @@ tags:
   - Plasma
 ---
 
-# <h2 align="center">🎨 XeroLinux KDE Rices 🎨</h2>
+<h1 align="center">🎨 XeroLinux KDE Rices 🎨</h1>
 
 !!! warning
 

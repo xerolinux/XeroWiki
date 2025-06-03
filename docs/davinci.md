@@ -6,8 +6,8 @@ tags:
   - Editing
 ---
 
-# <h1 align="center">📽️ DaVinci Resolve Installer 📽️</h1>
-<h2 align="center">⚠️ <strong>DaVinCi support NOT included</strong> ⚠️</h2>
+<h1 align="center">📽️ DaVinci Resolve Installer 📽️</h1>
+<h3 align="center">⚠️ <strong>DaVinCi support NOT included</strong> ⚠️</h3>
 
 ### ℹ️ Info
 

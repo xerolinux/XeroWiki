@@ -6,8 +6,8 @@ tags:
   - XeroLinux
 ---
 
-# <h1 align="center">💿 XeroLinux Distro 💿</h1>
-<h2 align="center">Currently available Flavors : KDE Plasma & Gnome</h2>
+<h1 align="center">💿 XeroLinux Distro 💿</h1>
+<h3 align="center">Currently available Flavors : KDE Plasma & Gnome</h3>
 
 !!! info
 

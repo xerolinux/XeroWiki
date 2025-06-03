@@ -10,7 +10,7 @@ tags:
   - XeroLinux
   - ArchLinux
 ---
-# <h2 align="center">💻 Xero D.E Install Script 💻</h2>
+<h1 align="center">💻 Xero D.E Install Script 💻</h1>
 
 !!! note
 

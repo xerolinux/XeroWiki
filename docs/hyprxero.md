@@ -6,7 +6,7 @@ tags:
   - Hyprland
 ---
 
-# <h2 align="center">🎨 XeroLayan — now on Hyprland 🎨</h2>
+<h1 align="center">🎨 XeroLayan — now on Hyprland 🎨</h1>
 
 ### ℹ️ Info
 

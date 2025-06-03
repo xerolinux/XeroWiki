@@ -5,7 +5,7 @@ tags:
   - Linux
 ---
 
-# <h2 align="center">🎭 Grub-Themes Script 🎭</h2>
+<h1 align="center">🎭 Grub-Themes Script 🎭</h1>
 
 ### Information
 
