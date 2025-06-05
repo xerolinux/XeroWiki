@@ -7,7 +7,7 @@ tags:
 ---
 
 <h1 align="center">📽️ DaVinci Resolve Installer 📽️</h1>
-<h3 align="center">⚠️ <strong>DaVinCi support NOT included</strong> ⚠️</h3>
+<h3 align="center">⚠️ <strong>DaVinci support NOT included</strong> ⚠️</h3>
 
 ### ℹ️ Info
 
@@ -55,7 +55,7 @@ Select the version you want to use. Once download is done, it will extract and r
 
 However, whichever version you select, they both lack native **AAC** and **MP3** audio encoding on Linux. meaning you cannot directly export **MP4** files with **AAC** audio from **Resolve** on Linux without using external tools like FFmpeg. Also for a better experience, best use it on an **nVidia** GPU since that's what the software favors.
 
-### 🗨️ Wrap up
+### 🗨️ Closing Words
 
 While powerful and stable, Linux users face limitations as mentioned above. Despite this, Resolve remains the top professional video editor available on Linux for users comfortable with extra setup.
 
