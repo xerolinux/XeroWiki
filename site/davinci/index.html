@@ -590,7 +590,11 @@
 <p>Run this command in Terminal :</p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/davinci.sh<span class="k">)</span><span class="s2">"</span>
 </span></code></pre></div>
-<p>Script will install the required <code>figlet</code> and <code>fuse2</code> packages in case they are missing before running, then it will resume.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Ethernet connection RECOMMENDED!</strong>. As WiFi can fluctuate a lot causing <strong>CURL</strong> to time-out and download to fail. Unless you have a stable enough connection. Also download might start off slow, don't mind it, as it will pick up as it goes. We host the zip files on our server simply because official links are temporary and expire after 30 minutes.</p>
+</div>
+<p>Script will install the required <code>figlet</code> and <code>fuse2</code> packages in case they are missing before running, then it will resume. </p>
 <p>Select the version you want to use. Once download is done, it will extract and run the <strong>DaVinci</strong> installer. Go through it as you would on a <strong>Windows</strong> machine and click finish. Then the script will ask you what GPU you have, be it <strong>nVidia</strong> or <strong>AMD</strong> select the appropriate one, at which point the script will take care of the rest. Once it's all done, just launch the app, either from the newly created desktop shortcut or the App Launcher.</p>
 <h3 id="differences">🔄 Differences<a class="headerlink" href="#differences" title="Permanent link">¶</a></h3>
 <p><strong>DaVinci Resolve</strong> (free) provides a robust set of editing, color grading, and audio tools suitable for most users, but it is limited to 4K output and lacks advanced features like multi-GPU support and AI-powered effects. It covers the essentials for independent creators and small projects.</p>

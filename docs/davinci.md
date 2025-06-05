@@ -39,7 +39,11 @@ Run this command in Terminal :
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/davinci.sh)"
 ```
 
-Script will install the required `figlet` and `fuse2` packages in case they are missing before running, then it will resume.
+!!! info
+
+    **Ethernet connection RECOMMENDED!**. As WiFi can fluctuate a lot causing **CURL** to time-out and download to fail. Unless you have a stable enough connection. Also download might start off slow, don't mind it, as it will pick up as it goes. We host the zip files on our server simply because official links are temporary and expire after 30 minutes.
+
+Script will install the required `figlet` and `fuse2` packages in case they are missing before running, then it will resume. 
 
 Select the version you want to use. Once download is done, it will extract and run the **DaVinci** installer. Go through it as you would on a **Windows** machine and click finish. Then the script will ask you what GPU you have, be it **nVidia** or **AMD** select the appropriate one, at which point the script will take care of the rest. Once it's all done, just launch the app, either from the newly created desktop shortcut or the App Launcher.
 
