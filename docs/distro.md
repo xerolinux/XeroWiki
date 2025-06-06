@@ -88,7 +88,7 @@ The **KDE Plasma** version is and always will be the main edition. I call it the
 
 As of February 2025, a new **Gnome** Dev-Spin has been added to the mix. The key differences between it and the **KDE Flagship** is that it's more oriented to those of you who do not game much, and prefer to have a stable system that stays out of your way while you do your work. 
 
-Additionally, we have avoided *ricing* it, e.g: no custom theme was used, following the **Gnome Guidelines**. All we did was use the Accent color feature to enable the Purple colors, and for consistency, we applied the **Tela Circle Purple** icon theme, while including just enough extensions & **GhosTTY** terminal (soon to be replaced with [**Ptyxis**](https://gitlab.gnome.org/chergert/ptyxis){:target="_blank"}), making it more functional.
+Additionally, we have avoided *ricing* it, e.g: no custom theme was used, following the **Gnome Guidelines**. All we did was use the Accent color feature to enable the Purple colors, and for consistency, we applied the **Tela Circle Purple** icon theme, while including just enough extensions & [**Ptyxis**](https://gitlab.gnome.org/chergert/ptyxis){:target="_blank"}, making it more functional.
 
 **Gnome Note :** 
 
@@ -98,7 +98,7 @@ Additionally, we have avoided *ricing* it, e.g: no custom theme was used, follow
 
 Although **XeroLinux** now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
 
-Just in case you *do* encounter the dreaded black screen of doom after an update, remember we ship `downgrade` package, so take full advantage of it and revert back to last known working version og your GPU driver, be it **nVidia** or **mesa** (AMD/Intel).
+Just in case you *do* encounter the dreaded black screen of doom after an update, remember we ship `downgrade` package, so take full advantage of it and revert back to last known working version of your GPU driver, be it **nVidia** or **mesa** (AMD/Intel).
 
 We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
 
