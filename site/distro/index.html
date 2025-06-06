@@ -740,8 +740,7 @@
 </p>
 
 <h2 id="supported-filesystems">Supported Filesystems<a class="headerlink" href="#supported-filesystems" title="Permanent link">¶</a></h2>
-<p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code>, <code>btrfs</code> and <code>xfs</code>. I don't know much about <code>btrfs</code> so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry. </p>
-<p>Additionally, <code>xfs</code> has a minor issue where it will show a very quick error message before <code>Grub</code> appears, I have no clue how to fix that, if you do please do let me know. Working together to squash bugs would allow me to do so at a much quicker pace.</p>
+<p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code>, <code>btrfs</code> and <code>xfs</code>. I don't know much about <code>btrfs</code> so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry. Use it as reason to learn something new.</p>
 <h2 id="gui-package-managers">GUI Package Managers<a class="headerlink" href="#gui-package-managers" title="Permanent link">¶</a></h2>
 <p>Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, <strong>PacSeekTUI</strong>, or <strong>Bauh</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.</p>
 <h2 id="iso-differences">ISO Differences<a class="headerlink" href="#iso-differences" title="Permanent link">¶</a></h2>
@@ -758,8 +757,8 @@
 </blockquote>
 <h2 id="hybriddual-gpus">Hybrid/Dual GPUs<a class="headerlink" href="#hybriddual-gpus" title="Permanent link">¶</a></h2>
 <p>Although <strong>XeroLinux</strong> now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.</p>
-<p>Sometimes, <code>mesa</code> ships updates that break the ability to login to user session, especially for Intel/nVidia setups, resulting in a black screen. To solve that, downgrading it via <code>sudo downgrade mesa lib32-mesa</code> selecting a version that works, and adding it to <strong>pacman</strong>'s ignore list would be the best solution. Keep an eye out for <code>mesa</code> update, try it by doing <code>sudo pacman -S mesa lib32-mesa</code> even though it's being ignored, if that doesn't work then downgrade again, rince n repeat until issue is gone. Only then remove it from ignore list.</p>
-<p>That's out of our hands unfortunately. We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!</p>
+<p>Just in case you <em>do</em> encounter the dreaded black screen of doom after an update, remember we ship <code>downgrade</code> package, so take full advantage of it and revert back to last known working version og your GPU driver, be it <strong>nVidia</strong> or <strong>mesa</strong> (AMD/Intel).</p>
+<p>We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!</p>
 <h2 id="faq-answers">FAQ &amp; Answers<a class="headerlink" href="#faq-answers" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>Q : Theming broke after update how do I get it back ?</p>

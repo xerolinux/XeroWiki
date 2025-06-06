@@ -72,9 +72,7 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
 
 ## Supported Filesystems
 
-Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry. 
-
-Additionally, `xfs` has a minor issue where it will show a very quick error message before `Grub` appears, I have no clue how to fix that, if you do please do let me know. Working together to squash bugs would allow me to do so at a much quicker pace.
+Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry. Use it as reason to learn something new.
 
 ## GUI Package Managers
 
@@ -100,9 +98,9 @@ Additionally, we have avoided *ricing* it, e.g: no custom theme was used, follow
 
 Although **XeroLinux** now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
 
-Sometimes, `mesa` ships updates that break the ability to login to user session, especially for Intel/nVidia setups, resulting in a black screen. To solve that, downgrading it via `sudo downgrade mesa lib32-mesa` selecting a version that works, and adding it to **pacman**'s ignore list would be the best solution. Keep an eye out for `mesa` update, try it by doing `sudo pacman -S mesa lib32-mesa` even though it's being ignored, if that doesn't work then downgrade again, rince n repeat until issue is gone. Only then remove it from ignore list.
+Just in case you *do* encounter the dreaded black screen of doom after an update, remember we ship `downgrade` package, so take full advantage of it and revert back to last known working version og your GPU driver, be it **nVidia** or **mesa** (AMD/Intel).
 
-That's out of our hands unfortunately. We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
+We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
 
 ## FAQ & Answers
 
