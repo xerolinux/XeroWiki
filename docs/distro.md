@@ -7,7 +7,6 @@ tags:
 ---
 
 <h1 align="center">💿 XeroLinux Distro 💿</h1>
-<h3 align="center">Available DEs : KDE Plasma & Gnome</h3>
 
 <p align="center" style="font-size: 1.0em; color: #ca54ca;">
   🐧<strong>info Build Status <em>(Not ISOs)</em></strong>🐧
