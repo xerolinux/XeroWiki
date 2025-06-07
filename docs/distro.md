@@ -8,10 +8,13 @@ tags:
 
 <h1 align="center">💿 XeroLinux Distro 💿</h1>
 <h3 align="center">Currently available Flavors : KDE Plasma & Gnome</h3>
+<p align="center" style="font-size: 0.9em; color: #888;">
+  Latest Commit: <code>{{ git_commit }}</code> Info: <em>{{ git_commit_message }} ({{ git_commit_date }})</em> 
+</p>
 
 !!! info
 
-    In a nutshell, the **XeroLinux** ISO bundles all my scripts, toolkit, and custom rice into a seamless, easy-to-install package, skipping the hassle of running the ArchInstall script entirely. No more, no less. [**Source Code**](https://github.com/XeroLinuxDev/xero-build){:target="_blank"}
+    In a nutshell, the **XeroLinux** ISO bundles all my scripts, toolkit, and custom rice into a seamless, easy-to-install package, skipping the hassle of running the ArchInstall script entirely. No more, no less. [**Source Code**](https://github.com/XeroLinuxDev/xero-build){:target="_blank"}.
 
 ### Thank you
 
