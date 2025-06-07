@@ -8,8 +8,9 @@ tags:
 
 <h1 align="center">💿 XeroLinux Distro 💿</h1>
 <h3 align="center">Currently available Flavors : KDE Plasma & Gnome</h3>
-<p align="center" style="font-size: 0.9em; color: #888;">
-  Latest Commit: <code>{{ git_commit }}</code> Info: <em>{{ git_commit_message }} ({{ git_commit_date }})</em> 
+<p align="center" style="font-size: 0.9em; color: #ca54ca;">
+<strong>.:: Build Repo Updates <em>(NOT ISOs)</em> ::.</strong><br />
+  <strong>Latest Commit :</strong> <code>{{ git_commit }}</code> / <strong>Git Message :</strong> <em>{{ git_commit_message }}</em> 
 </p>
 
 !!! info
