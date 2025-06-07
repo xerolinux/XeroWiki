@@ -53,7 +53,7 @@ Select the version you want to use. Once download is done, it will extract and r
 
 **DaVinci Resolve Studio** (paid) expands on this with higher resolution support, advanced noise reduction, AI-driven tools, multi-GPU acceleration and unlocks hardware-accelerated H.264/5 video encoding and higher resolution exports. It is designed for professionals who need enhanced performance and a wider range of high-end features for complex workflows.
 
-However, whichever version you select, they both lack native **AAC** and **MP3** audio encoding on Linux. meaning you cannot directly export **MP4** files with **AAC** audio from **Resolve** on Linux without using external tools like FFmpeg. Also for a better experience, best use it on an **nVidia** GPU since that's what the software favors.
+However, whichever version you select, they both lack native **AAC** audio encoding on Linux. meaning you cannot directly export **MP4** files with **AAC** audio from **Resolve** on Linux without using external tools like FFmpeg. Also for a better experience, best use it on an **nVidia** GPU since that's what the software favors.
 
 ### 🗨️ Closing Words
 
