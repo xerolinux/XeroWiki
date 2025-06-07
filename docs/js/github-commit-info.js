@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const msg = data.commit.message.split("\n")[0];
 
         target.innerHTML = `
-        <strong>Latest Commit :</strong> <code>${sha}</code> /
-        <strong>Git Message :</strong> <em>${msg}</em>
+        <strong>Latest Commit :</strong><code style="color: #ff5555;">${sha}</code> /
+        <strong>Git Message :</strong> <span style="color: #bd93f9;"><em>${msg}</em></span>
         `;
     })
     .catch(err => {
