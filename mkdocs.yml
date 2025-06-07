@@ -75,6 +75,9 @@ markdown_extensions:
        custom_checkbox: true
    - pymdownx.tilde
 
+extra_javascript:
+    - js/github-commit-info.js
+
 extra:
   social:
     - icon: fontawesome/brands/github

@@ -9,9 +9,11 @@ tags:
 <h1 align="center">💿 XeroLinux Distro 💿</h1>
 <h3 align="center">Currently available Flavors : KDE Plasma & Gnome</h3>
 <p align="center" style="font-size: 0.9em; color: #ca54ca;">
-<strong>.:: Build Repo Updates <em>(NOT ISOs)</em> ::.</strong><br />
-  <strong>Latest Commit :</strong> <code>{{ git_commit }}</code> / <strong>Git Message :</strong> <em>{{ git_commit_message }}</em> 
+  🐧<strong>info Build Status <em>(Not ISOs)</em></strong>🐧
 </p>
+<div id="live-build-commit" style="text-align: center; font-size: 0.9em;">
+  Loading latest commit info...
+</div>
 
 !!! info
 
