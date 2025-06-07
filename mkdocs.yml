@@ -3,7 +3,7 @@ site_description: XeroLinux Project Documentation.
 site_url: https://wiki.xerolinux.xyz
 
 # Copyright
-copyright: Copyright &copy; 2024 <a href="https://xerolinux.xyz" target="_blank"><strong>XeroLinux Group</strong></a>.
+copyright: Copyright &copy; {{ now.year }} <a href="https://xerolinux.xyz" target="_blank"><strong>XeroLinux Group</strong></a>.
 
 theme:
   name: material
@@ -27,6 +27,7 @@ theme:
 
 plugins:
   - search
+  - macros
   - autorefs
   - social
   - glightbox
