@@ -747,6 +747,8 @@
 <p>Once you trust it, you can move on. Now, depending on the method that was used, <code>ssh</code> or not, we either copy paste the command below or type it manually :</p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://xerolinux.xyz/script/xero-install.sh<span class="k">)</span><span class="s2">"</span>
 </span></code></pre></div>
+<p><strong>nVidia/Hybrid Note :</strong></p>
+<p>In those cases, it is <em>Highly</em> recommended that you run the toolkit via <code>sudo pacman -Syy &amp;&amp; xero-cli -m</code>, <em>prior</em> to first reboot, head on to the <strong>Drivers</strong> section and install the <strong>nVidia</strong> ones of choice, and only then reboot your system. Do not ignore this, as it might result in a <strong>Hard-Lock</strong>. This is not an issue with the script, sometimes drivers are required for things to work especially with <strong>nVidia</strong>.</p>
 <p><strong>Virtual Machine Note :</strong> </p>
 <p>If you want to test them inside a VM, please make sure you have 3D acceleration turned on in the VM or <strong>VirtGL</strong> in the case to <strong>KVM</strong> for best experience. Anyway, you will see such a message when selecting them via the script. Especially for <strong>Hyprland</strong> and <strong>Cosmic</strong> since they heavily rely on it due to all the effects and with them being <strong>Wayland</strong> only.. </p>
 <p><strong>Hyprland Install note :</strong></p>

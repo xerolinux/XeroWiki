@@ -124,6 +124,10 @@ Once you trust it, you can move on. Now, depending on the method that was used, 
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-install.sh)"
 ```
 
+**nVidia/Hybrid Note :**
+
+In those cases, it is *Highly* recommended that you run the toolkit via `sudo pacman -Syy && xero-cli -m`, *prior* to first reboot, head on to the **Drivers** section and install the **nVidia** ones of choice, and only then reboot your system. Do not ignore this, as it might result in a **Hard-Lock**. This is not an issue with the script, sometimes drivers are required for things to work especially with **nVidia**.
+
 **Virtual Machine Note :** 
 
 If you want to test them inside a VM, please make sure you have 3D acceleration turned on in the VM or **VirtGL** in the case to **KVM** for best experience. Anyway, you will see such a message when selecting them via the script. Especially for **Hyprland** and **Cosmic** since they heavily rely on it due to all the effects and with them being **Wayland** only.. 
