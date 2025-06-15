@@ -33,6 +33,8 @@ This project was a real labor of love, built with the help of two **Legendary** 
 
     **Hyprland** can be complex in and of itself, for support please check their [**HyprWiki**](https://wiki.hyprland.org){:target="_blank"}. If you do not have any prior Linux knowledge, please do not use it or this config. We will not be held responsible in case you break your system. It's yours, you are responsible for everything that happens to it.
     
+![type:video](https://www.youtube.com/embed/ochcsepIzhE)
+    
 - **⚙️ Supported Platform :**
 
 Only use this config on a fresh *Arch* install, once done, reboot and login to your newly created user, then run the command below. In case you don't know how to do that, please follow the [**Installing ArchLinux**](https://wiki.xerolinux.xyz/script/#installing-archlinux){:target="_blank"} section of our previous guide. **Don't install on top of an existing DE/WM !**
