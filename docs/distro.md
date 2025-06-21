@@ -56,7 +56,7 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 ## X11 is no more
 
-We have moved completely to **Wayland** on the flagship, as we have on the **Gnome Dev Spin**, so no more **X11 session**. If you still rely on **X11**, please install the following packages to be able to login to **X11 Session**. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
+We have moved completely to **Wayland** on the flagship, as we have on the **Gnome Dev Spin**. If you still rely on **X11**, please install the following packages to be able to login to it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
 
 ```Bash
 sudo pacman -S kwin-x11 plasma-x11-session
