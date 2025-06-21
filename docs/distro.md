@@ -54,11 +54,17 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
     <img src="https://i.imgur.com/LTVLXo3.png" alt="rice">
 </p>
 
+## X11 is no more
+
+We have moved completely to **Wayland** on the flagship, as we have on the **Gnome Dev Spin**, so no more **X11 session**. If you still rely on **X11**, please install the following packages to be able to login to **X11 Session**. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
+
+```Bash
+sudo pacman -S kwin-x11 plasma-x11-session
+```
+
 ## Calamares Installer
 
-The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer will auto start. We will be (June 2025) moving everything to **Wayland** on the flagship, as we have on the **Gnome Dev Spin**, but fear not as we will keep **X11/Xorg** around for compatibility with legacy hardware. If you have older unsupported hardware, just select **Plasma X11** from login screen and enjoy ;)
-
-You can also switch to *X11* post-install in case of autologin either via KDE's **SDDM** or Gnome's **GDM**.
+The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer will auto start. 
 
 <p align="center">
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
@@ -78,7 +84,7 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
 
 ## Supported Filesystems
 
-Also, the currently supported **Filesystems** are, `ext4`, `btrfs` and `xfs`. I don't know much about `btrfs` so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry. Use it as reason to learn something new.
+Also, the currently supported **Filesystems** are, `ext4` and `xfs`. As of **June 2025** we have removed **BTRFS** from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line. 
 
 ## GUI Package Managers
 

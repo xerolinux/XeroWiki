@@ -341,6 +341,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#x11-is-no-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      X11 is no more
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#calamares-installer" class="md-nav__link">
     <span class="md-ellipsis">
       Calamares Installer
@@ -604,6 +613,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#x11-is-no-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      X11 is no more
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#calamares-installer" class="md-nav__link">
     <span class="md-ellipsis">
       Calamares Installer
@@ -730,9 +748,12 @@
     <a class="glightbox" href="https://i.imgur.com/LTVLXo3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/LTVLXo3.png" alt="rice"></a>
 </p>
 
+<h2 id="x11-is-no-more">X11 is no more<a class="headerlink" href="#x11-is-no-more" title="Permanent link">¶</a></h2>
+<p>We have moved completely to <strong>Wayland</strong> on the flagship, as we have on the <strong>Gnome Dev Spin</strong>, so no more <strong>X11 session</strong>. If you still rely on <strong>X11</strong>, please install the following packages to be able to login to <strong>X11 Session</strong>. That is a major shift by the Plasma Team, they split <strong>X11</strong> &amp; <strong>Wayland</strong> packages.</p>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>kwin-x11<span class="w"> </span>plasma-x11-session
+</span></code></pre></div>
 <h2 id="calamares-installer">Calamares Installer<a class="headerlink" href="#calamares-installer" title="Permanent link">¶</a></h2>
-<p>The <a href="https://codeberg.org/Calamares/calamares" target="_blank"><strong>Calamares</strong></a> installer will auto start. We will be (June 2025) moving everything to <strong>Wayland</strong> on the flagship, as we have on the <strong>Gnome Dev Spin</strong>, but fear not as we will keep <strong>X11/Xorg</strong> around for compatibility with legacy hardware. If you have older unsupported hardware, just select <strong>Plasma X11</strong> from login screen and enjoy ;)</p>
-<p>You can also switch to <em>X11</em> post-install in case of autologin either via KDE's <strong>SDDM</strong> or Gnome's <strong>GDM</strong>.</p>
+<p>The <a href="https://codeberg.org/Calamares/calamares" target="_blank"><strong>Calamares</strong></a> installer will auto start. </p>
 <p align="center">
     <a class="glightbox" href="https://i.imgur.com/QsLRWtG.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/QsLRWtG.png" alt="rice"></a>
 </p>
@@ -746,7 +767,7 @@
 </p>
 
 <h2 id="supported-filesystems">Supported Filesystems<a class="headerlink" href="#supported-filesystems" title="Permanent link">¶</a></h2>
-<p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code>, <code>btrfs</code> and <code>xfs</code>. I don't know much about <code>btrfs</code> so I will try my best to help there, just do not expect me to have all the answers regarding it, sorry. Use it as reason to learn something new.</p>
+<p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code> and <code>xfs</code>. As of <strong>June 2025</strong> we have removed <strong>BTRFS</strong> from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line. </p>
 <h2 id="gui-package-managers">GUI Package Managers<a class="headerlink" href="#gui-package-managers" title="Permanent link">¶</a></h2>
 <p>Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, <strong>PacSeekTUI</strong>, or <strong>Bauh</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.</p>
 <h2 id="iso-differences">ISO Differences<a class="headerlink" href="#iso-differences" title="Permanent link">¶</a></h2>
