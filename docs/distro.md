@@ -42,7 +42,7 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 ## Installation
 
-Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** & **GNOME**, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!
+Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** & **GNOME**, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.
 
 ## Bootable Tool
 
@@ -52,11 +52,11 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
     <img src="https://i.imgur.com/LTVLXo3.png" alt="rice">
 </p>
 
-## KDE Wayland
+## Nouveau Wayland
 
 If you are planning to grab the **KDE** version of **XeroLinux**, kindly note that there's currently an ongoing issue causing *"kwin_wayland"* to peg CPU to 100% for **nVidia** users, making install and usage nearly impossible.
 
-In the meantime, we have blacklisted the *"nouveau"* driver by default, so please make sure to install appropriate drivers post-install via included toolkit, after having updated the system, before rebooting.
+For now, we’ve temporarily disabled the *"nouveau"* driver by default, so if you’re using multiple monitors, only one will work and performance may be limited. To get the best experience, please make sure to 1) update your system, 2) install the GPU drivers using the included toolkit, and then 3) reboot your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
 
 We apologize for any inconvenience.
 
