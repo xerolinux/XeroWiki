@@ -44,8 +44,6 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** & **GNOME**, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal. Check the requirements below for more details!
 
-P.S : VM Performance without *GPU Passthrough* may be underwhelming, please keep that in mind !
-
 ## Bootable Tool
 
 To boot into the Distro's Live Environment, all you have to do is use the tried and true [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"} to put ISO on & boot, that way you have **Grub** as fallback in case **SystemD-Boot** fails. If you burn using **Etcher** or similar tools there will be nothing to fall back to. Just an FYI.
@@ -54,13 +52,21 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
     <img src="https://i.imgur.com/LTVLXo3.png" alt="rice">
 </p>
 
+## KDE Wayland
+
+If you are planning to grab the **KDE** version of **XeroLinux**, kindly note that there's currently an ongoing issue causing *"kwin_wayland"* to peg CPU to 100% for **nVidia** users, making install and usage nearly impossible.
+
+In the meantime, we have blacklisted the *"nouveau"* driver by default, so please make sure to install appropriate drivers post-install via included toolkit, after having updated the system, before rebooting.
+
+We apologize for any inconvenience.
+
 ## X11 is no more
 
-We have moved completely to **Wayland** on the flagship, as we have on the **Gnome Dev Spin**. If you still rely on **X11**, please install the following packages to be able to login to it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
+We have moved completely to **Wayland** on the flagship, as we have on the **Gnome Dev Spin**. If you still rely on **X11**, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
 
-```Bash
-sudo pacman -S kwin-x11 plasma-x11-session
-```
+<p align="center">
+    <img src="https://i.imgur.com/FeBe8gQ.png" alt="X11">
+</p>
 
 ## Calamares Installer
 
