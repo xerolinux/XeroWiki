@@ -33,7 +33,7 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 <h1 align="center">.// The Wiki \\.</h1>
 
-<h2 align="center">⚠️ <strong>ISO does NOT (yet) boot on nVidia 50 Series cards.</strong> ⚠️</h2>
+<h2 align="center">⚠️ <strong>nVidia 50 Series Support Limited.</strong> ⚠️</h2>
 <h4 align="center">Always update & Reboot post-install before using the Distro.</h4>
 
 !!! warning
@@ -96,22 +96,6 @@ Also, the currently supported **Filesystems** are, `ext4` and `xfs`. As of **Jun
 
 Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **PacSeekTUI**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
 
-## ISO Differences
-
-The **KDE Plasma** version is and always will be the main edition. I call it the **Flagship** simply because  it's the DE I love and contribute to the most. It can be unstable at times however, since it's constantly evolving and keeps getting new features non stop making the most customizable/riceable DE out there. That's why I love it so much. So it's targeted to anyone who likes that sort of stuff and don't mind a few bugs here n there...
-
-<p align="center">
-  <img width="360" src="https://i.imgur.com/X0tqq1R.jpeg">  <img width="360" src="https://i.imgur.com/QiB1mxk.jpeg">
-</p>
-
-As of February 2025, a new **Gnome** Dev-Spin has been added to the mix. The key differences between it and the **KDE Flagship** is that it's more oriented to those of you who do not game much, and prefer to have a stable system that stays out of your way while you do your work. 
-
-Additionally, we have avoided *ricing* it, e.g: no custom theme was used, following the **Gnome Guidelines**. All we did was use the Accent color feature to enable the Purple colors, and for consistency, we applied the **Tela Circle Purple** icon theme, while including just enough extensions & [**Ptyxis**](https://gitlab.gnome.org/chergert/ptyxis){:target="_blank"}, making it more functional.
-
-**Gnome Note :** 
-
-> I highly recommend against installing too many extensions if you want to keep your system stable. Also, please avoid using any themes, as they might cause overall issues since the Gnome devs do not like it when you do. In the end it's all up to you. You have been warned ;)
-
 ## Hybrid/Dual GPUs
 
 Although **XeroLinux** now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
@@ -170,8 +154,6 @@ If you encounter any *other* issues or have questions directly related to the in
     <img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice">
 </p>
 
-However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**.
-
-As for any **KDE** or **GNOME** related issues, you are kindly requested to report them over on the [**KDE Bugtracker**](https://bugs.kde.org){:target="_blank"} & [**GNOME BugZilla**](https://gitlab.gnome.org/GNOME){:target="_blank"}.
+However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**. As for release changelog, you can find this [**Here**](https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md){:target="_blank"}.
 
 That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉

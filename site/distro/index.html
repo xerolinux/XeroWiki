@@ -395,15 +395,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iso-differences" class="md-nav__link">
-    <span class="md-ellipsis">
-      ISO Differences
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#hybriddual-gpus" class="md-nav__link">
     <span class="md-ellipsis">
       Hybrid/Dual GPUs
@@ -676,15 +667,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#iso-differences" class="md-nav__link">
-    <span class="md-ellipsis">
-      ISO Differences
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#hybriddual-gpus" class="md-nav__link">
     <span class="md-ellipsis">
       Hybrid/Dual GPUs
@@ -750,7 +732,7 @@
 <hr>
 <h1 align="center">.// The Wiki \\.</h1>
 
-<h2 align="center">⚠️ <strong>ISO does NOT (yet) boot on nVidia 50 Series cards.</strong> ⚠️</h2>
+<h2 align="center">⚠️ <strong>nVidia 50 Series Support Limited.</strong> ⚠️</h2>
 <h4 align="center">Always update &amp; Reboot post-install before using the Distro.</h4>
 
 <div class="admonition warning">
@@ -793,18 +775,6 @@
 <p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code> and <code>xfs</code>. As of <strong>June 2025</strong> we have removed <strong>BTRFS</strong> from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line. </p>
 <h2 id="gui-package-managers">GUI Package Managers<a class="headerlink" href="#gui-package-managers" title="Permanent link">¶</a></h2>
 <p>Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, <strong>PacSeekTUI</strong>, or <strong>Bauh</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.</p>
-<h2 id="iso-differences">ISO Differences<a class="headerlink" href="#iso-differences" title="Permanent link">¶</a></h2>
-<p>The <strong>KDE Plasma</strong> version is and always will be the main edition. I call it the <strong>Flagship</strong> simply because  it's the DE I love and contribute to the most. It can be unstable at times however, since it's constantly evolving and keeps getting new features non stop making the most customizable/riceable DE out there. That's why I love it so much. So it's targeted to anyone who likes that sort of stuff and don't mind a few bugs here n there...</p>
-<p align="center">
-  <a class="glightbox" href="https://i.imgur.com/X0tqq1R.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="360" src="https://i.imgur.com/X0tqq1R.jpeg"></a>  <a class="glightbox" href="https://i.imgur.com/QiB1mxk.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="360" src="https://i.imgur.com/QiB1mxk.jpeg"></a>
-</p>
-
-<p>As of February 2025, a new <strong>Gnome</strong> Dev-Spin has been added to the mix. The key differences between it and the <strong>KDE Flagship</strong> is that it's more oriented to those of you who do not game much, and prefer to have a stable system that stays out of your way while you do your work. </p>
-<p>Additionally, we have avoided <em>ricing</em> it, e.g: no custom theme was used, following the <strong>Gnome Guidelines</strong>. All we did was use the Accent color feature to enable the Purple colors, and for consistency, we applied the <strong>Tela Circle Purple</strong> icon theme, while including just enough extensions &amp; <a href="https://gitlab.gnome.org/chergert/ptyxis" target="_blank"><strong>Ptyxis</strong></a>, making it more functional.</p>
-<p><strong>Gnome Note :</strong> </p>
-<blockquote>
-<p>I highly recommend against installing too many extensions if you want to keep your system stable. Also, please avoid using any themes, as they might cause overall issues since the Gnome devs do not like it when you do. In the end it's all up to you. You have been warned ;)</p>
-</blockquote>
 <h2 id="hybriddual-gpus">Hybrid/Dual GPUs<a class="headerlink" href="#hybriddual-gpus" title="Permanent link">¶</a></h2>
 <p>Although <strong>XeroLinux</strong> now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.</p>
 <p>Just in case you <em>do</em> encounter the dreaded black screen of doom after an update, remember we ship <code>downgrade</code> package, so take full advantage of it and revert back to last known working version of your GPU driver, be it <strong>nVidia</strong> or <strong>mesa</strong> (AMD/Intel).</p>
@@ -856,8 +826,7 @@
     <a class="glightbox" href="https://i.imgur.com/6qyA6nM.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice"></a>
 </p>
 
-<p>However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the <a href="https://wiki.archlinux.org" target="_blank"><strong>ArchWiki</strong></a>, or our custom <strong>ChatGPT A.I.</strong> available on <strong>Discord</strong>.</p>
-<p>As for any <strong>KDE</strong> or <strong>GNOME</strong> related issues, you are kindly requested to report them over on the <a href="https://bugs.kde.org" target="_blank"><strong>KDE Bugtracker</strong></a> &amp; <a href="https://gitlab.gnome.org/GNOME" target="_blank"><strong>GNOME BugZilla</strong></a>.</p>
+<p>However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the <a href="https://wiki.archlinux.org" target="_blank"><strong>ArchWiki</strong></a>, or our custom <strong>ChatGPT A.I.</strong> available on <strong>Discord</strong>. As for release changelog, you can find this <a href="https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md" target="_blank"><strong>Here</strong></a>.</p>
 <p>That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉</p></div>
 
 
