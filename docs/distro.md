@@ -58,7 +58,7 @@ Due to an ongoing issue with *kwin_wayland* + **nVidia** GPUs causing CPU to be 
 
 To get the best experience, please make sure to 1) update your system, 2) install the GPU drivers using the included toolkit, and then 3) reboot your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
 
-This *might* have also fixed support for the *50 Series* **nVidia** GPUs, I do not know. Test it and report back. This does not apply to the **Gnome Spin** which still uses *"nouveau" to boot. So if you want to use it, it might not boot on the aforementioned GPUs. Again report.
+This *might* have also fixed support for the *50 Series* **nVidia** GPUs, I do not know. Test it and report back. This does not apply to the **Gnome Spin** which still uses *"nouveau"* to boot. So if you want to use it, it might not boot on the aforementioned GPUs. Again report.
 
 We apologize for any inconvenience.
 
