@@ -33,12 +33,12 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 <h1 align="center">.// The Wiki \\.</h1>
 
-<h2 align="center">⚠️ <strong>nVidia 50 Series Support Limited.</strong> ⚠️</h2>
+<h2 align="center">⚠️ <strong>nVidia "Nouveau" Blacklisted.</strong> ⚠️</h2>
 <h4 align="center">Always update & Reboot post-install before using the Distro.</h4>
 
 !!! warning
 
-    The "*nouveau*" Open Source Kernel Driver, used to boot the ISO(s), currently does not have support for the new 50 Series nVidia cards. For a non-exhaustive list of currently supported **nVidia** GPUs, please click [**Here**](https://nouveau.freedesktop.org/CodeNames.html){:target="_blank"} or [**Here**](https://nouveau.freedesktop.org/FeatureMatrix.html){:target="_blank"}.
+    The "*nouveau*" Open Source Kernel Driver, used to boot the ISO(s), currently does not have support for the new 50 Series nVidia cards. This only affects the **Gnome Spin**. On the **KDE Flagship** we have blacklisted it so it might still work. For a non-exhaustive list of currently supported **nVidia** GPUs, please click [**Here**](https://nouveau.freedesktop.org/CodeNames.html){:target="_blank"} or [**Here**](https://nouveau.freedesktop.org/FeatureMatrix.html){:target="_blank"}.
 
 ## Installation
 
@@ -54,9 +54,11 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 ## Nouveau Wayland
 
-If you are planning to grab the **KDE** version of **XeroLinux**, kindly note that there's currently an ongoing issue causing *"kwin_wayland"* to peg CPU to 100% for **nVidia** users, making install and usage nearly impossible.
+Due to an ongoing issue with *kwin_wayland* + **nVidia** GPUs causing CPU to be pegged at 100% we’ve temporarily disabled the *"nouveau"* driver by default on the **KDE Flagship**, so if you’re using multiple monitors, only one will work and performance may be limited. 
 
-For now, we’ve temporarily disabled the *"nouveau"* driver by default, so if you’re using multiple monitors, only one will work and performance may be limited. To get the best experience, please make sure to 1) update your system, 2) install the GPU drivers using the included toolkit, and then 3) reboot your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
+To get the best experience, please make sure to 1) update your system, 2) install the GPU drivers using the included toolkit, and then 3) reboot your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
+
+This *might* have also fixed support for the *50 Series* **nVidia** GPUs, I do not know. Test it and report back. This does not apply to the **Gnome Spin** which still uses *"nouveau" to boot. So if you want to use it, it might not boot on the aforementioned GPUs. Again report.
 
 We apologize for any inconvenience.
 
@@ -90,7 +92,9 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
 
 ## Supported Filesystems
 
-Also, the currently supported **Filesystems** are, `ext4` and `xfs`. As of **June 2025** we have removed **BTRFS** from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line. 
+Also, the currently supported **Filesystems** are, `ext4` and `xfs`. As of **June 2025** we have removed **BTRFS** from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.
+
+If you are planning on using the **Manual Partitioning** option however, **BTRFS** will still show up as an option, can't disable it from there. **PLEASE IGNORE IT !!**
 
 ## GUI Package Managers
 
@@ -100,7 +104,7 @@ Additionally, I'd like to point out that no *GUI package managers* are included 
 
 Although **XeroLinux** now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
 
-Just in case you *do* encounter the dreaded black screen of doom after an update, remember we ship `downgrade` package, so take full advantage of it and revert back to last known working version of your GPU driver, be it **nVidia** or **mesa** (AMD/Intel).
+Just in case you *do* encounter the dreaded **Black Screen of Doom** after an update, remember we ship `downgrade` package, so take full advantage of it and revert back to last known working version of your GPU driver, be it **nVidia** or **mesa** (AMD/Intel).
 
 We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
 

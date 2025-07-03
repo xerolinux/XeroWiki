@@ -732,12 +732,12 @@
 <hr>
 <h1 align="center">.// The Wiki \\.</h1>
 
-<h2 align="center">⚠️ <strong>nVidia 50 Series Support Limited.</strong> ⚠️</h2>
+<h2 align="center">⚠️ <strong>nVidia "Nouveau" Blacklisted.</strong> ⚠️</h2>
 <h4 align="center">Always update &amp; Reboot post-install before using the Distro.</h4>
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The "<em>nouveau</em>" Open Source Kernel Driver, used to boot the ISO(s), currently does not have support for the new 50 Series nVidia cards. For a non-exhaustive list of currently supported <strong>nVidia</strong> GPUs, please click <a href="https://nouveau.freedesktop.org/CodeNames.html" target="_blank"><strong>Here</strong></a> or <a href="https://nouveau.freedesktop.org/FeatureMatrix.html" target="_blank"><strong>Here</strong></a>.</p>
+<p>The "<em>nouveau</em>" Open Source Kernel Driver, used to boot the ISO(s), currently does not have support for the new 50 Series nVidia cards. This only affects the <strong>Gnome Spin</strong>. On the <strong>KDE Flagship</strong> we have blacklisted it so it might still work. For a non-exhaustive list of currently supported <strong>nVidia</strong> GPUs, please click <a href="https://nouveau.freedesktop.org/CodeNames.html" target="_blank"><strong>Here</strong></a> or <a href="https://nouveau.freedesktop.org/FeatureMatrix.html" target="_blank"><strong>Here</strong></a>.</p>
 </div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong> &amp; <strong>GNOME</strong>, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.</p>
@@ -748,8 +748,9 @@
 </p>
 
 <h2 id="nouveau-wayland">Nouveau Wayland<a class="headerlink" href="#nouveau-wayland" title="Permanent link">¶</a></h2>
-<p>If you are planning to grab the <strong>KDE</strong> version of <strong>XeroLinux</strong>, kindly note that there's currently an ongoing issue causing <em>"kwin_wayland"</em> to peg CPU to 100% for <strong>nVidia</strong> users, making install and usage nearly impossible.</p>
-<p>For now, we’ve temporarily disabled the <em>"nouveau"</em> driver by default, so if you’re using multiple monitors, only one will work and performance may be limited. To get the best experience, please make sure to 1) update your system, 2) install the GPU drivers using the included toolkit, and then 3) reboot your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.</p>
+<p>Due to an ongoing issue with <em>kwin_wayland</em> + <strong>nVidia</strong> GPUs causing CPU to be pegged at 100% we’ve temporarily disabled the <em>"nouveau"</em> driver by default on the <strong>KDE Flagship</strong>, so if you’re using multiple monitors, only one will work and performance may be limited. </p>
+<p>To get the best experience, please make sure to 1) update your system, 2) install the GPU drivers using the included toolkit, and then 3) reboot your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.</p>
+<p>This <em>might</em> have also fixed support for the <em>50 Series</em> <strong>nVidia</strong> GPUs, I do not know. Test it and report back. This does not apply to the <strong>Gnome Spin</strong> which still uses *"nouveau" to boot. So if you want to use it, it might not boot on the aforementioned GPUs. Again report.</p>
 <p>We apologize for any inconvenience.</p>
 <h2 id="x11-is-no-more">X11 is no more<a class="headerlink" href="#x11-is-no-more" title="Permanent link">¶</a></h2>
 <p>We have moved completely to <strong>Wayland</strong> on the flagship, as we have on the <strong>Gnome Dev Spin</strong>. If you still rely on <strong>X11</strong>, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split <strong>X11</strong> &amp; <strong>Wayland</strong> packages.</p>
@@ -772,12 +773,13 @@
 </p>
 
 <h2 id="supported-filesystems">Supported Filesystems<a class="headerlink" href="#supported-filesystems" title="Permanent link">¶</a></h2>
-<p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code> and <code>xfs</code>. As of <strong>June 2025</strong> we have removed <strong>BTRFS</strong> from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line. </p>
+<p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code> and <code>xfs</code>. As of <strong>June 2025</strong> we have removed <strong>BTRFS</strong> from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.</p>
+<p>If you are planning on using the <strong>Manual Partitioning</strong> option however, <strong>BTRFS</strong> will still show up as an option, can't disable it from there. <strong>PLEASE IGNORE IT !!</strong></p>
 <h2 id="gui-package-managers">GUI Package Managers<a class="headerlink" href="#gui-package-managers" title="Permanent link">¶</a></h2>
 <p>Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, <strong>PacSeekTUI</strong>, or <strong>Bauh</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.</p>
 <h2 id="hybriddual-gpus">Hybrid/Dual GPUs<a class="headerlink" href="#hybriddual-gpus" title="Permanent link">¶</a></h2>
 <p>Although <strong>XeroLinux</strong> now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.</p>
-<p>Just in case you <em>do</em> encounter the dreaded black screen of doom after an update, remember we ship <code>downgrade</code> package, so take full advantage of it and revert back to last known working version of your GPU driver, be it <strong>nVidia</strong> or <strong>mesa</strong> (AMD/Intel).</p>
+<p>Just in case you <em>do</em> encounter the dreaded <strong>Black Screen of Doom</strong> after an update, remember we ship <code>downgrade</code> package, so take full advantage of it and revert back to last known working version of your GPU driver, be it <strong>nVidia</strong> or <strong>mesa</strong> (AMD/Intel).</p>
 <p>We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!</p>
 <h2 id="faq-answers">FAQ &amp; Answers<a class="headerlink" href="#faq-answers" title="Permanent link">¶</a></h2>
 <blockquote>
