@@ -54,7 +54,7 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 ## Nouveau Wayland
 
-Due to an ongoing issue with *kwin_wayland* + **nVidia** GPUs causing CPU to be pegged at 100% we’ve temporarily disabled the *"nouveau"* driver by default on the **KDE Flagship**, so if you’re using multiple monitors, only one will work and performance may be limited. 
+Due to an ongoing issue with *nouveau+wayland* on **nVidia** GPUs causing CPU to be pegged at 100% we’ve temporarily disabled the *"nouveau"* driver by default on the **KDE Flagship**, so if you’re using multiple monitors, only one will work and performance may be limited. 
 
 To get the best experience, please make sure to 1) update your system, 2) install the GPU drivers using the included toolkit, and then 3) reboot your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
 
