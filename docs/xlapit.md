@@ -17,7 +17,7 @@ tags:
 
 This toolkit aims to be an all-in-one solution for post-installation, expediting your Arch setup. It's offered as use at your own risk type of thing, without much support. You will have to rely on yourself and your own knowledge and ability to do research your setup.
 
-![type:video](https://www.youtube.com/embed/bEFBO2QRN8E)
+![type:video](https://www.youtube.com/embed/YGSOthQbefI)
 
 Toolkit recieves a lot of updates on almost a daily basis. Use above video just as a reference not an absolute lol. I keep getting ideas which I immediately implement. Due to the amount of changes I cannot keep a changelog, sorry. Too many to keep up with. **Feel free to fork it, modify what you need to make it work better for you, it's FOSS !**
 
