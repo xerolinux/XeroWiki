@@ -44,6 +44,12 @@ In case you haven't gotten your copy yet, check out how to » [**Here**](https:/
 
 Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** & **GNOME**, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.
 
+**Quick heads up for anyone new here:**
+
+This distro won’t work on old-school computers that use legacy **BIOS/MBR**. It only runs on newer setups with **EFI/UEFI** — that’s the modern way computers start up. 
+
+If you’re not sure what that means, just read [**This Article**](https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi) and check if your PC supports **UEFI**. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that! 
+
 ## Bootable Tool
 
 To boot into the Distro's Live Environment, all you have to do is use the tried and true [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"} to put ISO on & boot, that way you have **Grub** as fallback in case **SystemD-Boot** fails. If you burn using **Etcher** or similar tools there will be nothing to fall back to. Just an FYI.
