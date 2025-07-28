@@ -29,7 +29,7 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
 
 ### Free Demo ISOs
 
-These *Demo* ISOs are for exploring only, since they come without an installer and space is pretty limited. Great for checking out what the distro can do and experimenting with the setup before making a donation. A solid way to tinker, see the tweaks in action, and dive into the details without any commitment.
+These *Demo* ISOs are available **free** of charge for exploring only, since they come without an installer and space is pretty limited. Great for checking out what the distro can do and experimenting with the setup before making a donation. A solid way to tinker, see the tweaks in action, and dive into the details without any commitment.
 
 In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/xerolinux/shop){:target="_blank"}.
 
