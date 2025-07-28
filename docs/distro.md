@@ -29,9 +29,11 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
 
 ### Free Demo ISOs
 
-These *Demo* ISOs will be available *soon*, **free** of charge for testing purposes only, since they come without an installer and *cow-space* is pretty limited (100MiB). Great for checking out what the distro can do and experimenting with the setup before making a donation. A solid way to tinker, see the tweaks in action, and dive into the details without any commitment.
+These *Demo* ISOs will be available *soon*, **free** of charge for testing purposes only, since they come without an installer and *cow-space* is pretty limited (100MiB), so you won’t be able to update or install big packages. They’re just for testing, so don’t try updating, it won’t work because of the space limit. 
 
-In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/xerolinux/shop){:target="_blank"}.
+Great for checking out what the distro can do and experimenting with the setup before making a donation. A solid way to tinker, see the tweaks in action, and dive into the details without any commitment.
+
+Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://ko-fi.com/xerolinux/shop){:target="_blank"}.
 
 ---
 
