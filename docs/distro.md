@@ -23,11 +23,15 @@ tags:
 
 Before we begin, I would like to tell everyone of you who has supported the **XeroLinux** project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️
 
-In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/xerolinux/shop){:target="_blank"}.
-
 <p align="center">
     <img src="https://i.imgur.com/ejZ1ZQv.png" alt="rice">
 </p>
+
+### Free Demo ISOs
+
+These *Demo* ISOs are for exploring only, since they come without an installer and space is pretty limited. Great for checking out what the distro can do and experimenting with the setup before making a donation. A solid way to tinker, see the tweaks in action, and dive into the details without any commitment.
+
+In case you haven't gotten your copy yet, check out how to » [**Here**](https://ko-fi.com/xerolinux/shop){:target="_blank"}.
 
 ---
 
