@@ -29,7 +29,7 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
 
 ### Free Demo ISOs
 
-These *Demo* ISOs will be available *soon*, **free** of charge for testing purposes only, since they come without an installer and *cow-space* is pretty limited (100MiB), so you won’t be able to update or install big packages. They’re just for testing, so don’t try updating, it won’t work because of the space limit.
+These *Demo* ISOs available *now*, **free** of charge are for testing purposes only, since they come without an installer and *cow-space* is pretty limited (100MiB), so you won’t be able to update or install big packages. They’re just for testing, so don’t try updating, it won’t work because of the space limit.
 
 Finally, since Live Environment is not persistent, installing anything that requires a reboot, like Drivers is therefore impossible, keep that in mind before attempting to do so.
 
