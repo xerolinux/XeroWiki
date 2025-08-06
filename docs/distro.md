@@ -27,7 +27,7 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
     <img src="https://i.imgur.com/ejZ1ZQv.png" alt="rice">
 </p>
 
-### Free Demo ISOs
+### Free Demos
 
 These *Demo* ISOs available *now*, **free** of charge are for testing purposes only, since they come without an installer and *cow-space* is pretty limited (100MiB), so you won’t be able to update or install big packages. They’re just for testing, so don’t try updating, it won’t work because of the space limit.
 
@@ -52,17 +52,11 @@ Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://
 
 Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** & **GNOME**, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.
 
-**Quick heads up for anyone new here:**
+## Legacy Systems
 
 This distro won’t work on old-school computers that use legacy **BIOS/MBR**. It only runs on newer setups with **EFI/UEFI** — that’s the modern way computers start up. 
 
-If you’re not sure what that means, just read [**This Article**](https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi){:target="_blank"} and check if your PC supports **UEFI**. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that! 
-
-> Note : If at any moment while using it, you get the `unkown key "%INSTALL_DB%" in local database` issue during update, please run the following command in terminal :
-
-```Bash
-sudo find /var/lib/pacman/local/ -type f -name "desc" -exec sed -i '/^%INSTALLED_DB%$/,+2d' {} \;
-```
+If you’re not sure what that means, just read [**This Article**](https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi){:target="_blank"} and check if your PC supports **UEFI**. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that!
 
 ## Bootable Tool
 
@@ -127,6 +121,24 @@ Although **XeroLinux** now supports Hybrid laptops with both integrated (iGPU) a
 Just in case you *do* encounter the dreaded **Black Screen of Doom** after an update, remember we ship `downgrade` package, so take full advantage of it and revert back to last known working version of your GPU driver, be it **nVidia** or **mesa** (AMD/Intel).
 
 We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
+
+## Accessibility
+
+Starting with the **September** builds, we’re including [**Orca**](https://orca.gnome.org), an open-source screen reader for **GNOME** and other *AT-SPI-compliant* Linux desktops. This helps users with visual impairments interact more easily with apps like GTK, LibreOffice, and web browsers.
+
+Orca uses speech synthesis engines such as *eSpeak-NG* and supports refreshable braille devices via BRLTTY. It offers features like screen magnification, focus tracking, customizable verbosity, and flexible keybindings. Users can also personalize Orca through scripting and profiles.
+
+Adding Orca improves accessibility and ensures a better experience for those relying on screen readers.
+
+## Issues/Fixes
+
+If at any moment while using it, you get the `unkown key "%INSTALL_DB%" in local database` issue during update, please run the following command in terminal :
+
+```Bash
+sudo find /var/lib/pacman/local/ -type f -name "desc" -exec sed -i '/^%INSTALLED_DB%$/,+2d' {} \;
+```
+
+That's it. Hopefully nothing else exists.
 
 ## FAQ & Answers
 
