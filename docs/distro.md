@@ -112,7 +112,7 @@ If you are planning on using the **Manual Partitioning** option however, **BTRFS
 
 ## GUI Package Managers
 
-Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **PacSeekTUI**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
+Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
 
 ## Hybrid/Dual GPUs
 
@@ -128,7 +128,7 @@ Starting with the **September** builds, we’re including [**Orca**](https://orc
 
 Orca uses speech synthesis engines such as *eSpeak-NG* and supports refreshable braille devices via BRLTTY. It offers features like screen magnification, focus tracking, customizable verbosity, and flexible keybindings. Users can also personalize Orca through scripting and profiles.
 
-Adding Orca improves accessibility and ensures a better experience for those relying on screen readers.
+Adding Orca improves accessibility and ensures a better experience.
 
 ## Issues/Fixes
 
