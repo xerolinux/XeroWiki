@@ -1,4 +1,5 @@
 - [🏠Home](index.md)
+- [⁉️Xero FAQ](xero-faq.md)
 - [💿The Distro](distro.md)
 - [🐧The Toolkit](xlapit.md)
 - [💻DE Install Script](script.md)
