@@ -46,7 +46,7 @@ Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://
 
 !!! warning
 
-    The "*nouveau*" Open Source Kernel Driver, used to boot the ISO(s), currently does not have support for the new 50 Series nVidia cards. We have had no choice but to blacklist it so it might still work. For a non-exhaustive list of currently supported **nVidia** GPUs, please click [**Here**](https://nouveau.freedesktop.org/CodeNames.html){:target="_blank"} or [**Here**](https://nouveau.freedesktop.org/FeatureMatrix.html){:target="_blank"}.
+    The "*nouveau*" Open Source Kernel Driver, that was used to boot the ISO(s), currently does not have support for the new 50 Series nVidia cards. That's why we had to blacklist it. If you have a 50 Series card plz test and report back to us. For a non-exhaustive list of currently supported **nVidia** GPUs, please click [**Here**](https://nouveau.freedesktop.org/CodeNames.html){:target="_blank"} or [**Here**](https://nouveau.freedesktop.org/FeatureMatrix.html){:target="_blank"}.
 
 ## Installation
 
