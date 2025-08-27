@@ -15,9 +15,9 @@ tags:
   Loading latest commit info...
 </div>
 
-!!! info
+!!! warning
 
-    In a nutshell, the **XeroLinux** ISO bundles all my scripts, toolkit, and custom rice into a seamless, easy-to-install package, skipping the hassle of running the ArchInstall script entirely. No more, no less. [**Source Code**](https://github.com/XeroLinuxDev/xero-build){:target="_blank"}.
+    The *AUR* is currently under **DDoS** attack, and has been for past few weeks, so the **Apdatifier** widget might error out during update checks. I would recommend you avoid installing packages from there unitl issue is resolved. Use the **Chaotic-AUR** instead for now. Check service status [**Here**](https://stats.uptimerobot.com/vmM5ruWEAB){:target="_blank"}.
 
 ### Thank you
 
@@ -54,7 +54,7 @@ Before we dive in, it's important to note that **XeroLinux** features **KDE Plas
 
 ## Legacy Systems
 
-This distro won’t work on old-school computers that use legacy **BIOS/MBR**. It only runs on newer setups with **EFI/UEFI** — that’s the modern way computers start up. 
+This distro won’t boot on old-school computers that use legacy **BIOS/MBR**. It only runs on newer setups with **EFI/UEFI** — that’s the modern way computers start up. 
 
 If you’re not sure what that means, just read [**This Article**](https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi){:target="_blank"} and check if your PC supports **UEFI**. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that!
 
@@ -107,8 +107,6 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
 ## Supported Filesystems
 
 Also, the currently supported **Filesystems** are, `ext4` and `xfs`. As of **June 2025** we have removed **BTRFS** from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.
-
-If you are planning on using the **Manual Partitioning** option however, **BTRFS** will still show up as an option, can't disable it from there. **PLEASE IGNORE IT !!**
 
 ## GUI Package Managers
 

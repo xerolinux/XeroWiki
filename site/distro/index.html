@@ -772,9 +772,9 @@
   Loading latest commit info...
 </div>
 
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>In a nutshell, the <strong>XeroLinux</strong> ISO bundles all my scripts, toolkit, and custom rice into a seamless, easy-to-install package, skipping the hassle of running the ArchInstall script entirely. No more, no less. <a href="https://github.com/XeroLinuxDev/xero-build" target="_blank"><strong>Source Code</strong></a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <em>AUR</em> is currently under <strong>DDoS</strong> attack, and has been for past few weeks, so the <strong>Apdatifier</strong> widget might error out during update checks. I would recommend you avoid installing packages from there unitl issue is resolved. Use the <strong>Chaotic-AUR</strong> instead for now. Check service status <a href="https://stats.uptimerobot.com/vmM5ruWEAB" target="_blank"><strong>Here</strong></a>.</p>
 </div>
 <h3 id="thank-you">Thank you<a class="headerlink" href="#thank-you" title="Permanent link">¶</a></h3>
 <p>Before we begin, I would like to tell everyone of you who has supported the <strong>XeroLinux</strong> project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️</p>
@@ -800,7 +800,7 @@
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong> &amp; <strong>GNOME</strong>, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.</p>
 <h2 id="legacy-systems">Legacy Systems<a class="headerlink" href="#legacy-systems" title="Permanent link">¶</a></h2>
-<p>This distro won’t work on old-school computers that use legacy <strong>BIOS/MBR</strong>. It only runs on newer setups with <strong>EFI/UEFI</strong> — that’s the modern way computers start up. </p>
+<p>This distro won’t boot on old-school computers that use legacy <strong>BIOS/MBR</strong>. It only runs on newer setups with <strong>EFI/UEFI</strong> — that’s the modern way computers start up. </p>
 <p>If you’re not sure what that means, just read <a href="https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi" target="_blank"><strong>This Article</strong></a> and check if your PC supports <strong>UEFI</strong>. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that!</p>
 <h2 id="bootable-tool">Bootable Tool<a class="headerlink" href="#bootable-tool" title="Permanent link">¶</a></h2>
 <p>To boot into the Distro's Live Environment, all you have to do is use the tried and true <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a> to put ISO on &amp; boot, that way you have <strong>Grub</strong> as fallback in case <strong>SystemD-Boot</strong> fails. If you burn using <strong>Etcher</strong> or similar tools there will be nothing to fall back to. Just an FYI.</p>
@@ -835,7 +835,6 @@
 
 <h2 id="supported-filesystems">Supported Filesystems<a class="headerlink" href="#supported-filesystems" title="Permanent link">¶</a></h2>
 <p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code> and <code>xfs</code>. As of <strong>June 2025</strong> we have removed <strong>BTRFS</strong> from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.</p>
-<p>If you are planning on using the <strong>Manual Partitioning</strong> option however, <strong>BTRFS</strong> will still show up as an option, can't disable it from there. <strong>PLEASE IGNORE IT !!</strong></p>
 <h2 id="gui-package-managers">GUI Package Managers<a class="headerlink" href="#gui-package-managers" title="Permanent link">¶</a></h2>
 <p>Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, or <strong>Bauh</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.</p>
 <h2 id="hybriddual-gpus">Hybrid/Dual GPUs<a class="headerlink" href="#hybriddual-gpus" title="Permanent link">¶</a></h2>
