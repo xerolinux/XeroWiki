@@ -46,7 +46,7 @@ Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://
 
 !!! warning
 
-    The "*nouveau*" Open Source Kernel Driver, that was used to boot the ISO(s), currently does not have support for the new 50 Series nVidia cards. That's why we had to blacklist it. If you have a 50 Series card plz test and report back to us. For a non-exhaustive list of currently supported **nVidia** GPUs, please click [**Here**](https://nouveau.freedesktop.org/CodeNames.html){:target="_blank"} or [**Here**](https://nouveau.freedesktop.org/FeatureMatrix.html){:target="_blank"}.
+    Due to an ongoing issue with *nouveau+wayland* on **nVidia** GPUs causing CPU to be pegged at 100% we’ve temporarily blacklisted the *"nouveau"* driver by default, so if you’re using multiple monitors, only one will work and performance may be limited. To get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
 
 ## Installation
 
@@ -65,16 +65,6 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 <p align="center">
     <img src="https://i.imgur.com/LTVLXo3.png" alt="rice">
 </p>
-
-## Nouveau Wayland
-
-Due to an ongoing issue with *nouveau+wayland* on **nVidia** GPUs causing CPU to be pegged at 100% we’ve temporarily disabled the *"nouveau"* driver by default on the **KDE Flagship**, so if you’re using multiple monitors, only one will work and performance may be limited. 
-
-To get the best experience, please make sure to 1) update your system, 2) install the GPU drivers using the included toolkit, and then 3) reboot your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
-
-This *might* have also fixed support for the *50 Series* **nVidia** GPUs, I do not know. Test it and report back. This does not apply to the **Gnome Spin** which still uses *"nouveau"* to boot. So if you want to use it, it might not boot on the aforementioned GPUs. Again report.
-
-We apologize for any inconvenience.
 
 ## X11 is no more
 

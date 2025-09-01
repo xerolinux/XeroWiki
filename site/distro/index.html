@@ -359,15 +359,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nouveau-wayland" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nouveau Wayland
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#x11-is-no-more" class="md-nav__link">
     <span class="md-ellipsis">
       X11 is no more
@@ -658,15 +649,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nouveau-wayland" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nouveau Wayland
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#x11-is-no-more" class="md-nav__link">
     <span class="md-ellipsis">
       X11 is no more
@@ -795,7 +777,7 @@
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The "<em>nouveau</em>" Open Source Kernel Driver, that was used to boot the ISO(s), currently does not have support for the new 50 Series nVidia cards. That's why we had to blacklist it. If you have a 50 Series card plz test and report back to us. For a non-exhaustive list of currently supported <strong>nVidia</strong> GPUs, please click <a href="https://nouveau.freedesktop.org/CodeNames.html" target="_blank"><strong>Here</strong></a> or <a href="https://nouveau.freedesktop.org/FeatureMatrix.html" target="_blank"><strong>Here</strong></a>.</p>
+<p>Due to an ongoing issue with <em>nouveau+wayland</em> on <strong>nVidia</strong> GPUs causing CPU to be pegged at 100% we’ve temporarily blacklisted the <em>"nouveau"</em> driver by default, so if you’re using multiple monitors, only one will work and performance may be limited. To get the best experience, please make sure to <strong>1) update</strong>, <strong>2) install the GPU drivers</strong> using the included toolkit, and then <strong>3) reboot</strong> your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.</p>
 </div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong> &amp; <strong>GNOME</strong>, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.</p>
@@ -808,11 +790,6 @@
     <a class="glightbox" href="https://i.imgur.com/LTVLXo3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/LTVLXo3.png" alt="rice"></a>
 </p>
 
-<h2 id="nouveau-wayland">Nouveau Wayland<a class="headerlink" href="#nouveau-wayland" title="Permanent link">¶</a></h2>
-<p>Due to an ongoing issue with <em>nouveau+wayland</em> on <strong>nVidia</strong> GPUs causing CPU to be pegged at 100% we’ve temporarily disabled the <em>"nouveau"</em> driver by default on the <strong>KDE Flagship</strong>, so if you’re using multiple monitors, only one will work and performance may be limited. </p>
-<p>To get the best experience, please make sure to 1) update your system, 2) install the GPU drivers using the included toolkit, and then 3) reboot your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.</p>
-<p>This <em>might</em> have also fixed support for the <em>50 Series</em> <strong>nVidia</strong> GPUs, I do not know. Test it and report back. This does not apply to the <strong>Gnome Spin</strong> which still uses <em>"nouveau"</em> to boot. So if you want to use it, it might not boot on the aforementioned GPUs. Again report.</p>
-<p>We apologize for any inconvenience.</p>
 <h2 id="x11-is-no-more">X11 is no more<a class="headerlink" href="#x11-is-no-more" title="Permanent link">¶</a></h2>
 <p>We have moved completely to <strong>Wayland</strong> on the flagship, as we have on the <strong>Gnome Dev Spin</strong>. If you still rely on <strong>X11</strong>, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split <strong>X11</strong> &amp; <strong>Wayland</strong> packages.</p>
 <p align="center">
