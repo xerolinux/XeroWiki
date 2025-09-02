@@ -54,7 +54,7 @@ Before we dive in, it's important to note that **XeroLinux** features **KDE Plas
 
 ## Legacy Systems
 
-This distro won’t boot on old-school computers that use legacy **BIOS/MBR**. It only runs on newer setups with **EFI/UEFI** — that’s the modern way computers start up. 
+Please avoid booting ISOs on on old-school computers that use legacy **BIOS/MBR**. It only works on newer setups with **EFI/UEFI** — Legacy Boot will be removed soon !
 
 If you’re not sure what that means, just read [**This Article**](https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi){:target="_blank"} and check if your PC supports **UEFI**. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that!
 
