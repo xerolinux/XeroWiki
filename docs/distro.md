@@ -15,10 +15,6 @@ tags:
   Loading latest commit info...
 </div>
 
-!!! warning
-
-    The *AUR* is currently under **DDoS** attack, and has been for past few weeks, so the **Apdatifier** widget might error out during update checks. I would recommend you avoid installing packages from there unitl issue is resolved. Use the **Chaotic-AUR** instead for now. Check service status [**Here**](https://stats.uptimerobot.com/vmM5ruWEAB){:target="_blank"}.
-
 ### Thank you
 
 Before we begin, I would like to tell everyone of you who has supported the **XeroLinux** project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️
@@ -46,7 +42,7 @@ Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://
 
 !!! warning
 
-    Due to an ongoing issue with *nouveau+wayland* on **nVidia** GPUs causing CPU to be pegged at 100% we’ve temporarily blacklisted the *"nouveau"* driver by default, so if you’re using multiple monitors, only one will work and performance may be limited. To get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
+    **nVidia Users :** Due to an ongoing issue with *nouveau+wayland* on those GPUs causing CPU to be pegged at 100% we’ve temporarily blacklisted the *"nouveau"* driver by default, so if you’re using **nVidia**, to get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
 
 ## Installation
 
