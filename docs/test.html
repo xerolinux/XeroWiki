@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The XeroLinux Distro</title>
+</head>
+<body>
+  <h1 align="center">💿 XeroLinux Distro 💿</h1>
+  <p align="center" style="font-size: 1.0em; color: #ca54ca;">
+    🐧<strong>Info Build Status<em>(Not ISOs)</em></strong>🐧
+  </p>
+  <div id="live-build-commit" style="text-align: center; font-size: 0.96em;">
+    Loading latest commit info...
+  </div>
+  <h3>Thank you</h3>
+  <p>
+    Before we begin, I would like to tell everyone of you who has supported the <strong>XeroLinux</strong> project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️
+  </p>
+  <p align="center">
+    <img src="https://i.imgur.com/ejZ1ZQv.png" alt="rice" />
+  </p>
+  <h3>Free Demos</h3>
+  <p>
+    These <em>Demo</em> ISOs available <em>now</em>, <strong>free</strong> of charge are for testing purposes only, since they come without an installer and <em>cow-space</em> is pretty limited (100MiB), so you won’t be able to update or install big packages. They’re just for testing, so don’t try updating, it won’t work because of the space limit.
+    Finally, since Live Environment is not persistent, installing anything that requires a reboot, like Drivers is therefore impossible, keep that in mind before attempting to do so.
+    All this is great for checking out what the distro can do and experimenting with the setup before making a donation. A solid way to tinker, see the tweaks in action, and dive into the details without any commitment.
+    Satisfied ? You can take the plunge and donate for a copy » <a href="https://ko-fi.com/xerolinux/shop" target="_blank"><strong>Here</strong></a>.
+  </p>
+  <hr />
+  <h1 align="center">.// The Wiki \.</h1>
+  <h2 align="center">⚠️ <strong>nVidia "Nouveau" Blacklisted.</strong> ⚠️</h2>
+  <h4 align="center">Always update &amp; Reboot post-install before using the Distro.</h4>
+  <div style="border: 1px solid #f5c6cb; background-color: #f8d7da; padding: 1em; border-radius: 5px; margin: 1em 0;">
+    <strong>nVidia Users :</strong> Due to an ongoing issue with <em>nouveau+wayland</em> on those GPUs causing CPU to be pegged at 100% we’ve temporarily blacklisted the <em>"nouveau"</em> driver by default, so if you’re using <strong>nVidia</strong>, to get the best experience, please make sure to <strong>1) update</strong>, <strong>2) install the GPU drivers</strong> using the included toolkit, and then <strong>3) reboot</strong> your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
+  </div>
+  <h2>Installation</h2>
+  <p>
+    Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong> &amp; <strong>GNOME</strong>, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.
+  </p>
+  <h2>Legacy Systems</h2>
+  <p>
+    Please avoid booting ISOs on on old-school computers that use legacy <strong>BIOS/MBR</strong>. It only works on newer setups with <strong>EFI/UEFI</strong> — Legacy Boot will be removed soon !
+    If you’re not sure what that means, just read <a href="https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi" target="_blank"><strong>This Article</strong></a> and check if your PC supports <strong>UEFI</strong>. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that!
+  </p>
+  <h2>Bootable Tool</h2>
+  <p>
+    To boot into the Distro's Live Environment, all you have to do is use the tried and true <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a> to put ISO on &amp; boot, that way you have <strong>Grub</strong> as fallback in case <strong>SystemD-Boot</strong> fails. If you burn using <strong>Etcher</strong> or similar tools there will be nothing to fall back to. Just an FYI.
+  </p>
+  <p align="center">
+    <img src="https://i.imgur.com/LTVLXo3.png" alt="rice" />
+  </p>
+  <h2>X11 is no more</h2>
+  <p>
+    We have moved completely to <strong>Wayland</strong> on the flagship, as we have on the <strong>Gnome Dev Spin</strong>. If you still rely on <strong>X11</strong>, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split <strong>X11</strong> &amp; <strong>Wayland</strong> packages.
+  </p>
+  <p align="center">
+    <img src="https://i.imgur.com/FeBe8gQ.png" alt="X11" />
+  </p>
+  <h2>Calamares Installer</h2>
+  <p>The <a href="https://codeberg.org/Calamares/calamares" target="_blank"><strong>Calamares</strong></a> installer will auto start.</p>
+  <p align="center">
+    <img src="https://i.imgur.com/QsLRWtG.png" alt="rice" />
+  </p>
+  <p>
+    Anyway, the installer is and will always function in offline mode, meaning that while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.
+  </p>
+  <h2>XeroLinux Toolkit</h2>
+  <p>
+    I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.
+    For more info about it check the <a href="https://wiki.xerolinux.xyz/xlapit/" target="_blank"><strong>Wiki</strong></a>
+  </p>
+  <p align="center">
+    <img src="https://i.imgur.com/yym6CPo.png" alt="rice" />
+  </p>
+  <h2>Supported Filesystems</h2>
+  <p>
+    Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code> and <code>xfs</code>. As of <strong>June 2025</strong> we have removed <strong>BTRFS</strong> from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.
+  </p>
+  <h2>GUI Package Managers</h2>
+  <p>
+    Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, or <strong>Bauh</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
+  </p>
+  <h2>Hybrid/Dual GPUs</h2>
+  <p>
+    Although <strong>XeroLinux</strong> now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
+    Just in case you <em>do</em> encounter the dreaded <strong>Black Screen of Doom</strong> after an update, remember we ship <code>downgrade</code> package, so take full advantage of it and revert back to last known working version of your GPU driver, be it <strong>nVidia</strong> or <strong>mesa</strong> (AMD/Intel).
+    We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
+  </p>
+  <h2>Accessibility</h2>
+  <p>
+    Starting with the <strong>September</strong> builds, we’re including <a href="https://orca.gnome.org" target="_blank"><strong>Orca</strong></a>, an open-source screen reader for <strong>GNOME</strong> and other <em>AT-SPI-compliant</em> Linux desktops. This helps users with visual impairments interact more easily with apps like GTK, LibreOffice, and web browsers.
+    Orca uses speech synthesis engines such as <em>eSpeak-NG</em> and supports refreshable braille devices via BRLTTY. It offers features like screen magnification, focus tracking, customizable verbosity, and flexible keybindings. Users can also personalize Orca through scripting and profiles.
+    Adding Orca improves accessibility and ensures a better experience.
+  </p>
+  <h2>Issues/Fixes</h2>
+  <p>
+    If at any moment while using it, you get the <code>unkown key "%INSTALL_DB%" in local database</code> issue during update, please run the following command in terminal :
+  </p>
+  <pre><code>sudo find /var/lib/pacman/local/ -type f -name "desc" -exec sed -i '/^%INSTALLED_DB%$/,+2d' {} \;
+</code></pre>
+  <p>That's it. Hopefully nothing else exists.</p>
+  <h2>Support/Issues</h2>
+  <p>
+    If you encounter any <em>other</em> issues or have questions directly related to the installation, feel free to reach out to me on <strong>Fosstodon</strong> or <strong>Discord</strong>. Please do not ask ok <strong>Ko-Fi</strong>. All relevant links are provided in the footer, and I'll do my best to assist you.
+  </p>
+  <p align="center">
+    <img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice" />
+  </p>
+  <p>
+    However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the <a href="https://wiki.archlinux.org" target="_blank"><strong>ArchWiki</strong></a>, or our custom <strong>ChatGPT A.I.</strong> available on <strong>Discord</strong>. As for release changelog, you can find this <a href="https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md" target="_blank"><strong>Here</strong></a>.
+  </p>
+  <p>
+    That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉
+  </p>
+</body>
+</html>

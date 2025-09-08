@@ -83,16 +83,7 @@
       
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
@@ -757,7 +748,7 @@
 <h3 id="thank-you">Thank you<a class="headerlink" href="#thank-you" title="Permanent link">¶</a></h3>
 <p>Before we begin, I would like to tell everyone of you who has supported the <strong>XeroLinux</strong> project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️</p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/ejZ1ZQv.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/ejZ1ZQv.png" alt="rice"></a>
+    <img src="https://i.imgur.com/ejZ1ZQv.png" alt="rice">
 </p>
 
 <h3 id="free-demos">Free Demos<a class="headerlink" href="#free-demos" title="Permanent link">¶</a></h3>
@@ -772,8 +763,9 @@
 <h4 align="center">Always update &amp; Reboot post-install before using the Distro.</h4>
 
 <div class="admonition warning">
-<strong>nVidia Users :</strong> Due to an ongoing issue with <em>nouveau+wayland</em> on those GPUs causing CPU to be pegged at 100% we’ve temporarily blacklisted the <em>"nouveau"</em> driver by default, so if you’re using <strong>nVidia</strong>, to get the best experience, please make sure to <strong>1) update</strong>, <strong>2) install the GPU drivers</strong> using the included toolkit, and then <strong>3) reboot</strong> your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
-  </div>
+<p class="admonition-title">Warning</p>
+<p><strong>nVidia Users :</strong> Due to an ongoing issue with <em>nouveau+wayland</em> on those GPUs causing CPU to be pegged at 100% we’ve temporarily blacklisted the <em>"nouveau"</em> driver by default, so if you’re using <strong>nVidia</strong>, to get the best experience, please make sure to <strong>1) update</strong>, <strong>2) install the GPU drivers</strong> using the included toolkit, and then <strong>3) reboot</strong> your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.</p>
+</div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong> &amp; <strong>GNOME</strong>, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.</p>
 <h2 id="legacy-systems">Legacy Systems<a class="headerlink" href="#legacy-systems" title="Permanent link">¶</a></h2>
@@ -782,19 +774,19 @@
 <h2 id="bootable-tool">Bootable Tool<a class="headerlink" href="#bootable-tool" title="Permanent link">¶</a></h2>
 <p>To boot into the Distro's Live Environment, all you have to do is use the tried and true <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a> to put ISO on &amp; boot, that way you have <strong>Grub</strong> as fallback in case <strong>SystemD-Boot</strong> fails. If you burn using <strong>Etcher</strong> or similar tools there will be nothing to fall back to. Just an FYI.</p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/LTVLXo3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/LTVLXo3.png" alt="rice"></a>
+    <img src="https://i.imgur.com/LTVLXo3.png" alt="rice">
 </p>
 
 <h2 id="x11-is-no-more">X11 is no more<a class="headerlink" href="#x11-is-no-more" title="Permanent link">¶</a></h2>
 <p>We have moved completely to <strong>Wayland</strong> on the flagship, as we have on the <strong>Gnome Dev Spin</strong>. If you still rely on <strong>X11</strong>, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split <strong>X11</strong> &amp; <strong>Wayland</strong> packages.</p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/FeBe8gQ.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/FeBe8gQ.png" alt="X11"></a>
+    <img src="https://i.imgur.com/FeBe8gQ.png" alt="X11">
 </p>
 
 <h2 id="calamares-installer">Calamares Installer<a class="headerlink" href="#calamares-installer" title="Permanent link">¶</a></h2>
 <p>The <a href="https://codeberg.org/Calamares/calamares" target="_blank"><strong>Calamares</strong></a> installer will auto start. </p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/QsLRWtG.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/QsLRWtG.png" alt="rice"></a>
+    <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
 </p>
 
 <p>Anyway, the installer is and will always function in offline mode, meaning that while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.</p>
@@ -802,7 +794,7 @@
 <p>I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.</p>
 <p>For more info about it check the <a href="https://wiki.xerolinux.xyz/xlapit/" target="_blank"><strong>Wiki</strong></a></p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/yym6CPo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/yym6CPo.png" alt="rice"></a>
+    <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
 </p>
 
 <h2 id="supported-filesystems">Supported Filesystems<a class="headerlink" href="#supported-filesystems" title="Permanent link">¶</a></h2>
@@ -825,7 +817,7 @@
 <h2 id="supportissues">Support/Issues<a class="headerlink" href="#supportissues" title="Permanent link">¶</a></h2>
 <p>If you encounter any <em>other</em> issues or have questions directly related to the installation, feel free to reach out to me on <strong>Fosstodon</strong> or <strong>Discord</strong>. Please do not ask ok <strong>Ko-Fi</strong>. All relevant links are provided in the footer, and I'll do my best to assist you.</p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/6qyA6nM.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice"></a>
+    <img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice">
 </p>
 
 <p>However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the <a href="https://wiki.archlinux.org" target="_blank"><strong>ArchWiki</strong></a>, or our custom <strong>ChatGPT A.I.</strong> available on <strong>Discord</strong>. As for release changelog, you can find this <a href="https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md" target="_blank"><strong>Here</strong></a>.</p>
@@ -992,7 +984,5 @@
         <script src="../js/github-commit-info.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>

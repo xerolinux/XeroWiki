@@ -83,16 +83,7 @@
       
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-    html.glightbox-open { overflow: initial; height: 100%; }
-    .gslide-title { margin-top: 0px; user-select: text; }
-    .gslide-desc { color: #666; user-select: text; }
-    .gslide-image img { background: white; }
-    .gscrollbar-fixer { padding-right: 15px; }
-    .gdesc-inner { font-size: 0.75rem; }
-    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  </head>
   
   
     
@@ -676,7 +667,7 @@
 <h3 id="scripts-purpose">Script's Purpose<a class="headerlink" href="#scripts-purpose" title="Permanent link">¶</a></h3>
 <p>The whole reason it was created was to fix the badly implemented <strong>ArchInstall</strong> profiles which do not provide a solid enough base, while extending them further nothing more. For customizations and other stuff, please use the included toolkit found in the app menu/launcher.</p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/wDv1PAk.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/wDv1PAk.png" alt="shot"></a>
+    <img src="https://i.imgur.com/wDv1PAk.png" alt="shot">
 </p>
 
 <p>This script is subject to change over time, so please treat this guide as a general reference rather than an exact one. As updates and improvements are made, some steps or options may differ from what is shown. Keep that in mind while following along, and always refer to the most recent version for the best results.</p>
@@ -691,7 +682,7 @@
 <h4 id="installing-archlinux">Installing ArchLinux<a class="headerlink" href="#installing-archlinux" title="Permanent link">¶</a></h4>
 <p>Ok, so now that we have burned the ISO to the USB using either tools, boot the system we want to install it on using it. Am not gonna go through showing you how, you should know that by now lol.</p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/RO64NWD.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/RO64NWD.png" alt="shot"></a>
+    <img src="https://i.imgur.com/RO64NWD.png" alt="shot">
 </p>
 
 <p><strong>Note :</strong></p>
@@ -737,7 +728,7 @@
 <h3 align="center"><strong>MAKE SURE YOU ARE LOGGED IN WITH NEW CREDENTIALS NOT ROOT !</strong></h3>
 
 <p align="center">
-  <a class="glightbox" href="https://i.imgur.com/esK1OAO.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="360" src="https://i.imgur.com/esK1OAO.png"></a>  <a class="glightbox" href="https://i.imgur.com/I8sNnw6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img width="360" src="https://i.imgur.com/I8sNnw6.png"></a>
+  <img width="360" src="https://i.imgur.com/esK1OAO.png">  <img width="360" src="https://i.imgur.com/I8sNnw6.png">
 </p>
 
 <div class="admonition warning">
@@ -752,14 +743,14 @@
 <p><strong>Hyprland Install note :</strong></p>
 <p>When it comes to that WM, you will notice that it's bare bones, as in it just ships with a Terminal (<a href="https://sw.kovidgoyal.net/kitty/" target="_blank"><strong>Kitty</strong></a>) and a filemanager (<a href="https://docs.xfce.org/xfce/thunar/start" target="_blank"><strong>Thunar</strong></a>). We decided to ship it that way so you have the freedom to choose things like what panels, docks and other tools you want without having to be forced by our choices. At the end of the day that's the WM's strongsuite, customizability. You are free to go crazy with it. Also due to its volatile nature it's <strong>NOT FOR THE LIGHT-HEARTED !</strong></p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/UKeOaIL.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/UKeOaIL.png" alt="shot"></a>
+    <img src="https://i.imgur.com/UKeOaIL.png" alt="shot">
 </p>
 
 <h4 id="script-logic">Script logic<a class="headerlink" href="#script-logic" title="Permanent link">¶</a></h4>
 <p>To start, the script includes the <strong>XeroLinux</strong> &amp; <strong>Chaotic-AUR</strong> repos, to ease the pain when it comes to packages that come from the <strong>A.U.R</strong> (Arch User Repository), so less compiling for you, the end-user. It also will install the <strong>XeroLinux Toolkit</strong> making it easier to configure your system post-install.</p>
 <p>I have written the script in such a way where it will check what distro it's being run on, blocking it from going any further if either a D.E is already installed, or if it's being run on anything other than a <strong>Base Arch Install</strong>. I did that to avoid any potential issues resulting in countless support tickes that would waste both your and my time. Better safe than sorry.</p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/TjdY9fx.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/TjdY9fx.png" alt="shot"></a>
+    <img src="https://i.imgur.com/TjdY9fx.png" alt="shot">
 </p>
 
 <p>Furthermore, I made sure that, during installation it would check if you are running it in a VM, if so it will install the relevant <strong>Guest Drivers/Utils</strong>. Not forgetting any of you who prefer to use a <em>Bootloader</em> other than <strong>Grub</strong>, where it will skip the part where it installs hooks and configs.</p>
@@ -771,7 +762,7 @@
 </span></code></pre></div>
 <p>Then we launch the <strong>XeroLinux Post Installation Toolkit</strong> from the App Launcher. That's it.</p>
 <p align="center">
-    <a class="glightbox" href="https://i.imgur.com/JuWceYE.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://i.imgur.com/JuWceYE.png" alt="shot"></a>
+    <img src="https://i.imgur.com/JuWceYE.png" alt="shot">
 </p>
 
 <p>It's up to you to discover all the options. The whole point of this guide is how to get included DEs installed the right way while expanding them a little, not to set up the system from A to Z. For more info, check out the <a href="https://wiki.xerolinux.xyz/xlapit/"><strong>Toolkit Wiki</strong></a></p>
@@ -943,7 +934,5 @@
         <script src="../js/github-commit-info.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>
