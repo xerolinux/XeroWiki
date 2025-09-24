@@ -13,7 +13,7 @@ A : Just launch toolkit from the dock, option `7` for service then `s` to reset.
 
 > Q : Why not include **nVidia** GPU Drivers on the ISO ?
 
-A : We will be doing that, making it available through **Calamares** as on December 2025.
+A : We will be doing that, making it available through **Calamares** as of December 2025.
 
 > Q : Why not add a Window Manager like **Hyprland** ?
 
