@@ -13,11 +13,11 @@ A : Just launch toolkit from the dock, option `7` for service then `s` to reset.
 
 > Q : Why not include **nVidia** GPU Drivers on the ISO ?
 
-A : Simply because it's way too complex. Post-install covers a wider range of configs.
+A : We will be doing that, making it available through **Calamares** as on December 2025.
 
 > Q : Why not add a Window Manager like **Hyprland** ?
 
-A : We did ! However not as an ISO but in post-install script form  ==> [**Here**](https://wiki.xerolinux.xyz/hyprxero/){:target="_blank"}
+A : We did try ! However it wasn't that popular so we gave up. You can find archived code ==> [**Here**](https://github.com/xerolinux/HyprXero-git){:target="_blank"}
 
 > Q : Why not include a well-known browser like **Firefox** or **LibreWolf** ?
 
