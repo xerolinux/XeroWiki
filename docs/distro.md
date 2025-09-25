@@ -70,15 +70,13 @@ We have moved completely to **Wayland** on the flagship, as we have on the **Gno
     <img src="https://i.imgur.com/FeBe8gQ.png" alt="X11">
 </p>
 
-## Calamares Installer
+<!--## Calamares Installer
 
 The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer will auto start. 
 
 <p align="center">
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
-</p>
-
-Anyway, the installer is and will always function in offline mode, meaning that while no actual Internet connection is required during install, it's highly recommended you do have one in order to be able to update later on.
+</p>-->
 
 ## XeroLinux Toolkit
 
@@ -160,14 +158,6 @@ Also, the currently supported **Filesystems** are, `ext4` and `xfs`. As of **Jun
 ## GUI Package Managers
 
 Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
-
-## Hybrid/Dual GPUs
-
-Although **XeroLinux** now supports Hybrid laptops with both integrated (iGPU) and dedicated graphic cards (dGPU), they can be a bit tricky, as there's no one-size-fits-all solution. The idea behind this setup is to save battery life and keep things cool, so the dGPU isn’t meant to do all the heavy lifting all the time.
-
-Just in case you *do* encounter the dreaded **Black Screen of Doom** after an update, remember we ship `downgrade` package, so take full advantage of it and revert back to last known working version of your GPU driver, be it **nVidia** or **mesa** (AMD/Intel).
-
-We’re keeping it simple by providing the essential drivers to help everything run smoothly, without any extra tools. But if you love tinkering and want to explore other options, go for it! The beauty of open-source software is that you have the freedom to customize your experience. So dive in, have fun, and make your laptop uniquely yours!
 
 ## Accessibility
 
