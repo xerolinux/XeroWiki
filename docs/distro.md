@@ -42,7 +42,7 @@ Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://
 
 !!! warning
 
-    **nVidia Users :** Due to an ongoing issue with *nouveau+wayland* on those GPUs causing CPU to be pegged at 100% we’ve temporarily blacklisted the *"nouveau"* driver by default, so if you’re using **nVidia**, to get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
+    **nVidia Users :** Due to an ongoing issue with *nouveau+wayland* on those GPUs causing CPU to be pegged at 100% we’ve blacklisted the *"nouveau"* driver by default, so if you’re using **nVidia**, to get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
 
 ## Installation
 
@@ -89,6 +89,69 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
 <p align="center">
     <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
 </p>
+
+## Fingerprint Authentication
+
+This guide will cover how to configure and use the `fprintd` fingerprint sensor on **KDE**, **Cosmic** and other DEs or WMs that do not have a built-in GUI.
+
+- **Install & Enroll**
+
+Let's install the required packages & enroll fingerprints. Below we will be using `fprint-cli` on KDE you can use the Fingerprint enrollment GUI in settings.
+```Bash
+sudo pacman -S fprintd
+fprintd-enroll -f [finger]
+```
+Example fingers
+```Bash
+  left-thumb
+  left-index-finger
+  left-middle-finger
+  left-ring-finger
+  left-little-finger
+  right-thumb
+  right-index-finger
+  right-middle-finger
+  right-ring-finger
+  right-little-finger
+```
+Example :
+```Bash
+fprintd-enroll -f right-index-finger
+```
+To verify :
+```Bash
+fprintd-verify
+```
+- **Configure Authentication**
+
+In order for it to work on login, lock, prompt and terminal we will have to configure it correctly. 
+
+- For login, add this on top in `/etc/pam.d/login`...
+```Bash
+auth    [success=1 default=ignore]  pam_succeed_if.so service in sudo:su:su-l tty in :unknown
+auth    sufficient  pam_fprintd.so
+```
+- For polkit, create & paste below in `/etc/pam.d/polkit-1`
+```Bash
+#%PAM-1.0
+auth       [success=1 default=ignore]  pam_succeed_if.so service in sudo:su:su-l tty in :unknown
+auth       sufficient   pam_fprintd.so
+auth       sufficient   pam_unix.so try_first_pass likeauth nullok
+
+auth       include      system-auth
+account    include      system-auth
+session    include      system-auth
+password   include      system-auth
+```
+- for `sudo` add this on top in `/etc/pam.d/sudo`...
+```Bash
+auth    [success=1  default=ignore] pam_succeed_if.so service in sudo:su:su-l tty in :unknown
+auth    sufficient  pam_fprintd.so
+```
+
+Polkit (GUI) *might* continue to prompt for password in some DEs like **Cosmic**, just swipe your finger and it will authenticate. Terminal works. I hope it's implemented soon though ! As for WMs I have no idea if this works or not, I guess try it and see if it does, I don't use any.
+
+Now reboot & benefit !!!
 
 ## Supported Filesystems
 

@@ -377,6 +377,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fingerprint-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fingerprint Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-filesystems" class="md-nav__link">
     <span class="md-ellipsis">
       Supported Filesystems
@@ -645,6 +654,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fingerprint-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fingerprint Authentication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#supported-filesystems" class="md-nav__link">
     <span class="md-ellipsis">
       Supported Filesystems
@@ -742,7 +760,7 @@
 
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p><strong>nVidia Users :</strong> Due to an ongoing issue with <em>nouveau+wayland</em> on those GPUs causing CPU to be pegged at 100% we’ve temporarily blacklisted the <em>"nouveau"</em> driver by default, so if you’re using <strong>nVidia</strong>, to get the best experience, please make sure to <strong>1) update</strong>, <strong>2) install the GPU drivers</strong> using the included toolkit, and then <strong>3) reboot</strong> your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.</p>
+<p><strong>nVidia Users :</strong> Due to an ongoing issue with <em>nouveau+wayland</em> on those GPUs causing CPU to be pegged at 100% we’ve blacklisted the <em>"nouveau"</em> driver by default, so if you’re using <strong>nVidia</strong>, to get the best experience, please make sure to <strong>1) update</strong>, <strong>2) install the GPU drivers</strong> using the included toolkit, and then <strong>3) reboot</strong> your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.</p>
 </div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong> &amp; <strong>GNOME</strong>, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.</p>
@@ -775,6 +793,58 @@
     <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
 </p>
 
+<h2 id="fingerprint-authentication">Fingerprint Authentication<a class="headerlink" href="#fingerprint-authentication" title="Permanent link">¶</a></h2>
+<p>This guide will cover how to configure and use the <code>fprintd</code> fingerprint sensor on <strong>KDE</strong>, <strong>Cosmic</strong> and other DEs or WMs that do not have a built-in GUI.</p>
+<ul>
+<li><strong>Install &amp; Enroll</strong></li>
+</ul>
+<p>Let's install the required packages &amp; enroll fingerprints. Below we will be using <code>fprint-cli</code> on KDE you can use the Fingerprint enrollment GUI in settings.
+</p><div class="language-Bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>fprintd
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>fprintd-enroll<span class="w"> </span>-f<span class="w"> </span><span class="o">[</span>finger<span class="o">]</span>
+</span></code></pre></div>
+Example fingers
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span>left-thumb
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>left-index-finger
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>left-middle-finger
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span>left-ring-finger
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span>left-little-finger
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span>right-thumb
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span>right-index-finger
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span>right-middle-finger
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span>right-ring-finger
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span>right-little-finger
+</span></code></pre></div>
+Example :
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>fprintd-enroll<span class="w"> </span>-f<span class="w"> </span>right-index-finger
+</span></code></pre></div>
+To verify :
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>fprintd-verify
+</span></code></pre></div>
+- <strong>Configure Authentication</strong>
+<p>In order for it to work on login, lock, prompt and terminal we will have to configure it correctly. </p>
+<ul>
+<li>For login, add this on top in <code>/etc/pam.d/login</code>...
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>auth<span class="w">    </span><span class="o">[</span><span class="nv">success</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">default</span><span class="o">=</span>ignore<span class="o">]</span><span class="w">  </span>pam_succeed_if.so<span class="w"> </span>service<span class="w"> </span><span class="k">in</span><span class="w"> </span>sudo:su:su-l<span class="w"> </span>tty<span class="w"> </span><span class="k">in</span><span class="w"> </span>:unknown
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>auth<span class="w">    </span>sufficient<span class="w">  </span>pam_fprintd.so
+</span></code></pre></div></li>
+<li>For polkit, create &amp; paste below in <code>/etc/pam.d/polkit-1</code>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">#%PAM-1.0</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>auth<span class="w">       </span><span class="o">[</span><span class="nv">success</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">default</span><span class="o">=</span>ignore<span class="o">]</span><span class="w">  </span>pam_succeed_if.so<span class="w"> </span>service<span class="w"> </span><span class="k">in</span><span class="w"> </span>sudo:su:su-l<span class="w"> </span>tty<span class="w"> </span><span class="k">in</span><span class="w"> </span>:unknown
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>auth<span class="w">       </span>sufficient<span class="w">   </span>pam_fprintd.so
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>auth<span class="w">       </span>sufficient<span class="w">   </span>pam_unix.so<span class="w"> </span>try_first_pass<span class="w"> </span>likeauth<span class="w"> </span>nullok
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>auth<span class="w">       </span>include<span class="w">      </span>system-auth
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>account<span class="w">    </span>include<span class="w">      </span>system-auth
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>session<span class="w">    </span>include<span class="w">      </span>system-auth
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>password<span class="w">   </span>include<span class="w">      </span>system-auth
+</span></code></pre></div></li>
+<li>for <code>sudo</code> add this on top in <code>/etc/pam.d/sudo</code>...
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>auth<span class="w">    </span><span class="o">[</span><span class="nv">success</span><span class="o">=</span><span class="m">1</span><span class="w">  </span><span class="nv">default</span><span class="o">=</span>ignore<span class="o">]</span><span class="w"> </span>pam_succeed_if.so<span class="w"> </span>service<span class="w"> </span><span class="k">in</span><span class="w"> </span>sudo:su:su-l<span class="w"> </span>tty<span class="w"> </span><span class="k">in</span><span class="w"> </span>:unknown
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>auth<span class="w">    </span>sufficient<span class="w">  </span>pam_fprintd.so
+</span></code></pre></div></li>
+</ul>
+<p>Polkit (GUI) <em>might</em> continue to prompt for password in some DEs like <strong>Cosmic</strong>, just swipe your finger and it will authenticate. Terminal works. I hope it's implemented soon though ! As for WMs I have no idea if this works or not, I guess try it and see if it does, I don't use any.</p>
+<p>Now reboot &amp; benefit !!!</p>
 <h2 id="supported-filesystems">Supported Filesystems<a class="headerlink" href="#supported-filesystems" title="Permanent link">¶</a></h2>
 <p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code> and <code>xfs</code>. As of <strong>June 2025</strong> we have removed <strong>BTRFS</strong> from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.</p>
 <h2 id="gui-package-managers">GUI Package Managers<a class="headerlink" href="#gui-package-managers" title="Permanent link">¶</a></h2>
@@ -789,7 +859,7 @@
 <p>Adding Orca improves accessibility and ensures a better experience.</p>
 <h2 id="issuesfixes">Issues/Fixes<a class="headerlink" href="#issuesfixes" title="Permanent link">¶</a></h2>
 <p>If at any moment while using it, you get the <code>unkown key "%INSTALL_DB%" in local database</code> issue during update, please run the following command in terminal :</p>
-<div class="language-Bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>find<span class="w"> </span>/var/lib/pacman/local/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">"desc"</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'/^%INSTALLED_DB%$/,+2d'</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>find<span class="w"> </span>/var/lib/pacman/local/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">"desc"</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'/^%INSTALLED_DB%$/,+2d'</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
 </span></code></pre></div>
 <p>That's it. Hopefully nothing else exists.</p>
 <h2 id="supportissues">Support/Issues<a class="headerlink" href="#supportissues" title="Permanent link">¶</a></h2>
