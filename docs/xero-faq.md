@@ -7,10 +7,6 @@ tags:
 
 <h1 align="center">⁉️ XeroLinux FAQ ⁉️</h1>
 
-> Q : Theming broke after update how do I get it back ?
-
-A : Just launch toolkit from the dock, option `7` for service then `s` to reset.
-
 > Q : Why not include **nVidia** GPU Drivers on the ISO ?
 
 A : We will be doing that, making it available through **Calamares** as of December 2025.
@@ -26,10 +22,6 @@ A : This was covered on a separate post ==> [**Here**](https://xerolinux.xyz/upd
 > Q : What if I cannot afford to donate, how can I get **XeroLinux** ?
 
 A : You can convert Vanilla Arch with either **Gnome** or **KDE Plasma** to *mimic* the distro ==> [**Here**](https://xerolinux.xyz/posts/vanilla-to-xero/){:target="_blank"}
-
-> Q : I dislike the way **ArchInstall** installs some DEs is there a better way to install them ?
-
-A : Yep, there's a script that installs **Gnome**, **KDE Plasma**, **XFCE**, **Hyprland** or **Cosmic** ==> [**Here**](https://wiki.xerolinux.xyz/script/){:target="_blank"}
 
 > Q : Why doesn't the Distro include more tools for Gaming, Production and so on out the box ?
 
