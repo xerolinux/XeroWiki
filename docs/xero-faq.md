@@ -7,6 +7,10 @@ tags:
 
 <h1 align="center">⁉️ XeroLinux FAQ ⁉️</h1>
 
+> Q : Will there be any more "Spins" other than **KDE Plasma** ?
+
+A : Nope. I have tried many times, was too much for one man. Sorry...
+
 > Q : Why not include **nVidia** GPU Drivers on the ISO ?
 
 A : We will be doing that, making it available through **Calamares** as of December 2025.
@@ -18,10 +22,6 @@ A : We did try ! However it didn't pan out. You can find archived code ==> [**He
 > Q : Why not include a well-known browser like **Firefox** or **LibreWolf** ?
 
 A : This was covered on a separate post ==> [**Here**](https://xerolinux.xyz/updates/browser-situation/){:target="_blank"}
-
-> Q : What if I cannot afford to donate, how can I get **XeroLinux** ?
-
-A : You can convert Vanilla Arch with either **Gnome** or **KDE Plasma** to *mimic* the distro ==> [**Here**](https://xerolinux.xyz/posts/vanilla-to-xero/){:target="_blank"}
 
 > Q : Why doesn't the Distro include more tools for Gaming, Production and so on out the box ?
 
