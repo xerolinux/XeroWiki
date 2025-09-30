@@ -11,7 +11,7 @@ tags:
 
 !!! warning
 
-    It's crucial to clarify that this toolkit isn't intended for custom Arch-Based distros. While some elements might function, I can't ensure seamless compatibility due to potential conflicts arising from differing tweaks and repositories. To ensure optimal performance.
+    It's crucial to clarify that this toolkit isn't intended for custom Arch-Based distros. It was created for **XeroLinux**. Also this version of it will cease to exist and replaced with a GUI based version as of December 2025. This page will either be updated or deleted. So please take everything here with a grain of salt. Don't say we didn't warn you !
 
 ### What it is
 
@@ -21,25 +21,9 @@ This toolkit aims to be an all-in-one solution for post-installation, expediting
 
 Toolkit recieves a lot of updates on almost a daily basis. Use above video just as a reference not an absolute lol. I keep getting ideas which I immediately implement. Due to the amount of changes I cannot keep a changelog, sorry. Too many to keep up with. **Feel free to fork it, modify what you need to make it work better for you, it's FOSS !**
 
-### How to get it
-
-First off let me say that everything this awesome toolkit provides is and will forever be optional and up to you the user. I will never force anything on you.
-
-!!! tip
-
-    Don't just run script, without inspecting it first. So before using _Curl_ command below you can examine it => [**HERE**](https://xerolinux.xyz/script/xapi.sh){:target="_blank"}. It will always be provided as is without any **Warranty** of any kind. If you need support you know where to find me. Hint : "check the footer for links".
-
-Now, once you have inspected the code, just run this simple curl command to get started :
-
-```Bash
-bash -c "$(curl -fsSL https://xerolinux.xyz/script/xapi.sh)"
-```
-
-It will prompt you before injecting as in adding the XeroLinux repository, where from it will then prompt you, should you agree, as to which AUR helper you prefer, then proceed to do so then install and launch the toolkit.. Again only if you agree..
-
 ### Acessing Toolkit
 
-You can access toolkit by either typing `xero-cli -m` in terminal or from the application menu via the **XeroLinux Post Installation Toolkit** shortcut.. Just close terminal window once done using it lol ;)
+You can access toolkit by either typing `xero-cli` in terminal or from the application menu via the **XeroLinux Post Installation Toolkit** shortcut.. Just close terminal window once done using it lol ;)
 
 ---
 
