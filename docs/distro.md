@@ -96,7 +96,7 @@ A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. 
     <img src="https://i.imgur.com/WUGMuLk.png" alt="rice">
 </p>
 
-> Note : Polkit (GUI) *might* continue to prompt for password in some DEs like **Cosmic**, just swipe your finger and it will authenticate. Terminal works. I hope it's implemented soon though ! As for WMs I have no idea if this works or not, I guess try it and see if it does, I don't use any.
+> Note : Polkit (GUI) *might* continue to prompt for password, just swipe your finger and it will authenticate. Terminal works. As for SDDM please click on "bulb" icon n read.
 
 ## Supported Filesystems
 
