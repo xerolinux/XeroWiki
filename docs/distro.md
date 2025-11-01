@@ -88,7 +88,7 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
     <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
 </p>
 
-## Fingerprint Authentication
+## Fingerprint GUI Tool
 
 A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. Will be included starting December 2025 release. 
 
@@ -96,7 +96,7 @@ A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. 
     <img src="https://i.imgur.com/WUGMuLk.png" alt="rice">
 </p>
 
-> Note : Polkit (GUI) *might* continue to prompt for password, just swipe your finger and it will authenticate. Terminal works. As for SDDM please click on "bulb" icon n read.
+> Note : Polkit (GUI) *might* continue to prompt for password, just swipe your finger and it will authenticate. Terminal works. As for SDDM and more info [**Click Here**](https://xerolinux.xyz/posts/xero-fingerprint/){:target="_blank"}.
 
 ## Supported Filesystems
 
