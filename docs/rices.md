@@ -48,6 +48,19 @@ cd xero-layan-git/ && ./install.sh
 The rice uses the **Layan** [**GTK**](https://github.com/vinceliuice/Layan-gtk-theme){:target="_blank"} / [**KDE**](https://github.com/vinceliuice/Layan-kde){:target="_blank"} Theme & [**Tela Circle Icons**](https://github.com/vinceliuice/Tela-circle-icon-theme){:target="_blank"} by [**VinceLiuice**](https://github.com/vinceliuice){:target="_blank"}. As for Widgets AkA Plasmoids, it uses [**Apdatifier**](https://store.kde.org/p/2135796){:target="_blank"}, [**Netspeed**](https://store.kde.org/p/2136505){:target="_blank"}, [**Quick Shutdown**](https://store.kde.org/p/1288430){:target="_blank"},
 [**Toggle Overview**](https://store.kde.org/p/2132554){:target="_blank"}, [**Wunderground PWS**](https://store.kde.org/p/2135799){:target="_blank"}, [**Panel Colorizer**](https://store.kde.org/p/2130967){:target="_blank"}, [**Kurve Audio Visualizer**](https://store.kde.org/p/2299506){:target="_blank"}, [**Krohnkite**](https://www.pling.com/p/2144146){:target="_blank"} and [**Smart Video Wallpaper**](https://www.pling.com/p/2139746){:target="_blank"}
 
+- **Xero Cosmic Rice :**
+
+```Bash
+wget https://raw.githubusercontent.com/DarkXero-dev/scripts/refs/heads/main/compilation/cosmic-cfg.sh
+chmod +x cosmic-cfg.sh && sh cosmic-cfg.sh
+```
+
+<p align="center">
+    <img src="https://i.imgur.com/KAbUOno.png" alt="rice">
+</p>
+
+This rice is work in progress, will always be. Note that I do not use **Cosmic** myself on the daily, so updates will be few and far between. Nevertheless, it's been thoroughly tested, and works as is, for now. I will say this once, this comes with minimal to no support, **USE AT YOUR OWN RISK !**. 
+
 ### Backing up
 
 The install script will backup some app settings & all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues please find us on our [**Discord**](https://discord.gg/5sqxTSuKZu){:target="_blank"}. Best of luck !
