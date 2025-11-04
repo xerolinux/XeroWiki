@@ -50,6 +50,8 @@ The rice uses the **Layan** [**GTK**](https://github.com/vinceliuice/Layan-gtk-t
 
 - **Xero Cosmic Rice :**
 
+The script below will take care of everything. It will proceed to add both **XeroLinux** & **Chaotic-AUR** repos for less compilation. Just not that doing it on a fresh install of **Cosmic** prior to making your own modifications is highly recommended. Applying it on top of an existing config might cause issues.
+
 ```Bash
 wget https://raw.githubusercontent.com/DarkXero-dev/scripts/refs/heads/main/compilation/cosmic-cfg.sh
 chmod +x cosmic-cfg.sh && sh cosmic-cfg.sh
