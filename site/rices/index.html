@@ -418,9 +418,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#backing-up" class="md-nav__link">
+  <a href="#wrapping-up" class="md-nav__link">
     <span class="md-ellipsis">
-      Backing up
+      Wrapping up
     </span>
   </a>
   
@@ -486,9 +486,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#backing-up" class="md-nav__link">
+  <a href="#wrapping-up" class="md-nav__link">
     <span class="md-ellipsis">
-      Backing up
+      Wrapping up
     </span>
   </a>
   
@@ -524,14 +524,15 @@
 <h1 align="center">.// The Wiki \\.</h1>
 
 <h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Before you proceed, kindly note that in order for the rice to work, you will need to add and activate the <strong>XeroLinux Repo</strong>. Some required packages for example wallpapers come from it and do not exist elsewhere. For How-To guide please <a href="https://xerolinux.xyz/updates/add-our-repo/" target="_blank"><strong>Click Here</strong></a></p>
-</div>
 <p><strong>Install At Own Risk!!!</strong>. As of now it supports <strong>Plasma 6.x.x</strong>. If you notice any issues and report them via issue tracker on here and I will do my best to address them. To apply the rice, please follow the commands posted below. You will need either <strong>Paru</strong> or <strong>Yay</strong> (installed via my toolkit). Keep in mind that this will replace some files. Read below...</p>
 <ul>
 <li><strong>Layan based Rice :</strong></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before you proceed, kindly note that in order for the rice to work, you will need to manually add and activate the <strong>XeroLinux Repo</strong> since script doesn't currently do that yet. Some required packages like wallpapers come from it and do not exist elsewhere. For How-To guide please <a href="https://xerolinux.xyz/updates/add-our-repo/" target="_blank"><strong>Click Here</strong></a></p>
+</div>
+<p><strong>Installation :</strong></p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/xerolinux/xero-layan-git
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>xero-layan-git/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./install.sh
 </span></code></pre></div>
@@ -545,7 +546,11 @@
 <ul>
 <li><strong>Xero Cosmic Rice :</strong></li>
 </ul>
-<p>The script below will take care of everything. It will proceed to add both <strong>XeroLinux</strong> &amp; <strong>Chaotic-AUR</strong> repos for less compilation. Just note that doing it on a fresh install of <strong>Cosmic</strong> prior to making your own modifications is highly recommended. Applying it on top of an existing config might cause issues.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before you proceed, kindly note that <strong>ArchInstall</strong> currently does not enable the <strong>Cosmic-Greeter</strong> service, so you will have to do that on your own via <code>sudo systemctl enable --now cosmic-greeter</code>, only after that will you be able to login to graphical session. Script will proceed to add both <strong>XeroLinux</strong> &amp; <strong>Chaotic-AUR</strong> repos for less compilation. use this on a <em>Fresh Install</em> of <strong>Cosmic</strong> prior to making your own modifications.</p>
+</div>
+<p><strong>Installation :</strong></p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wget<span class="w"> </span>https://raw.githubusercontent.com/DarkXero-dev/scripts/refs/heads/main/compilation/cosmic-cfg.sh
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>chmod<span class="w"> </span>+x<span class="w"> </span>cosmic-cfg.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>cosmic-cfg.sh
 </span></code></pre></div>
@@ -554,8 +559,8 @@
 </p>
 
 <p>This rice is work in progress, will always be. Note that I do not use <strong>Cosmic</strong> myself on the daily, so updates will be few and far between. Nevertheless, it's been thoroughly tested, and works as is, for now. I will say this once, this comes with minimal to no support, <strong>USE AT YOUR OWN RISK !</strong>. </p>
-<h3 id="backing-up">Backing up<a class="headerlink" href="#backing-up" title="Permanent link">¶</a></h3>
-<p>The install script will backup some app settings &amp; all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues please find us on our <a href="https://discord.gg/5sqxTSuKZu" target="_blank"><strong>Discord</strong></a>. Best of luck !</p></div>
+<h3 id="wrapping-up">Wrapping up<a class="headerlink" href="#wrapping-up" title="Permanent link">¶</a></h3>
+<p>These script were created to make it easier for you to try n use my dots. Feel free to suggest any changes over on <strong>Github</strong>. And in case of any issues please find us on our <a href="https://discord.gg/5sqxTSuKZu" target="_blank"><strong>Discord</strong></a>. Best of luck !</p></div>
 
 
 

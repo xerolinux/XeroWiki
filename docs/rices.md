@@ -26,13 +26,15 @@ As mentioned, this rice has been throughly optimized for best performance on hig
 
 ### Installation
 
-!!! warning
-
-    Before you proceed, kindly note that in order for the rice to work, you will need to add and activate the **XeroLinux Repo**. Some required packages for example wallpapers come from it and do not exist elsewhere. For How-To guide please [**Click Here**](https://xerolinux.xyz/updates/add-our-repo/){:target="_blank"}
-
 **Install At Own Risk!!!**. As of now it supports **Plasma 6.x.x**. If you notice any issues and report them via issue tracker on here and I will do my best to address them. To apply the rice, please follow the commands posted below. You will need either **Paru** or **Yay** (installed via my toolkit). Keep in mind that this will replace some files. Read below...
 
 - **Layan based Rice :**
+
+!!! warning
+
+    Before you proceed, kindly note that in order for the rice to work, you will need to manually add and activate the **XeroLinux Repo** since script doesn't currently do that yet. Some required packages like wallpapers come from it and do not exist elsewhere. For How-To guide please [**Click Here**](https://xerolinux.xyz/updates/add-our-repo/){:target="_blank"}
+
+**Installation :**
 
 ```Bash
 git clone https://github.com/xerolinux/xero-layan-git
@@ -50,8 +52,12 @@ The rice uses the **Layan** [**GTK**](https://github.com/vinceliuice/Layan-gtk-t
 
 - **Xero Cosmic Rice :**
 
-The script below will take care of everything. It will proceed to add both **XeroLinux** & **Chaotic-AUR** repos for less compilation. Just note that doing it on a fresh install of **Cosmic** prior to making your own modifications is highly recommended. Applying it on top of an existing config might cause issues.
+!!! warning
 
+    Before you proceed, kindly note that **ArchInstall** currently does not enable the **Cosmic-Greeter** service, so you will have to do that on your own via `sudo systemctl enable --now cosmic-greeter`, only after that will you be able to login to graphical session. Script will proceed to add both **XeroLinux** & **Chaotic-AUR** repos for less compilation. use this on a *Fresh Install* of **Cosmic** prior to making your own modifications.
+
+**Installation :**
+    
 ```Bash
 wget https://raw.githubusercontent.com/DarkXero-dev/scripts/refs/heads/main/compilation/cosmic-cfg.sh
 chmod +x cosmic-cfg.sh && sh cosmic-cfg.sh
@@ -63,6 +69,6 @@ chmod +x cosmic-cfg.sh && sh cosmic-cfg.sh
 
 This rice is work in progress, will always be. Note that I do not use **Cosmic** myself on the daily, so updates will be few and far between. Nevertheless, it's been thoroughly tested, and works as is, for now. I will say this once, this comes with minimal to no support, **USE AT YOUR OWN RISK !**. 
 
-### Backing up
+### Wrapping up
 
-The install script will backup some app settings & all system ones before applying and overriding them with new ones, you will be able to restore what you need from the backup, so please do not report that. You have been warned. In case of any issues please find us on our [**Discord**](https://discord.gg/5sqxTSuKZu){:target="_blank"}. Best of luck !
+These script were created to make it easier for you to try n use my dots. Feel free to suggest any changes over on **Github**. And in case of any issues please find us on our [**Discord**](https://discord.gg/5sqxTSuKZu){:target="_blank"}. Best of luck !
