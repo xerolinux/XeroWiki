@@ -54,7 +54,15 @@ The rice uses the **Layan** [**GTK**](https://github.com/vinceliuice/Layan-gtk-t
 
     Before you proceed, kindly note that **ArchInstall** currently does not enable the **Cosmic-Greeter** service, so you will have to do that on your own via `sudo systemctl enable --now cosmic-greeter`, only after that will you be able to login to graphical session. Script will proceed to add both **XeroLinux** & **Chaotic-AUR** repos for less compilation. use this on a *Fresh Install* of **Cosmic** prior to making your own modifications.
 
-**Installation :**
+**Installation**
+
+Quickest method :
+
+```Bash
+bash -c "$(curl -fsSL https://xerolinux.xyz/script/cosmic.sh)"
+```
+
+Or, if you prefer :
     
 ```Bash
 wget https://raw.githubusercontent.com/DarkXero-dev/scripts/refs/heads/main/compilation/cosmic-cfg.sh
