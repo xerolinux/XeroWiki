@@ -65,8 +65,8 @@ bash -c "$(curl -fsSL https://xerolinux.xyz/script/cosmic.sh)"
 Or, if you prefer :
     
 ```Bash
-wget https://raw.githubusercontent.com/DarkXero-dev/scripts/refs/heads/main/compilation/cosmic-cfg.sh
-chmod +x cosmic-cfg.sh && sh cosmic-cfg.sh
+wget https://xerolinux.xyz/script/cosmic.sh
+chmod +x cosmic.sh && sh cosmic.sh
 ```
 
 <p align="center">
