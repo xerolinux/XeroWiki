@@ -30,7 +30,7 @@ As mentioned, this rice has been throughly optimized for best performance on hig
 
 !!! warning
 
-    Before you proceed, kindly note that in order for the rice to work, you will need to manually add and activate the **XeroLinux Repo** since script doesn't currently do that yet. Some required packages like wallpapers come from it and do not exist elsewhere. For How-To guide please [**Click Here**](https://xerolinux.xyz/updates/add-our-repo/){:target="_blank"}
+    Before you proceed, kindly note that Script will proceed to add both **XeroLinux** & **Chaotic-AUR** repos for less compilation. use this on a *Fresh Install* of **KDE-Plasma** prior to making your own modifications. Also it's good to keep in mind that **ArchInstall** installs a minimal diabetic version **KDE**, so even though script will install what's required for rice to work, you might have to spend more time getting rest of necessary packages for your needs. That's why **XeroLinux** exists lol ;)
 
 **Installation :**
 
