@@ -70,10 +70,6 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 We have moved completely to **Wayland** on XeroLinux. If you still rely on **X11**, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
 
-<p align="center">
-    <img src="https://i.imgur.com/FeBe8gQ.png" alt="X11">
-</p>
-
 <!--## Calamares Installer
 
 The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer will auto start. 
@@ -82,7 +78,7 @@ The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} 
     <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
 </p>-->
 
-## XeroLinux Toolkit
+<!--## XeroLinux Toolkit
 
 I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.
 
@@ -90,7 +86,7 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
 
 <p align="center">
     <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
-</p>
+</p>-->
 
 ## Fingerprint GUI Tool
 
