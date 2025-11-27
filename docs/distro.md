@@ -25,7 +25,11 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
 
 ### Free Demo
 
-A *Demo* ISO is available *now*, **free** of charge are for testing purposes only, since it comes without an installer and *cow-space* is pretty limited (100MiB), so you won’t be able to update or install big packages. It's just for testing, so don’t try updating, it won’t work because of the space limit.
+!!! warning
+
+    Please do **NOT** under any circumstances attempt to use the **Demo** with *Persistent Ventoy*. You will only be hurting yourselves as it will not be a good experience, many features were left out for full ISO. If you do and ask for help you *Will* be ignored. 
+
+A *Demo* ISO is available *now*, **free** of charge for testing purposes only, since it comes without an installer and *cow-space* is pretty limited (100MiB), so you won’t be able to update or install big packages. It's just for testing, so don’t try updating, it won’t work because of the space limit.
 
 Finally, since Live Environment is not persistent, installing anything that requires a reboot, like Drivers is therefore impossible, keep that in mind before attempting to do so.
 
@@ -46,11 +50,11 @@ Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://
 
 ## Installation
 
-Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** & **GNOME**, two powerful and distinct desktop environments. While they were designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.
+Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** a powerful and distinct desktop environment. While it was designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.
 
 ## Legacy Systems
 
-Please avoid booting ISOs on on old-school computers that use legacy **BIOS/MBR**. It only works on newer setups with **EFI/UEFI** — Legacy Boot will be removed soon !
+Please avoid booting ISO on on old-school computers that use legacy **BIOS/MBR**. It only works on newer setups with **EFI/UEFI** — Legacy Boot will be removed soon !
 
 If you’re not sure what that means, just read [**This Article**](https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi){:target="_blank"} and check if your PC supports **UEFI**. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that!
 
@@ -64,7 +68,7 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 ## X11 is no more
 
-We have moved completely to **Wayland** on the flagship, as we have on the **Gnome Dev Spin**. If you still rely on **X11**, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
+We have moved completely to **Wayland** on XeroLinux. If you still rely on **X11**, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
 
 <p align="center">
     <img src="https://i.imgur.com/FeBe8gQ.png" alt="X11">
@@ -100,15 +104,15 @@ A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. 
 
 ## Supported Filesystems
 
-Also, the currently supported **Filesystems** are, `ext4` and `xfs`. As of **June 2025** we have removed **BTRFS** from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.
+Also, the currently supported **Filesystems** are, `ext4` and `xfs`. We have removed **BTRFS** from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.
 
 ## GUI Package Managers
 
-Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, or **Bauh**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
+Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **Bauh** or **Bazaar**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
 
 ## Accessibility
 
-Starting with the **September** builds, we’re including [**Orca**](https://orca.gnome.org), an open-source screen reader for **GNOME** and other *AT-SPI-compliant* Linux desktops. This helps users with visual impairments interact more easily with apps like GTK, LibreOffice, and web browsers.
+We have included [**Orca**](https://orca.gnome.org), an open-source screen reader for *AT-SPI-compliant* Linux desktops. This helps users with visual impairments interact more easily with apps like GTK, LibreOffice, and web browsers.
 
 Orca uses speech synthesis engines such as *eSpeak-NG* and supports refreshable braille devices via BRLTTY. It offers features like screen magnification, focus tracking, customizable verbosity, and flexible keybindings. Users can also personalize Orca through scripting and profiles.
 
@@ -132,6 +136,6 @@ If you encounter any *other* issues or have questions directly related to the in
     <img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice">
 </p>
 
-However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or our custom **ChatGPT A.I.** available on **Discord**. As for release changelog, you can find this [**Here**](https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md){:target="_blank"}.
+However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or on **Discord**. As for release changelog, you can find this [**Here**](https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md){:target="_blank"}.
 
 That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉

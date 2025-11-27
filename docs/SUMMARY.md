@@ -1,6 +1,6 @@
 - [🏠Home](index.md)
 - [💿The Distro](distro.md)
-- [🐧The Toolkit](xlapit.md)
+<!--- [🐧The Toolkit](xlapit.md)-->
 - [⁉️XeroLinux FAQ](xero-faq.md)
 - [🎭The Grub Themes](grub.md)
 - [🎨XeroLinux Rices](rices.md)
