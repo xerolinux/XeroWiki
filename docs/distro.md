@@ -35,7 +35,7 @@ Finally, since Live Environment is not persistent, installing anything that requ
 
 All this is great for checking out what the distro has to offer and experimenting with the setup before donating for full version. A solid way to tinker, see the tweaks in action, and dive into the details without any commitment.
 
-Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://ko-fi.com/xerolinux/shop){:target="_blank"}.
+Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://ko-fi.com/xerolinux/shop){:target="_blank"} or [**Here**](https://iso.xerolinux.xyz/crypto.html){:target="_blank"}.
 
 ---
 
@@ -46,7 +46,7 @@ Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://
 
 !!! warning
 
-    **nVidia Users :** Due to an ongoing issue with *nouveau+wayland* on those GPUs causing CPU to be pegged at 100% we’ve blacklisted the *"nouveau"* driver by default, so if you’re using **nVidia**, to get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup.
+    **nVidia Users :** Due to an ongoing issue with *nouveau+wayland* on those GPUs causing CPU to be pegged at 100% we’ve blacklisted the *"nouveau"* driver by default, so if you’re using **nVidia**, to get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup. Also not all Printers & Game Controllers are supported out the box, those are upt to you.
 
 ## Installation
 

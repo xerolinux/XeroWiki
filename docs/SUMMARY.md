@@ -1,5 +1,5 @@
 - [🏠Home](index.md)
 - [💿The Distro](distro.md)
 - [⁉️XeroLinux FAQ](xero-faq.md)
-- [🎭The Grub Themes](grub.md)
 - [🎨XeroLinux Rices](rices.md)
+- [🎭The Grub Themes](grub.md)
