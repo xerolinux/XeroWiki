@@ -46,7 +46,7 @@ Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://
 
 !!! warning
 
-    **nVidia Users :** Due to an ongoing issue with *nouveau+wayland* on those GPUs causing CPU to be pegged at 100% we’ve blacklisted the *"nouveau"* driver by default, so if you’re using **nVidia**, to get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup. Also not all Printers & Game Controllers are supported out the box, those are upt to you.
+    **nVidia Users :** Due to an ongoing issue with *nouveau+wayland* on those GPUs causing CPU to be pegged at 100% we’ve blacklisted the *"nouveau"* driver by default, so if you’re using **nVidia**, to get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup. Also not all Printers & Game Controllers are supported out the box, those are up to you.
 
 ## Installation
 
