@@ -17,7 +17,9 @@ tags:
 
 This is my [**Plymouth**](https://wiki.archlinux.org/title/Plymouth){:target="_blank"} manager script/TUI. It allows you to install Plymouth and manage themes the easy way. It also has an option that safely reverts any changes should you not want it anymore. It was created for fun, during my spare time.
 
-Now, I know I could have created a **GUI** instead making it more user-friendly. But nahh am more of a script kiddie, I prefer scripts over GUI any day of the week. However if you want to do that, feel free, just make sure to credit me and share so I can see what you have done. It's **FOSS** after all, am I right ?
+Now, I know I could have created a **GUI** instead making it more user-friendly. But nahh am more of a script kiddie, I prefer scripts over GUI any day of the week. However if you want to do that, feel free, just make sure to credit me and share so I can see what you have done.
+
+It's **FOSS** after all, am I right ?
 
 ---
 
