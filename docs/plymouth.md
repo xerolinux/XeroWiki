@@ -13,7 +13,17 @@ tags:
 
     This script was created for Arch & Arch-Derivatives with the **Chaotic-AUR** repo enabled, since most if not all themes come from there. For a guide on how to enable it please [**Click Here**](https://aur.chaotic.cx/docs){:target="_blank"}.
 
-### Information
+<p align="center">
+    <img src="https://raw.githubusercontent.com/adi1090x/files/master/plymouth-themes/previews/22.gif" alt="preview">
+</p>
+
+Above is one of the many available themes. Looks amazing doesn't it ? 
+
+### What is plymouth
+
+[**Plymouth**](http://www.freedesktop.org/wiki/Software/Plymouth){:target="_blank"} is a project from **Fedora** and now listed among the `freedesktop`'s official resources providing a flicker-free graphical boot process. It relies on [**Kernel Mode Setting**](https://wiki.archlinux.org/index.php/Kernel_mode_setting){:target="_blank"} (KMS) to set the native resolution of the display as early as possible, then provides an eye-candy splash screen leading all the way up to the login manager.
+    
+### TUI Information
 
 This is my [**Plymouth**](https://wiki.archlinux.org/title/Plymouth){:target="_blank"} manager script/TUI. It allows you to install Plymouth and manage themes the easy way. It also has an option that safely reverts any changes should you not want it anymore. It was created for fun, during my spare time.
 
