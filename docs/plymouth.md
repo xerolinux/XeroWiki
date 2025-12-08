@@ -11,7 +11,7 @@ tags:
 
 !!! info
 
-    This script was created for Arch & Arch-Derivatives with the **Chaotic-AUR** repo enabled, since most if not all themes come from there.Please do not attempt to use it without that repo enabled. For a guide on how to enable it please [**Click Here**](https://aur.chaotic.cx/docs){:target="_blank"}
+    This script was created for Arch & Arch-Derivatives with the **Chaotic-AUR** repo enabled, since most if not all themes come from there. For a guide on how to enable it please [**Click Here**](https://aur.chaotic.cx/docs){:target="_blank"}.
 
 ### Information
 
