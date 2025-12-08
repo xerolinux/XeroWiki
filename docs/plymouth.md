@@ -41,15 +41,14 @@ chmod + xpm && sh xpm
     <img src="https://i.imgur.com/AL7frmH.png" alt="plymouth">
 </p>
 
-**Nerd Note :** 
-
-> If you are nerdy enough, you can also move this script into `/usr/local/bin/` so you don't have to keep looking for it. This will make it so all you have to do is type `xpm` (or whatever toy renamed script to) in terminal, just like you would `fastfetch`. Just an FYI. ;)
-
-
 **Script Usage :**
 
 Select 1st option to install and activate **Plymouth**. 2nd option is where all the fun happens. Use it to install and mange themes. Use Sub-Option `a` to do that. Sub-Option `p` will open your browser to a **Github** repo where you will be able to preview *some* of the included themes.
 
 That said, once you have installed a theme select sub-option `b` to apply it. You can also install a bunch of themes then go back apply & test each one. That's it !
+
+**Nerd Note :** 
+
+> If you are nerdy enough, you can also move this script into `/usr/local/bin/` so you don't have to keep looking for it. This will make it so all you have to do is type `xpm` (or whatever you renamed script to) in terminal, just like you would `fastfetch`. Just an FYI. ;)
 
 Be G33ky & Enjoy 🤓
