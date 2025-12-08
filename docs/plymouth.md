@@ -1,5 +1,5 @@
 ---
-title: XeroLinux KDE Rices
+title: XeroLinux Plymouth Manager
 tags:
   - Linux
   - Boot
