@@ -13,7 +13,7 @@ A : Nope. I have tried many times, was too much for one man. Sorry...
 
 > Q : Why not include **nVidia** GPU Drivers on the ISO ?
 
-A : Too complex. There will be a dedicated section in the upcoming Toolkit/GUI.
+A : Soon. We are working on adding an **nVidia** ISO.
 
 > Q : Why not add a Window Manager like **Hyprland** ?
 
