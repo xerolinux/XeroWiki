@@ -98,6 +98,16 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
     <video src="https://repos.xerolinux.xyz/toolkit.webm" width="640" height="480" controls></video>
 </p>
 
+If you already are using **XeroLinux** updating will prompt you if you want to replace old toolkit with new GUI one, please answer with `y` to do so. Upon doing that you will notice that icon on the Dock will disappear, to update it please run the following command followed by `rshell` :
+
+```Bash
+sed -i.bak \
+  -e '\|^localPath=/home/techxero/.local/share/plasma_icons/xapit-cli.desktop$|d' \
+  -e '\|^localPath=/home/xero/.local/share/plasma_icons/xapit-cli (1).desktop$|d' \
+  -e 's|^url=file:///usr/share/applications/xapit-cli.desktop$|url=file:///usr/share/applications/xero-toolkit.desktop|' \
+  "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc"
+```
+
 ## Fingerprint GUI Tool
 
 A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. Will be included starting December 2025 release. 
