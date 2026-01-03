@@ -102,8 +102,7 @@ If you already are using **XeroLinux** updating will prompt you if you want to r
 
 ```Bash
 sed -i.bak \
-  -e '\|^localPath=/home/techxero/.local/share/plasma_icons/xapit-cli.desktop$|d' \
-  -e '\|^localPath=/home/xero/.local/share/plasma_icons/xapit-cli (1).desktop$|d' \
+  -e '\|^localPath=/home/|d' \
   -e 's|^url=file:///usr/share/applications/xapit-cli.desktop$|url=file:///usr/share/applications/xero-toolkit.desktop|' \
   "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc"
 ```
