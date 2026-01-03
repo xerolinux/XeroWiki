@@ -342,6 +342,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nvidia-iso-split" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nVidia ISO Split
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpu-swap-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU Swap Detection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#legacy-systems" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -375,6 +397,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#calamares-installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calamares Installer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xerolinux-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XeroLinux Toolkit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fingerprint-gui-tool" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -401,17 +445,6 @@
     <span class="md-ellipsis">
       
         GUI Package Managers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Accessibility
       
     </span>
   </a>
@@ -614,6 +647,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nvidia-iso-split" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nVidia ISO Split
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpu-swap-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU Swap Detection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#legacy-systems" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -647,6 +702,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#calamares-installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calamares Installer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xerolinux-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XeroLinux Toolkit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#fingerprint-gui-tool" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -673,17 +750,6 @@
     <span class="md-ellipsis">
       
         GUI Package Managers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#accessibility" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Accessibility
       
     </span>
   </a>
@@ -756,15 +822,17 @@
 <hr>
 <h1 align="center">.// The Wiki \\.</h1>
 
-<h2 align="center">⚠️ <strong>nVidia "Nouveau" Blacklisted.</strong> ⚠️</h2>
+<h2 align="center">📀 <strong>New nVidia ISO Added</strong> 📀</h2>
 <h4 align="center">Always update &amp; Reboot post-install before using the Distro.</h4>
 
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>nVidia Users :</strong> Due to an ongoing issue with <em>nouveau+wayland</em> on those GPUs causing CPU to be pegged at 100% we’ve blacklisted the <em>"nouveau"</em> driver by default, so if you’re using <strong>nVidia</strong>, to get the best experience, please make sure to <strong>1) update</strong>, <strong>2) install the GPU drivers</strong> using the included toolkit, and then <strong>3) reboot</strong> your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup. Also not all Printers &amp; Game Controllers are supported out the box, those are up to you.</p>
-</div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong> a powerful and distinct desktop environment. While it was designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.</p>
+<h2 id="nvidia-iso-split">nVidia ISO Split<a class="headerlink" href="#nvidia-iso-split" title="Permanent link">¶</a></h2>
+<p>We have decided to split <strong>XeroLinux</strong> into two ISOs because the GPU world has become a bit of a circus. <strong>nVidia</strong> decided to retire the old <em>900</em> and <em>1000</em> series cards from the modern driver lineup, which means only shiny new RTX cards get the “VIP treatment” from the latest open drivers. Instead of forcing everyone into a one-size-fits-nobody installer, we created a dedicated <strong>nVidia</strong> ISO built specifically for <strong>RTX</strong> users, and a Standard ISO that keeps <strong>Intel</strong> and <strong>AMD</strong> systems happy.</p>
+<p>While it’s sad to see those legendary older cards ride off into the sunset, this split actually gives everyone a smoother experience. Each ISO now does exactly what it’s meant to do, with fewer surprises, fewer black screens, and a whole lot more reliability. It’s our way of turning an unfortunate driver situation into something cleaner, clearer, and friendlier for the entire <strong>XeroLinux</strong> community.</p>
+<h2 id="gpu-swap-detection">GPU Swap Detection<a class="headerlink" href="#gpu-swap-detection" title="Permanent link">¶</a></h2>
+<p><strong>XeroLinux</strong> now includes a small background service that quietly checks which graphics hardware is inside your computer. It does this by reading standard system information (the same information shown by tools like “About This System”). When it notices that the hardware has changed, for example, if you install an <strong>nVidia</strong> card or remove one, it records the change and shows a popup notification in <strong>Plasma</strong>. Nothing runs unless something actually changes.</p>
+<p>When you choose to continue, <strong>XeroLinux</strong> opens an easy-to-use tool that installs or removes the correct graphics drivers based on your current hardware. The tool updates system components like the boot configuration and kernel modules automatically, ensuring everything loads correctly on the next restart. This approach supports <strong>Intel</strong>, <strong>AMD</strong>, <strong>nVIdia</strong>, and hybrid setups, and it does so in a way that’s transparent, predictable, and safe for all users.</p>
 <h2 id="legacy-systems">Legacy Systems<a class="headerlink" href="#legacy-systems" title="Permanent link">¶</a></h2>
 <p>Please avoid booting ISO on on old-school computers that use legacy <strong>BIOS/MBR</strong>. It only works on newer setups with <strong>EFI/UEFI</strong> — Legacy Boot will be removed soon !</p>
 <p>If you’re not sure what that means, just read <a href="https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi" target="_blank"><strong>This Article</strong></a> and check if your PC supports <strong>UEFI</strong>. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that!</p>
@@ -775,24 +843,20 @@
 </p>
 
 <h2 id="x11-is-no-more">X11 is no more<a class="headerlink" href="#x11-is-no-more" title="Permanent link">¶</a></h2>
-<p>We have moved completely to <strong>Wayland</strong> on XeroLinux. If you still rely on <strong>X11</strong>, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split <strong>X11</strong> &amp; <strong>Wayland</strong> packages.</p>
-<!--## Calamares Installer
-
-The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer will auto start. 
-
+<p>We have moved completely to <strong>Wayland</strong> on XeroLinux. If you still rely on <strong>X11</strong>, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split <strong>X11</strong> &amp; <strong>Wayland</strong> packages. Will be totally removed as of <a href="https://itsfoss.com/news/kde-plasma-to-drop-x11-support/" target="_blank"><strong>Plasma 6.8</strong></a></p>
+<h2 id="calamares-installer">Calamares Installer<a class="headerlink" href="#calamares-installer" title="Permanent link">¶</a></h2>
+<p><strong>XeroLinux</strong>, like many other distros uses the <a href="https://codeberg.org/Calamares/calamares" target="_blank"><strong>Calamares</strong></a> installer. </p>
 <p align="center">
-    <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
-</p>-->
+    <img src="https://i.imgur.com/8f0b3NI.png" alt="netinstall">
+</p>
 
-<!--## XeroLinux Toolkit
-
-I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.
-
-For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){:target="_blank"}
-
+<p>With this release, we have decided to re-enable the <strong>NetInstall</strong> module, allowing you to select what packages/apps you want out of the box. Keep in mind that the included <strong>Flakon</strong> browser on the Live Environment, will be removed during install, replaced with the one you selected from that module. One very important thing to note here, the more packages you select the longer the install will take, especially if your Internet connection is as slow as mine here in Leb lol.</p>
+<h2 id="xerolinux-toolkit">XeroLinux Toolkit<a class="headerlink" href="#xerolinux-toolkit" title="Permanent link">¶</a></h2>
+<p>I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.</p>
+<p>For more info about it check the <a href="https://wiki.xerolinux.xyz/xlapit/" target="_blank"><strong>Wiki</strong></a></p>
 <p align="center">
-    <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
-</p>-->
+    <video src="https://repos.xerolinux.xyz/toolkit.webm" width="640" height="480" controls></video>
+</p>
 
 <h2 id="fingerprint-gui-tool">Fingerprint GUI Tool<a class="headerlink" href="#fingerprint-gui-tool" title="Permanent link">¶</a></h2>
 <p>A new fingerprint GUI tool was created in-house for <strong>XeroLinux</strong>. Easy to use. Will be included starting December 2025 release. </p>
@@ -807,10 +871,6 @@ For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){
 <p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code> and <code>xfs</code>. We have removed <strong>BTRFS</strong> from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.</p>
 <h2 id="gui-package-managers">GUI Package Managers<a class="headerlink" href="#gui-package-managers" title="Permanent link">¶</a></h2>
 <p>Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, <strong>Bauh</strong> or <strong>Bazaar</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.</p>
-<h2 id="accessibility">Accessibility<a class="headerlink" href="#accessibility" title="Permanent link">¶</a></h2>
-<p>We have included <a href="https://orca.gnome.org"><strong>Orca</strong></a>, an open-source screen reader for <em>AT-SPI-compliant</em> Linux desktops. This helps users with visual impairments interact more easily with apps like GTK, LibreOffice, and web browsers.</p>
-<p>Orca uses speech synthesis engines such as <em>eSpeak-NG</em> and supports refreshable braille devices via BRLTTY. It offers features like screen magnification, focus tracking, customizable verbosity, and flexible keybindings. Users can also personalize Orca through scripting and profiles.</p>
-<p>Adding Orca improves accessibility and ensures a better experience.</p>
 <h2 id="issuesfixes">Issues/Fixes<a class="headerlink" href="#issuesfixes" title="Permanent link">¶</a></h2>
 <p>If at any moment while using it, you get the <code>unkown key "%INSTALL_DB%" in local database</code> issue during update, please run the following command in terminal :</p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>find<span class="w"> </span>/var/lib/pacman/local/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">"desc"</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'/^%INSTALLED_DB%$/,+2d'</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>

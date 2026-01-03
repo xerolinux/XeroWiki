@@ -41,16 +41,24 @@ Satisfied ? You can take the plunge and donate for a copy » [**Here**](https://
 
 <h1 align="center">.// The Wiki \\.</h1>
 
-<h2 align="center">⚠️ <strong>nVidia "Nouveau" Blacklisted.</strong> ⚠️</h2>
+<h2 align="center">📀 <strong>New nVidia ISO Added</strong> 📀</h2>
 <h4 align="center">Always update & Reboot post-install before using the Distro.</h4>
-
-!!! warning
-
-    **nVidia Users :** Due to an ongoing issue with *nouveau+wayland* on those GPUs causing CPU to be pegged at 100% we’ve blacklisted the *"nouveau"* driver by default, so if you’re using **nVidia**, to get the best experience, please make sure to **1) update**, **2) install the GPU drivers** using the included toolkit, and then **3) reboot** your computer, in that exact order. Following these steps will ensure you can fully benefit from your setup. Also not all Printers & Game Controllers are supported out the box, those are up to you.
 
 ## Installation
 
 Before we dive in, it's important to note that **XeroLinux** features **KDE Plasma** a powerful and distinct desktop environment. While it was designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.
+
+## nVidia ISO Split
+
+We have decided to split **XeroLinux** into two ISOs because the GPU world has become a bit of a circus. **nVidia** decided to retire the old *900* and *1000* series cards from the modern driver lineup, which means only shiny new RTX cards get the “VIP treatment” from the latest open drivers. Instead of forcing everyone into a one-size-fits-nobody installer, we created a dedicated **nVidia** ISO built specifically for **RTX** users, and a Standard ISO that keeps **Intel** and **AMD** systems happy.
+
+While it’s sad to see those legendary older cards ride off into the sunset, this split actually gives everyone a smoother experience. Each ISO now does exactly what it’s meant to do, with fewer surprises, fewer black screens, and a whole lot more reliability. It’s our way of turning an unfortunate driver situation into something cleaner, clearer, and friendlier for the entire **XeroLinux** community.
+
+## GPU Swap Detection
+
+**XeroLinux** now includes a small background service that quietly checks which graphics hardware is inside your computer. It does this by reading standard system information (the same information shown by tools like “About This System”). When it notices that the hardware has changed, for example, if you install an **nVidia** card or remove one, it records the change and shows a popup notification in **Plasma**. Nothing runs unless something actually changes.
+
+When you choose to continue, **XeroLinux** opens an easy-to-use tool that installs or removes the correct graphics drivers based on your current hardware. The tool updates system components like the boot configuration and kernel modules automatically, ensuring everything loads correctly on the next restart. This approach supports **Intel**, **AMD**, **nVIdia**, and hybrid setups, and it does so in a way that’s transparent, predictable, and safe for all users.
 
 ## Legacy Systems
 
@@ -68,25 +76,27 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 ## X11 is no more
 
-We have moved completely to **Wayland** on XeroLinux. If you still rely on **X11**, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
+We have moved completely to **Wayland** on XeroLinux. If you still rely on **X11**, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages. Will be totally removed as of [**Plasma 6.8**](https://itsfoss.com/news/kde-plasma-to-drop-x11-support/){:target="_blank"}
 
-<!--## Calamares Installer
+## Calamares Installer
 
-The [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer will auto start. 
+**XeroLinux**, like many other distros uses the [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer. 
 
 <p align="center">
-    <img src="https://i.imgur.com/QsLRWtG.png" alt="rice">
-</p>-->
+    <img src="https://i.imgur.com/8f0b3NI.png" alt="netinstall">
+</p>
 
-<!--## XeroLinux Toolkit
+With this release, we have decided to re-enable the **NetInstall** module, allowing you to select what packages/apps you want out of the box. Keep in mind that the included **Flakon** browser on the Live Environment, will be removed during install, replaced with the one you selected from that module. One very important thing to note here, the more packages you select the longer the install will take, especially if your Internet connection is as slow as mine here in Leb lol.
+
+## XeroLinux Toolkit
 
 I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.
 
 For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){:target="_blank"}
 
 <p align="center">
-    <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
-</p>-->
+    <video src="https://repos.xerolinux.xyz/toolkit.webm" width="640" height="480" controls></video>
+</p>
 
 ## Fingerprint GUI Tool
 
@@ -105,14 +115,6 @@ Also, the currently supported **Filesystems** are, `ext4` and `xfs`. We have rem
 ## GUI Package Managers
 
 Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **Bauh** or **Bazaar**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
-
-## Accessibility
-
-We have included [**Orca**](https://orca.gnome.org), an open-source screen reader for *AT-SPI-compliant* Linux desktops. This helps users with visual impairments interact more easily with apps like GTK, LibreOffice, and web browsers.
-
-Orca uses speech synthesis engines such as *eSpeak-NG* and supports refreshable braille devices via BRLTTY. It offers features like screen magnification, focus tracking, customizable verbosity, and flexible keybindings. Users can also personalize Orca through scripting and profiles.
-
-Adding Orca improves accessibility and ensures a better experience.
 
 ## Issues/Fixes
 

@@ -76,7 +76,7 @@ To boot into the Distro's Live Environment, all you have to do is use the tried 
 
 ## X11 is no more
 
-We have moved completely to **Wayland** on XeroLinux. If you still rely on **X11**, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages.
+We have moved completely to **Wayland** on XeroLinux. If you still rely on **X11**, please use the toolkit to re-enable it. That is a major shift by the Plasma Team, they split **X11** & **Wayland** packages. Will be totally removed as of [**Plasma 6.8**](https://itsfoss.com/news/kde-plasma-to-drop-x11-support/){:target="_blank"}
 
 ## Calamares Installer
 
@@ -88,15 +88,15 @@ We have moved completely to **Wayland** on XeroLinux. If you still rely on **X11
 
 With this release, we have decided to re-enable the **NetInstall** module, allowing you to select what packages/apps you want out of the box. Keep in mind that the included **Flakon** browser on the Live Environment, will be removed during install, replaced with the one you selected from that module. One very important thing to note here, the more packages you select the longer the install will take, especially if your Internet connection is as slow as mine here in Leb lol.
 
-<!--## XeroLinux Toolkit
+## XeroLinux Toolkit
 
 I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.
 
 For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){:target="_blank"}
 
 <p align="center">
-    <img src="https://i.imgur.com/yym6CPo.png" alt="rice">
-</p>-->
+    <video src="https://repos.xerolinux.xyz/toolkit.webm" width="640" height="480" controls></video>
+</p>
 
 ## Fingerprint GUI Tool
 
