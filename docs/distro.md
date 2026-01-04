@@ -92,8 +92,6 @@ With this release, we have decided to re-enable the **NetInstall** module, allow
 
 I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.
 
-For more info about it check the [**Wiki**](https://wiki.xerolinux.xyz/xlapit/){:target="_blank"}
-
 <p align="center">
     <video src="https://repos.xerolinux.xyz/toolkit.webm" width="640" height="480" controls></video>
 </p>
