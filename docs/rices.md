@@ -6,31 +6,23 @@ tags:
   - Plasma
 ---
 
-<h1 align="center">🎨 XeroLinux KDE Rices 🎨</h1>
+<h1 align="center">🎨 XeroLinux Rices 🎨</h1>
 
 !!! info
 
     I would like to clarify one very important aspect of ricing. We use custom themes, and those might not get updated very often, if at all by their respective developers/artists, which might result in some parts of the system and apps not to get themed correctly. That, my friends, is unfortunately out of our hands.
 
-### Information
-
-This is my complete conversion script, that will transform your **KDE Plasma** into something out of this world. I spent days, nay weeks optimizing it for best performance and stability. Some bugs may remain, please report them.
-
-### Performance
-
-As mentioned, this rice has been throughly optimized for best performance on higher-end systems.. Although it might work on lower-end ones, for better performance I do not recommend that you use it there. So please do not report any performance issues.
-
 ---
 
-<h1 align="center">.// The Wiki \\.</h1>
-
-### The Rices
-
-- **Layan based Rice :**
+<h1 align="center">.// The Rices \\.</h1>
 
 !!! warning
 
-    Before you proceed, kindly note that Script will proceed to add both **XeroLinux** & **Chaotic-AUR** repos for less compilation. use this on a *Fresh Install* of **KDE-Plasma** prior to making your own modifications. Also it's good to keep in mind that **ArchInstall** installs a minimal diabetic version **KDE**, that's why **XeroLinux** exists lol ;)
+    Before you proceed, kindly note that Scripts will proceed to add both **XeroLinux** & **Chaotic-AUR** repos for less compilation. use this on a *Fresh Install* prior to making your own modifications. Also it's good to keep in mind that **ArchInstall** installs a minimal diabetic version selected DEs ;)
+
+- **Layan KDE Rice :**
+
+This is my complete conversion script, that will transform your **KDE Plasma** into something out of this world. I spent days, nay weeks optimizing it for best performance and stability. Some bugs may remain, please report them.
 
 **Installation :**
 
@@ -50,9 +42,7 @@ The rice uses the **Layan** [**GTK**](https://github.com/vinceliuice/Layan-gtk-t
 
 - **Xero Cosmic Rice :**
 
-!!! warning
-
-    Before you proceed, kindly note that **ArchInstall** currently does not enable the **Cosmic-Greeter** service, so you will have to do that on your own via `sudo systemctl enable --now cosmic-greeter`, only after that will you be able to login to graphical session. Script will proceed to add both **XeroLinux** & **Chaotic-AUR** repos for less compilation. use this on a *Fresh Install* of **Cosmic** prior to making your own modifications.
+This rice is work in progress, will always be. Note that I do not use **Cosmic** myself on the daily, so updates will be few and far between. Nevertheless, it's been thoroughly tested, and works as is, for now. I will say this once, this comes with minimal to no support, **USE AT YOUR OWN RISK !**. 
 
 **Installation**
 
@@ -73,7 +63,23 @@ chmod +x cosmic.sh && sh cosmic.sh
     <img src="https://i.imgur.com/KAbUOno.png" alt="rice">
 </p>
 
-This rice is work in progress, will always be. Note that I do not use **Cosmic** myself on the daily, so updates will be few and far between. Nevertheless, it's been thoroughly tested, and works as is, for now. I will say this once, this comes with minimal to no support, **USE AT YOUR OWN RISK !**. 
+- **KDE Tiling Rice :**
+
+This rice was created/contributed by [**MurderFromMars**](https://www.youtube.com/channel/UC_jwY9Q683jumkBSaKne60A){:target="_blank"}, a member of the **XeroLinux** community Discord server. Kudos to him for putting in the hard work. 
+
+**Installation :**
+
+```Bash
+Coming Soon !
+```
+
+<p align="center">
+    <img src="https://i.imgur.com/5P4DcSC.png" alt="tiling">
+</p>
+
+**Elements Used :**
+
+_Soon !_
 
 ### Wrapping up
 
