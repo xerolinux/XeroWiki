@@ -74,7 +74,7 @@ Coming Soon !
 ```
 
 <p align="center">
-    <img src="https://i.imgur.com/5P4DcSC.png" alt="tiling">
+    <video src="https://repos.xerolinux.xyz/XeroTiling.mp4" width="640" height="480" controls></video>
 </p>
 
 **Elements Used :**
