@@ -65,7 +65,7 @@ Select 1st option to install and activate **Plymouth**. 2nd option is where all 
 
 That said, once you have installed a theme select sub-option `b` to apply it. You can also install a bunch of themes then go back apply & test each one. That's it !
 
-### Issues * Fixes
+### Issues & Fixes
 
 - **Boot Delay**
 
