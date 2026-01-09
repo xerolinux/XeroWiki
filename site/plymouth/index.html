@@ -447,6 +447,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#issues-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues * Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -512,6 +523,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#issues-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues * Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -569,6 +591,32 @@
 <p><strong>Script Usage :</strong></p>
 <p>Select 1<sup>st</sup> option to install and activate <strong>Plymouth</strong>. 2<sup>nd</sup> option is where all the fun happens. Use it to install and mange themes. Use Sub-Option <code>a</code> to do that. Sub-Option <code>p</code> will open your browser to a <strong>Github</strong> repo where you will be able to preview <em>some</em> of the included themes.</p>
 <p>That said, once you have installed a theme select sub-option <code>b</code> to apply it. You can also install a bunch of themes then go back apply &amp; test each one. That's it !</p>
+<h3 id="issues-fixes">Issues * Fixes<a class="headerlink" href="#issues-fixes" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Boot Delay</strong></li>
+</ul>
+<p>In many cases, on a very fast system with an nVme SSD boot animation can go by way too quickly. To solve that please do the following to add a short delay to boot sequence :</p>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>edit<span class="w"> </span>plymouth-quit.service<span class="w"> </span>--drop-in<span class="o">=</span>long_splash.conf
+</span></code></pre></div>
+<p>Add the following to that file :</p>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">[</span>Service<span class="o">]</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nv">ExecStartPre</span><span class="o">=</span>/usr/bin/sleep<span class="w"> </span><span class="m">6</span>
+</span></code></pre></div>
+<p align="center">
+    <img src="https://i.imgur.com/7iHW4Ar.png" alt="delay">
+</p>
+
+<p>Adjust delay to fit your setup. Save it and apply with <code>sudo systemctl daemon-reload</code>.</p>
+<ul>
+<li><strong>Multi-Monitor</strong></li>
+</ul>
+<p>In a multi-monitor setup, <strong>Plymouth</strong> might not show the animation scaled correctly. To fix that, do the following :</p>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/default/grub
+</span></code></pre></div>
+<p>Then use a tool like <code>xrandr</code> to identify your primary monitor, and add it to grub's <code>GRUB_CMDLINE_LINUX_DEFAULT='</code> line, like so <code>video=DP-1:1920x1080@60</code>, replacing the <code>DP-1</code> with yours. Save and exit, then update grub with the following command :</p>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>grub-mkconfig<span class="w"> </span>-o<span class="w"> </span>/boot/grub/grub.cfg
+</span></code></pre></div>
+<p>Once all that is done, reboot and enjoy ;)</p>
 <p>Be G33ky &amp; Enjoy 🤓</p></div>
 
 

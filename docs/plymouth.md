@@ -65,4 +65,43 @@ Select 1st option to install and activate **Plymouth**. 2nd option is where all 
 
 That said, once you have installed a theme select sub-option `b` to apply it. You can also install a bunch of themes then go back apply & test each one. That's it !
 
+### Issues * Fixes
+
+- **Boot Delay**
+
+In many cases, on a very fast system with an nVme SSD boot animation can go by way too quickly. To solve that please do the following to add a short delay to boot sequence :
+
+```Bash
+sudo systemctl edit plymouth-quit.service --drop-in=long_splash.conf
+```
+
+Add the following to that file :
+
+```Bash
+[Service]
+ExecStartPre=/usr/bin/sleep 6
+```
+
+<p align="center">
+    <img src="https://i.imgur.com/7iHW4Ar.png" alt="delay">
+</p>
+
+Adjust delay to fit your setup. Save it and apply with `sudo systemctl daemon-reload`.
+
+- **Multi-Monitor**
+
+In a multi-monitor setup, **Plymouth** might not show the animation scaled correctly. To fix that, do the following :
+
+```Bash
+sudo nano /etc/default/grub
+```
+
+Then use a tool like `xrandr` to identify your primary monitor, and add it to grub's `GRUB_CMDLINE_LINUX_DEFAULT='` line, like so `video=DP-1:1920x1080@60`, replacing the `DP-1` with yours. Save and exit, then update grub with the following command :
+
+```Bash
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+Once all that is done, reboot and enjoy ;)
+
 Be G33ky & Enjoy 🤓
