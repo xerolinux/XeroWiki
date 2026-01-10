@@ -50,11 +50,13 @@ Before we dive in, it's important to note that **XeroLinux** features **KDE Plas
 
 ## nVidia ISO Split
 
+!!! info
+
+    If you are on one of those legacy 900/1000 Series **nVidia** cards, just use the Standard **Intel/AMD** ISO then install old 580xx Drivers through it. Keep in mind that ISO will boot in `nomodeset` limited which will result in a low-res display, until them old drivers are installed. Also those drivers are provided with no support/help. Just an FYI.
+
 We have decided to split **XeroLinux** into two ISOs because the GPU world has become a bit of a circus. **nVidia** decided to retire the old *900* and *1000* series cards from the modern driver lineup, which means only shiny new RTX cards get the “VIP treatment” from the latest open drivers. Instead of forcing everyone into a one-size-fits-nobody installer, we created a dedicated **nVidia** ISO built specifically for **RTX** users, and a Standard ISO that keeps **Intel** and **AMD** systems happy.
 
 While it’s sad to see those legendary older cards ride off into the sunset, this split actually gives everyone a smoother experience. Each ISO now does exactly what it’s meant to do, with fewer surprises, fewer black screens, and a whole lot more reliability. It’s our way of turning an unfortunate driver situation into something cleaner, clearer, and friendlier for the entire **XeroLinux** community.
-
-> Note : If you are on one of those legacy 900/1000 Series **nVidia** cards, just use the Standard **Intel/AMD** ISO then install old 580xx Drivers through it. Keep in mind that ISO will boot in `nomodeset` limited which will result in a low-res display, until them old drivers are installed. Also those drivers are privided as is with no support/help. Just an FYI.
 
 ## GPU Swap Detection
 
