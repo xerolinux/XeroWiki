@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -830,6 +830,9 @@
 <h2 id="nvidia-iso-split">nVidia ISO Split<a class="headerlink" href="#nvidia-iso-split" title="Permanent link">¶</a></h2>
 <p>We have decided to split <strong>XeroLinux</strong> into two ISOs because the GPU world has become a bit of a circus. <strong>nVidia</strong> decided to retire the old <em>900</em> and <em>1000</em> series cards from the modern driver lineup, which means only shiny new RTX cards get the “VIP treatment” from the latest open drivers. Instead of forcing everyone into a one-size-fits-nobody installer, we created a dedicated <strong>nVidia</strong> ISO built specifically for <strong>RTX</strong> users, and a Standard ISO that keeps <strong>Intel</strong> and <strong>AMD</strong> systems happy.</p>
 <p>While it’s sad to see those legendary older cards ride off into the sunset, this split actually gives everyone a smoother experience. Each ISO now does exactly what it’s meant to do, with fewer surprises, fewer black screens, and a whole lot more reliability. It’s our way of turning an unfortunate driver situation into something cleaner, clearer, and friendlier for the entire <strong>XeroLinux</strong> community.</p>
+<blockquote>
+<p>Note : If you are on one of those legacy 900/1000 Series <strong>nVidia</strong> cards, just use the Standard <strong>Intel/AMD</strong> ISO then install old 580xx Drivers through it. Keep in mind that ISO will boot in <code>nomodeset</code> limited which will result in a low-res display, until them old drivers are installed. Also those drivers are privided as is with no support/help. Just an FYI.</p>
+</blockquote>
 <h2 id="gpu-swap-detection">GPU Swap Detection<a class="headerlink" href="#gpu-swap-detection" title="Permanent link">¶</a></h2>
 <p><strong>XeroLinux</strong> now includes a small background service that quietly checks which graphics hardware is inside your computer. It does this by reading standard system information (the same information shown by tools like “About This System”). When it notices that the hardware has changed, for example, if you install an <strong>nVidia</strong> card or remove one, it records the change and shows a popup notification in <strong>Plasma</strong>. Nothing runs unless something actually changes.</p>
 <p>When you choose to continue, <strong>XeroLinux</strong> opens an easy-to-use tool that installs or removes the correct graphics drivers based on your current hardware. The tool updates system components like the boot configuration and kernel modules automatically, ensuring everything loads correctly on the next restart. This approach supports <strong>Intel</strong>, <strong>AMD</strong>, <strong>nVIdia</strong>, and hybrid setups, and it does so in a way that’s transparent, predictable, and safe for all users.</p>
@@ -880,6 +883,7 @@
 <p>If at any moment while using it, you get the <code>unkown key "%INSTALL_DB%" in local database</code> issue during update, please run the following command in terminal :</p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>find<span class="w"> </span>/var/lib/pacman/local/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">"desc"</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'/^%INSTALLED_DB%$/,+2d'</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
 </span></code></pre></div>
+<p>Or use the <strong>Pacman DB Fix</strong> in the toolkit under <strong>Servicing/System Tweaks</strong> section ;)</p>
 <p>That's it. Hopefully nothing else exists.</p>
 <h2 id="supportissues">Support/Issues<a class="headerlink" href="#supportissues" title="Permanent link">¶</a></h2>
 <p>If you encounter any <em>other</em> issues or have questions directly related to the installation, feel free to reach out to me on <strong>Fosstodon</strong> or <strong>Discord</strong>. Please do not ask ok <strong>Ko-Fi</strong>. All relevant links are provided in the footer, and I'll do my best to assist you.</p>
@@ -1044,10 +1048,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.footer", "navigation.indexes", "navigation.sections", "content.code.copy", "content.code.annotate", "content.tabs.link", "glightbox", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.footer", "navigation.indexes", "navigation.sections", "content.code.copy", "content.code.annotate", "content.tabs.link", "glightbox", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../js/github-commit-info.js"></script>
       

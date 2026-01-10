@@ -54,6 +54,8 @@ We have decided to split **XeroLinux** into two ISOs because the GPU world has b
 
 While it’s sad to see those legendary older cards ride off into the sunset, this split actually gives everyone a smoother experience. Each ISO now does exactly what it’s meant to do, with fewer surprises, fewer black screens, and a whole lot more reliability. It’s our way of turning an unfortunate driver situation into something cleaner, clearer, and friendlier for the entire **XeroLinux** community.
 
+> Note : If you are on one of those legacy 900/1000 Series **nVidia** cards, just use the Standard **Intel/AMD** ISO then install old 580xx Drivers through it. Keep in mind that ISO will boot in `nomodeset` limited which will result in a low-res display, until them old drivers are installed. Also those drivers are privided as is with no support/help. Just an FYI.
+
 ## GPU Swap Detection
 
 **XeroLinux** now includes a small background service that quietly checks which graphics hardware is inside your computer. It does this by reading standard system information (the same information shown by tools like “About This System”). When it notices that the hardware has changed, for example, if you install an **nVidia** card or remove one, it records the change and shows a popup notification in **Plasma**. Nothing runs unless something actually changes.
@@ -130,6 +132,8 @@ If at any moment while using it, you get the `unkown key "%INSTALL_DB%" in local
 ```Bash
 sudo find /var/lib/pacman/local/ -type f -name "desc" -exec sed -i '/^%INSTALLED_DB%$/,+2d' {} \;
 ```
+
+Or use the **Pacman DB Fix** in the toolkit under **Servicing/System Tweaks** section ;)
 
 That's it. Hopefully nothing else exists.
 
