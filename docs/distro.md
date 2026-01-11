@@ -27,7 +27,7 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
 
 !!! warning
 
-    **T.L.D.R :** This ISO is not meant to be booted on *Live Hardware* but in a Virtual Machine to see what **XeroLinux** is all about. Booting it on Real Metal will result in low resolution, especially on **nVidia** systems. So please do not try it !
+    **T.L.D.R :** This ISO is **NOT** meant to be booted on *Live Hardware* but in a Virtual Machine to see what **XeroLinux** is all about. Booting it on Real Metal will result in low resolution, especially on **nVidia** systems. So please do not try it !
 
 A *Demo* ISO is available *now*, **free** of charge for testing purposes only, since it comes without an installer and *cow-space* is pretty limited (100MiB), so you won’t be able to update or install big packages. It's just for testing, so don’t try updating, it won’t work because of the space limit.
 
