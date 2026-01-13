@@ -43,7 +43,7 @@ Since this is currently in *Alpha* stages, we do need people willing to help tes
 
 <p align="center">
   <a href="https://i.imgur.com/sU7bHQL.png" target="_blank" rel="noopener">
-    <img src="https://i.imgur.com/sU7bHQL.png" width="56%">
+    <img src="https://i.imgur.com/sU7bHQL.png" width="50%">
   </a>
   <a href="https://i.imgur.com/3MDVkOi.png" target="_blank" rel="noopener">
     <img src="https://i.imgur.com/3MDVkOi.png" width="50%">
