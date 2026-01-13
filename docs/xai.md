@@ -41,10 +41,14 @@ Since this is currently in *Alpha* stages, we do need people willing to help tes
 
 <h1 align="center">.// Screenshots \\.</h1>
 
-<div style="display:flex; gap:20px; justify-content:center;">
-  <img src="https://i.imgur.com/sU7bHQL.png" style="width:45%;">
-  <img src="https://i.imgur.com/3MDVkOi.png" style="width:45%;">
-</div>
+<p align="center">
+  <a href="https://i.imgur.com/sU7bHQL.png">
+    <img src="https://i.imgur.com/sU7bHQL.png" width="45%">
+  </a>
+  <a href="https://i.imgur.com/3MDVkOi.png">
+    <img src="https://i.imgur.com/3MDVkOi.png" width="45%">
+  </a>
+</p>
 
 ### Wrapping up
 
