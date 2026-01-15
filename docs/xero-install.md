@@ -16,7 +16,7 @@ tags:
 
 Transform your base Arch Linux installation into a fully-featured **XeroLinux KDE Plasma** desktop with a single command. This script handles everything from package installation to system configuration, giving you a personalized and polished desktop experience.
 
-No compromises. No missing features. Just pure **XeroLinux** goodness.
+No compromises. No missing features. Just pure **XeroLinux** goodness. 🤓
 
 <p align="center">
     <img src="https://i.imgur.com/vl5hMAF.png" alt="preview">
