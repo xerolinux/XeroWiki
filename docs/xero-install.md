@@ -18,9 +18,14 @@ Transform your base Arch Linux installation into a fully-featured **XeroLinux KD
 
 No compromises. No missing features. Just pure **XeroLinux** goodness. 🤓
 
-<p align="center">
-    <img src="https://i.imgur.com/vl5hMAF.png" alt="preview">
-</p>
+<center>
+  <iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/8g72HUrKcWc"
+    allowfullscreen>
+  </iframe>
+</center>
 
 ### Overview
 
