@@ -45,20 +45,27 @@ This project is our way of giving back to the community that made XeroLinux poss
 
 ## What You Get
 
-Everything included in the official XeroLinux ISO:
+Here's what will be included if you opt to use this script Vs. ISO :
 
-| Feature | Description |
-|---------|-------------|
-| 🖥️ **KDE Plasma Desktop** | Complete desktop environment with full Wayland support |
-| 🎨 **Layan Theme Suite** | KDE theme, icons, cursors, and color schemes |
-| 🔐 **LUKS Encryption** | Optional full-disk encryption for your data |
-| 🗂️ **BTRFS with Snapshots** | Modern filesystem with automatic snapshot support |
-| 🎛️ **GPU Auto-Detection** | Automatic drivers for Intel, AMD, and NVIDIA |
-| 🚀 **XeroLinux Toolkit** | Post-install configuration utility |
-| 💻 **Oh-My-Posh Terminal** | Beautiful, informative shell prompt |
-| 🖼️ **Custom GRUB Theme** | XeroLayan boot screen |
-| ⚡ **Optimized Services** | Pre-configured for performance |
-| 📦 **AUR Ready** | Choice of paru or yay helper |
+<style>
+.table-full { width: 100%; table-layout: fixed; }
+</style>
+
+<table class="table-full">
+  <thead>
+    <tr><th>Aspect</th><th>Scripts</th><th>ISO</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>End Result</td><td>Identical</td><td>Identical</td></tr>
+    <tr><td>Installation Method</td><td>Terminal-guided</td><td>GUI (Calamares)</td></tr>
+    <tr><td>BTRFS+Compression</td><td>✅</td><td>❌</td></tr>
+    <tr><td>Encryption</td><td>✅</td><td>❌</td></tr>
+    <tr><td>Download Size</td><td>~2 KB</td><td>~3 GB</td></tr>
+    <tr><td>Requires Donation</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Learning Experience</td><td>Higher</td><td>Lower</td></tr>
+  </tbody>
+</table>
+
 
 ---
 
@@ -89,7 +96,15 @@ The transformation. This script turns base Arch into XeroLinux:
 
 ## Installation
 
-### Quick Start
+### Requirements
+
+- **Arch Linux ISO** — Any recent version
+- **Internet Connection** — Required throughout installation
+- **Storage** — 20GB minimum (50GB+ recommended)
+- **RAM** — 2GB minimum (4GB+ recommended)
+- **UEFI System** — Legacy BIOS not supported
+
+### Script Runner
 
 Boot from any Arch Linux ISO and run:
 ```bash
@@ -100,7 +115,7 @@ That's it. The script guides you through everything else.
 
 ---
 
-## Installation Walkthrough
+## Walkthrough
 
 ### Phase 1: Base System
 
@@ -142,46 +157,6 @@ Skip anything you don't need. Install only what you want.
 
 ---
 
-## Supported Hardware
-
-### GPUs
-
-| Vendor | Support |
-|--------|---------|
-| **Intel** | Full support (integrated graphics) |
-| **AMD** | Full support (AMDGPU driver) |
-| **NVIDIA** | Full support (proprietary + open kernel modules) |
-| **Hybrid** | Intel/AMD + NVIDIA switchable graphics |
-
-### Filesystems
-
-| Filesystem | Features |
-|------------|----------|
-| **BTRFS** | Snapshots, compression, subvolumes (recommended) |
-| **EXT4** | Traditional, stable, widely supported |
-| **XFS** | High performance, large file support |
-
-### Encryption
-
-| Option | Description |
-|--------|-------------|
-| **LUKS** | Full-disk encryption with password |
-| **None** | Standard unencrypted installation |
-
----
-
-### Script Vs. ISO
-
-| Aspect | Scripts | ISO |
-|--------|---------|-----|
-| End Result | Identical | Identical |
-| Installation Method | Terminal-guided | GUI (Calamares) |
-| Download Size | ~2 KB | ~3 GB |
-| Requires Donation | ❌ | ✅ |
-| Learning Experience | Higher | Lower |
-
----
-
 ## Frequently Asked Questions
 
 ### Is this really free?
@@ -192,7 +167,7 @@ Skip anything you don't need. Install only what you want.
 
 **Yes.** You get the exact same packages, themes, and configurations. The only difference is the installation method.
 
-### Why would I use this over the ISO?
+### Why would I use this
 
 Several reasons:
 
@@ -202,7 +177,7 @@ Several reasons:
 - You have a slow internet connection
 - You want more control over the process
 
-### Why would I use the ISO instead?
+### Why would I use the ISO
 
 - Faster installation with GUI
 - Offline installation capability
@@ -212,20 +187,6 @@ Several reasons:
 ### Can I use this in a VM?
 
 **Yes.** The scripts detect virtual environments and install appropriate guest tools (QEMU, VirtualBox, VMware).
-
-### What if something goes wrong?
-
-The scripts pause for 3 seconds on any error, letting you see what happened. Most warnings are non-critical and won't stop the installation. If something fails completely, you can check the output and retry.
-
----
-
-## Requirements
-
-- **Arch Linux ISO** — Any recent version
-- **Internet Connection** — Required throughout installation
-- **Storage** — 20GB minimum (50GB+ recommended)
-- **RAM** — 2GB minimum (4GB+ recommended)
-- **UEFI System** — Legacy BIOS not supported
 
 ---
 
