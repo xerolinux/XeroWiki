@@ -5,3 +5,4 @@
 - [🎨XeroLinux Rices](rices.md)
 - [🎭The Grub Themes](grub.md)
 - [🎨Plymouth Manager](plymouth.md)
+- [🗒️Chaotic-AUR Tool](chaotic-tool.md)
