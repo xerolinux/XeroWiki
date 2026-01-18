@@ -43,6 +43,17 @@ To run the script just use this simple command :
 curl -fsSL "https://xerolinux.xyz/script/chaotic-tool.py" | python3
 ```
 
+<h2 align="center">.// Screenshots \\.</h2>
+
+<p align="center">
+  <a href="../images/chaotic-tool2.png" target="_blank" rel="noopener">
+    <img src="../images/chaotic-tool2.png" width="45%">
+  </a>
+  <a href="../images/chaotic-tool3.png" target="_blank" rel="noopener">
+    <img src="../images/chaotic-tool3.png" width="45%">
+  </a>
+</p>
+
 ## Closing words
 
 If you’ve ever wanted the convenience of **Chaotic-AUR** without the “copy commands, edit config, hope nothing breaks” routine, this tool is meant to make that whole experience feel simple and familiar. One window, clear status, clean output, and the same actions you’d normally do by hand, just wrapped in a straightforward GUI with proper polkit prompts.
