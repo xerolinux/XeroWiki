@@ -13,7 +13,7 @@ Welcome to **XeroLinux Wiki** ! Think of this page as your go-to hub for all thi
 It's meticulously designed to keep everything organized and accessible, so you can focus more on experimenting and less on searching for that one-liner you swear you wrote down somewhere.
 
 <p align="center">
-    <img src="https://i.imgur.com/9HqsYLP.png" alt="logo">
+    <img src="../images/Header.png" alt="logo">
 </p>
 
 This wiki is built with intuitive section links that seamlessly navigate to specific parts of the documentation. Imagine needing to remember a specific customization: simply enter the Customization page and press `i` in the toolkit, to instantly jump to the relevant section.

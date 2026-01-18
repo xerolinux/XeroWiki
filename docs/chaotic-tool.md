@@ -12,10 +12,10 @@ tags:
 
 !!! info
 
-    This script was created as a fun side-project. Please do not use unless you know what you are doing ! All info conatained in the script comes from the : [**Chaoti-AUR Site**](https://aur.chaotic.cx/){:target="_blank"}
+    This script was created as a fun side-project. Please do not use unless you know what you are doing ! All info conatained in the script comes from the : [**Chaotic-AUR Site**](https://aur.chaotic.cx/){:target="_blank"}
 
 <p align="center">
-    <img src="https://i.imgur.com/8L3n7MG.png" alt="chaotic-tool">
+    <img src="../images/chaotic-tool.png" alt="chaotic-tool">
 </p>
 
 ### Overview

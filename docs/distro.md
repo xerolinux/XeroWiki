@@ -20,7 +20,7 @@ tags:
 Before we begin, I would like to tell everyone of you who has supported the **XeroLinux** project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️
 
 <p align="center">
-    <img src="https://i.imgur.com/ejZ1ZQv.png" alt="rice">
+    <img src="../images/XeroLinux.png" alt="rice">
 </p>
 
 ### Free Demo
@@ -75,7 +75,7 @@ If you’re not sure what that means, just read [**This Article**](https://www.m
 To boot into the Distro's Live Environment, all you have to do is use the tried and true [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/){:target="_blank"} to put ISO on & boot, that way you have **Grub** as fallback in case **SystemD-Boot** fails. If you burn using **Etcher** or similar tools there will be nothing to fall back to. Just an FYI.
 
 <p align="center">
-    <img src="https://i.imgur.com/LTVLXo3.png" alt="rice">
+    <img src="../images/Ventoy.png" alt="ventoy">
 </p>
 
 ## X11 is no more
@@ -87,7 +87,7 @@ We have moved completely to **Wayland** on XeroLinux. If you still rely on **X11
 **XeroLinux**, like many other distros uses the [**Calamares**](https://codeberg.org/Calamares/calamares){:target="_blank"} installer. 
 
 <p align="center">
-    <img src="https://i.imgur.com/8f0b3NI.png" alt="netinstall">
+    <img src="../images/Calamares.png" alt="netinstall">
 </p>
 
 With this release, we have decided to re-enable the **NetInstall** module, allowing you to select what packages/apps you want out of the box. Keep in mind that the included **Flakon** browser on the Live Environment, will be removed during install, replaced with the one you selected from that module. One very important thing to note here, the more packages you select the longer the install will take, especially if your Internet connection is as slow as mine here in Leb lol.
@@ -114,7 +114,7 @@ sed -i.bak \
 A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. Will be included starting December 2025 release. 
 
 <p align="center">
-    <img src="https://i.imgur.com/WUGMuLk.png" alt="rice">
+    <img src="../images/FPrintd.png" alt="rice">
 </p>
 
 > Note : Polkit (GUI) *might* continue to prompt for password, just swipe your finger and it will authenticate. Terminal works. As for SDDM and more info [**Click Here**](https://xerolinux.xyz/posts/xero-fingerprint/){:target="_blank"}.
@@ -144,7 +144,7 @@ That's it. Hopefully nothing else exists.
 If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. Please do not ask ok **Ko-Fi**. All relevant links are provided in the footer, and I'll do my best to assist you.
 
 <p align="center">
-    <img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice">
+    <img src="../images/Tech.jpeg" alt="rice">
 </p>
 
 However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or on **Discord**. As for release changelog, you can find this [**Here**](https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md){:target="_blank"}.

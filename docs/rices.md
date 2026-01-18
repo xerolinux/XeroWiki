@@ -32,7 +32,7 @@ cd xero-layan-git/ && ./install.sh
 ```
 
 <p align="center">
-    <img src="https://i.imgur.com/VA2tycb.jpeg" alt="rice">
+    <img src="../images/Rice.jpeg" alt="rice">
 </p>
 
 **Elements Used :**
@@ -60,7 +60,7 @@ chmod +x cosmic.sh && sh cosmic.sh
 ```
 
 <p align="center">
-    <img src="https://i.imgur.com/KAbUOno.png" alt="rice">
+    <img src="../images/Cosmic.png" alt="rice">
 </p>
 
 ### KDE Tiling Special

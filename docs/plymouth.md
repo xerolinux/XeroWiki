@@ -52,7 +52,7 @@ chmod + xpm && sh xpm
 ```
 
 <p align="center">
-    <img src="https://i.imgur.com/AL7frmH.png" alt="plymouth">
+    <img src="../images/Plymouth.png" alt="plymouth">
 </p>
 
 **Nerd Note :** 
@@ -83,7 +83,7 @@ ExecStartPre=/usr/bin/sleep 6
 ```
 
 <p align="center">
-    <img src="https://i.imgur.com/7iHW4Ar.png" alt="delay">
+    <img src="../images/Delay.png" alt="delay">
 </p>
 
 Adjust delay to fit your setup. Save it and apply with `sudo systemctl daemon-reload`.
