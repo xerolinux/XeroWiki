@@ -20,7 +20,7 @@ tags:
 
 ### Overview
 
-This **Unofficial Chaotic-AUR Tool** is a native `PyQt6` desktop application for Arch-based systems that lets you enable or disable the **Chaotic-AUR** repository using your system’s polkit (pkexec) authentication.
+This **Unofficial Chaotic-AUR Tool** is a native `PyQt6` desktop application for **ANY** Arch-based systems that lets you enable or disable the **Chaotic-AUR** repository using your system’s polkit (pkexec) authentication.
 
 It provides a clean dark-themed interface with an on-screen Enabled/Disabled status indicator, an always-visible output log, and built-in pages to browse the live package list (via the Chaotic backend API) with search, view recent build/pipeline status, check deployments/mirrors, and see the official Chaotic team members with GitHub avatars and quick links.
 
@@ -49,10 +49,10 @@ curl -fsSL "https://xerolinux.xyz/script/chaotic-tool.py" | python3
 
 <p align="center">
   <a href="../images/chaotic-tool2.png" target="_blank" rel="noopener">
-    <img src="../images/chaotic-tool2.png" width="45%">
+    <img src="../images/chaotic-tool2.png" width="49%">
   </a>
   <a href="../images/chaotic-tool3.png" target="_blank" rel="noopener">
-    <img src="../images/chaotic-tool3.png" width="45%">
+    <img src="../images/chaotic-tool3.png" width="49%">
   </a>
 </p>
 
