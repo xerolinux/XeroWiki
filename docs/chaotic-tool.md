@@ -8,7 +8,7 @@ tags:
 ---
 
 <h1 align="center">🗒️ Unofficial Chaotic-AUR Tool 🗒️</h1>
-<h2 align="center">Not related or affiliated by the Chaotic-AUR Team !</h2>
+<h2 align="center">Not affiliated with the Chaotic-AUR Team/Project !</h2>
 
 !!! info
 
@@ -23,6 +23,8 @@ tags:
 This **Unofficial Chaotic-AUR Tool** is a native `PyQt6` desktop application for Arch-based systems that lets you enable or disable the **Chaotic-AUR** repository using your system’s polkit (pkexec) authentication.
 
 It provides a clean dark-themed interface with an on-screen Enabled/Disabled status indicator, an always-visible output log, and built-in pages to browse the live package list (via the Chaotic backend API) with search, view recent build/pipeline status, check deployments/mirrors, and see the official Chaotic team members with GitHub avatars and quick links.
+
+You can also search for package to see if it's available on the repo via the **Packages** Page. I humanized their names for more clarity...
 
 ---
 
