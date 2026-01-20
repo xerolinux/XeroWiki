@@ -71,13 +71,14 @@ This rice was created/contributed by [**MurderFromMars**](https://www.youtube.co
 
 Unlike other rices, this will not include an automated install script. However, will embed a how-to video by the author, as well as written instructions, including a list of packages required to achieve this. Reason for that is simply because it's currently hard to do that. It's a complex setup. It's for those of you willing to tinker and learn.
 
-<p align="center">
-    <video src="https://repos.xerolinux.xyz/XeroTiling.mp4" width="640" height="480" controls></video>
-</p>
-
-**Elements Used :**
-
-_Soon !_
+<center>
+  <iframe
+    width="640"
+    height="360"
+    src="https://www.youtube.com/embed/qRIbiVSYvvs"
+    allowfullscreen>
+  </iframe>
+</center>
 
 ### Wrapping up
 
