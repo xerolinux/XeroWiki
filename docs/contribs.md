@@ -46,4 +46,6 @@ Unlike other rices, this will not include an automated install script. However, 
   </iframe>
 </center>
 
+--- 
+
 <h1 align="center">.// The Scripts \\.</h1>
