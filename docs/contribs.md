@@ -27,7 +27,7 @@ That being said, if you have anything to contribute to the project, you are more
 
 ### KDE Tiling Special
 
-This rice was created/contributed by [**MurderFromMars**](https://www.youtube.com/channel/UC_jwY9Q683jumkBSaKne60A){:target="_blank"}, a member of the **XeroLinux** community Discord server. Kudos to him for putting in the hard work. 
+This rice was created/contributed by [**MurderFromMars**](https://www.youtube.com/channel/UC_jwY9Q683jumkBSaKne60A){:target="_blank"}, a member of the **XeroLinux** community Discord server. Kudos to him for putting in the hard work. For the Repo [**Click Here**](https://github.com/MurderFromMars/CyberXero-Theme-Repo){:target="_blank"}
 
 <p align="center">
     <video src="https://repos.xerolinux.xyz/XeroTiling.mp4" width="640" height="480" controls></video>
