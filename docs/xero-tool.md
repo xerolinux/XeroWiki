@@ -7,7 +7,7 @@ tags:
   - XeroLinux
 ---
 
-<h1 align="center">💿 XeroLinux Customization Hub 💿</h1>
+<h1 align="center">🎨 XeroLinux Customization Hub 🎨</h1>
 
 ## Overview 
 
