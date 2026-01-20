@@ -70,6 +70,10 @@ sudo pacman -S --needed python python-pyqt6 python-pip python-pipx
 
 - **XeroLayan :**
 
+<p align="center">
+    <img src="../images/Rice.jpeg" alt="rice">
+</p>
+
 ```Bash
 git clone https://github.com/xerolinux/xero-layan-git
 cd xero-layan-git/ && ./install.sh
@@ -82,12 +86,20 @@ The rice uses the **Layan** [**GTK**](https://github.com/vinceliuice/Layan-gtk-t
 
 - **Xero Cosmic:**
 
+<p align="center">
+    <img src="../images/Cosmic.png" alt="rice">
+</p>
+
 ```Bash
 wget https://xerolinux.xyz/script/cosmic.sh
 chmod +x cosmic.sh && sh cosmic.sh
 ```
 
 - **Xero Grubs :**
+
+<p align="center">
+  <img src="../images/Grub.png">
+</p>
 
 ```Bash
 git clone https://github.com/xerolinux/xero-grubs
@@ -96,12 +108,25 @@ cd xero-grubs/ && sudo ./install.sh
 
 - **Plymouth Manager :**
 
+<p align="center">
+    <img src="../images/Plymouth.png" alt="plymouth">
+</p>
+
 ```Bash
 wget https://raw.githubusercontent.com/XeroLinuxDev/extra-scripts/refs/heads/main/usr/local/bin/xpm
 chmod + xpm && sh xpm
 ```
 
 - **Unofficial Chaotic-AUR Tool :**
+
+<p align="center">
+  <a href="../images/chaotic-tool.png" target="_blank" rel="noopener">
+    <img src="../images/chaotic-tool.png" width="49%">
+  </a>
+  <a href="../images/chaotic-tool3.png" target="_blank" rel="noopener">
+    <img src="../images/chaotic-tool3.png" width="49%">
+  </a>
+</p>
 
 ```Bash
 curl -fsSL "https://xerolinux.xyz/script/chaotic-tool.py" | python3
@@ -145,45 +170,6 @@ Then use a tool like `xrandr` to identify your primary monitor, and add it to gr
 ```Bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
-
----
-
-## Screenshots
-
-- **XeroLayan**
-
-<p align="center">
-    <img src="../images/Rice.jpeg" alt="rice">
-</p>
-
-- **Dracula Cosmic**
-
-<p align="center">
-    <img src="../images/Cosmic.png" alt="rice">
-</p>
-
-- **Xero Grubs**
-
-<p align="center">
-  <img src="../images/Grub.png">
-</p>
-
-- **Plymouth Manager**
-
-<p align="center">
-    <img src="../images/Plymouth.png" alt="plymouth">
-</p>
-
-- **Chaotic-AUR-Tool**
-
-<p align="center">
-  <a href="../images/chaotic-tool.png" target="_blank" rel="noopener">
-    <img src="../images/chaotic-tool.png" width="49%">
-  </a>
-  <a href="../images/chaotic-tool3.png" target="_blank" rel="noopener">
-    <img src="../images/chaotic-tool3.png" width="49%">
-  </a>
-</p>
 
 ---
 

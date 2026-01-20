@@ -435,17 +435,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Screenshots
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#final-words" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -615,17 +604,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#screenshots" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Screenshots
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#final-words" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -698,6 +676,10 @@
 <ul>
 <li><strong>XeroLayan :</strong></li>
 </ul>
+<p align="center">
+    <img src="../images/Rice.jpeg" alt="rice">
+</p>
+
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/xerolinux/xero-layan-git
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd</span><span class="w"> </span>xero-layan-git/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>./install.sh
 </span></code></pre></div>
@@ -707,24 +689,45 @@
 <ul>
 <li><strong>Xero Cosmic:</strong></li>
 </ul>
+<p align="center">
+    <img src="../images/Cosmic.png" alt="rice">
+</p>
+
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>wget<span class="w"> </span>https://xerolinux.xyz/script/cosmic.sh
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>chmod<span class="w"> </span>+x<span class="w"> </span>cosmic.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>cosmic.sh
 </span></code></pre></div>
 <ul>
 <li><strong>Xero Grubs :</strong></li>
 </ul>
+<p align="center">
+  <img src="../images/Grub.png">
+</p>
+
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/xerolinux/xero-grubs
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>xero-grubs/<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>./install.sh
 </span></code></pre></div>
 <ul>
 <li><strong>Plymouth Manager :</strong></li>
 </ul>
+<p align="center">
+    <img src="../images/Plymouth.png" alt="plymouth">
+</p>
+
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>wget<span class="w"> </span>https://raw.githubusercontent.com/XeroLinuxDev/extra-scripts/refs/heads/main/usr/local/bin/xpm
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>chmod<span class="w"> </span>+<span class="w"> </span>xpm<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sh<span class="w"> </span>xpm
 </span></code></pre></div>
 <ul>
 <li><strong>Unofficial Chaotic-AUR Tool :</strong></li>
 </ul>
+<p align="center">
+  <a href="../images/chaotic-tool.png" target="_blank" rel="noopener">
+    <img src="../images/chaotic-tool.png" width="49%">
+  </a>
+  <a href="../images/chaotic-tool3.png" target="_blank" rel="noopener">
+    <img src="../images/chaotic-tool3.png" width="49%">
+  </a>
+</p>
+
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span><span class="s2">"https://xerolinux.xyz/script/chaotic-tool.py"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>python3
 </span></code></pre></div>
 <hr>
@@ -753,48 +756,6 @@
 <p>Then use a tool like <code>xrandr</code> to identify your primary monitor, and add it to grub's <code>GRUB_CMDLINE_LINUX_DEFAULT='</code> line, like so <code>video=DP-1:1920x1080@60</code>, replacing the <code>DP-1</code> with yours. Save and exit, then update grub with the following command :</p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>grub-mkconfig<span class="w"> </span>-o<span class="w"> </span>/boot/grub/grub.cfg
 </span></code></pre></div>
-<hr>
-<h2 id="screenshots">Screenshots<a class="headerlink" href="#screenshots" title="Permanent link">¶</a></h2>
-<ul>
-<li><strong>XeroLayan</strong></li>
-</ul>
-<p align="center">
-    <img src="../images/Rice.jpeg" alt="rice">
-</p>
-
-<ul>
-<li><strong>Dracula Cosmic</strong></li>
-</ul>
-<p align="center">
-    <img src="../images/Cosmic.png" alt="rice">
-</p>
-
-<ul>
-<li><strong>Xero Grubs</strong></li>
-</ul>
-<p align="center">
-  <img src="../images/Grub.png">
-</p>
-
-<ul>
-<li><strong>Plymouth Manager</strong></li>
-</ul>
-<p align="center">
-    <img src="../images/Plymouth.png" alt="plymouth">
-</p>
-
-<ul>
-<li><strong>Chaotic-AUR-Tool</strong></li>
-</ul>
-<p align="center">
-  <a href="../images/chaotic-tool.png" target="_blank" rel="noopener">
-    <img src="../images/chaotic-tool.png" width="49%">
-  </a>
-  <a href="../images/chaotic-tool3.png" target="_blank" rel="noopener">
-    <img src="../images/chaotic-tool3.png" width="49%">
-  </a>
-</p>
-
 <hr>
 <h2 id="final-words">Final Words<a class="headerlink" href="#final-words" title="Permanent link">¶</a></h2>
 <p>The XeroLinux Customization Hub brings together all your favorite XeroLinux customization options into one sleek, easy-to-use interface. Whether you're looking to rice your desktop, beautify your bootloader, or manage system tools, this hub has you covered. The animated interface and embedded previews make it not just functional, but visually appealing as well. Give it a try and transform your Arch Linux experience!</p></div>
