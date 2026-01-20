@@ -21,12 +21,9 @@ The **XeroLinux Customization Hub** is a vibrant, all-in-one GUI tool created as
 
 This tool was created for *any* Arch System. It includes :
 
-- **Desktop Rices**: Install beautiful desktop configurations including Layan KDE and Dracula Cosmic themes
-- **GRUB Themes**: Browse and install from a gallery of 8 stunning bootloader themes
-- **Scripts & Tools**: Quick access to essential utilities like the Chaotic-AUR Manager and Plymouth boot splash manager
-- **Animated Interface**: Eye-catching RGB rainbow borders that cycle continuously
-- **Terminal Integration**: Executes commands in your default terminal emulator with full verbose output
-- **Polkit Support**: Leverages your desktop environment's polkit for secure sudo privilege handling
+- **Desktop Rices**: Install beautiful desktop Rices.
+- **GRUB Themes**: Inst aany of 8 stunning `Grub` themes.
+- **Scripts & Tools**: Quick access to essential utilities & Scripts.
 
 ---
 
