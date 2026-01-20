@@ -2,6 +2,7 @@
 - [💿The Distro](distro.md)
 - [🗒️XeroInstall](xero-install.md)
 - [⁉️XeroLinux FAQ](xero-faq.md)
+- [🎨XeroLinux Tool](xero-tool.md)
 - [🎨XeroLinux Rices](rices.md)
 - [🎭The Grub Themes](grub.md)
 - [🗒️Chaotic-AUR Tool](chaotic-tool.md)
