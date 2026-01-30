@@ -35,7 +35,11 @@ This rice was created/contributed by [**MurderFromMars**](https://www.youtube.co
 
 **Installation :**
 
-Unlike other rices, this will not include an automated install script. However, will embed a how-to video by the author, as well as written instructions, including a list of packages required to achieve this. Reason for that is simply because it's currently hard to do that. It's a complex setup. It's for those of you willing to tinker and learn.
+Run the below command. If you end up with double panel make sure to delete old one. It sometimes happens. Will be fixed in future releases. Contact dev in case of issues.
+
+```Bash
+curl -fsSL https://raw.githubusercontent.com/MurderFromMars/CyberXero/main/install.sh | bash
+```
 
 <center>
   <iframe
@@ -48,4 +52,4 @@ Unlike other rices, this will not include an automated install script. However, 
 
 --- 
 
-<h1 align="center">.// The Scripts \\.</h1>
+<h1 align="center">.// More to come... \\.</h1>

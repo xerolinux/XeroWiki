@@ -457,17 +457,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#legacy-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Legacy Systems
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#bootable-tool" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -527,6 +516,17 @@
     <span class="md-ellipsis">
       
         Supported Filesystems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zram-swap-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        zRAM Swap Support
       
     </span>
   </a>
@@ -595,13 +595,13 @@
 <h3 id="thank-you">Thank you<a class="headerlink" href="#thank-you" title="Permanent link">¶</a></h3>
 <p>Before we begin, I would like to tell everyone of you who has supported the <strong>XeroLinux</strong> project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated. 🙏❤️</p>
 <p align="center">
-    <img src="https://i.imgur.com/ejZ1ZQv.png" alt="rice">
+    <img src="../images/XeroLinux.png" alt="rice">
 </p>
 
 <h3 id="free-demo">Free Demo<a class="headerlink" href="#free-demo" title="Permanent link">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Please do <strong>NOT</strong> under any circumstances attempt to use the <strong>Demo</strong> with <em>Persistent Ventoy</em>. You will only be hurting yourselves as it will not be a good experience, many features were left out for full ISO. If you do and ask for help you <em>Will</em> be ignored. </p>
+<p><strong>T.L.D.R :</strong> This ISO is <strong>NOT</strong> meant to be booted on <em>Live Hardware</em> but in a Virtual Machine to see what <strong>XeroLinux</strong> is all about. Booting it on Real Metal will result in low resolution, especially on <strong>nVidia</strong> systems. So please do not try it !</p>
 </div>
 <p>A <em>Demo</em> ISO is available <em>now</em>, <strong>free</strong> of charge for testing purposes only, since it comes without an installer and <em>cow-space</em> is pretty limited (100MiB), so you won’t be able to update or install big packages. It's just for testing, so don’t try updating, it won’t work because of the space limit.</p>
 <p>Finally, since Live Environment is not persistent, installing anything that requires a reboot, like Drivers is therefore impossible, keep that in mind before attempting to do so.</p>
@@ -616,18 +616,20 @@
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h2>
 <p>Before we dive in, it's important to note that <strong>XeroLinux</strong> features <strong>KDE Plasma</strong> a powerful and distinct desktop environment. While it was designed to run on a variety of systems, for the best experience, we recommend mid-range or higher hardware. That said, they can work on low-end hardware, but performance may be less than optimal.</p>
 <h2 id="nvidia-iso-split">nVidia ISO Split<a class="headerlink" href="#nvidia-iso-split" title="Permanent link">¶</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If you are on one of those legacy 900/1000 Series <strong>nVidia</strong> cards, just use the Standard <strong>Intel/AMD</strong> ISO then install old 580xx Drivers through it. Keep in mind that ISO will boot in <code>nomodeset</code> limited which will result in a low-res display, until them old drivers are installed. Also those drivers are provided with no support/help. Just an FYI.</p>
+</div>
 <p>We have decided to split <strong>XeroLinux</strong> into two ISOs because the GPU world has become a bit of a circus. <strong>nVidia</strong> decided to retire the old <em>900</em> and <em>1000</em> series cards from the modern driver lineup, which means only shiny new RTX cards get the “VIP treatment” from the latest open drivers. Instead of forcing everyone into a one-size-fits-nobody installer, we created a dedicated <strong>nVidia</strong> ISO built specifically for <strong>RTX</strong> users, and a Standard ISO that keeps <strong>Intel</strong> and <strong>AMD</strong> systems happy.</p>
 <p>While it’s sad to see those legendary older cards ride off into the sunset, this split actually gives everyone a smoother experience. Each ISO now does exactly what it’s meant to do, with fewer surprises, fewer black screens, and a whole lot more reliability. It’s our way of turning an unfortunate driver situation into something cleaner, clearer, and friendlier for the entire <strong>XeroLinux</strong> community.</p>
+<p>Finally we tried our best to make <strong>nVidia</strong> ISO robust by including support for laptops and by adding many other optimizations.</p>
 <h2 id="gpu-swap-detection">GPU Swap Detection<a class="headerlink" href="#gpu-swap-detection" title="Permanent link">¶</a></h2>
 <p><strong>XeroLinux</strong> now includes a small background service that quietly checks which graphics hardware is inside your computer. It does this by reading standard system information (the same information shown by tools like “About This System”). When it notices that the hardware has changed, for example, if you install an <strong>nVidia</strong> card or remove one, it records the change and shows a popup notification in <strong>Plasma</strong>. Nothing runs unless something actually changes.</p>
 <p>When you choose to continue, <strong>XeroLinux</strong> opens an easy-to-use tool that installs or removes the correct graphics drivers based on your current hardware. The tool updates system components like the boot configuration and kernel modules automatically, ensuring everything loads correctly on the next restart. This approach supports <strong>Intel</strong>, <strong>AMD</strong>, <strong>nVIdia</strong>, and hybrid setups, and it does so in a way that’s transparent, predictable, and safe for all users.</p>
-<h2 id="legacy-systems">Legacy Systems<a class="headerlink" href="#legacy-systems" title="Permanent link">¶</a></h2>
-<p>Please avoid booting ISO on on old-school computers that use legacy <strong>BIOS/MBR</strong>. It only works on newer setups with <strong>EFI/UEFI</strong> — Legacy Boot will be removed soon !</p>
-<p>If you’re not sure what that means, just read <a href="https://www.macrium.com/blog/understanding-mbr-bios-and-gpt-uefi" target="_blank"><strong>This Article</strong></a> and check if your PC supports <strong>UEFI</strong>. If it doesn’t, don’t sweat it, just pick a distro made for older hardware instead. Easy as that!</p>
 <h2 id="bootable-tool">Bootable Tool<a class="headerlink" href="#bootable-tool" title="Permanent link">¶</a></h2>
 <p>To boot into the Distro's Live Environment, all you have to do is use the tried and true <a href="https://xerolinux.xyz/posts/ventoy-multi-boot/" target="_blank"><strong>Ventoy</strong></a> to put ISO on &amp; boot, that way you have <strong>Grub</strong> as fallback in case <strong>SystemD-Boot</strong> fails. If you burn using <strong>Etcher</strong> or similar tools there will be nothing to fall back to. Just an FYI.</p>
 <p align="center">
-    <img src="https://i.imgur.com/LTVLXo3.png" alt="rice">
+    <img src="../images/Ventoy.png" alt="ventoy">
 </p>
 
 <h2 id="x11-is-no-more">X11 is no more<a class="headerlink" href="#x11-is-no-more" title="Permanent link">¶</a></h2>
@@ -635,39 +637,47 @@
 <h2 id="calamares-installer">Calamares Installer<a class="headerlink" href="#calamares-installer" title="Permanent link">¶</a></h2>
 <p><strong>XeroLinux</strong>, like many other distros uses the <a href="https://codeberg.org/Calamares/calamares" target="_blank"><strong>Calamares</strong></a> installer. </p>
 <p align="center">
-    <img src="https://i.imgur.com/8f0b3NI.png" alt="netinstall">
+    <img src="../images/Calamares.png" alt="netinstall">
 </p>
 
 <p>With this release, we have decided to re-enable the <strong>NetInstall</strong> module, allowing you to select what packages/apps you want out of the box. Keep in mind that the included <strong>Flakon</strong> browser on the Live Environment, will be removed during install, replaced with the one you selected from that module. One very important thing to note here, the more packages you select the longer the install will take, especially if your Internet connection is as slow as mine here in Leb lol.</p>
 <h2 id="xerolinux-toolkit">XeroLinux Toolkit<a class="headerlink" href="#xerolinux-toolkit" title="Permanent link">¶</a></h2>
 <p>I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.</p>
-<p>For more info about it check the <a href="https://wiki.xerolinux.xyz/xlapit/" target="_blank"><strong>Wiki</strong></a></p>
 <p align="center">
     <video src="https://repos.xerolinux.xyz/toolkit.webm" width="640" height="480" controls></video>
 </p>
 
+<p>If you already are using <strong>XeroLinux</strong> updating will prompt you if you want to replace old toolkit with new GUI one, please answer with <code>y</code> to do so. Upon doing that you will notice that icon on the Dock will disappear, to update it please run the following command followed by <code>rshell</code> :</p>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sed<span class="w"> </span>-i.bak<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>-e<span class="w"> </span><span class="s1">'\|^localPath=/home/|d'</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>-e<span class="w"> </span><span class="s1">'s|^url=file:///usr/share/applications/xapit-cli.desktop$|url=file:///usr/share/applications/xero-toolkit.desktop|'</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.config/plasma-org.kde.plasma.desktop-appletsrc"</span>
+</span></code></pre></div>
 <h2 id="fingerprint-gui-tool">Fingerprint GUI Tool<a class="headerlink" href="#fingerprint-gui-tool" title="Permanent link">¶</a></h2>
 <p>A new fingerprint GUI tool was created in-house for <strong>XeroLinux</strong>. Easy to use. Will be included starting December 2025 release. </p>
 <p align="center">
-    <img src="https://i.imgur.com/WUGMuLk.png" alt="rice">
+    <img src="../images/FPrintd.png" alt="rice">
 </p>
 
 <blockquote>
 <p>Note : Polkit (GUI) <em>might</em> continue to prompt for password, just swipe your finger and it will authenticate. Terminal works. As for SDDM and more info <a href="https://xerolinux.xyz/posts/xero-fingerprint/" target="_blank"><strong>Click Here</strong></a>.</p>
 </blockquote>
 <h2 id="supported-filesystems">Supported Filesystems<a class="headerlink" href="#supported-filesystems" title="Permanent link">¶</a></h2>
-<p>Also, the currently supported <strong>Filesystems</strong> are, <code>ext4</code> and <code>xfs</code>. We have removed <strong>BTRFS</strong> from the choice of filesystems due to unforeseen issues with it failing to create volumes. Might bring it back later on down the line.</p>
+<p>Also, the currently supported <strong>Filesystems</strong> are, <code>xfs</code>, <code>xfs</code> and <code>BTRFS</code>, though it's on you to figure out how to use this beyond <strong>Timeshift</strong>. We have also re-enabled Encryption which now uses <code>luks2</code> instead of <code>luks1</code> making it more robust.</p>
+<h2 id="zram-swap-support">zRAM Swap Support<a class="headerlink" href="#zram-swap-support" title="Permanent link">¶</a></h2>
+<p>We have added <code>zram</code> support via <a href="https://github.com/systemd/zram-generator" target="_blank"><strong>zram-generator</strong></a> as well, which is similar to swap just faster. To check status run the <code>zramctl --output-all</code> command. Read the wiki and configure it to your needs.</p>
 <h2 id="gui-package-managers">GUI Package Managers<a class="headerlink" href="#gui-package-managers" title="Permanent link">¶</a></h2>
 <p>Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, <strong>Bauh</strong> or <strong>Bazaar</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.</p>
 <h2 id="issuesfixes">Issues/Fixes<a class="headerlink" href="#issuesfixes" title="Permanent link">¶</a></h2>
 <p>If at any moment while using it, you get the <code>unkown key "%INSTALL_DB%" in local database</code> issue during update, please run the following command in terminal :</p>
-<div class="language-Bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>find<span class="w"> </span>/var/lib/pacman/local/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">"desc"</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'/^%INSTALLED_DB%$/,+2d'</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+<div class="language-Bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>find<span class="w"> </span>/var/lib/pacman/local/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">"desc"</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'/^%INSTALLED_DB%$/,+2d'</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
 </span></code></pre></div>
+<p>Or use the <strong>Pacman DB Fix</strong> in the toolkit under <strong>Servicing/System Tweaks</strong> section ;)</p>
 <p>That's it. Hopefully nothing else exists.</p>
 <h2 id="supportissues">Support/Issues<a class="headerlink" href="#supportissues" title="Permanent link">¶</a></h2>
 <p>If you encounter any <em>other</em> issues or have questions directly related to the installation, feel free to reach out to me on <strong>Fosstodon</strong> or <strong>Discord</strong>. Please do not ask ok <strong>Ko-Fi</strong>. All relevant links are provided in the footer, and I'll do my best to assist you.</p>
 <p align="center">
-    <img src="https://i.imgur.com/6qyA6nM.jpeg" alt="rice">
+    <img src="../images/Tech.jpeg" alt="rice">
 </p>
 
 <p>However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the <a href="https://wiki.archlinux.org" target="_blank"><strong>ArchWiki</strong></a>, or on <strong>Discord</strong>. As for release changelog, you can find this <a href="https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md" target="_blank"><strong>Here</strong></a>.</p>
