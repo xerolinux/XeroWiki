@@ -41,15 +41,6 @@ Run the below command. If you end up with double panel make sure to delete old o
 curl -fsSL https://raw.githubusercontent.com/MurderFromMars/CyberXero/main/install.sh | bash
 ```
 
-<center>
-  <iframe
-    width="640"
-    height="360"
-    src="https://www.youtube.com/embed/qRIbiVSYvvs"
-    allowfullscreen>
-  </iframe>
-</center>
-
 --- 
 
 <h1 align="center">.// More to come... \\.</h1>
