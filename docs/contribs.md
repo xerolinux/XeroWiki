@@ -41,7 +41,7 @@ Run the below command. If you end up with double panel make sure to delete old o
 curl -fsSL https://raw.githubusercontent.com/MurderFromMars/CyberXero/main/install.sh | bash
 ```
 
-> Note : You will need to configure their keybinds if they desire them. Can easily be done under settings / shortcuts, in a GUI.
+> Note : You will need to configure their keybinds if you desire them. It can easily be done under settings / shortcuts, in the GUI.
 
 --- 
 
