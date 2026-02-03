@@ -111,7 +111,7 @@ sed -i.bak \
 
 ## Fingerprint GUI Tool
 
-A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. Will be included starting December 2025 release. 
+A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. Optionally available via the toolkit. 
 
 <p align="center">
     <img src="../images/FPrintd.png" alt="rice">
@@ -147,6 +147,6 @@ If you encounter any *other* issues or have questions directly related to the in
     <img src="../images/Tech.jpeg" alt="rice">
 </p>
 
-However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or on **Discord**. As for release changelog, you can find this [**Here**](https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md){:target="_blank"}.
+However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or on **Discord**.
 
 That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉

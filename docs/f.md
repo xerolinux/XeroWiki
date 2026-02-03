@@ -58,7 +58,7 @@ We have decided to split **XeroLinux** into two ISOs because the GPU world has b
 
 While it’s sad to see those legendary older cards ride off into the sunset, this split actually gives everyone a smoother experience. Each ISO now does exactly what it’s meant to do, with fewer surprises, fewer black screens, and a whole lot more reliability. It’s our way of turning an unfortunate driver situation into something cleaner, clearer, and friendlier for the entire **XeroLinux** community.
 
-Finally we tried our best to make **nVidia** ISO robust by including support for laptops and by adding many other optimizations.
+Finally we tried our best to make **nVidia** ISO robust by including support for laptops by adding many other optimizations.
 
 ## GPU Swap Detection
 
@@ -107,7 +107,7 @@ sed -i.bak \
 
 ## Fingerprint GUI Tool
 
-A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. Will be included starting December 2025 release. 
+A new fingerprint GUI tool was created in-house for **XeroLinux**. Easy to use. Optionally available via the toolkit.
 
 <p align="center">
     <img src="../images/FPrintd.png" alt="rice">
@@ -127,6 +127,19 @@ We have added `zram` support via [**zram-generator**](https://github.com/systemd
 
 Additionally, I'd like to point out that no *GUI package managers* are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **Bauh** or **Bazaar**. That said, I strongly advise against installing KDE's **Discover** if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.
 
+## Kernel Manager/SCX
+
+We now include a **KernelManager** and **Scheds-ext** tool in the toolkit for you to tweak running Kernel to work for every need !
+
+<p align="center">
+  <a href="../images/KM.png" target="_blank" rel="noopener">
+    <img src="../images/KM.png" width="49%">
+  </a>
+  <a href="../images/SCX.png" target="_blank" rel="noopener">
+    <img src="../images/SCX.png" width="49%">
+  </a>
+</p>
+
 ## Issues/Fixes
 
 If at any moment while using it, you get the `unkown key "%INSTALL_DB%" in local database` issue during update, please run the following command in terminal :
@@ -139,7 +152,7 @@ Or use the **Pacman DB Fix** in the toolkit under **Servicing/System Tweaks** se
 
 That's it. Hopefully nothing else exists.
 
-## Support/Issues
+## Support
 
 If you encounter any *other* issues or have questions directly related to the installation, feel free to reach out to me on **Fosstodon** or **Discord**. Please do not ask ok **Ko-Fi**. All relevant links are provided in the footer, and I'll do my best to assist you.
 
@@ -147,6 +160,6 @@ If you encounter any *other* issues or have questions directly related to the in
     <img src="../images/Tech.jpeg" alt="rice">
 </p>
 
-However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or on **Discord**. As for release changelog, you can find this [**Here**](https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md){:target="_blank"}.
+However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org){:target="_blank"}, or on **Discord**.
 
 That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉

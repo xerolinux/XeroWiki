@@ -545,6 +545,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#kernel-managerscx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kernel Manager/SCX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#issuesfixes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -556,10 +567,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supportissues" class="md-nav__link">
+  <a href="#support" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Support/Issues
+        Support
       
     </span>
   </a>
@@ -622,7 +633,7 @@
 </div>
 <p>We have decided to split <strong>XeroLinux</strong> into two ISOs because the GPU world has become a bit of a circus. <strong>nVidia</strong> decided to retire the old <em>900</em> and <em>1000</em> series cards from the modern driver lineup, which means only shiny new RTX cards get the “VIP treatment” from the latest open drivers. Instead of forcing everyone into a one-size-fits-nobody installer, we created a dedicated <strong>nVidia</strong> ISO built specifically for <strong>RTX</strong> users, and a Standard ISO that keeps <strong>Intel</strong> and <strong>AMD</strong> systems happy.</p>
 <p>While it’s sad to see those legendary older cards ride off into the sunset, this split actually gives everyone a smoother experience. Each ISO now does exactly what it’s meant to do, with fewer surprises, fewer black screens, and a whole lot more reliability. It’s our way of turning an unfortunate driver situation into something cleaner, clearer, and friendlier for the entire <strong>XeroLinux</strong> community.</p>
-<p>Finally we tried our best to make <strong>nVidia</strong> ISO robust by including support for laptops and by adding many other optimizations.</p>
+<p>Finally we tried our best to make <strong>nVidia</strong> ISO robust by including support for laptops by adding many other optimizations.</p>
 <h2 id="gpu-swap-detection">GPU Swap Detection<a class="headerlink" href="#gpu-swap-detection" title="Permanent link">¶</a></h2>
 <p><strong>XeroLinux</strong> now includes a small background service that quietly checks which graphics hardware is inside your computer. It does this by reading standard system information (the same information shown by tools like “About This System”). When it notices that the hardware has changed, for example, if you install an <strong>nVidia</strong> card or remove one, it records the change and shows a popup notification in <strong>Plasma</strong>. Nothing runs unless something actually changes.</p>
 <p>When you choose to continue, <strong>XeroLinux</strong> opens an easy-to-use tool that installs or removes the correct graphics drivers based on your current hardware. The tool updates system components like the boot configuration and kernel modules automatically, ensuring everything loads correctly on the next restart. This approach supports <strong>Intel</strong>, <strong>AMD</strong>, <strong>nVIdia</strong>, and hybrid setups, and it does so in a way that’s transparent, predictable, and safe for all users.</p>
@@ -654,7 +665,7 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.config/plasma-org.kde.plasma.desktop-appletsrc"</span>
 </span></code></pre></div>
 <h2 id="fingerprint-gui-tool">Fingerprint GUI Tool<a class="headerlink" href="#fingerprint-gui-tool" title="Permanent link">¶</a></h2>
-<p>A new fingerprint GUI tool was created in-house for <strong>XeroLinux</strong>. Easy to use. Will be included starting December 2025 release. </p>
+<p>A new fingerprint GUI tool was created in-house for <strong>XeroLinux</strong>. Easy to use. Optionally available via the toolkit.</p>
 <p align="center">
     <img src="../images/FPrintd.png" alt="rice">
 </p>
@@ -668,19 +679,30 @@
 <p>We have added <code>zram</code> support via <a href="https://github.com/systemd/zram-generator" target="_blank"><strong>zram-generator</strong></a> as well, which is similar to swap just faster. To check status run the <code>zramctl --output-all</code> command. Read the wiki and configure it to your needs.</p>
 <h2 id="gui-package-managers">GUI Package Managers<a class="headerlink" href="#gui-package-managers" title="Permanent link">¶</a></h2>
 <p>Additionally, I'd like to point out that no <em>GUI package managers</em> are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from <strong>Octopi</strong>, <strong>Bauh</strong> or <strong>Bazaar</strong>. That said, I strongly advise against installing KDE's <strong>Discover</strong> if you're aiming for stability; it's notoriously troublesome. But, as always, the final decision is yours.</p>
+<h2 id="kernel-managerscx">Kernel Manager/SCX<a class="headerlink" href="#kernel-managerscx" title="Permanent link">¶</a></h2>
+<p>We now include a <strong>KernelManager</strong> and <strong>Scheds-ext</strong> tool in the toolkit for you to tweak running Kernel to work for every need !</p>
+<p align="center">
+  <a href="../images/KM.png" target="_blank" rel="noopener">
+    <img src="../images/KM.png" width="49%">
+  </a>
+  <a href="../images/SCX.png" target="_blank" rel="noopener">
+    <img src="../images/SCX.png" width="49%">
+  </a>
+</p>
+
 <h2 id="issuesfixes">Issues/Fixes<a class="headerlink" href="#issuesfixes" title="Permanent link">¶</a></h2>
 <p>If at any moment while using it, you get the <code>unkown key "%INSTALL_DB%" in local database</code> issue during update, please run the following command in terminal :</p>
 <div class="language-Bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>find<span class="w"> </span>/var/lib/pacman/local/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s2">"desc"</span><span class="w"> </span>-exec<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">'/^%INSTALLED_DB%$/,+2d'</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
 </span></code></pre></div>
 <p>Or use the <strong>Pacman DB Fix</strong> in the toolkit under <strong>Servicing/System Tweaks</strong> section ;)</p>
 <p>That's it. Hopefully nothing else exists.</p>
-<h2 id="supportissues">Support/Issues<a class="headerlink" href="#supportissues" title="Permanent link">¶</a></h2>
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">¶</a></h2>
 <p>If you encounter any <em>other</em> issues or have questions directly related to the installation, feel free to reach out to me on <strong>Fosstodon</strong> or <strong>Discord</strong>. Please do not ask ok <strong>Ko-Fi</strong>. All relevant links are provided in the footer, and I'll do my best to assist you.</p>
 <p align="center">
     <img src="../images/Tech.jpeg" alt="rice">
 </p>
 
-<p>However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the <a href="https://wiki.archlinux.org" target="_blank"><strong>ArchWiki</strong></a>, or on <strong>Discord</strong>. As for release changelog, you can find this <a href="https://github.com/XeroLinuxDev/xero-build/blob/main/Changelog.md" target="_blank"><strong>Here</strong></a>.</p>
+<p>However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the <a href="https://wiki.archlinux.org" target="_blank"><strong>ArchWiki</strong></a>, or on <strong>Discord</strong>.</p>
 <p>That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there’s anything that catches your fancy. Just don’t blame me if you get lost in the endless sea of tweaks and options 🎉</p></div>
 
 
