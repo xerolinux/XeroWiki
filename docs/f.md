@@ -86,7 +86,7 @@ We have moved completely to **Wayland** on XeroLinux. If you still rely on **X11
     <img src="../images/Calamares.png" alt="netinstall">
 </p>
 
-With this release, we have decided to re-enable the **NetInstall** module, allowing you to select what packages/apps you want out of the box. Keep in mind that the included **Flakon** browser on the Live Environment, will be removed during install, replaced with the one you selected from that module. One very important thing to note here, the more packages you select the longer the install will take, especially if your Internet connection is as slow as mine here in Leb lol.
+With this release, we have been able to re-enable encryption, allowing you to encrypt your drives using `luks2`. We have also added the ablity to update system during install, so you might notice it taking a little bit longer to be done, depends on how many updates there are, size, and your connection speed. Please be patient while it does that.
 
 ## XeroLinux Toolkit
 
