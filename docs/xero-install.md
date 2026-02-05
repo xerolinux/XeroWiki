@@ -106,7 +106,7 @@ The transformation. This script turns base Arch into XeroLinux:
 
 ### Script Runner
 
-Boot from any Arch Linux ISO and run:
+Boot from *latest* ArchLinux LIVE ISO and run:
 ```bash
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-install/install.sh)"
 ```
