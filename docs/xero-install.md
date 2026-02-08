@@ -111,6 +111,12 @@ Boot from *latest* [**ArchLinux LIVE ISO**](https://archlinux.org/download/){:ta
 bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-install/install.sh)"
 ```
 
+Or for a shorter URL
+
+```Bash
+bash -c "$(curl -fsSL https://tinyurl.com/xeroinstall)"
+```
+
 That's it. The script guides you through everything else.
 
 ---
