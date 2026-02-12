@@ -23,25 +23,6 @@ That being said, if you have anything to contribute to the project, you are more
 
 <h1 align="center">.// The Rices \\.</h1>
 
-## The Rices
-
-### KDE Tiling Special
-
-This rice was created/contributed by [**MurderFromMars**](https://www.youtube.com/channel/UC_jwY9Q683jumkBSaKne60A){:target="_blank"}, a member of the **XeroLinux** community Discord server. Kudos to him for putting in the hard work. For the Repo [**Click Here**](https://github.com/MurderFromMars/CyberXero-Theme-Repo){:target="_blank"}
-
-<p align="center">
-    <video src="https://repos.xerolinux.xyz/XeroTiling.mp4" width="640" height="480" controls></video>
-</p>
-
-**Installation :**
-
-Run the below command. If you end up with double panel make sure to delete old one. It sometimes happens. Will be fixed in future releases. Contact dev in case of issues.
-
-```Bash
-curl -fsSL https://raw.githubusercontent.com/MurderFromMars/CyberXero/main/install.sh | bash
-```
-
-> Note : You will need to configure some keybinds if you desire them. It can easily be done under settings / shortcuts, in the GUI.
 
 --- 
 
