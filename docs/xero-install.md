@@ -215,6 +215,33 @@ Using these free scripts? Consider supporting XeroLinux:
 
 ---
 
+## Version History
+
+- **v1.5** - Boot partition & cleanup
+  - Increased boot partition size from 512M to 2048M
+  - Simplified internet connectivity check
+  - Removed VPN, Blender, and Extras sections from package selection
+  - Further trimmed package list to 37 curated options
+
+- **v1.4** - Unified package selection
+  - Condensed 12 separate prompts into a single categorized selection screen
+  - Added pass to password managers, moved LibreOffice to its own Office section
+  - Trimmed package list for a leaner default offering
+
+- **v1.3** - LUKS2 & encryption scope
+  - Upgraded to LUKS2 with systemd `sd-encrypt` hook
+  - Added encryption scope choice: root only or root + boot
+  - Fixed skel config copy reliability for user home
+  - Updated display and version strings
+
+- **v1.0** - Initial release
+  - BTRFS with subvolumes
+  - LUKS encryption support
+  - Graphics driver selection
+  - ZRAM swap support
+
+---  
+  
 ## License
 
 Both scripts are released under the **GPL-3.0 License**. Use them, modify them, share them — just keep them open source.
