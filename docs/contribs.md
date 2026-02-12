@@ -21,9 +21,6 @@ That being said, if you have anything to contribute to the project, you are more
     
 ---
 
-<h1 align="center">.// The Rices \\.</h1>
+<h1 align="center">.// They show up here \\.</h1>
 
-
---- 
-
-<h1 align="center">.// More to come... \\.</h1>
+---
