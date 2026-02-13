@@ -69,52 +69,11 @@ Here's what will be included if you opt to use this script Vs. ISO :
 
 ---
 
-## The Two Scripts
-
-### Script 1: `xero-install.sh`
-
-The foundation. This script handles the base Arch Linux installation:
-
-- **Disk Partitioning** — Guided setup with encryption options
-- **Filesystem Selection** — BTRFS (recommended), EXT4, or XFS
-- **Base System** — Core packages, kernel, and bootloader
-- **GPU Drivers** — Automatic detection and installation
-- **Network Setup** — NetworkManager and essential connectivity
-- **User Creation** — Your account with proper permissions
-
-### Script 2: `xero-kde.sh`
-
-The transformation. This script turns base Arch into XeroLinux:
-
-- **KDE Plasma** — Full desktop with curated package selection
-- **XeroLinux Theming** — Complete Layan rice applied
-- **Software Selection** — 12 categories of optional applications
-- **System Configuration** — Services, initramfs, GRUB
-- **Shell Customization** — Oh-My-Posh, Fastfetch, and more
-
----
-
-## Installation
-
-### Requirements
-
-- **Arch Linux ISO** — Any recent version
-- **Internet Connection** — Required throughout installation
-- **Storage** — 20GB minimum (50GB+ recommended)
-- **RAM** — 2GB minimum (4GB+ recommended)
-- **UEFI System** — Legacy BIOS not supported
-
-### Script Runner
+### Installation URL
 
 Boot from *latest* [**ArchLinux LIVE ISO**](https://archlinux.org/download/){:target="_blank"} and run:
 ```bash
-bash -c "$(curl -fsSL https://xerolinux.xyz/script/xero-install/install.sh)"
-```
-
-Or for a shorter URL
-
-```Bash
-bash -c "$(curl -fsSL https://tinyurl.com/xeroinstall)"
+bash -c "$(curl -fsSL https://urls.xerolinux.xyz/xeroinstall)"
 ```
 
 That's it. The script guides you through everything else.
