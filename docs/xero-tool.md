@@ -97,7 +97,7 @@ chmod +x cosmic.sh && sh cosmic.sh
 - **Xero Grubs :**
 
 <p align="center">
-  <img src="../images/Grub.png">
+  <img src="../images/Grubs.png">
 </p>
 
 ```Bash
