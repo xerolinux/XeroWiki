@@ -101,8 +101,7 @@ chmod +x cosmic.sh && sh cosmic.sh
 </p>
 
 ```Bash
-git clone https://github.com/xerolinux/xero-grubs
-cd xero-grubs/ && sudo ./install.sh
+bash -c "python3 <(curl -fsSL 'https://xerolinux.xyz/script/grubs/xero-grubs.py')"
 ```
 
 - **Plymouth Manager :**
