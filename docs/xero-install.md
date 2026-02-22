@@ -11,7 +11,7 @@ tags:
 
 !!! info
 
-    This script was created for a fresh install. Will format full disk, no manual partioning is offered yet. Also it's to be used only if you know what you are doing. **USE AT YOUR OWN RISK !** Both scripts are open source and available on GitHub : [**Here**](https://github.com/xerolinux/XeroInstall){:target="_blank"}
+    This script was created for a fresh install. Will format full disk, no manual partioning is offered yet. Also it's to be used only if you know what you are doing. **USE AT YOUR OWN RISK !** Script is open source and available on GitHub : [**Here**](https://github.com/xerolinux/XeroInstall){:target="_blank"}
 
 Transform your base Arch Linux installation into a fully-featured **XeroLinux KDE Plasma** desktop with a single command. This script handles everything from package installation to system configuration, giving you a personalized and polished desktop experience.
 
