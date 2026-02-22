@@ -8,7 +8,6 @@ tags:
 ---
 
 <h1 align="center">🎨 XeroLinux Installer Script 🎨</h1>
-<h2 align="center">Project is currently in Beta Stages. Testers Needed !</h2>
 
 !!! info
 
