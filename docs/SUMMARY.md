@@ -1,6 +1,0 @@
-- [🏠Home](index.md)
-- [💿The Distro](distro.md)
-- [🗒️XeroInstall](xero-install.md)
-- [🎨XeroLinux Tool](xero-tool.md)
-- [⁉️The XeroLinux FAQ](xero-faq.md)
-- [📽️Various Contributions](contribs.md)

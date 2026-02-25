@@ -1,0 +1,134 @@
+---
+title: XeroLinux Installer Script
+description: Transform a base Arch Linux installation into a fully-featured XeroLinux KDE Plasma desktop with a single command.
+---
+
+import { Image } from 'astro:assets';
+import partition from '../../assets/images/Partition.png';
+import encrypt from '../../assets/images/Encrypt.png';
+
+The **XeroLinux Installer** transforms a base Arch Linux installation into a complete XeroLinux KDE Plasma desktop. The end result is identical to the official [**ISO**](/distro/) — same packages, themes, and configuration.
+
+:::caution
+This script formats the **entire disk**. Manual partitioning is not yet supported. **Use at your own risk.** Source code: [**GitHub**](https://github.com/xerolinux/XeroInstall)
+:::
+
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube.com/embed/8g72HUrKcWc"
+    allowfullscreen>
+  </iframe>
+</div>
+
+---
+
+## Scripts vs ISO
+
+| Aspect | Scripts | ISO |
+|--------|---------|-----|
+| End Result | Identical | Identical |
+| Installation Method | Terminal-guided | GUI (Calamares) |
+| BTRFS+Compression | ✓ | ✗ |
+| Encryption | ✓ | ✗ |
+| Download Size | ~2 KB | ~3 GB |
+| Requires Donation | ✗ | ✓ |
+| Learning Experience | Higher | Lower |
+
+---
+
+## Quick Start
+
+Boot from the latest [**Arch Linux ISO**](https://archlinux.org/download/) and run:
+
+```bash
+bash -c "$(curl -fsSL https://urls.xerolinux.xyz/xeroinstall)"
+```
+
+---
+
+## Installation Walkthrough
+
+### Phase 1 — Base System
+
+1. **Keyboard Layout** — Select your preferred layout
+2. **Disk Selection** — Choose installation target
+3. **Encryption** — Optional LUKS full-disk encryption
+4. **Filesystem** — BTRFS, EXT4, or XFS
+5. **Username & Password** — Create your account
+6. **GPU Drivers** — Automatic or manual selection
+
+### Phase 2 — Desktop & Software
+
+After rebooting into the new system:
+
+1. **AUR Helper** — paru (default) or yay
+2. **Web Browser** — Floorp, Firefox, Brave, LibreWolf, and more
+3. **VPN Client** — ExpressVPN, Mozilla VPN, Proton VPN
+4. **Communication** — Discord, Telegram, Element, and more
+5. **Office Suite** — LibreOffice with 30+ language options
+6. **Development** — VSCodium, Hugo, Meld, GitHub Desktop
+7. **Creative Apps** — GIMP, Krita, Inkscape, Blender
+8. **Media Tools** — Kdenlive, Spotify, MPV, and more
+9. **Virtualization** — QEMU/KVM with virt-manager
+
+All categories are optional — skip anything you don't need.
+
+<h2 class="centered">.// Screenshots \\\\.</h2>
+
+<div class="img-row">
+  <Image src={partition} alt="Partition Selection" />
+  <Image src={encrypt} alt="Encryption Setup" />
+</div>
+
+---
+
+## FAQ
+
+### Is this free?
+
+Yes. Completely free and open source. No donations, paywalls, or restrictions.
+
+### Can I use this in a VM?
+
+Yes. The scripts detect virtual environments and install appropriate guest tools (QEMU, VirtualBox, VMware).
+
+### Why use this over the ISO?
+
+- Smaller download (~2 KB vs ~3 GB)
+- BTRFS compression and encryption options
+- More control over the installation process
+- Learn how Arch Linux works under the hood
+
+### Why use the ISO instead?
+
+- GUI installer (Calamares)
+- Offline installation capability
+- Less technical knowledge required
+- Supports the project financially
+
+---
+
+## Version History
+
+| Version | Changes |
+|---------|---------|
+| **v1.5** | Increased boot partition to 2048M, simplified connectivity check, trimmed to 37 packages |
+| **v1.4** | Unified package selection into single categorized screen |
+| **v1.3** | LUKS2 with `sd-encrypt`, encryption scope choice (root / root+boot) |
+| **v1.0** | Initial release — BTRFS subvolumes, LUKS, GPU drivers, zRAM |
+
+---
+
+## Support & Community
+
+- **Website** — [xerolinux.xyz](https://xerolinux.xyz)
+- **Discord** — [Join the server](https://discord.xerolinux.xyz)
+- **Mastodon** — [@xerolinux](https://fosstodon.org/@xerolinux)
+
+:::tip
+Using these scripts? Consider supporting XeroLinux by starring the [**repos on GitHub**](https://github.com/xerolinux) or reporting bugs.
+:::
+
+## License
+
+GPL-3.0 — free to use, modify, and redistribute.

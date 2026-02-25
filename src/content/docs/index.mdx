@@ -1,0 +1,128 @@
+---
+title: Welcome to the XeroLinux Wiki
+description: XeroLinux Project Documentation — your go-to hub for all things related to our scripts, tools, and configurations.
+template: splash
+hero:
+  title: Welcome to the XeroLinux Wiki
+  tagline: Your go-to reference for the XeroLinux ecosystem — distro setup, installer scripts, and the customization toolkit.
+  image:
+    html: '<img src="/xeroWShadow.png" alt="XeroLinux" class="hero-logo" />'
+  actions:
+    - text: Getting Started
+      link: /distro/
+      icon: right-arrow
+    - text: GitHub
+      link: https://github.com/XeroLinuxDev
+      icon: github
+      variant: minimal
+    - text: Discord
+      link: https://discord.xerolinux.xyz
+      icon: discord
+      variant: minimal
+---
+
+import { LinkCard } from '@astrojs/starlight/components';
+
+<div class="home-content">
+
+<h2 class="section-heading">Getting Started</h2>
+
+<div class="card-grid-home">
+  <LinkCard title="◎ The Distro" description="Installation, GPU support, and troubleshooting for XeroLinux." href="/distro/" />
+  <LinkCard title="☰ XeroInstall Script" description="Deploy XeroLinux on base Arch using a single command." href="/xero-install/" />
+  <LinkCard title="✦ XeroLinux Tool" description="Desktop rices, GRUB themes, Plymouth, and tweaks." href="/xero-tool/" />
+  <LinkCard title="⁉ XeroLinux F.A.Q." description="Common questions about the project, answered here." href="/faq/" />
+</div>
+
+<div class="wiki-terminal">
+  <div class="wiki-terminal-bar">
+    <span class="wiki-terminal-dot red"></span>
+    <span class="wiki-terminal-dot yellow"></span>
+    <span class="wiki-terminal-dot green"></span>
+    <span class="wiki-terminal-title">arch-tips</span>
+  </div>
+  <div class="wiki-terminal-body" id="terminal-tips"></div>
+</div>
+
+<div class="wiki-pageviews" id="pageview-counter"></div>
+
+</div>
+
+<script>{`
+(function() {
+  const tips = [
+    ["pacman -Syu", "Always update before troubleshooting"],
+    ["journalctl -b -p err", "Check boot errors"],
+    ["systemctl --failed", "Find broken services"],
+    ["pacman -Qkk 2>&1 | grep warning", "Verify package integrity"],
+    ["mkinitcpio -P", "Rebuild initramfs"],
+    ["grub-mkconfig -o /boot/grub/grub.cfg", "Regenerate GRUB"],
+    ["pacman -Qs package_name", "Search installed packages"],
+    ["pacman -Ss package_name", "Search available packages"],
+    ["pacman -Rns package_name", "Remove package + deps + config"],
+    ["paccache -r", "Clean old package cache"],
+    ["pacman -Qdt", "List orphaned packages"],
+    ["pacman -Qm", "List AUR/foreign packages"],
+    ["systemctl status service_name", "Check service status"],
+    ["systemctl restart service_name", "Restart a service"],
+    ["journalctl -xe", "View recent system logs"],
+    ["journalctl --disk-usage", "Check journal disk usage"],
+    ["ip addr show", "Display network interfaces"],
+    ["nmcli device status", "Check NetworkManager devices"],
+    ["lsblk -f", "Show block devices + filesystems"],
+    ["df -h", "Check disk space usage"],
+    ["free -h", "Check memory usage"],
+    ["top -bn1 | head -20", "Quick system resource snapshot"],
+    ["uname -r", "Show running kernel version"],
+    ["cat /proc/cpuinfo | head -10", "View CPU information"],
+    ["lspci -k | grep -A2 VGA", "Identify GPU and driver"],
+    ["dmesg | tail -30", "View recent kernel messages"],
+    ["reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist", "Update fastest mirrors"],
+    ["pacman -Fy && pacman -F missing_file", "Find which package owns a file"],
+    ["sudo pacman -Scc", "Clear all cached packages"],
+    ["findmnt --real", "Show mounted filesystems"],
+    ["timedatectl status", "Check time/date sync status"],
+    ["localectl status", "Check locale settings"],
+    ["hostnamectl", "View system hostname info"],
+    ["bluetoothctl devices", "List paired Bluetooth devices"],
+    ["pactl info", "Check PipeWire/PulseAudio status"],
+    ["xrandr --listmonitors", "List connected monitors"],
+    ["sensors", "Read hardware temperature sensors"],
+    ["smartctl -a /dev/sda", "Check drive health (SMART)"],
+    ["chmod +x script.sh", "Make a script executable"],
+    ["chown user:group file", "Change file ownership"],
+  ];
+
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  const selected = shuffle([...tips]).slice(0, 6);
+  const container = document.getElementById("terminal-tips");
+  if (container) {
+    container.innerHTML = selected.map(([cmd, comment]) =>
+      '<p><span class="prompt">$</span> <span class="cmd">' + cmd + '</span> <span class="comment"># ' + comment + '</span></p>'
+    ).join("");
+  }
+
+  const BASE_VIEWS = 12769;
+  const STORAGE_KEY = "xero-wiki-views";
+  const SESSION_KEY = "xero-wiki-counted";
+  if (!sessionStorage.getItem(SESSION_KEY)) {
+    sessionStorage.setItem(SESSION_KEY, "1");
+    let views = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
+    views++;
+    localStorage.setItem(STORAGE_KEY, views.toString());
+  }
+  const views = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10);
+  const total = BASE_VIEWS + views;
+  const counter = document.getElementById("pageview-counter");
+  if (counter) {
+    counter.textContent = total.toLocaleString() + " views";
+  }
+})();
+`}</script>

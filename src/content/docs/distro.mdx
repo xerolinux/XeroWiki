@@ -1,0 +1,155 @@
+---
+title: The XeroLinux Distro
+description: XeroLinux distro documentation — installation, features, and support.
+---
+
+import { Image } from 'astro:assets';
+import km from '../../assets/images/KM.png';
+import scx from '../../assets/images/SCX.png';
+
+**XeroLinux** is a KDE Plasma-based Arch Linux distribution focused on aesthetics and usability. For mid-range or higher hardware, it provides a polished out-of-the-box experience. It can run on lower-end systems, but performance may vary.
+
+![XeroLinux](../../assets/images/XeroLinux.png)
+
+:::note
+If you prefer not to use the ISO, the same result can be achieved with the [**XeroInstall script**](/xero-install/) on a base Arch install.
+:::
+
+---
+
+## ISO Variants
+
+XeroLinux ships as **two separate ISOs**:
+
+- **Standard ISO** — For Intel and AMD GPU systems
+- **nVidia ISO** — For RTX-series cards using modern open drivers
+
+:::caution
+Legacy nVidia 900/1000 series cards are **not supported** by the nVidia ISO. Use the Standard ISO and install the legacy 580xx drivers manually via the [toolkit](/xero-tool/). The ISO will boot in `nomodeset` (low-res) until drivers are installed. No support is provided for these legacy drivers.
+:::
+
+This split ensures each ISO targets its hardware cleanly — fewer black screens, better reliability.
+
+---
+
+## GPU Swap Detection
+
+A background service monitors your GPU hardware. If a change is detected (e.g., swapping an nVidia card for AMD), a notification appears in Plasma offering to install or remove the correct drivers automatically.
+
+Supported: **Intel**, **AMD**, **nVidia**, and hybrid configurations.
+
+---
+
+## Boot Requirements
+
+| Requirement | Details |
+|-------------|---------|
+| Firmware | **UEFI only** — Legacy BIOS/MBR is not supported |
+| Boot tool | [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/) recommended (provides GRUB fallback) |
+| Session | **Wayland** by default — X11 can be re-enabled via the toolkit |
+
+:::tip
+Avoid burning with Etcher or similar tools — there's no fallback if SystemD-Boot fails. Use Ventoy instead.
+:::
+
+![Ventoy](../../assets/images/Ventoy.png)
+
+---
+
+## Calamares Installer
+
+XeroLinux uses the [**Calamares**](https://codeberg.org/Calamares/calamares) installer.
+
+![Calamares Installer](../../assets/images/Calamares.png)
+
+Key features:
+- **Encryption** — LUKS2 full-disk encryption
+- **System update during install** — Packages are updated as part of the installation process (duration depends on update size and connection speed)
+
+---
+
+## Post-Install Setup
+
+### XeroLinux Toolkit
+
+The toolkit (first icon on the dock) handles initial system configuration. See the full [**Customization Hub documentation**](/xero-tool/) for details.
+
+<video src="https://repos.xerolinux.xyz/toolkit.webm" controls></video>
+
+If updating from an older toolkit version, the dock icon may disappear. Run the following to restore it, then restart the shell with `rshell`:
+
+```bash
+sed -i.bak \
+  -e '\|^localPath=/home/|d' \
+  -e 's|^url=file:///usr/share/applications/xapit-cli.desktop$|url=file:///usr/share/applications/xero-toolkit.desktop|' \
+  "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc"
+```
+
+### Fingerprint Support
+
+An in-house fingerprint GUI tool is available via the toolkit.
+
+![Fingerprint GUI Tool](../../assets/images/FPrintd.png)
+
+:::note
+Polkit may still prompt for a password — swipe your finger to authenticate. Terminal authentication works out of the box. For SDDM details, see [**this guide**](https://xerolinux.xyz/posts/xero-fingerprint/).
+:::
+
+---
+
+## Filesystem & Swap
+
+| Feature | Options |
+|---------|---------|
+| Filesystems | `xfs`, `ext4`, `btrfs` |
+| Encryption | LUKS2 |
+| Swap | zRAM via [**zram-generator**](https://github.com/systemd/zram-generator) |
+
+Check zRAM status with `zramctl --output-all`. See the zram-generator documentation for configuration.
+
+---
+
+## Package Managers
+
+No GUI package manager is included by default. Available via the toolkit:
+
+- **Octopi**
+- **Bauh**
+- **Bazaar**
+
+:::danger
+**Avoid KDE Discover** — it's known to cause stability issues on Arch-based systems.
+:::
+
+---
+
+## Kernel Manager / SCX
+
+The toolkit includes a **Kernel Manager** and **sched-ext** tool for kernel tuning.
+
+<div class="img-row">
+  <Image src={km} alt="Kernel Manager" />
+  <Image src={scx} alt="SCX Scheduler" />
+</div>
+
+---
+
+## Troubleshooting
+
+### Pacman DB Error
+
+If you encounter `unknown key "%INSTALL_DB%" in local database` during updates:
+
+```bash
+sudo find /var/lib/pacman/local/ -type f -name "desc" -exec sed -i '/^%INSTALLED_DB%$/,+2d' {} \;
+```
+
+Alternatively, use **Pacman DB Fix** in the toolkit under **Servicing/System Tweaks**.
+
+---
+
+## Support
+
+For installation-related questions, reach out on [**Fosstodon**](https://fosstodon.org/@XeroLinux) or [**Discord**](https://discord.gg/5sqxTSuKZu). Hardware-specific issues are best directed to the [**ArchWiki**](https://wiki.archlinux.org) or community Discord.
+
+![TechXero](../../assets/images/Tech.jpeg)

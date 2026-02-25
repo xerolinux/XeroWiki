@@ -1,0 +1,478 @@
+/* ===========================
+   Dark-Only Theme
+   =========================== */
+:root {
+	color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+	color-scheme: dark;
+}
+
+starlight-theme-select {
+	display: none !important;
+}
+
+/* ===========================
+   XeroLinux Purple Brand Colors
+   =========================== */
+:root,
+:root[data-theme='light'] {
+	/* Accent — purple from xerolinux.xyz */
+	--sl-hue-accent: 270;
+	--sl-color-accent-low: #2a1848;
+	--sl-color-accent: #a86ae8;
+	--sl-color-accent-high: #e8d5ff;
+
+	/* Grays — dark navy-purple tint */
+	--sl-color-gray-1: #e0dce6;
+	--sl-color-gray-2: #c2bcc8;
+	--sl-color-gray-3: #8b8592;
+	--sl-color-gray-4: #585262;
+	--sl-color-gray-5: #2e2a38;
+	--sl-color-gray-6: #1a1a2e;
+	--sl-color-black: #12121f;
+
+	/* Backgrounds */
+	--sl-color-bg: #1a1a2e;
+	--sl-color-bg-sidebar: #16162a;
+	--sl-color-bg-nav: #0f0f1e;
+
+	/* Hairlines */
+	--sl-color-hairline-light: #2e2a38;
+	--sl-color-hairline: #3a3548;
+
+	/* Text */
+	--sl-color-white: #e8e4ee;
+	--sl-color-text: #e0dce6;
+	--sl-color-text-accent: #e8d5ff;
+}
+
+/* ===========================
+   Top Nav Bar — distinct darker bg
+   =========================== */
+header.header {
+	background: #0f0f1e !important;
+	border-bottom: 1px solid #2a1848 !important;
+}
+
+/* Site title in nav */
+.site-title {
+	color: #e8d5ff !important;
+	font-size: 0.9rem !important;
+}
+
+/* ===========================
+   Sidebar polish
+   =========================== */
+.sidebar-pane {
+	background: #16162a;
+	--sl-sidebar-width: 14rem;
+}
+
+nav.sidebar a {
+	font-size: 0.95rem !important;
+}
+
+nav.sidebar a[aria-current='page'],
+nav.sidebar a[aria-current='true'] {
+	background: rgba(168, 106, 232, 0.12);
+	color: #e8d5ff;
+	border-inline-start-color: #a86ae8;
+}
+
+/* ===========================
+   Typography
+   =========================== */
+.sl-markdown-content {
+	text-align: justify;
+}
+
+/* All headings centered */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4,
+.sl-markdown-content h5,
+.sl-markdown-content h6 {
+	text-align: left;
+}
+
+/* Page title — centered (non-splash pages only) */
+:not([data-has-hero]) h1#_top {
+	text-align: center !important;
+}
+
+.centered {
+	text-align: center !important;
+}
+
+/* Nav logo — constrain size */
+.site-title img {
+	max-height: 2rem;
+	width: auto;
+}
+
+/* ===========================
+   Splash hero — CachyOS style
+   =========================== */
+.hero-logo {
+	max-width: 300px;
+	height: auto;
+	filter: drop-shadow(0 4px 24px rgba(168, 106, 232, 0.3));
+}
+
+[data-has-hero] .hero .copy h1 {
+	text-align: left !important;
+	font-size: 2.25rem !important;
+}
+
+/* Tighten splash hero spacing */
+[data-has-hero] .hero {
+	padding-block: 0.5rem !important;
+}
+
+[data-has-hero] .content-panel {
+	padding-block: 0 !important;
+}
+
+[data-has-hero] footer {
+	padding-block: 0 !important;
+	margin: 0 !important;
+}
+
+[data-has-hero] main {
+	padding-bottom: 0 !important;
+}
+
+/* Vertically center splash page content */
+[data-has-hero] .main-pane {
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+	flex: 1 !important;
+}
+
+[data-has-hero] .main-frame {
+	display: flex !important;
+	flex-direction: column !important;
+	flex: 1 !important;
+}
+
+[data-has-hero] .lg\:sl-flex {
+	flex: 1 !important;
+}
+
+/* Home content — constrained container */
+.home-content {
+	max-width: 1100px;
+	margin: 2.75rem auto 0;
+	padding: 0 1.5rem;
+}
+
+.section-heading {
+	text-align: left !important;
+	color: #e8e4ee;
+	font-size: 1.75rem;
+	margin: 0 0 0.75rem;
+}
+
+/* ===========================
+   Home card grid — 2x2 equal
+   =========================== */
+.card-grid-home {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: 1fr;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.card-grid-home > .sl-link-card {
+	height: 100% !important;
+}
+
+.card-grid-home > .sl-link-card:first-child {
+	margin-top: 0.9rem;
+}
+
+.card-grid-home .sl-link-card .description {
+	text-align: left !important;
+}
+
+/* Content fills available space, balanced sidebars */
+:root {
+	--sl-sidebar-width: 14rem;
+	--sl-content-width: calc(100vw - 2 * var(--sl-sidebar-width) - 2rem);
+}
+
+.right-sidebar-container {
+	width: var(--sl-sidebar-width) !important;
+}
+
+.right-sidebar {
+	width: var(--sl-sidebar-width) !important;
+}
+
+/* ===========================
+   Images — card style with glow
+   =========================== */
+.sl-markdown-content img {
+	display: block;
+	margin: 1.5rem auto;
+	max-width: min(100%, 800px);
+	height: auto;
+	border-radius: 0.75rem;
+	border: 1px solid #2e2a38;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(168, 106, 232, 0.08);
+}
+
+@media (min-width: 1600px) {
+	.sl-markdown-content img {
+		max-width: min(100%, 900px);
+	}
+}
+
+/* Side-by-side image grid */
+.img-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin: 1.5rem 0;
+}
+
+.img-row img {
+	margin: 0;
+	width: 100%;
+	height: auto;
+	border-radius: 0.75rem;
+	border: 1px solid #2e2a38;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(168, 106, 232, 0.08);
+}
+
+@media (max-width: 600px) {
+	.img-row {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ===========================
+   Video — responsive, centered
+   =========================== */
+.video-embed {
+	max-width: 800px;
+	margin: 1.5rem auto;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	border-radius: 0.75rem;
+	border: 1px solid #2e2a38;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(168, 106, 232, 0.08);
+}
+
+@media (min-width: 1600px) {
+	.video-embed {
+		max-width: 900px;
+	}
+}
+
+.video-embed iframe,
+.video-embed video {
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+.sl-markdown-content video {
+	display: block;
+	margin: 1.5rem auto;
+	max-width: 720px;
+	border-radius: 0.75rem;
+	border: 1px solid #2e2a38;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(168, 106, 232, 0.08);
+}
+
+/* ===========================
+   FAQ styling — purple accent
+   =========================== */
+.sl-markdown-content blockquote {
+	border-left: 3px solid #a86ae8;
+	background: rgba(168, 106, 232, 0.08);
+	border-radius: 0 0.5rem 0.5rem 0;
+	padding: 0.75rem 1rem;
+	margin: 1.25rem 0 0.5rem;
+}
+
+/* ===========================
+   Table polish
+   =========================== */
+.sl-markdown-content table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1.5rem 0;
+}
+
+.sl-markdown-content th {
+	background: rgba(168, 106, 232, 0.15);
+}
+
+.sl-markdown-content td,
+.sl-markdown-content th {
+	padding: 0.6rem 1rem;
+}
+
+/* ===========================
+   Links — purple tint
+   =========================== */
+.sl-markdown-content a {
+	color: #c89eff;
+}
+
+.sl-markdown-content a:hover {
+	color: #e8d5ff;
+}
+
+/* ===========================
+   Admonitions — purple tinted
+   =========================== */
+.starlight-aside {
+	border-radius: 0.75rem !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(168, 106, 232, 0.1) !important;
+	border: 1px solid #2e2a38 !important;
+	border-left: 4px solid !important;
+}
+
+.starlight-aside--tip {
+	border-left-color: #a86ae8 !important;
+	background: rgba(168, 106, 232, 0.06) !important;
+}
+
+.starlight-aside--note {
+	border-left-color: #794bc4 !important;
+	background: rgba(121, 75, 196, 0.06) !important;
+}
+
+.starlight-aside--caution {
+	border-left-color: #e8a838 !important;
+}
+
+.starlight-aside--danger {
+	border-left-color: #e85050 !important;
+}
+
+/* ===========================
+   Misc
+   =========================== */
+.sl-markdown-content hr {
+	border-color: #2e2a38;
+	margin: 2rem 0;
+}
+
+/* Hide edit page link */
+a[data-edit-url] {
+	display: none !important;
+}
+
+/* Hide prev/next pagination on splash page */
+[data-has-hero] .pagination-links {
+	display: none !important;
+}
+
+@media (max-width: 600px) {
+	.card-grid-home {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Card styling — shadow, rounded, hover */
+.sl-link-card {
+	border-radius: 0.75rem !important;
+	border: 1px solid #2e2a38 !important;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(168, 106, 232, 0.08) !important;
+	transition: box-shadow 0.2s ease, border-color 0.2s ease !important;
+}
+
+.sl-link-card:hover {
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(168, 106, 232, 0.2) !important;
+	border-color: #a86ae8 !important;
+}
+
+/* ===========================
+   Wiki terminal widget
+   =========================== */
+.wiki-terminal {
+	background: #0f0f1e;
+	border: 1px solid #2e2a38;
+	border-radius: 0.75rem;
+	overflow: hidden;
+	margin: 2.5rem auto;
+	max-width: 100%;
+	font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+	font-size: 0.8rem;
+	line-height: 1.6;
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(168, 106, 232, 0.1);
+}
+
+.wiki-terminal-bar {
+	background: #12121f;
+	padding: 0.5rem 0.75rem;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	border-bottom: 1px solid #2e2a38;
+}
+
+.wiki-terminal-dot {
+	width: 0.6rem;
+	height: 0.6rem;
+	border-radius: 50%;
+}
+
+.wiki-terminal-dot.red { background: #ff5f57; }
+.wiki-terminal-dot.yellow { background: #febc2e; }
+.wiki-terminal-dot.green { background: #28c840; }
+
+.wiki-terminal-title {
+	margin-left: 0.5rem;
+	color: #8b8592;
+	font-size: 0.7rem;
+}
+
+.wiki-terminal-body {
+	padding: 0.75rem 1rem;
+}
+
+.wiki-terminal-body p {
+	margin: 0.15rem 0 !important;
+	text-align: left !important;
+	white-space: nowrap;
+	overflow-x: auto;
+}
+
+.wiki-terminal .prompt {
+	color: #a86ae8;
+	font-weight: bold;
+}
+
+.wiki-terminal .cmd {
+	color: #e8d5ff;
+}
+
+.wiki-terminal .comment {
+	color: #585262;
+}
+
+/* Page view counter */
+.wiki-pageviews {
+	text-align: center;
+	color: #585262;
+	font-size: 0.75rem;
+	margin: 0.25rem 0 0;
+	letter-spacing: 0.05em;
+}
+
+/* Code blocks — slightly different bg */
+.sl-markdown-content pre {
+	background: #12121f !important;
+	border: 1px solid #2e2a38;
+	border-radius: 0.5rem;
+}
