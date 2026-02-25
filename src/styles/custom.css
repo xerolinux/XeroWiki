@@ -265,9 +265,11 @@ nav.sidebar a[aria-current='true'] {
    Video — responsive, centered
    =========================== */
 .video-embed {
+	position: relative;
+	width: 100%;
 	max-width: 800px;
 	margin: 1.5rem auto;
-	aspect-ratio: 16 / 9;
+	padding-top: 56.25%;
 	overflow: hidden;
 	border-radius: 0.75rem;
 	border: 1px solid #2e2a38;
@@ -282,6 +284,9 @@ nav.sidebar a[aria-current='true'] {
 
 .video-embed iframe,
 .video-embed video {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	border: 0;
