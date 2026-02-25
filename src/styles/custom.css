@@ -382,6 +382,11 @@ nav.sidebar a[aria-current='true'] {
 	margin: 2rem 0;
 }
 
+/* Center search in nav bar */
+.header > .sl-flex:nth-child(2) {
+	justify-content: center;
+}
+
 /* Hide edit page link */
 a[data-edit-url] {
 	display: none !important;
