@@ -1,6 +1,10 @@
 /* ===========================
    Dark-Only Theme
    =========================== */
+html {
+	scrollbar-gutter: stable;
+}
+
 :root {
 	color-scheme: dark;
 }
@@ -383,8 +387,31 @@ nav.sidebar a[aria-current='true'] {
 }
 
 /* Center search in nav bar */
-.header > .sl-flex:nth-child(2) {
-	justify-content: center;
+@media (min-width: 50rem) {
+	header.header {
+		position: relative;
+	}
+
+	site-search button[data-open-modal] {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+/* Reduce space above page titles */
+:not([data-has-hero]) .main-pane {
+	padding-top: 0 !important;
+	margin-top: -1.5rem;
+}
+
+:not([data-has-hero]) .content-panel {
+	padding-top: 0.5rem !important;
+}
+
+:not([data-has-hero]) h1#_top {
+	margin-top: 0.25rem !important;
 }
 
 /* Hide edit page link */
