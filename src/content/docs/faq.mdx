@@ -4,44 +4,72 @@ description: Frequently asked questions about the XeroLinux project.
 tableOfContents: false
 ---
 
-### Will there be desktop spins other than KDE Plasma?
+<p class="page-tagline" id="faq-tagline"></p>
 
-No. Maintaining multiple desktop environments is not feasible as a solo project.
+<script>{`
+(function() {
+  const taglines = [
+    'The answers you seek, without the <code>man</code> page headache.',
+    'No need to <code>grep</code> through forums — we did it for you.',
+    '<code>sudo</code> read this before opening a ticket.',
+    'Frequently asked, patiently answered, zero <code>RTFM</code> attitude.',
+    'Because life is too short to debug alone.',
+    'All signal, no <code>/dev/null</code>.',
+    'Saving you from a <code>segfault</code> of confusion.',
+    'Your <code>--help</code> flag, but actually helpful.',
+    'Less scrolling through wikis, more <code>pacman -Syu</code>.',
+    'Answers so good, even <code>btw i use arch</code> users approve.',
+    'Stack Overflow wishes it was this clean.',
+    'Certified <code>SIGTERM</code>-free answers.',
+    'Where questions come to get <code>resolved</code>, not <code>deprecated</code>.',
+    'No kernel panics here — just straight answers.',
+  ];
+  const el = document.getElementById("faq-tagline");
+  if (el) {
+    el.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
+  }
+})();
+`}</script>
 
----
+<div class="faq-grid">
 
-### Why is there a separate nVidia ISO?
+<div class="faq-card">
+<h3>Will there be desktop spins other than KDE Plasma?</h3>
+<p>No. Maintaining multiple desktop environments is not feasible as a solo project.</p>
+</div>
 
-nVidia retired driver support for legacy 900/1000 series cards. The dedicated nVidia ISO targets RTX-series cards with modern open drivers, while the Standard ISO serves Intel and AMD systems. See [**The Distro**](/distro/#iso-variants) for details.
+<div class="faq-card">
+<h3>Why is there a separate nVidia ISO?</h3>
+<p>nVidia retired driver support for legacy 900/1000 series cards. The dedicated nVidia ISO targets RTX-series cards with modern open drivers, while the Standard ISO serves Intel and AMD systems. See <a href="/distro/#iso-variants"><strong>The Distro</strong></a> for details.</p>
+</div>
 
----
+<div class="faq-card">
+<h3>What about Hyprland or other window managers?</h3>
+<p>A Hyprland integration was attempted but discontinued. Archived code is available <a href="https://github.com/xerolinux/HyprXero-git"><strong>here</strong></a>.</p>
+</div>
 
-### What about Hyprland or other window managers?
+<div class="faq-card">
+<h3>Why isn't Firefox or LibreWolf included by default?</h3>
+<p>This was addressed in a dedicated post — <a href="https://xerolinux.xyz/updates/browser-situation/"><strong>read the explanation</strong></a>.</p>
+</div>
 
-A Hyprland integration was attempted but discontinued. Archived code is available [**here**](https://github.com/xerolinux/HyprXero-git).
+<div class="faq-card">
+<h3>Why doesn't the ISO include more software out of the box?</h3>
+<p>To keep the distro lean and stable. More packages means more variables that can break things. The <a href="/xero-tool/"><strong>toolkit</strong></a> provides optional software categories so you install only what you need.</p>
+</div>
 
----
+<div class="faq-card">
+<h3>Can I request a feature or package?</h3>
+<p>Yes, but all requests are evaluated for stability impact and usefulness. Submit requests on <a href="https://fider.xerolinux.xyz"><strong>Fider</strong></a> or <a href="https://discord.xerolinux.xyz"><strong>Discord</strong></a>.</p>
+</div>
 
-### Why isn't Firefox or LibreWolf included by default?
+<div class="faq-card">
+<h3>How can I contribute?</h3>
+<ul>
+<li><strong>Test and report bugs</strong> — on <a href="https://discord.xerolinux.xyz"><strong>Discord</strong></a> or <a href="https://github.com/XeroLinuxDev/XeroBuild"><strong>GitHub</strong></a></li>
+<li><strong>Donate</strong> — grab the <a href="/distro/"><strong>ISO</strong></a> to support development</li>
+<li><strong>Submit content</strong> — see the <a href="/contributions/"><strong>Contributions</strong></a> page</li>
+</ul>
+</div>
 
-This was addressed in a dedicated post — [**read the explanation**](https://xerolinux.xyz/updates/browser-situation/).
-
----
-
-### Why doesn't the ISO include more software out of the box?
-
-To keep the distro lean and stable. More packages means more variables that can break things. The [**toolkit**](/xero-tool/) provides optional software categories so you install only what you need.
-
----
-
-### Can I request a feature or package?
-
-Yes, but all requests are evaluated for stability impact and usefulness. Submit requests on [**Fider**](https://fider.xerolinux.xyz) or [**Discord**](https://discord.xerolinux.xyz).
-
----
-
-### How can I contribute?
-
-- **Test and report bugs** — on [**Discord**](https://discord.xerolinux.xyz) or [**GitHub**](https://github.com/XeroLinuxDev/xero-build)
-- **Donate** — grab the [**ISO**](/distro/) to support development
-- **Submit content** — see the [**Contributions**](/contributions/) page
+</div>

@@ -7,6 +7,29 @@ import { Image } from 'astro:assets';
 import partition from '../../assets/images/Partition.png';
 import encrypt from '../../assets/images/Encrypt.png';
 
+<p class="page-tagline" id="install-tagline"></p>
+
+<script>{`
+(function() {
+  const taglines = [
+    'One script to rule them all, one script to <code>bind</code> them.',
+    'From bare Arch to full desktop — just add <code>bash</code>.',
+    '<code>curl | bash</code> but the kind you actually trust.',
+    'Because manual installs build character — and gray hair.',
+    'Skip the 47-step wiki guide. We wrote a <code>script</code>.',
+    'Turns <code>archinstall</code> survivors into XeroLinux enjoyers.',
+    'Your base Arch just got a serious <code>upgrade</code>.',
+    'Why spend a weekend when you can spend a <code>command</code>?',
+    'The installer that makes <code>chroot</code> a distant memory.',
+    'Automated, tested, and zero <code>PKGBUILD</code> drama.',
+    'From <code>tty1</code> to a full desktop — hold our beer.',
+    'Installation so smooth it should require a <code>--confirm</code>.',
+  ];
+  const el = document.getElementById("install-tagline");
+  if (el) el.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
+})();
+`}</script>
+
 The **XeroLinux Installer** transforms a base Arch Linux installation into a complete XeroLinux KDE Plasma desktop. The end result is identical to the official [**ISO**](/distro/) — same packages, themes, and configuration.
 
 :::caution

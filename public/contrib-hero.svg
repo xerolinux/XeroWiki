@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" fill="none">
+  <!-- Branch lines -->
+  <path d="M300 30 L300 170" stroke="#3a3548" stroke-width="2" stroke-dasharray="6 4"/>
+  <!-- Left branch -->
+  <path d="M150 60 Q200 60 220 80 Q240 100 260 100 L280 100" stroke="#794bc4" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Right branch -->
+  <path d="M450 60 Q400 60 380 80 Q360 100 340 100 L320 100" stroke="#794bc4" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Bottom left branch -->
+  <path d="M180 160 Q220 160 240 140 Q260 120 280 120 L290 115" stroke="#a86ae8" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <!-- Bottom right branch -->
+  <path d="M420 160 Q380 160 360 140 Q340 120 320 120 L310 115" stroke="#a86ae8" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <!-- Top merge lines -->
+  <path d="M200 40 Q240 40 260 55 Q280 70 290 75" stroke="#a86ae8" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M400 40 Q360 40 340 55 Q320 70 310 75" stroke="#a86ae8" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Center merge node (main) -->
+  <circle cx="300" cy="100" r="16" fill="#2a1848" stroke="#a86ae8" stroke-width="2.5"/>
+  <path d="M293 100 L298 105 L308 95" stroke="#e8d5ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Top node -->
+  <circle cx="300" cy="40" r="8" fill="#2a1848" stroke="#794bc4" stroke-width="2"/>
+  <circle cx="300" cy="40" r="3" fill="#794bc4"/>
+  <!-- Bottom node -->
+  <circle cx="300" cy="160" r="8" fill="#2a1848" stroke="#794bc4" stroke-width="2"/>
+  <circle cx="300" cy="160" r="3" fill="#794bc4"/>
+  <!-- Contributor nodes - left -->
+  <circle cx="150" cy="60" r="10" fill="#12121f" stroke="#a86ae8" stroke-width="2"/>
+  <path d="M146 60 L150 56 L154 60" stroke="#e8d5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="150" y1="57" x2="150" y2="64" stroke="#e8d5ff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Contributor nodes - right -->
+  <circle cx="450" cy="60" r="10" fill="#12121f" stroke="#a86ae8" stroke-width="2"/>
+  <path d="M446 60 L450 56 L454 60" stroke="#e8d5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="450" y1="57" x2="450" y2="64" stroke="#e8d5ff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Contributor nodes - bottom left -->
+  <circle cx="180" cy="160" r="9" fill="#12121f" stroke="#a86ae8" stroke-width="1.5" opacity="0.7"/>
+  <path d="M176.5 160 L180 157 L183.5 160" stroke="#e8d5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <line x1="180" y1="157.5" x2="180" y2="163" stroke="#e8d5ff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Contributor nodes - bottom right -->
+  <circle cx="420" cy="160" r="9" fill="#12121f" stroke="#a86ae8" stroke-width="1.5" opacity="0.7"/>
+  <path d="M416.5 160 L420 157 L423.5 160" stroke="#e8d5ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+  <line x1="420" y1="157.5" x2="420" y2="163" stroke="#e8d5ff" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Small floating nodes - top -->
+  <circle cx="200" cy="40" r="6" fill="#12121f" stroke="#794bc4" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="200" cy="40" r="2" fill="#794bc4" opacity="0.6"/>
+  <circle cx="400" cy="40" r="6" fill="#12121f" stroke="#794bc4" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="400" cy="40" r="2" fill="#794bc4" opacity="0.6"/>
+  <!-- Glow effect on center -->
+  <circle cx="300" cy="100" r="28" fill="none" stroke="#a86ae8" stroke-width="0.5" opacity="0.2"/>
+  <circle cx="300" cy="100" r="40" fill="none" stroke="#a86ae8" stroke-width="0.3" opacity="0.1"/>
+</svg>

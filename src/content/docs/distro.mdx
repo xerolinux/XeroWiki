@@ -7,6 +7,29 @@ import { Image } from 'astro:assets';
 import km from '../../assets/images/KM.png';
 import scx from '../../assets/images/SCX.png';
 
+<p class="page-tagline" id="distro-tagline"></p>
+
+<script>{`
+(function() {
+  const taglines = [
+    'Arch Linux, but make it <code>pretty</code>.',
+    'Where <code>pacman -Syu</code> is a lifestyle, not a chore.',
+    'Riced out of the box — no weekend lost to dotfiles.',
+    'Because vanilla Arch is just the <code>base-devel</code>.',
+    'KDE Plasma + Arch = <code>peak_desktop</code>.',
+    'Your hardware deserves better than a default <code>.bashrc</code>.',
+    'Not just another Arch spin — a whole <code>vibe</code>.',
+    'We did the ricing so you don\\u0027t have to <code>--force</code> it.',
+    'Stability meets aesthetics — no <code>dependency hell</code> included.',
+    'Built for the users who think <code>neofetch</code> screenshots matter.',
+    '<code>btw</code>, this is the distro you\\u0027ve been looking for.',
+    'From <code>archiso</code> to eye candy in one install.',
+  ];
+  const el = document.getElementById("distro-tagline");
+  if (el) el.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
+})();
+`}</script>
+
 **XeroLinux** is a KDE Plasma-based Arch Linux distribution focused on aesthetics and usability. For mid-range or higher hardware, it provides a polished out-of-the-box experience. It can run on lower-end systems, but performance may vary.
 
 ![XeroLinux](../../assets/images/XeroLinux.png)

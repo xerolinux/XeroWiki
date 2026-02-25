@@ -7,6 +7,29 @@ import { Image } from 'astro:assets';
 import chaoticTool from '../../assets/images/chaotic-tool.png';
 import chaoticTool3 from '../../assets/images/chaotic-tool3.png';
 
+<p class="page-tagline" id="tool-tagline"></p>
+
+<script>{`
+(function() {
+  const taglines = [
+    'Your desktop, your rules — we just provide the <code>toolkit</code>.',
+    'Point. Click. Rice. No <code>config</code> files harmed.',
+    'Because editing <code>dotfiles</code> at 3am gets old.',
+    'A GUI for the ricing that used to take a <code>git clone</code>.',
+    'All the customization, none of the <code>dependency</code> rabbit holes.',
+    'Making <code>r/unixporn</code> submissions effortless since day one.',
+    'Themes, scripts, and tools — all behind one <code>icon</code>.',
+    'Rice responsibly. Or don\\u0027t. We won\\u0027t <code>judge</code>.',
+    'PyQt6-powered — because even tools deserve to look <code>good</code>.',
+    'One hub to customize them all, one hub to <code>theme</code> them.',
+    'From stock to stunning in fewer <code>clicks</code> than you\\u0027d think.',
+    'The <code>Swiss Army knife</code> of Linux desktop customization.',
+  ];
+  const el = document.getElementById("tool-tagline");
+  if (el) el.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
+})();
+`}</script>
+
 The **XeroLinux Customization Hub** is a PyQt6-based GUI tool that brings together all XeroLinux themes, rices, scripts, and system tools in one interface. It works on **any Arch-based system**, not just XeroLinux.
 
 ![XeroLinux Customization Hub](../../assets/images/xero-tool.webp)

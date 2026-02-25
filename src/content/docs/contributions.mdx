@@ -4,18 +4,40 @@ description: User-contributed content for the XeroLinux project.
 tableOfContents: false
 ---
 
+<p class="page-tagline" id="contrib-tagline"></p>
+
+<script>{`
+(function() {
+  const taglines = [
+    'Open source thrives on <code>git push</code>, not just <code>git pull</code>.',
+    'Your <code>patch</code> could be the next big thing.',
+    'Community-driven — like Arch, but with more <code>thank you</code>s.',
+    'Fork it. Fix it. Ship it. <code>Repeat</code>.',
+    'Where every <code>contributor</code> gets credit, not just a merge.',
+    'Because the best distros are built by <code>everyone</code>.',
+    'Submit your work — we promise not to <code>rebase --hard</code>.',
+    'Think of it as <code>open source</code> show and tell.',
+    'Your code, your configs, your <code>community</code>.',
+    'PRs welcome. Ego not <code>required</code>.',
+    'Powered by caffeine, goodwill, and <code>git diff</code>.',
+    'The <code>upstream</code> is you.',
+  ];
+  const el = document.getElementById("contrib-tagline");
+  if (el) el.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
+})();
+`}</script>
+
 :::caution
 All content on this page is community-contributed. Report issues to the **original authors**, not the XeroLinux project. Use everything here **at your own risk**.
 :::
 
-## How to Contribute
+<div class="contrib-hero">
+  <img src="/contrib-hero.svg" alt="Community contributions" />
+</div>
 
-Contributions that improve the distro are welcome. Submit yours on the [**XeroLinux Community Discord**](https://discord.xerolinux.xyz).
+<h2 class="centered">.// Contributions Below \\\\.</h2>
 
-All submissions are reviewed before being published.
-
----
-
-<h2 class="centered">.// Community content appears here \\\\.</h2>
-
----
+<div class="contrib-callout">
+  <p>Contributions that improve the distro are welcome. Submit yours on the <a href="https://discord.xerolinux.xyz"><strong>XeroLinux Community Discord</strong></a>.</p>
+  <p>All submissions are reviewed before being published.</p>
+</div>
