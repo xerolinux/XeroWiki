@@ -203,15 +203,20 @@ nav.sidebar a[aria-current='true'] {
 /* Content fills available space, balanced sidebars */
 :root {
 	--sl-sidebar-width: 14rem;
-	--sl-content-width: calc(100vw - 2 * var(--sl-sidebar-width) - 2rem);
 }
 
-.right-sidebar-container {
-	width: var(--sl-sidebar-width) !important;
-}
+@media (min-width: 72rem) {
+	:root {
+		--sl-content-width: calc(100vw - 2 * var(--sl-sidebar-width) - 2rem);
+	}
 
-.right-sidebar {
-	width: var(--sl-sidebar-width) !important;
+	.right-sidebar-container {
+		width: var(--sl-sidebar-width) !important;
+	}
+
+	.right-sidebar {
+		width: var(--sl-sidebar-width) !important;
+	}
 }
 
 /* ===========================
@@ -380,6 +385,32 @@ a[data-edit-url] {
 @media (max-width: 600px) {
 	.card-grid-home {
 		grid-template-columns: 1fr;
+	}
+
+	.card-grid-home > .sl-link-card:first-child {
+		margin-top: 0 !important;
+	}
+
+	.home-content {
+		margin-top: 1rem;
+		padding: 0 0.75rem;
+	}
+
+	.section-heading {
+		font-size: 1.35rem;
+	}
+
+	.wiki-terminal {
+		font-size: 0.65rem;
+		margin: 1.5rem auto;
+	}
+
+	.hero-logo {
+		max-width: 200px;
+	}
+
+	[data-has-hero] .hero .copy h1 {
+		font-size: 1.75rem !important;
 	}
 }
 
