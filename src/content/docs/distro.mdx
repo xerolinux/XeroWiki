@@ -30,12 +30,14 @@ import scx from '../../assets/images/SCX.png';
 })();
 `}</script>
 
+Before we begin, I would like to tell everyone of you who has supported the **XeroLinux** project by either getting the ISO or some merch, how much your simple act of kindness means to me. I cannot put it into words. So all am gonna say is God bless you all. I hope your kindness is reciprocated.
+
 **XeroLinux** is a KDE Plasma-based Arch Linux distribution focused on aesthetics and usability. For mid-range or higher hardware, it provides a polished out-of-the-box experience. It can run on lower-end systems, but performance may vary.
 
 ![XeroLinux](../../assets/images/XeroLinux.png)
 
 :::note
-If you prefer not to use the ISO, the same result can be achieved with the [**XeroInstall script**](/xero-install/) on a base Arch install.
+Always update and reboot post-install before using the Distro. If you prefer not to use the ISO, the same result can be achieved with the [**XeroInstall script**](/xero-install/) on a base Arch install.
 :::
 
 ---
@@ -44,22 +46,24 @@ If you prefer not to use the ISO, the same result can be achieved with the [**Xe
 
 XeroLinux ships as **two separate ISOs**:
 
-- **Standard ISO** — For Intel and AMD GPU systems
-- **nVidia ISO** — For RTX-series cards using modern open drivers
+- **Standard ISO** — For **Intel** and **AMD** GPU systems
+- **nVidia ISO** — For **RTX**-series cards using modern open drivers
 
 :::caution
 Legacy nVidia 900/1000 series cards are **not supported** by the nVidia ISO. Use the Standard ISO and install the legacy 580xx drivers manually via the [toolkit](/xero-tool/). The ISO will boot in `nomodeset` (low-res) until drivers are installed. No support is provided for these legacy drivers.
 :::
 
-This split ensures each ISO targets its hardware cleanly — fewer black screens, better reliability.
+We split **XeroLinux** into two ISOs because **nVidia** retired the old 900 and 1000 series cards from the modern driver lineup — only **RTX** cards get the latest open drivers. Instead of forcing everyone into a one-size-fits-nobody installer, the dedicated **nVidia** ISO is built specifically for RTX users, while the Standard ISO keeps Intel and AMD systems happy. Each ISO does exactly what it's meant to do, with fewer surprises and better reliability.
+
+We also tried our best to make the **nVidia** ISO robust by including laptop support and many other optimizations.
 
 ---
 
 ## GPU Swap Detection
 
-A background service monitors your GPU hardware. If a change is detected (e.g., swapping an nVidia card for AMD), a notification appears in Plasma offering to install or remove the correct drivers automatically.
+**XeroLinux** includes a small background service that checks which graphics hardware is inside your computer by reading standard system information. When it notices a change — for example, if you install an **nVidia** card or remove one — it records the change and shows a popup notification in Plasma. Nothing runs unless something actually changes.
 
-Supported: **Intel**, **AMD**, **nVidia**, and hybrid configurations.
+When you choose to continue, **XeroLinux** opens an easy-to-use tool that installs or removes the correct graphics drivers based on your current hardware. The tool updates system components like the boot configuration and kernel modules automatically. Supports **Intel**, **AMD**, **nVidia**, and hybrid setups.
 
 ---
 
@@ -67,9 +71,9 @@ Supported: **Intel**, **AMD**, **nVidia**, and hybrid configurations.
 
 | Requirement | Details |
 |-------------|---------|
-| Firmware | **UEFI only** — Legacy BIOS/MBR is not supported |
+| Firmware | **UEFI** & Legacy **BIOS/MBR** are now supported |
 | Boot tool | [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/) recommended (provides GRUB fallback) |
-| Session | **Wayland** by default — X11 can be re-enabled via the toolkit |
+| Session | **Wayland** only — X11 has been fully dropped by KDE Plasma but can be enabled via toolkit |
 
 :::tip
 Avoid burning with Etcher or similar tools — there's no fallback if SystemD-Boot fails. Use Ventoy instead.
@@ -81,13 +85,11 @@ Avoid burning with Etcher or similar tools — there's no fallback if SystemD-Bo
 
 ## Calamares Installer
 
-XeroLinux uses the [**Calamares**](https://codeberg.org/Calamares/calamares) installer.
+**XeroLinux**, like many other distros, uses the [**Calamares**](https://codeberg.org/Calamares/calamares) installer.
 
 ![Calamares Installer](../../assets/images/Calamares.png)
 
-Key features:
-- **Encryption** — LUKS2 full-disk encryption
-- **System update during install** — Packages are updated as part of the installation process (duration depends on update size and connection speed)
+We have been able to re-enable encryption, allowing you to encrypt your drives using `luks2`. We have also added the ability to update the system during install, so you might notice it taking a little bit longer — depends on how many updates there are at the time of install, their size, and your connection speed. Please be patient while it does that.
 
 ---
 
@@ -95,11 +97,9 @@ Key features:
 
 ### XeroLinux Toolkit
 
-The toolkit (first icon on the dock) handles initial system configuration. See the full [**Customization Hub documentation**](/xero-tool/) for details.
+I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you — just the essentials.
 
-<div class="video-embed">
-  <video src="https://repos.xerolinux.xyz/toolkit.webm" controls></video>
-</div>
+![XeroLinux Toolkit](../../assets/images/xtoolkit.png)
 
 If updating from an older toolkit version, the dock icon may disappear. Run the following to restore it, then restart the shell with `rshell`:
 
@@ -136,14 +136,10 @@ Check zRAM status with `zramctl --output-all`. See the zram-generator documentat
 
 ## Package Managers
 
-No GUI package manager is included by default. Available via the toolkit:
-
-- **Octopi**
-- **Bauh**
-- **Bazaar**
+No GUI package managers are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **Bauh**, or **Bazaar**.
 
 :::danger
-**Avoid KDE Discover** — it's known to cause stability issues on Arch-based systems.
+I strongly advise against installing KDE's **Discover** if you're aiming for stability — it's notoriously troublesome. But, as always, the final decision is yours.
 :::
 
 ---
@@ -175,6 +171,10 @@ Alternatively, use **Pacman DB Fix** in the toolkit under **Servicing/System Twe
 
 ## Support
 
-For installation-related questions, reach out on [**Fosstodon**](https://fosstodon.org/@XeroLinux) or [**Discord**](https://discord.gg/5sqxTSuKZu). Hardware-specific issues are best directed to the [**ArchWiki**](https://wiki.archlinux.org) or community Discord.
+If you encounter any issues or have questions directly related to the installation, feel free to reach out on [**Fosstodon**](https://fosstodon.org/@XeroLinux) or [**Discord**](https://discord.gg/5sqxTSuKZu). Please do not ask on Ko-Fi.
 
 ![TechXero](../../assets/images/Tech.jpeg)
+
+However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org) or community Discord.
+
+That's it, there ain't much to it. The rest is in your hands now. Dive into the toolkit, poke around, and see if there's anything that catches your fancy.

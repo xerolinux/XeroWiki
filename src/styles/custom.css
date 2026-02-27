@@ -326,17 +326,48 @@ nav.sidebar a[aria-current='true'] {
    =========================== */
 .sl-markdown-content table {
 	width: 100%;
-	border-collapse: collapse;
+	border-collapse: separate;
+	border-spacing: 0;
 	margin: 1.5rem 0;
+	border-radius: 0.75rem;
+	overflow: hidden;
+	background: #12121f;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .sl-markdown-content th {
-	background: rgba(168, 106, 232, 0.15);
+	background: rgba(168, 106, 232, 0.08);
+	padding: 0.65rem 1.25rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: #8b8592;
+	text-align: left;
+	border-bottom: 1px solid #2e2a38;
 }
 
-.sl-markdown-content td,
-.sl-markdown-content th {
-	padding: 0.6rem 1rem;
+.sl-markdown-content td {
+	padding: 0.55rem 1.25rem;
+	font-size: 0.9rem;
+	border-bottom: 1px solid rgba(46, 42, 56, 0.3);
+}
+
+.sl-markdown-content tr:last-child td {
+	border-bottom: none;
+}
+
+.sl-markdown-content td:first-child {
+	white-space: nowrap;
+	font-weight: 600;
+	color: #e0dce6;
+}
+
+.sl-markdown-content td:last-child {
+	width: 100%;
+	color: #8b8592;
+}
+
+.sl-markdown-content tr:hover td {
+	background: rgba(255, 255, 255, 0.02);
 }
 
 /* ===========================
