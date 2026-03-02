@@ -157,6 +157,42 @@ The toolkit includes a **Kernel Manager** and **sched-ext** tool for kernel tuni
 
 ## Troubleshooting
 
+### GPGMe No Data
+
+If you encounter this issue, it's likely caused by signing keys bundled in the ISO having expired or been replaced on the Arch mirrors, causing the installer to crash during the package update step.
+
+**The Fix**
+
+run this in a terminal before launching the installer:
+
+```bash
+sudo tee /etc/calamares/modules/shellprocess-update.conf << 'EOF'
+i18n:
+    name: "Updating system packages..."
+dontChroot: false
+timeout: 7200
+script:
+    - command: "pacman -Syy --noconfirm"
+      timeout: 600
+    - command: "sed 's/^SigLevel.*/SigLevel = Never/' /etc/pacman.conf > /tmp/pacman-nosig.conf"
+      timeout: 10
+    - command: "pacman -S --noconfirm --needed --config /tmp/pacman-nosig.conf archlinux-keyring"
+      timeout: 300
+    - command: "rm -f /tmp/pacman-nosig.conf"
+      timeout: 10
+    - command: "pacman-key --populate archlinux"
+      timeout: 120
+    - command: "pacman -Su --noconfirm --disable-download-timeout"
+      timeout: 5400
+EOF
+```
+
+Then launch the installer normally.
+
+*This only modifies the config for your current live session, nothing permanent.*
+
+A permanent fix will be included in the next ISO release.
+
 ### Pacman DB Error
 
 If you encounter `unknown key "%INSTALL_DB%" in local database` during updates:
