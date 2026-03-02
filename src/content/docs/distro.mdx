@@ -153,6 +153,89 @@ The toolkit includes a **Kernel Manager** and **sched-ext** tool for kernel tuni
   <Image src={scx} alt="SCX Scheduler" />
 </div>
 
+### The Schedulers
+
+> These schedulers are part of the **sched-ext (scx)** framework, a Linux kernel feature that allows CPU schedulers to be implemented in BPF and loaded dynamically without recompiling the kernel. All schedulers listed here are multipurpose to varying degrees — the best way to find what works for your system is to try them yourself.
+
+#### BPFLAND
+
+A vruntime-based scheduler that prioritizes interactive workloads. It identifies interactive tasks by how frequently they block (many voluntary context switches per second) and prioritizes them accordingly. When deciding which cores to assign tasks to, it takes cache layout into account — preferring cores that share the same L2/L3 cache — which reduces cache misses and improves overall performance. It excels under heavy load, provides strong FPS stability in gaming, and supports hybrid CPU topologies (efficiency and performance cores).
+
+**Supported profiles:** `auto`, `gaming`, `lowlatency`, `powersave`
+
+---
+
+#### LAVD
+
+Designed primarily for gaming and latency-sensitive workloads. It calculates a "latency criticality" score per task based on wake frequency, wait frequency, and average runtime, then assigns virtual deadlines accordingly to minimize latency spikes while maintaining good overall throughput. A standout feature is **Core Compaction**: when CPU utilization is below 50%, active cores run longer at higher frequency while idle cores are kept in a deep sleep state (C-state), resulting in meaningful power savings. It also includes an **Autopilot** mode that automatically adjusts its power profile (Performance, Balanced, Powersave) based on system load or energy preference (EPP).
+
+Originally developed for the Steam Deck and handheld devices, but works well on desktops too.
+
+**Supported profiles:** `auto`, `gaming`, `lowlatency`, `powersave`
+
+---
+
+#### RUSTY
+
+A load-balancing focused scheduler. CPUs are grouped into scheduling domains based on their Last-Level Cache (LLC), and tasks are kept within their original domain whenever possible to take advantage of data locality. It is highly tunable, offering a wide range of flags to customize behavior. Includes an **Autopower** mode that selects a power profile (Powersave, Balanced, Performance) based on the system's EPP (Energy Performance Preference). Well suited for general desktop and server workloads.
+
+**Supported profiles:** `auto`, `gaming`, `lowlatency`, `powersave` (flags-based, less opinionated than BPFLAND/LAVD)
+
+---
+
+#### RUSTLAND
+
+The userspace predecessor to BPFLAND, written by the same author. The scheduling algorithm is largely similar, but the decision-making runs in userspace rather than in BPF. This makes it more readable and easier to understand how the scheduler works internally, but comes with a slight throughput disadvantage compared to its BPF counterpart due to the overhead of crossing the kernel/userspace boundary.
+
+**Best for:** Learning, experimentation, or systems where understanding scheduler behavior is more important than raw throughput.
+
+---
+
+#### FLASH
+
+Focuses on fairness among tasks and performance predictability rather than prioritizing interactive tasks above others. Introduced as a replacement for the `lowlatency` mode in BPFLAND. Aims to keep latency low for soft real-time workloads like audio processing and multimedia at the cost of some throughput.
+
+**Best for:** Audio production, multimedia, and workloads that need consistent, predictable latency.
+
+---
+
+#### LAYERED
+
+A highly configurable scheduler that lets you classify tasks into named "layers" (similar to cgroups) and apply a different scheduling policy to each layer independently. Suited for power users and advanced setups where you need fine-grained control over how different types of workloads are handled simultaneously.
+
+**Best for:** Complex workload isolation, server environments, and users who want deep customization.
+
+---
+
+#### COSMOS
+
+A lightweight scheduler optimized for preserving task-to-CPU locality. Keeps tasks running on the same CPU as much as possible to maintain cache warmth and reduce migration overhead. Good for scalable, general-purpose use.
+
+**Best for:** General desktop use and server workloads where cache locality matters.
+
+---
+
+#### SIMPLE
+
+A minimal reference scheduler included mainly as a documentation and learning tool. It prioritizes keeping tasks on the same CPU for cache locality and uses local per-CPU runqueues when the system is not saturated. Not intended for production use.
+
+**Best for:** Understanding how sched-ext works at a basic level.
+
+### Profile Definitions
+
+Profiles are presets that adjust scheduler flags to optimize behavior for specific use cases. They are not available on all schedulers — currently **BPFLAND** and **LAVD** have the most complete profile support.
+
+| Profile | Description |
+|---|---|
+| **Auto** | Default behavior; the scheduler decides based on current system conditions |
+| **Gaming** | Prioritizes low latency and FPS stability; pushes performance headroom |
+| **Low Latency** | Minimizes scheduling latency; suited for audio, streaming, real-time tasks |
+| **Powersave** | Reduces CPU activity and frequency to conserve energy |
+
+:::note
+These schedulers are in active development. Flags and profile behavior may change between releases. Always check the upstream changelog when updating `scx-scheds`.
+:::
+
 ---
 
 ## Troubleshooting
