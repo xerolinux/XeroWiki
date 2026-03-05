@@ -1,11 +1,11 @@
 ---
-title: XeroLinux Customization Hub
-description: An all-in-one GUI tool that consolidates all XeroLinux themes, scripts, and system tools.
+title: XeroLinux In-House Tools
+description: XeroLinux themes, scripts, and system tools.
 ---
 
 import { Image } from 'astro:assets';
-import chaoticTool from '../../assets/images/chaotic-tool.png';
-import chaoticTool3 from '../../assets/images/chaotic-tool3.png';
+import EFIBootGUIMain from '../../assets/images/EFIBootGUIMain.webp';
+import EFIBootGUIAbout from '../../assets/images/EFIBootGUIAbout.webp';
 
 <p class="page-tagline" id="tool-tagline"></p>
 
@@ -30,11 +30,13 @@ import chaoticTool3 from '../../assets/images/chaotic-tool3.png';
 })();
 `}</script>
 
+## Customization Hub
+
 The **XeroLinux Customization Hub** is a PyQt6-based GUI tool that brings together all XeroLinux themes, rices, scripts, and system tools in one interface. It works on **any Arch-based system**, not just XeroLinux.
 
 ![XeroLinux Customization Hub](../../assets/images/xero-tool.webp)
 
-## Features
+### Features
 
 - **Desktop Rices** — Pre-configured desktop themes and layouts
 - **GRUB Themes** — 8 bootloader themes
@@ -42,21 +44,21 @@ The **XeroLinux Customization Hub** is a PyQt6-based GUI tool that brings togeth
 
 ---
 
-## Quick Start
+### Execution
 
-### Dependencies
+- **Dependencies**
 
 ```bash
 sudo pacman -S python python-pyqt6
 ```
 
-### Run from Web
+- **Run from Web**
 
 ```bash
 curl -fsSL https://xerolinux.xyz/script/xero-tool.py | python3
 ```
 
-### Run Locally
+- **Run Locally**
 
 ```bash
 curl -fsSL https://xerolinux.xyz/script/xero-tool.py -o xero-tool.py
@@ -65,66 +67,62 @@ python3 xero-tool.py
 
 ---
 
-## Manual Installation
-
-Each component can also be installed individually. All methods require:
-
-```bash
-sudo pacman -S --needed python python-pyqt6 python-pip python-pipx
-```
-
-### XeroLayan
-
-The flagship KDE rice using [**Layan**](https://github.com/vinceliuice/Layan-kde) theme and [**Tela Circle**](https://github.com/vinceliuice/Tela-circle-icon-theme) icons.
-
-![XeroLayan Rice](../../assets/images/Rice.jpeg)
-
-```bash
-git clone https://github.com/xerolinux/xero-layan-git
-cd xero-layan-git/ && ./install.sh
-```
-
-**Included widgets:** [Apdatifier](https://store.kde.org/p/2135796), [Netspeed](https://store.kde.org/p/2136505), [Quick Shutdown](https://store.kde.org/p/1288430), [Wunderground PWS](https://store.kde.org/p/2135799), [Kurve Audio Visualizer](https://store.kde.org/p/2299506)
-
-**KWin scripts:** [Karousel](https://github.com/peterfajdiga/karousel), [MouseTiler](https://github.com/rxappdev/MouseTiler), [Krohnkite](https://www.pling.com/p/2144146)
-
-**Tweaks:** [Panel Colorizer](https://store.kde.org/p/2130967), [Smart Video Wallpaper](https://www.pling.com/p/2139746)
-
-### Xero Cosmic
-
-![Xero Cosmic](../../assets/images/Cosmic.png)
-
-```bash
-wget https://xerolinux.xyz/script/cosmic.sh
-chmod +x cosmic.sh && sh cosmic.sh
-```
-
-### GRUB Themes
-
-![Xero Grubs](../../assets/images/Grubs.png)
-
-```bash
-bash -c "python3 <(curl -fsSL 'https://xerolinux.xyz/script/grubs/xero-grubs.py')"
-```
-
-### Plymouth Manager
-
-![Plymouth Manager](../../assets/images/Plymouth.png)
-
-```bash
-wget https://raw.githubusercontent.com/XeroLinuxDev/extra-scripts/refs/heads/main/usr/local/bin/xpm
-chmod +x xpm && sh xpm
-```
-
-### Chaotic-AUR Tool (Unofficial)
+## EFIBoot Manager
 
 <div class="img-row">
-  <Image src={chaoticTool} alt="Chaotic-AUR Tool" />
-  <Image src={chaoticTool3} alt="Chaotic-AUR Tool Settings" />
+  <Image src={EFIBootGUIMain} alt="EFI Boot Manager Tool" />
+  <Image src={EFIBootGUIAbout} alt="EFI Boot Manager About"/>
 </div>
 
+EFI Boot Manager GUI is a lightweight desktop app for Linux/KDE Plasma that lets you manage your UEFI/EFI boot entries without ever touching a terminal. **USE AT YOUR OWN RISK !**
+
+### Features
+
+  - View all EFI boot entries with OS-specific icons
+  - Enable or disable individual boot entries
+  - Reorder entries and apply a custom boot order
+  - Set a one-time BootNext entry
+  - Delete unwanted boot entries
+  - Confirm dialogs to prevent accidental changes
+  - Instant toast notifications for every action
+  - Auto-elevates to root on launch via kdesu — no manual sudo
+  - Native KDE Plasma look with blur/transparency support
+  - Built with Qt6/QML for a fast, native feel
+
+### Installation
+
+You need to be on **XeroLinux** to be able to install this. It's only available on our repo, nowhere else !
+
 ```bash
-curl -fsSL "https://xerolinux.xyz/script/chaotic-tool.py" | python3
+sudo pacman -Syy efibootmgrgui
+```
+
+---
+
+## PHP Server GUI
+
+![XeroLinux Php Server GUI](../../assets/images/phpgui.webp)
+
+**phpGUI** is a lightweight desktop app for Linux/KDE Plasma that lets you spin up a local PHP development server without ever touching a terminal.
+
+### Features
+
+  - Start a PHP built-in server (php -S) with a single click
+  - Create a new project folder and serve it instantly
+  - Browse for and serve any existing project directory
+  - Live log output — see server activity and errors in real time
+  - Clean two-card layout: New Project and Existing Project
+  - Stop the server cleanly when done
+  - Native KDE Plasma look with blur/transparency support
+  - Built with Qt6/QML for a fast, native feel
+
+
+### Installation
+
+You need to be on **XeroLinux** to be able to install this. It's only available on our repo, nowhere else !
+
+```bash
+sudo pacman -Syy phpgui
 ```
 
 ---
