@@ -6,6 +6,8 @@ description: XeroLinux themes, scripts, and system tools.
 import { Image } from 'astro:assets';
 import EFIBootGUIMain from '../../assets/images/EFIBootGUIMain.webp';
 import EFIBootGUIAbout from '../../assets/images/EFIBootGUIAbout.webp';
+import SCXTool from '../../assets/images/scx-tool.webp';
+import SCXTool2 from '../../assets/images/scx-tool2.webp';
 
 <p class="page-tagline" id="tool-tagline"></p>
 
@@ -63,6 +65,39 @@ curl -fsSL https://xerolinux.xyz/script/xero-tool.py | python3
 ```bash
 curl -fsSL https://xerolinux.xyz/script/xero-tool.py -o xero-tool.py
 python3 xero-tool.py
+```
+
+---
+
+## Scheduler Tool
+
+<div class="img-row">
+  <Image src={SCXTool} alt="SCX Tool" />
+  <Image src={SCXTool2} alt="SCX Flags"/>
+</div>
+
+A comprehensive GUI application for managing sched-ext CPU schedulers for **Linux**.
+
+### Features
+
+- **Live Scheduler Switching**: Switch between sched-ext BPF CPU schedulers on the fly.
+- **Real-time Monitoring**: Continuous status updates showing active scheduler and mode.
+- **Persistence Support**: Enable schedulers to auto-start on boot via systemd service.
+- **Multiple Modes**: Support for auto, gaming, lowlatency, and powersave modes.
+- **Kernel Compatibility Check**: Automatic detection of sched-ext kernel support.
+
+### How-to-use
+
+You need the following dependencies :
+
+```bash
+sudo pacman -S scx-scheds scx-tools
+```
+
+Now you can run it and play around with the various Schedulers. Use the `SCX Info` tab to see what each one does.
+
+```bash
+curl -fsSL https://urls.xerolinux.xyz/SCXTool | python3
 ```
 
 ---
