@@ -37,7 +37,7 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
 ![XeroLinux](../../assets/images/XeroLinux.png)
 
 :::note
-Always update and reboot post-install before using the Distro. If you prefer not to use the ISO, the same result can be achieved with the [**XeroInstall script**](/xero-install/) on a base Arch install.
+System will be updated during install, so please be patient, might take a while. If you prefer not to use the ISO, the same result can be achieved with the [**XeroInstall script**](/xero-install/) on a base Arch install.
 :::
 
 ---
@@ -101,7 +101,7 @@ I highly recommend using the toolkit (the first icon on the dock) to streamline 
 
 ![XeroLinux Toolkit](../../assets/images/xtoolkit.png)
 
-If updating from an older toolkit version, the dock icon may disappear. Run the following to restore it, then restart the shell with `rshell`:
+Dock icon will disappear after update. Run the following command to restore it, then restart shell with `rshell`:
 
 ```bash
 sed -i.bak \
@@ -249,10 +249,6 @@ find /var/lib/pacman/local/ -type f -name 'desc' -exec sed -i '/^%INSTALLED_DB%$
 ```
 
 Alternatively, use **Pacman DB Fix** in the toolkit under **Servicing/System Tweaks**.
-
-### NetworkManager
-
-If you see a *"Limited Connectivity"* notification show up, it has nothing to do with your connection, but a known `plasma-nm` bug. The only way to get rid of it temporarily, is by ignoring it or just disabling any notifications from it, it's nothing major, just a cosmetic thing. Nothing we can do about that, it's up to Plasma Devs, the ball is in their court now.
 
 ---
 
