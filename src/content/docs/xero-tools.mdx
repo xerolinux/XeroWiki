@@ -40,6 +40,20 @@ Every tool here has been **personally tested on my own system** before being mad
 **Use these tools at your own discretion.** They are provided as-is, and while I stand behind their tested functionality, the underlying code may be AI-assisted.
 :::
 
+## XeroLinux Repo
+
+Some of the tools below are only available on our Repo. In order to install them you will need to add it before proceeding.
+
+![Repo](../../assets/images/repo.png)
+
+Run below command :
+
+```bash
+echo -e '\n[xerolinux]\nSigLevel = Optional TrustAll\nServer = https://repos.xerolinux.xyz/$repo/$arch' | sudo tee -a /etc/pacman.conf
+```
+
+That's basically it, now update database with `sudo pacman -Syyu` and you will notice my repo part of the update.
+
 ## Customization Hub
 
 The **XeroLinux Customization Hub** is a PyQt6-based GUI tool that brings together all XeroLinux themes, rices, scripts, and system tools in one interface. It works on **any Arch-based system**, not just XeroLinux.
@@ -122,7 +136,7 @@ This tool is for the few of you using **Linux/XeroLinux** on a [**Windows Hello*
 
 ### Installation
 
-You need to be on **XeroLinux** to be able to install this. It's only available on our repo, nowhere else !
+You need to have the **XeroLinux** repo enabled to be able to install this.
 
 ```bash
 sudo pacman -S xero-howdy-qt
@@ -155,7 +169,7 @@ EFI Boot Manager GUI is a lightweight desktop app for Linuxhat lets you manage y
 
 ### Installation
 
-You need to be on **XeroLinux** to be able to install this. It's only available on our repo, nowhere else !
+You need to have the **XeroLinux** repo enabled to be able to install this.
 
 ```bash
 sudo pacman -Syy efibootmgrgui
@@ -167,7 +181,7 @@ sudo pacman -Syy efibootmgrgui
 
 ![XeroLinux Php Server GUI](../../assets/images/phpgui.webp)
 
-**phpGUI** is a lightweight desktop app for Linux that lets you spin up a local PHP development server without ever touching a terminal.
+**phpGUI** is a lightweight desktop app that lets you spin up a local PHP development server without ever touching a terminal.
 
 ### Features
 
@@ -179,7 +193,7 @@ sudo pacman -Syy efibootmgrgui
 
 ### Installation
 
-You need to be on **XeroLinux** to be able to install this. It's only available on our repo, nowhere else !
+You need to have the **XeroLinux** repo enabled to be able to install this.
 
 ```bash
 sudo pacman -Syy phpgui
