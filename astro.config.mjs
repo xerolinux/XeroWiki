@@ -20,7 +20,7 @@ export default defineConfig({
 			favicon: '/favicon.ico',
 			customCss: ['./src/styles/custom.css'],
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/XeroLinuxDev' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/XeroLinux' },
 				{ icon: 'youtube', label: 'YouTube', href: 'https://youtube.com/XeroLinuxOfficial' },
 				{ icon: 'x.com', label: 'X', href: 'https://twitter.com/xerolinuxop' },
 				{ icon: 'mastodon', label: 'Mastodon', href: 'https://fosstodon.org/@xerolinux' },
