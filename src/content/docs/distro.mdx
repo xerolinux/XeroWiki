@@ -250,6 +250,22 @@ sudo pacman -Syy linux-firmware-intel
 
 For some reason that driver is getting removed during install, will be addressed in future releases.
 
+### Laptop Sleep
+
+Some users reported an issue with Laptop not sleeping when Lid is closed. To be honest, I gave up on that idea as there are way too many fixes that work for a while then stop, nothing permanent. But if you want to try here's one that has been shared by one of our many users [**h-x-z**](https://gist.github.com/h-x-z) :
+
+> Note : This fix was primarily created for the **IdeaPad 3 14IIL05**. So use **AT YOUR OWN RISK !**
+
+<script src="https://gist.github.com/h-x-z/0d69502d540a40c6bfe99133dcf2058a.js"></script>
+
+**Usage**
+
+Paste the above content to a `lidfix.sh` file, make it executable via `chmod +x lidfix.sh` and run via `./lidfix.sh`.
+
+**Info**
+
+The script will make `ec_sys` module load on boot by default. It will also create a script in `/usr/local/bin` that polls that aforementioned `ec memory` every 0.5s, and create a `systemd service` that runs the above script on boot, then enabled and starts the service.
+
 ### Pacman DB Error
 
 If you encounter `unknown key "%INSTALL_DB%" in local database` during updates:
