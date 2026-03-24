@@ -266,15 +266,43 @@ Paste the above content to a `lidfix.sh` file, make it executable via `chmod +x 
 
 The script will make `ec_sys` module load on boot by default. It will also create a script in `/usr/local/bin` that polls that aforementioned `ec memory` every 0.5s, and create a `systemd service` that runs the above script on boot, then enabled and starts the service.
 
-### Pacman DB Error
+### GTK Apps No Menu
 
-If you encounter `unknown key "%INSTALL_DB%" in local database` during updates:
+Some GTK apps (e.g. Virt-Manager) don't display menus in the Global Menu widget. Setting DBus environment variables before launch fixes this.
+
+**Quick Test**
 
 ```bash
-find /var/lib/pacman/local/ -type f -name 'desc' -exec sed -i '/^%INSTALLED_DB%$/,+2d' {} +
+export $(dbus-launch) && virt-manager
 ```
 
-Alternatively, use **Pacman DB Fix** in the toolkit under **Servicing/System Tweaks**.
+**Permanent Fix (Wrapper Script)**
+
+But let’s be real, we don’t want to open a terminal every time we use KVM. So, let’s create a simple wrapper script.
+
+Create a new script file:
+
+```bash
+sudo nano /usr/local/bin/kvm_wrapper
+```
+
+Add the following lines to the script:
+
+```bash
+#!/bin/sh
+export $(dbus-launch)
+virt-manager "$@"
+```
+
+Make the script executable:
+
+```bash
+sudo chmod +x /usr/local/bin/kvm_wrapper
+```
+
+Then update the app's menu entry via Right-click → Edit Applications, replacing the command with `/usr/local/bin/kvm_wrapper`.
+
+Replace `kvm` with any other affected GTK app as needed.
 
 ---
 
