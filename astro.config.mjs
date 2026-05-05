@@ -31,6 +31,7 @@ export default defineConfig({
 				{ label: '☰ XeroInstall', slug: 'xero-install' },
 				{ label: '✦ XeroLinux Tools', slug: 'xero-tools' },
 				{ label: '❖ The Contributions', slug: 'contributions' },
+				{ label: '◈ Hyprland + Noctalia', slug: 'hypr-noc' },
 				{ label: '⁉ The XeroLinux F.A.Q', slug: 'faq' },
 			],
 		}),
