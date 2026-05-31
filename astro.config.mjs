@@ -11,6 +11,7 @@ export default defineConfig({
 		inlineStylesheets: 'auto',
 	},
 	markdown: {
+		gfm: true,
 		rehypePlugins: [
 			[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
 		],
