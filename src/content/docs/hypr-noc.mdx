@@ -3,6 +3,14 @@ title: XeroLinux's Hyprland + Noctalia
 description: Install Hyprland and Noctalia Shell with ease using the HyprNoc script.
 ---
 
+import { Image } from 'astro:assets';
+import hyprNoc from '../../assets/images/HyprNoc.webp';
+import hyprSvg from '../../assets/images/hypr.svg';
+
+:::caution
+We will not be held responsible for any issues you may encounter using this. It has been thoroughly tested. We do however, accept new ideas and suggestions, so please make sure to join us on the [Community Discord](https://discord.xerolinux.xyz).
+:::
+
 <p style="text-align: center; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem;">Install HyprNoc with ease</p>
 
 <p class="page-tagline" id="hyprnoc-tagline"></p>
@@ -34,11 +42,11 @@ description: Install Hyprland and Noctalia Shell with ease using the HyprNoc scr
 
 ## What's this?
 
-**HyprNoc** is a script that makes it easy to install **[Hyprland](https://wiki.hypr.land)** paired with the **[Noctalia Shell](https://noctalia.dev)** in a completely **Vanilla State** on **XeroLinux** next to **KDE-Plasma**. That means nothing is pre-configured out of the box. No dotfiles, no tweaks, no opinions forced on you. **MINIMAL INSTALL !**
+**HyprNoc** is an option inside the **XeroLinux T.U.I Installer** that installs **[Hyprland](https://wiki.hypr.land)** paired with the **[Noctalia Shell](https://noctalia.dev)** instead of **KDE Plasma**. It comes with a minimal amount of pre-configuration, just enough to give you a solid starting point without getting in your way.
 
-![Noctalia](../../assets/images/Noctalia.png)
+<Image src={hyprNoc} alt="Noctalia Shell on Hyprland" />
 
-What you get is a clean, working foundation. What you do with it is entirely up to you. Configure it from scratch, pull in pre-existing configs, apply community rices, or use bots and setup scripts from the **[Hyprland](https://wiki.hypr.land)** ecosystem. The script does not get in your way.
+The look has been tweaked slightly so things feel put-together from the start, but keybinds, behaviour, and everything under the hood remain stock. No strong opinions baked in. From there it is entirely up to you. Configure it your way, apply a rice, pull in community configs, or use setup bots from the **[Hyprland](https://wiki.hypr.land)** ecosystem.
 
 ---
 
@@ -46,41 +54,38 @@ What you get is a clean, working foundation. What you do with it is entirely up 
 
 Here at **XeroLinux HQ**, we chose **[Hyprland](https://wiki.hypr.land)** because we consider it the most mature and feature-rich Wayland compositor available right now. It has a well-established ecosystem, active development, and solid community support that makes it a strong default choice.
 
-<div class="video-embed">
-  <iframe
-    src="https://www.youtube.com/embed/5OPA2MlUi9Y"
-    allowfullscreen>
-  </iframe>
-</div>
-
-If you prefer to configure **[Hyprland](https://wiki.hypr.land)** via a GUI tool, there is one out there called **[HyprMod](https://github.com/BlueManCZ/hyprmod)**, check video below to see how to get it n use it. Thanks to our good friend **TheBlackDon**.
-
-<div class="video-embed">
-  <iframe
-    src="https://www.youtube.com/embed/tvjYWT2LOMk"
-    allowfullscreen>
-  </iframe>
-</div>
-
-```bash
-yay or paru -S hyprmod
-```
+<Image src={hyprSvg} alt="Hyprland logo" />
 
 That said, it is a choice, not a rule. **[Noctalia Shell](https://noctalia.dev)** is not locked to **[Hyprland](https://wiki.hypr.land)**. If you prefer a different window manager, there are plenty of great options out there to pair it with. Pick what fits your workflow and your taste.
 
 ---
 
-## Installation
+## Hyprlang to LUA
 
-:::caution
-This script is offered as-is, we will not be held responsible for any issues. It's been thoroughly tested on **XeroLinux**. However we do accept new ideas and suggestions on [Community Discord](https://discord.xerolinux.xyz).
+**[Hyprland](https://wiki.hypr.land)** is making a significant move, replacing its old custom **hyprlang** config syntax with **Lua** scripting. The original `k = v` format served its purpose in the early days but grew cluttered and limiting over four years of development. **Lua** brings a cleaner, more readable, and far more capable replacement.
+
+With **Lua** configs you get access to things that were previously plugin-only territory: timers, events, callbacks, layout data, and more, all built directly into your config. It is a proper scripting language, not a workaround.
+
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube.com/embed/8jiGCesJpgo"
+    allowfullscreen>
+  </iframe>
+</div>
+
+:::note
+Existing `hyprland.conf` files keep working as long as no `hyprland.lua` is present. **Hyprland** checks for a Lua config only at startup, so switching between formats requires a restart. Legacy hyprlang support has a grace period of 1 to 2 releases starting from v0.55, after which it will be dropped. New features will only target the **Lua** config going forward. For reference, see the [**official announcement**](https://hypr.land/news/26_lua).
 :::
 
-```bash
-bash <(curl -fsSL https://xerolinux.xyz/script/hyprnoc.sh)
-```
+---
 
-P.S : Using this script installs **[Hyprland](https://wiki.hypr.land)** and **[Noctalia](https://noctalia.dev)** alongside your existing **KDE Plasma** session, which may require resetting certain settings when switching between them. For a smoother experience, we recommend using the **Xero-Install TUI** instead, you can find it on this wiki. **The choice is yours**.
+## Installation
+
+:::danger
+**Noctalia v5 is coming.** The project is moving away from **QuickShell** to a pure **C++** implementation, making it fully independent. When that happens, things on current installs will likely break. We will update the **T.U.I Installer** once v5 is stable, but fixing existing installs is on you. Follow the [**Noctalia v5 Wiki**](https://docs.noctalia.dev/v5/) when the time comes.
+:::
+
+**[Hyprland](https://wiki.hypr.land)** + **[Noctalia Shell](https://noctalia.dev)** is available as a built-in option inside the **XeroLinux T.U.I Installer**. When going through setup, you will be presented with a choice of desktop environment. Simply select it from the menu and the installer handles the rest. No extra scripts, no manual steps. Boot in, make your pick, and walk away with a working setup.
 
 ---
 

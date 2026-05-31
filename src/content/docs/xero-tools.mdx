@@ -8,21 +8,26 @@ import EFIBootGUIMain from '../../assets/images/EFIBootGUIMain.webp';
 import EFIBootGUIAbout from '../../assets/images/EFIBootGUIAbout.webp';
 import SCXTool from '../../assets/images/scx-tool.webp';
 import SCXTool2 from '../../assets/images/scx-tool2.webp';
+import xeroTool from '../../assets/images/xero-tool.webp';
+import howdyQt from '../../assets/images/HowdyQt.webp';
+import wallsGui from '../../assets/images/walls-gui.webp';
+import phpGui from '../../assets/images/phpgui.webp';
+import plymouthDelay from '../../assets/images/Delay.png';
 
 <p class="page-tagline" id="tool-tagline"></p>
 
 <script>{`
 (function() {
   const taglines = [
-    'Your desktop, your rules — we just provide the <code>toolkit</code>.',
+    'Your desktop, your rules, we just provide the <code>toolkit</code>.',
     'Point. Click. Rice. No <code>config</code> files harmed.',
     'Because editing <code>dotfiles</code> at 3am gets old.',
     'A GUI for the ricing that used to take a <code>git clone</code>.',
     'All the customization, none of the <code>dependency</code> rabbit holes.',
     'Making <code>r/unixporn</code> submissions effortless since day one.',
-    'Themes, scripts, and tools — all behind one <code>icon</code>.',
+    'Themes, scripts, and tools, all behind one <code>icon</code>.',
     'Rice responsibly. Or don\\u0027t. We won\\u0027t <code>judge</code>.',
-    'PyQt6-powered — because even tools deserve to look <code>good</code>.',
+    'PyQt6-powered, because even tools deserve to look <code>good</code>.',
     'One hub to customize them all, one hub to <code>theme</code> them.',
     'From stock to stunning in fewer <code>clicks</code> than you\\u0027d think.',
     'The <code>Swiss Army knife</code> of Linux desktop customization.',
@@ -35,36 +40,22 @@ import SCXTool2 from '../../assets/images/scx-tool2.webp';
 :::tip[AI Transparency Statement]
 The tools available on this page may have been **fully or partially developed with the assistance of generative AI**. As a distro maintainer rather than a developer, I sometimes rely on AI to help write Bash scripts and small Linux utilities that would otherwise be beyond my skill set.
 
-Every tool here has been **personally tested on my own system** before being made available. I do not share anything I haven't run myself. That said, I may not fully understand every line of code internally — and I think it's only fair you know that before using anything here.
+Every tool here has been **personally tested on my own system** before being made available. I do not share anything I haven't run myself. That said, I may not fully understand every line of code internally, and I think it's only fair you know that before using anything here.
 
 **Use these tools at your own discretion.** They are provided as-is, and while I stand behind their tested functionality, the underlying code may be AI-assisted.
 :::
-
-## XeroLinux Repo
-
-Some of the tools below are only available on our Repo. In order to install them you will need to add it before proceeding.
-
-![Repo](../../assets/images/repo.png)
-
-Run below command :
-
-```bash
-echo -e '\n[xerolinux]\nSigLevel = Optional TrustAll\nServer = https://repos.xerolinux.xyz/$repo/$arch' | sudo tee -a /etc/pacman.conf
-```
-
-That's basically it, now update database with `sudo pacman -Syyu` and you will notice my repo part of the update.
 
 ## Customization Hub
 
 The **XeroLinux Customization Hub** is a PyQt6-based GUI tool that brings together all XeroLinux themes, rices, scripts, and system tools in one interface. It works on **any Arch-based system**, not just XeroLinux.
 
-![XeroLinux Customization Hub](../../assets/images/xero-tool.webp)
+<Image src={xeroTool} alt="XeroLinux Customization Hub" />
 
 ### Features
 
-- **Desktop Rices** — Pre-configured desktop themes and layouts
-- **GRUB Themes** — 8 bootloader themes
-- **Scripts & Tools** — System utilities and configuration scripts
+- **Desktop Rices**: Pre-configured desktop themes and layouts
+- **GRUB Themes**: 8 bootloader themes
+- **Scripts & Tools**: System utilities and configuration scripts
 
 ---
 
@@ -123,7 +114,7 @@ curl -fsSL https://urls.xerolinux.xyz/SCXTool | python3
 
 This tool is for the few of you using **Linux/XeroLinux** on a [**Windows Hello**](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/windows-hello-face-authentication) supported device or Laptop. It's a G.U.I front-end for a C.L.I tool called [**Howdy**](https://github.com/boltgolt/howdy). I worked hard on it, and it was improved upon by [**Marco-M**](https://github.com/morettimarco) a contributor to the project.
 
-![XeroLinux Howdy-Wt](../../assets/images/HowdyQt.webp)
+<Image src={howdyQt} alt="XeroLinux Howdy-Qt" />
 
 ### Features
 
@@ -136,10 +127,11 @@ This tool is for the few of you using **Linux/XeroLinux** on a [**Windows Hello*
 
 ### Installation
 
-You need to have the **XeroLinux** repo enabled to be able to install this.
+Any Arch-based Distro. You need to subscribe to repo on [**Github**](https://github.com/xerolinux/xero-howdy-qt) follow it for updates.
 
 ```bash
-sudo pacman -S xero-howdy-qt
+git clone https://github.com/xerolinux/xero-howdy-qt
+cd xero-howdy-qt/Packaging/ && makepkg -si
 ```
 
 > For **SDDM/PLM**, hit enter on empty password field first, same goes for the Lock Screen. Then it'll work.
@@ -169,17 +161,18 @@ EFI Boot Manager GUI is a lightweight desktop app for Linuxhat lets you manage y
 
 ### Installation
 
-You need to have the **XeroLinux** repo enabled to be able to install this.
+Any Arch-based Distro. You need to subscribe to repo on [**Github**](https://github.com/xerolinux/EfiBootGUI) follow it for updates.
 
 ```bash
-sudo pacman -Syy efibootmgrgui
+git clone https://github.com/xerolinux/EfiBootGUI
+cd EfiBootGUI/ && makepkg -si
 ```
 
 ---
 
 ## Wallpaper Browser GUI
 
-![XeroLinux Walls GUI](../../assets/images/walls-gui.webp)
+<Image src={wallsGui} alt="XeroLinux Walls GUI" />
 
 Browse, preview and download wallpapers & live wallpapers from multiple online sources, all from one app.
 
@@ -198,17 +191,18 @@ Browse, preview and download wallpapers & live wallpapers from multiple online s
 
 ### Installation
 
-You need to have the **XeroLinux** repo enabled to be able to install this.
+Any Arch-based Distro. You need to subscribe to repo on [**Github**](https://github.com/xerolinux/xero-wallpapers-gui) follow it for updates.
 
 ```bash
-sudo pacman -Syy xero-wallpaper-browser
+git clone https://github.com/xerolinux/xero-wallpapers-gui
+cd xero-wallpapers-gui/ && makepkg -si
 ```
 
 ---
 
 ## PHP Server GUI
 
-![XeroLinux Php Server GUI](../../assets/images/phpgui.webp)
+<Image src={phpGui} alt="XeroLinux PHP Server GUI" />
 
 **phpGUI** is a lightweight desktop app that lets you spin up a local PHP development server without ever touching a terminal.
 
@@ -222,10 +216,11 @@ sudo pacman -Syy xero-wallpaper-browser
 
 ### Installation
 
-You need to have the **XeroLinux** repo enabled to be able to install this.
+Any Arch-based Distro. You need to subscribe to repo on [**Github**](https://github.com/xerolinux/phpgui) follow it for updates.
 
 ```bash
-sudo pacman -Syy phpgui
+git clone https://github.com/xerolinux/phpgui
+cd phpgui/packaging/ && makepkg -si
 ```
 
 ---
@@ -247,7 +242,7 @@ Add this content:
 ExecStartPre=/usr/bin/sleep 6
 ```
 
-![Plymouth Delay Config](../../assets/images/Delay.png)
+<Image src={plymouthDelay} alt="Plymouth Delay Config" />
 
 Adjust the `6` (seconds) to suit your hardware. Apply with:
 

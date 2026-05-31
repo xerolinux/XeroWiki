@@ -1,0 +1,290 @@
+---
+title: XeroLinux Package Manager
+description: A native GUI package manager for XeroLinux. Manage pacman and Flatpak from one clean interface.
+---
+
+import { Image } from 'astro:assets';
+import home from '../../assets/images/xPMShots/1-Home.png';
+import flatpaks from '../../assets/images/xPMShots/2-Flatpaks.png';
+import flatpaks2 from '../../assets/images/xPMShots/3-Flatpaks2.png';
+import native from '../../assets/images/xPMShots/4-Native.png';
+import installed from '../../assets/images/xPMShots/5-Installed.png';
+import tree from '../../assets/images/xPMShots/6-Tree.png';
+import news from '../../assets/images/xPMShots/7-News.png';
+import troubleshooting from '../../assets/images/xPMShots/8-Troubleshooting.png';
+import settings from '../../assets/images/xPMShots/9-Settings.png';
+
+<p class="page-tagline" id="xpm-tagline"></p>
+
+<script>{`
+(function() {
+  const taglines = [
+    'Because <code>pacman -Syu</code> deserves a face.',
+    'pacman + Flatpak. One window. Zero excuses.',
+    'Managing packages should not require a <code>man</code> page.',
+    'Built in Rust. No Electron. No regrets.',
+    'Your repos, your rules. A GUI that actually works.',
+    'Arch Linux package management, finally civilised.',
+    'From Flathub to <code>core</code>, all in one place.',
+  ];
+  const el = document.getElementById("xpm-tagline");
+  if (el) el.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
+})();
+`}</script>
+
+
+After months of development, **xPackageManager** is ready. A native graphical package manager built specifically for **XeroLinux** and Arch Linux users. No more juggling terminal windows, no more remembering pacman flags, no more switching between tools for pacman and Flatpak. Everything lives in one fast, clean application.
+
+---
+
+<div class="stat-pills">
+  <span class="stat-pill"><span class="pill-icon">⊞</span><span class="pill-value">2</span><span class="pill-label">Package Ecosystems</span></span>
+  <span class="stat-pill"><span class="pill-icon">✦</span><span class="pill-value">8</span><span class="pill-label">Repair Tools</span></span>
+  <span class="stat-pill"><span class="pill-icon">◎</span><span class="pill-value">14</span><span class="pill-label">Languages</span></span>
+  <span class="stat-pill"><span class="pill-icon">◆</span><span class="pill-value">Rust</span><span class="pill-label">No Electron</span></span>
+</div>
+
+---
+
+## Why Another Package Manager GUI?
+
+Existing tools are either abandoned, ugly, slow, or only handle one package ecosystem. **xPackageManager** handles **pacman packages and Flatpaks in the same window**, ships with built-in system repair tools, shows live Arch news, and visualises dependency trees, all while feeling like a native KDE application.
+
+Built in **Rust** with the **Slint** UI toolkit. No Electron, no Python overhead. A lean binary that starts in under a second.
+
+<div class="feature-grid">
+
+<div class="faq-card">
+<h3>pacman + Flatpak</h3>
+<p>Both ecosystems managed from one window. Install, remove, and update without switching tools.</p>
+</div>
+
+<div class="faq-card">
+<h3>Built in Rust</h3>
+<p>No Electron, no Python. Slint UI toolkit. Starts in under a second, stays lean under load.</p>
+</div>
+
+<div class="faq-card">
+<h3>Dependency Trees</h3>
+<p>Full interactive dep graphs for any package. Installed, missing, and optional nodes colour-coded.</p>
+</div>
+
+<div class="faq-card">
+<h3>System Repair</h3>
+<p>8 built-in tools for common Arch problems. Each shows the exact command it runs.</p>
+</div>
+
+<div class="faq-card">
+<h3>Live Arch News</h3>
+<p>Pulls the latest announcements from archlinux.org inline. Read before you upgrade.</p>
+</div>
+
+<div class="faq-card">
+<h3>14 Languages</h3>
+<p>Czech, German, Spanish, French, Italian, Japanese, Korean, Dutch, Polish, Portuguese, Russian, Swedish, Turkish, and Simplified Chinese.</p>
+</div>
+
+</div>
+
+---
+
+## Why No AUR Support?
+
+**xPackageManager** intentionally leaves out AUR support, and there are good reasons for that.
+
+First, **compatibility**. The AUR is a collection of user-submitted build scripts. Quality and reliability vary wildly. Integrating it into a GUI adds a layer of risk that is hard to control and even harder to debug when things go wrong.
+
+Second, **Chaotic-AUR**. **XeroLinux** ships with [**Chaotic-AUR**](https://aur.chaotic.cx/) pre-configured in the repo manager. It provides pre-built binaries for thousands of the most popular AUR packages, so in most cases you already have access to what you need through standard pacman. No extra tooling required.
+
+Third, the AUR is designed for **advanced users** who are willing to read and understand a `PKGBUILD` before running it. It is not a one-click app store. If you do not know what a `PKGBUILD` is, the AUR is probably not the right tool for you.
+
+That said, if you want to use the AUR on **XeroLinux**, the terminal is the right place for it:
+
+```bash
+paru packagename
+```
+
+---
+
+## A Tour of Every Section
+
+<h3 class="centered">~ Click any screenshot to preview ~</h3>
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={home.src}>
+  <Image src={home} alt="Home screen showing system overview, quick actions and recent activity" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Home: Your System at a Glance</h3>
+<p>The home screen gives you everything at once:</p>
+<ul>
+<li><strong>System Overview:</strong> total pacman packages, Flatpak apps, orphans, and pending updates</li>
+<li><strong>Quick Actions:</strong> Check for Updates, Clean Cache, Update Mirrorlists, one click each</li>
+<li><strong>System Info:</strong> hostname, OS, kernel, CPU, GPU, RAM, disk, and uptime</li>
+<li><strong>Recent Activity:</strong> live log of every install, upgrade, and removal</li>
+</ul>
+</div>
+</div>
+
+<div class="tour-grid">
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={flatpaks.src}>
+  <Image src={flatpaks} alt="Flatpak browser with category filters and app list" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Flatpaks: Browse Flathub</h3>
+<p>Explore all of Flathub without leaving the app. Filter by category or search by name. Installing takes one click.</p>
+</div>
+</div>
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={flatpaks2.src}>
+  <Image src={flatpaks2} alt="Flatpak detail view showing app description and install button" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>App Detail View</h3>
+<p>Full description, screenshots, version history, and an Install or Remove button. Add-ons and extensions listed separately.</p>
+</div>
+</div>
+
+</div>
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={native.src}>
+  <Image src={native} alt="Package browser showing core, extra, multilib, chaotic-aur repositories" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Packages: Browse Every Arch Repository</h3>
+<p>Every enabled repository is one tab away: <code>core</code>, <code>extra</code>, <code>multilib</code>, <code>chaotic-aur</code>, <code>xerolinux</code>, with search across all of them at once. Each row shows the package name, version, repository badge, and a direct Install or Remove action. No need to remember which repo a package lives in.</p>
+</div>
+</div>
+
+<div class="tour-grid">
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={installed.src}>
+  <Image src={installed} alt="Installed packages list with Explicit badges and action buttons" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Installed Packages</h3>
+<p>Every package on your system with version, repository, and whether it was installed <strong>explicitly</strong> or pulled in as a dependency. Tree, Downgrade, and Remove actions per row.</p>
+</div>
+</div>
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={tree.src}>
+  <Image src={tree} alt="Dependency tree view showing installed, missing and optional deps" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Dependency Tree</h3>
+<p>Full interactive dependency graph for any package. <strong>Depends On</strong> and <strong>Required By</strong> tabs, colour-coded as installed (green), missing (red), or optional (orange) with version numbers on every node. No more parsing <code>pactree</code> output in a terminal.</p>
+</div>
+</div>
+
+</div>
+
+<div class="tour-grid">
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={news.src}>
+  <Image src={news} alt="Arch News feed showing latest announcements from archlinux.org" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Arch News</h3>
+<p>Latest announcements from <strong>archlinux.org</strong> displayed inline. Arch sometimes requires manual steps before upgrading. Read the news first, then upgrade.</p>
+</div>
+</div>
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={troubleshooting.src}>
+  <Image src={troubleshooting} alt="Troubleshooting page showing repair tool cards" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Troubleshooting</h3>
+<p>Eight repair tools for the most common Arch problems. Each one shows the exact command it runs before doing anything.</p>
+</div>
+</div>
+
+</div>
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={settings.src}>
+  <Image src={settings} alt="Settings page showing general options, repo manager, firmware updates and about section" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Settings and Tweaks</h3>
+<p>Fine-tune everything you would normally edit by hand in <code>pacman.conf</code>: Flatpak support, cache cleanup, parallel downloads, HoldPkg, repo manager, firmware updates via <code>fwupdmgr</code>, and more. The About section links directly to GitHub, Ko-Fi, and the XeroLinux Discord.</p>
+</div>
+</div>
+
+---
+
+## Troubleshooting Tools
+
+| Tool | What it does |
+|---|---|
+| **Rebuild InitRamFS** | Regenerates initramfs images via `mkinitcpio` |
+| **Fix GnuPG Keyring** | Resets and repopulates pacman keys |
+| **Rebuild GRUB** | Regenerates GRUB bootloader config |
+| **Orphan Manager** | Reviews and removes orphaned packages |
+| **Export Package List** | Saves all explicit packages to a file |
+| **Import Package List** | Reinstalls from an exported list |
+| **Unlock Database** | Removes stale pacman DB lock file |
+| **IgnorePkg** | Manages packages excluded from upgrades |
+
+---
+
+## Getting It
+
+**xPackageManager** is available via the XeroLinux repository. If you are already on **XeroLinux**, install it with:
+
+<div class="wiki-terminal">
+  <div class="wiki-terminal-bar">
+    <span class="wiki-terminal-dot red"></span>
+    <span class="wiki-terminal-dot yellow"></span>
+    <span class="wiki-terminal-dot green"></span>
+    <span class="wiki-terminal-title">terminal</span>
+  </div>
+  <div class="wiki-terminal-body">
+    <p><span class="prompt">$</span> <span class="cmd">sudo pacman -Syy xpm-gui</span></p>
+  </div>
+</div>
+
+Or build from source:
+
+```bash
+git clone https://github.com/xerolinux/xPackageManager
+cd xPackageManager/packaging && makepkg -rsifcd
+```
+
+To update:
+
+```bash
+cd xPackageManager/ && git pull
+cd packaging/ && makepkg -rsifcd
+```
+
+:::note
+Requirements: Rust 1.75+, pacman. Flatpak support is optional and can be toggled inside Settings.
+:::
+
+Bug reports and feature requests live on [**GitHub**](https://github.com/xerolinux/xPackageManager). If **xPackageManager** saves you time, consider supporting development on [**Ko-Fi**](https://ko-fi.com/xerolinux), it goes directly toward keeping **XeroLinux** and its tools alive.

@@ -13,16 +13,16 @@ import encrypt from '../../assets/images/Encrypt.png';
 (function() {
   const taglines = [
     'One script to rule them all, one script to <code>bind</code> them.',
-    'From bare Arch to full desktop — just add <code>bash</code>.',
+    'From bare Arch to full desktop, just add <code>bash</code>.',
     '<code>curl | bash</code> but the kind you actually trust.',
-    'Because manual installs build character — and gray hair.',
+    'Because manual installs build character, and gray hair.',
     'Skip the 47-step wiki guide. We wrote a <code>script</code>.',
     'Turns <code>archinstall</code> survivors into XeroLinux enjoyers.',
     'Your base Arch just got a serious <code>upgrade</code>.',
     'Why spend a weekend when you can spend a <code>command</code>?',
     'The installer that makes <code>chroot</code> a distant memory.',
     'Automated, tested, and zero <code>PKGBUILD</code> drama.',
-    'From <code>tty1</code> to a full desktop — hold our beer.',
+    'From <code>tty1</code> to a full desktop, hold our beer.',
     'Installation so smooth it should require a <code>--confirm</code>.',
   ];
   const el = document.getElementById("install-tagline");
@@ -30,7 +30,7 @@ import encrypt from '../../assets/images/Encrypt.png';
 })();
 `}</script>
 
-The **XeroLinux Installer** transforms a base Arch Linux installation into a complete XeroLinux KDE Plasma desktop. The end result is identical to the official [**ISO**](/distro/) — same packages, themes, and configuration.
+The **XeroLinux Installer** transforms a base Arch Linux installation into a complete XeroLinux KDE Plasma desktop. The end result is identical to the official [**ISO**](/distro/): same packages, themes, and configuration.
 
 :::caution
 Be very careful with manual Partitioning, know what you are doing. **Use at your own risk.** Source code: [**GitHub**](https://github.com/xerolinux/XeroHub/tree/main/public/script/xero-install)
@@ -57,7 +57,7 @@ bash <(curl -fsSL https://urls.xerolinux.xyz/xeroinstall)
 
 ## Installation Walkthrough
 
-### Phase 1 — Base System
+### Phase 1: Base System
 
 The first phase sets up the core system on bare metal:
 
@@ -71,9 +71,9 @@ The first phase sets up the core system on bare metal:
 | **Username & Password** | Create your account |
 | **iGPU/dGPU Drivers** | Automatic or manual selection |
 
-### Phase 2 — Extra Software
+### Phase 2: Extra Software
 
-After rebooting, the KDE installer runs automatically. All categories are optional — skip anything you don't need:
+After rebooting, the KDE installer runs automatically. All categories are optional, skip anything you don't need:
 
 | Category | Options |
 |----------|---------|
@@ -118,6 +118,6 @@ Yes. The scripts detect virtual environments and install appropriate guest tools
 | **v1.5** | Larger boot partition, trimmed package list, simplified connectivity check |
 | **v1.4** | All package prompts merged into one screen, leaner default selection |
 | **v1.3** | LUKS2 encryption, choose root-only or root+boot encryption scope |
-| **v1.0** | Initial release — BTRFS, LUKS, GPU drivers, ZRAM |
+| **v1.0** | Initial release: BTRFS, LUKS, GPU drivers, ZRAM |
 
 ---

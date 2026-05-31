@@ -3,6 +3,9 @@
    =========================== */
 html {
 	scrollbar-gutter: stable;
+	background: #0f0f1e;
+	scrollbar-color: #2e2a38 #0f0f1e;
+	scrollbar-width: thin;
 }
 
 :root {
@@ -58,6 +61,7 @@ starlight-theme-select {
 header.header {
 	background: #0f0f1e !important;
 	border-bottom: 1px solid #2a1848 !important;
+	width: 100vw !important;
 }
 
 /* Site title in nav */
@@ -71,7 +75,7 @@ header.header {
    =========================== */
 .sidebar-pane {
 	background: #16162a;
-	--sl-sidebar-width: 14rem;
+	--sl-sidebar-width: 15rem;
 }
 
 nav.sidebar a {
@@ -206,7 +210,7 @@ nav.sidebar a[aria-current='true'] {
 
 /* Content fills available space, balanced sidebars */
 :root {
-	--sl-sidebar-width: 14rem;
+	--sl-sidebar-width: 15rem;
 }
 
 @media (min-width: 72rem) {
@@ -235,6 +239,13 @@ nav.sidebar a[aria-current='true'] {
 	border-radius: 0.75rem;
 	border: 1px solid #2e2a38;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(168, 106, 232, 0.08);
+	cursor: zoom-in;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sl-markdown-content img:hover {
+	border-color: #a86ae8;
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5), 0 0 18px rgba(168, 106, 232, 0.2);
 }
 
 @media (min-width: 1600px) {
@@ -431,6 +442,11 @@ nav.sidebar a[aria-current='true'] {
 	}
 }
 
+/* Remove dangling separator — theme select is hidden so ::after line has nothing to separate */
+.social-icons::after {
+	display: none !important;
+}
+
 /* Reduce space above page titles */
 :not([data-has-hero]) .main-pane {
 	padding-top: 0 !important;
@@ -474,7 +490,7 @@ a[data-edit-url] {
 	}
 
 	.wiki-terminal {
-		font-size: 0.65rem;
+		font-size: 0.75rem;
 		margin: 1.5rem auto;
 	}
 
@@ -693,9 +709,231 @@ a[data-edit-url] {
 	color: #e8d5ff;
 }
 
+/* ===========================
+   Feature highlight grid
+   =========================== */
+.feature-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	margin: 1.5rem 0;
+	align-items: stretch;
+}
+
+@media (max-width: 900px) {
+	.feature-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.feature-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.feature-grid > .faq-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin: 0;
+}
+
+.feature-grid > .faq-card p {
+	flex: 1;
+}
+
+
+/* ===========================
+   Stat bar — key numbers
+   =========================== */
+.stat-pills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75rem;
+	margin: 1.5rem 0;
+}
+
+.stat-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: #12121f;
+	border: 1px solid #2e2a38;
+	border-radius: 2rem;
+	padding: 0.5rem 1.25rem;
+	white-space: nowrap;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 6px rgba(168, 106, 232, 0.06);
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-pill:hover {
+	border-color: #a86ae8;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 0 10px rgba(168, 106, 232, 0.18);
+}
+
+.stat-pill .pill-icon {
+	font-size: 1rem;
+	color: #a86ae8;
+}
+
+.stat-pill .pill-value {
+	font-size: 1rem;
+	font-weight: 700;
+	color: #a86ae8;
+}
+
+.stat-pill .pill-label {
+	font-size: 0.8rem;
+	color: #8b8592;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+
+/* ===========================
+   Section tour card
+   =========================== */
+.tour-card {
+	background: #12121f;
+	border: 1px solid #2e2a38;
+	border-radius: 0.75rem;
+	overflow: hidden;
+	margin: 1.5rem 0;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 8px rgba(168, 106, 232, 0.06);
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tour-card:hover {
+	border-color: #3a3548;
+	box-shadow: 0 6px 28px rgba(0, 0, 0, 0.5), 0 0 14px rgba(168, 106, 232, 0.12);
+}
+
+.tour-card-img a {
+	display: block;
+	cursor: zoom-in;
+	text-decoration: none !important;
+}
+
+.tour-card-img img {
+	display: block !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0 !important;
+	border-radius: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	transition: opacity 0.2s ease;
+}
+
+.tour-card-img a:hover img {
+	opacity: 0.9;
+}
+
+.tour-card-body {
+	padding: 1.25rem 1.5rem;
+	border-top: 1px solid #2e2a38;
+}
+
+.tour-card-body h3 {
+	color: #e8d5ff !important;
+	font-size: 1rem !important;
+	margin: 0 0 0.6rem !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none !important;
+	text-align: left !important;
+}
+
+.tour-card-body p,
+.tour-card-body ul {
+	color: #c2bcc8;
+	font-size: 0.9rem;
+	line-height: 1.65;
+	margin: 0.4rem 0 0 !important;
+	text-align: left !important;
+}
+
+.tour-card-body ul {
+	padding-left: 1.5rem;
+}
+
+.tour-card-body li {
+	margin: 0.2rem 0;
+}
+
+.tour-card-body strong {
+	color: #e0dce6;
+}
+
+/* ===========================
+   Two-column tour grid
+   =========================== */
+.tour-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin: 1.5rem 0;
+}
+
+@media (max-width: 800px) {
+	.tour-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
 /* Code blocks — slightly different bg */
 .sl-markdown-content pre {
 	background: #12121f !important;
 	border: 1px solid #2e2a38;
 	border-radius: 0.5rem;
+}
+
+/* ===========================
+   Mobile optimizations (max 430px)
+   =========================== */
+@media (max-width: 430px) {
+
+	/* Tables: scroll horizontally instead of clipping */
+	.sl-markdown-content table {
+		display: block;
+		overflow-x: auto;
+		border-radius: 0;
+	}
+
+	/* Table header font below 14px — bump up */
+	.sl-markdown-content th {
+		font-size: 0.875rem;
+	}
+
+	/* faq-card padding reduced ~40% */
+	.faq-card h3 {
+		padding: 0.65rem 1rem;
+	}
+
+	.faq-card p,
+	.faq-card ul {
+		padding: 0.65rem 1rem;
+	}
+
+	/* tour-card-body padding reduced */
+	.tour-card-body {
+		padding: 0.85rem 1rem;
+	}
+
+	/* contrib-callout padding reduced */
+	.contrib-callout {
+		padding: 1rem 1.25rem;
+	}
+
+	/* stat-pills: single column on very small screens */
+	.stat-pills {
+		gap: 0.5rem;
+	}
+
+	/* page tagline readable size */
+	.page-tagline {
+		font-size: 0.95rem;
+	}
 }

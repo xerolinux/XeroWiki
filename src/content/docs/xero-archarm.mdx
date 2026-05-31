@@ -1,0 +1,183 @@
+---
+title: Xero's Arch ARM Flasher
+description: A graphical wizard for flashing Arch Linux ARM to Raspberry Pi 4/400 with your configuration baked in before first boot.
+---
+
+import { Image } from 'astro:assets';
+import screenshot from '../../assets/images/XeroArchArm.png';
+
+<p class="page-tagline" id="archarm-tagline"></p>
+
+<script>{`
+(function() {
+  const taglines = [
+    'Arch Linux ARM on a Pi. No post-boot tinkering.',
+    'Flash, configure, boot. In that order.',
+    'Your Pi deserves better than a vanilla image.',
+    'Username, WiFi, packages. Baked in before first boot.',
+    'Raspberry Pi 4 running Arch. Properly.',
+    'A headless server setup that does not require a second SSH session.',
+  ];
+  const el = document.getElementById("archarm-tagline");
+  if (el) el.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
+})();
+`}</script>
+
+So you want **Arch Linux ARM** on a Raspberry Pi 4 without spending an hour doing post-install setup over SSH. That is exactly what this tool is for.
+
+**XeroArchArm** is a simple GUI that takes an official Arch ARM tarball, lets you set your username, password, hostname, WiFi, and packages, then writes everything to your SD card or USB drive ready to go. Boot the Pi, it does its thing, reboots, and you are dropped into a clean headless server. No fiddling, no second SSH session to finish what the flasher started.
+
+---
+
+<div class="stat-pills" style="display:grid;grid-template-columns:repeat(2,auto);justify-content:center;">
+  <span class="stat-pill"><span class="pill-icon">◎</span><span class="pill-value">Pi 4/400</span><span class="pill-label">Target Hardware</span></span>
+  <span class="stat-pill"><span class="pill-icon">✦</span><span class="pill-value">50+</span><span class="pill-label">Curated Packages</span></span>
+  <span class="stat-pill"><span class="pill-icon">⊞</span><span class="pill-value">PySide6</span><span class="pill-label">Native GUI</span></span>
+  <span class="stat-pill"><span class="pill-icon">◆</span><span class="pill-value">GPL v3</span><span class="pill-label">Open Source</span></span>
+</div>
+
+---
+
+<div style="text-align:center;margin:1.5rem 0;">
+  <a href={screenshot.src} style="cursor:zoom-in;display:inline-block;">
+    <Image src={screenshot} alt="XeroPi4 Arch ARM Flasher home screen showing flash mode selection and download options" style="border-radius:0.5rem;max-width:100%;" />
+  </a>
+</div>
+
+---
+
+## Features
+
+<div class="feature-grid">
+
+<div class="faq-card">
+<h3>Baked Configuration</h3>
+<p>Username, password, hostname, SSH key, WiFi credentials, and static IP for both WiFi and Ethernet. All set before first boot.</p>
+</div>
+
+<div class="faq-card">
+<h3>First-Boot Package Installer</h3>
+<p>Installs your selected packages via pacman on first boot, then self-removes. Your Pi comes up fully loaded.</p>
+</div>
+
+<div class="faq-card">
+<h3>Flash Verification</h3>
+<p>Confirms BOOT and ROOT partition labels after writing. If something is wrong, you know before you plug in the Pi.</p>
+</div>
+
+<div class="faq-card">
+<h3>Quiet Boot</h3>
+<p>Suppresses kernel console spam on HDMI for a clean login prompt instead of a wall of boot text.</p>
+</div>
+
+<div class="faq-card">
+<h3>Pi 4 Tuned</h3>
+<p>Correct keyring, pacman tweaks, mkinitcpio hooks, and U-Boot boot args configured specifically for Pi 4/400.</p>
+</div>
+
+<div class="faq-card">
+<h3>Static Networking</h3>
+<p>Independent static IP profiles for Ethernet and WiFi via NetworkManager. Set it and forget it.</p>
+</div>
+
+</div>
+
+---
+
+## How It Works
+
+It is a wizard, so you just follow the steps:
+
+1. Pick your **Arch Linux ARM** tarball, or let it download the latest one for you
+2. Choose where to write it: SD card, USB drive, or NVMe in an enclosure
+3. Fill in your username, password, hostname, network config, and which packages you want
+4. Hit **Flash** and walk away. It writes, configures, and verifies the image
+5. First boot, the Pi installs your packages, then reboots clean. You SSH in and everything is there
+
+---
+
+## Package Categories
+
+| Category | Examples |
+|---|---|
+| **Server Core** | openssh, networkmanager, docker, fail2ban, sudo |
+| **Monitoring** | btop, glances, smartmontools, iotop, nethogs |
+| **Network Tools** | nmap, tcpdump, mtr, bind-tools, iperf3 |
+| **VPN & Tunneling** | tailscale, wireguard-tools, openvpn |
+| **File Sharing** | samba, nfs-utils, rclone |
+| **Security** | ufw, lynis, rkhunter, aide, nftables |
+| **Web & Proxy** | nginx, caddy, haproxy |
+| **Databases** | mariadb, postgresql, redis, sqlite |
+| **Homelab** | mosquitto, grafana, prometheus, node_exporter |
+| **Utilities** | fzf, bat, ripgrep, jq, fd |
+
+---
+
+## Requirements
+
+You need to be running **Arch Linux** on the machine doing the flashing, since the tool relies on pacman to pull in what it needs. Beyond that:
+
+- `python` `python-pyside6` `libarchive` `uboot-tools` `polkit`
+- The official Arch Linux ARM tarball for RPi 4 from [**archlinuxarm.org**](https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4) (or just let the tool grab it)
+
+---
+
+## Running the Tool
+
+No installation needed. Just run this from your terminal:
+
+<div class="wiki-terminal">
+  <div class="wiki-terminal-bar">
+    <span class="wiki-terminal-dot red"></span>
+    <span class="wiki-terminal-dot yellow"></span>
+    <span class="wiki-terminal-dot green"></span>
+    <span class="wiki-terminal-title">terminal</span>
+  </div>
+  <div class="wiki-terminal-body">
+    <p><span class="prompt">$</span> <span class="cmd">curl -fsSL https://urls.xerolinux.xyz/XeroArchArm | bash</span></p>
+  </div>
+</div>
+
+That one command grabs the latest version, sets up the polkit policy so it can write to block devices, and launches the tool. Run it again any time to update.
+
+---
+
+## Connecting to Your Pi
+
+First boot takes a bit longer than usual because the Pi is installing your selected packages in the background. Give it a minute or two, then it reboots on its own. After that it is ready.
+
+If you set a **static IP** during setup, SSH straight to it:
+
+<div class="wiki-terminal">
+  <div class="wiki-terminal-bar">
+    <span class="wiki-terminal-dot red"></span>
+    <span class="wiki-terminal-dot yellow"></span>
+    <span class="wiki-terminal-dot green"></span>
+    <span class="wiki-terminal-title">terminal</span>
+  </div>
+  <div class="wiki-terminal-body">
+    <p><span class="prompt">$</span> <span class="cmd">ssh yourusername@192.168.x.x</span></p>
+  </div>
+</div>
+
+On **DHCP**, try the hostname you set followed by `.local` (mDNS resolves it on most home networks):
+
+<div class="wiki-terminal">
+  <div class="wiki-terminal-bar">
+    <span class="wiki-terminal-dot red"></span>
+    <span class="wiki-terminal-dot yellow"></span>
+    <span class="wiki-terminal-dot green"></span>
+    <span class="wiki-terminal-title">terminal</span>
+  </div>
+  <div class="wiki-terminal-body">
+    <p><span class="prompt">$</span> <span class="cmd">ssh yourusername@yourhostname.local</span></p>
+  </div>
+</div>
+
+If neither works, log into your router and find the Pi in the DHCP lease list to get its IP.
+
+:::tip
+Use `ssh-copy-id yourusername@yourpi` from your host to push your SSH key over. After that you will never need to type a password again.
+:::
+
+Bug reports and feature requests live on [**GitHub**](https://github.com/xerolinux/XeroArchArm). If **XeroArchArm** saves you time, consider supporting development via our [**Ko-Fi**](https://ko-fi.com/xerolinux). It goes directly toward keeping **XeroLinux** and its tools alive.

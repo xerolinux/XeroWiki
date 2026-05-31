@@ -6,6 +6,10 @@ import rehypeExternalLinks from 'rehype-external-links';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://wiki.xerolinux.xyz',
+	compressHTML: true,
+	build: {
+		inlineStylesheets: 'auto',
+	},
 	markdown: {
 		rehypePlugins: [
 			[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
@@ -19,6 +23,9 @@ export default defineConfig({
 			},
 			favicon: '/favicon.ico',
 			customCss: ['./src/styles/custom.css'],
+			head: [
+				{ tag: 'script', attrs: { src: '/lightbox.js', defer: true } },
+			],
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/XeroLinux' },
 				{ icon: 'youtube', label: 'YouTube', href: 'https://youtube.com/XeroLinuxOfficial' },
@@ -30,8 +37,10 @@ export default defineConfig({
 				{ label: '◎ The Distro', slug: 'distro' },
 				{ label: '☰ XeroInstall', slug: 'xero-install' },
 				{ label: '✦ XeroLinux Tools', slug: 'xero-tools' },
-				{ label: '❖ The Contributions', slug: 'contributions' },
+				{ label: '⊞ Package Manager', slug: 'xpackagemanager' },
+				{ label: '◉ Arch ARM Flasher', slug: 'xero-archarm' },
 				{ label: '◈ Hyprland + Noctalia', slug: 'hypr-noc' },
+				{ label: '❖ User Contributions', slug: 'contributions' },
 				{ label: '⁉ The XeroLinux F.A.Q', slug: 'faq' },
 			],
 		}),

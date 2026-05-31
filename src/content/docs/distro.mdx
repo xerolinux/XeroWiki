@@ -1,11 +1,16 @@
 ---
 title: The XeroLinux Distro
-description: XeroLinux distro documentation — installation, features, and support.
+description: XeroLinux distro documentation covering installation, features, and support.
 ---
 
 import { Image } from 'astro:assets';
 import km from '../../assets/images/KM.png';
 import scx from '../../assets/images/SCX.png';
+import xerolinux from '../../assets/images/XeroLinux.png';
+import ventoy from '../../assets/images/Ventoy.png';
+import calamares from '../../assets/images/Calamares.png';
+import xtoolkit from '../../assets/images/xtoolkit.png';
+import techxero from '../../assets/images/Tech.jpeg';
 
 <p class="page-tagline" id="distro-tagline"></p>
 
@@ -14,13 +19,13 @@ import scx from '../../assets/images/SCX.png';
   const taglines = [
     'Arch Linux, but make it <code>pretty</code>.',
     'Where <code>pacman -Syu</code> is a lifestyle, not a chore.',
-    'Riced out of the box — no weekend lost to dotfiles.',
+    'Riced out of the box, no weekend lost to dotfiles.',
     'Because vanilla Arch is just the <code>base-devel</code>.',
     'KDE Plasma + Arch = <code>peak_desktop</code>.',
     'Your hardware deserves better than a default <code>.bashrc</code>.',
-    'Not just another Arch spin — a whole <code>vibe</code>.',
+    'Not just another Arch spin. A whole <code>vibe</code>.',
     'We did the ricing so you don\\u0027t have to <code>--force</code> it.',
-    'Stability meets aesthetics — no <code>dependency hell</code> included.',
+    'Stability meets aesthetics, no <code>dependency hell</code> included.',
     'Built for the users who think <code>neofetch</code> screenshots matter.',
     '<code>btw</code>, this is the distro you\\u0027ve been looking for.',
     'From <code>archiso</code> to eye candy in one install.',
@@ -34,7 +39,7 @@ Before we begin, I would like to tell everyone of you who has supported the **Xe
 
 **XeroLinux** is a KDE Plasma-based Arch Linux distribution focused on aesthetics and usability. For mid-range or higher hardware, it provides a polished out-of-the-box experience. It can run on lower-end systems, but performance may vary.
 
-![XeroLinux](../../assets/images/XeroLinux.png)
+<Image src={xerolinux} alt="XeroLinux" />
 
 :::note
 System will be updated during install, so please be patient, might take a while. If you prefer not to use the ISO, the same result can be achieved with the [**XeroInstall script**](/xero-install/) on a base Arch install.
@@ -46,14 +51,14 @@ System will be updated during install, so please be patient, might take a while.
 
 XeroLinux ships as **two separate ISOs**:
 
-- **Standard ISO** — For **Intel** and **AMD** GPU systems
-- **nVidia ISO** — For **RTX**-series cards using modern open drivers
+- **Standard ISO**: For **Intel** and **AMD** GPU systems
+- **nVidia ISO**: For **RTX**-series cards using modern open drivers
 
 :::caution
-Legacy nVidia 900/1000 series cards are **not supported** by the nVidia ISO. Use the Standard ISO and install the legacy 580xx drivers manually via the [toolkit](/xero-tool/). The ISO will boot in `nomodeset` (low-res) until drivers are installed. No support is provided for these legacy drivers.
+Legacy nVidia 900/1000 series cards are **not supported** by the nVidia ISO. Use the Standard ISO and install the legacy 580xx drivers manually via the toolkit. The ISO will boot in `nomodeset` (low-res) until drivers are installed. No support is provided for these legacy drivers.
 :::
 
-We split **XeroLinux** into two ISOs because **nVidia** retired the old 900 and 1000 series cards from the modern driver lineup — only **RTX** cards get the latest open drivers. Instead of forcing everyone into a one-size-fits-nobody installer, the dedicated **nVidia** ISO is built specifically for RTX users, while the Standard ISO keeps Intel and AMD systems happy. Each ISO does exactly what it's meant to do, with fewer surprises and better reliability.
+We split **XeroLinux** into two ISOs because **nVidia** retired the old 900 and 1000 series cards from the modern driver lineup. Only **RTX** cards get the latest open drivers. Instead of forcing everyone into a one-size-fits-nobody installer, the dedicated **nVidia** ISO is built specifically for RTX users, while the Standard ISO keeps Intel and AMD systems happy. Each ISO does exactly what it's meant to do, with fewer surprises and better reliability.
 
 We also tried our best to make the **nVidia** ISO robust by including laptop support and many other optimizations.
 
@@ -61,7 +66,7 @@ We also tried our best to make the **nVidia** ISO robust by including laptop sup
 
 ## GPU Swap Detection
 
-**XeroLinux** includes a small background service that checks which graphics hardware is inside your computer by reading standard system information. When it notices a change — for example, if you install an **nVidia** card or remove one — it records the change and shows a popup notification in Plasma. Nothing runs unless something actually changes.
+**XeroLinux** includes a small background service that checks which graphics hardware is inside your computer by reading standard system information. When it notices a change, for example if you install an **nVidia** card or remove one, it records the change and shows a popup notification in Plasma. Nothing runs unless something actually changes.
 
 When you choose to continue, **XeroLinux** opens an easy-to-use tool that installs or removes the correct graphics drivers based on your current hardware. The tool updates system components like the boot configuration and kernel modules automatically. Supports **Intel**, **AMD**, **nVidia**, and hybrid setups.
 
@@ -73,13 +78,13 @@ When you choose to continue, **XeroLinux** opens an easy-to-use tool that instal
 |-------------|---------|
 | Firmware | **UEFI** & Legacy **BIOS/MBR** are now supported |
 | Boot tool | [**Ventoy**](https://xerolinux.xyz/posts/ventoy-multi-boot/) recommended (provides GRUB fallback) |
-| Session | **Wayland** only — X11 has been fully dropped by KDE Plasma but can be enabled via toolkit |
+| Session | **Wayland** only. X11 has been fully dropped by KDE Plasma but can be enabled via toolkit |
 
 :::tip
-Avoid burning with Etcher or similar tools — there's no fallback if SystemD-Boot fails. Use Ventoy instead.
+Avoid burning with Etcher or similar tools. There's no fallback if SystemD-Boot fails. Use Ventoy instead.
 :::
 
-![Ventoy](../../assets/images/Ventoy.png)
+<Image src={ventoy} alt="Ventoy" />
 
 ---
 
@@ -87,9 +92,9 @@ Avoid burning with Etcher or similar tools — there's no fallback if SystemD-Bo
 
 **XeroLinux**, like many other distros, uses the [**Calamares**](https://codeberg.org/Calamares/calamares) installer.
 
-![Calamares Installer](../../assets/images/Calamares.png)
+<Image src={calamares} alt="Calamares Installer" />
 
-We have been able to re-enable encryption, allowing you to encrypt your drives using `luks2`. We have also added the ability to update the system during install, so you might notice it taking a little bit longer — depends on how many updates there are at the time of install, their size, and your connection speed. Please be patient while it does that.
+We have been able to re-enable encryption, allowing you to encrypt your drives using `luks2`. We have also added the ability to update the system during install, so you might notice it taking a little bit longer, depending on how many updates there are at the time of install, their size, and your connection speed. Please be patient while it does that.
 
 ---
 
@@ -97,9 +102,9 @@ We have been able to re-enable encryption, allowing you to encrypt your drives u
 
 ### XeroLinux Toolkit
 
-I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you — just the essentials.
+I highly recommend using the toolkit (the first icon on the dock) to streamline your initial setup experience. It was designed to make the process much smoother and more pleasant. Keep in mind, however, that it's not meant to handle everything for you, just the essentials.
 
-![XeroLinux Toolkit](../../assets/images/xtoolkit.png)
+<Image src={xtoolkit} alt="XeroLinux Toolkit" />
 
 Toolkit icon disappeared after update ? Run the following command to restore it, then restart shell with `rshell`:
 
@@ -110,39 +115,111 @@ sed -i.bak \
   "$HOME/.config/plasma-org.kde.plasma.desktop-appletsrc"
 ```
 
-### Fingerprint Support
-
-An in-house fingerprint GUI tool is available via the toolkit.
-
-![Fingerprint GUI Tool](../../assets/images/FPrintd.png)
-
-:::note
-Polkit may still prompt for a password — swipe your finger to authenticate. Terminal authentication works out of the box. For SDDM details, see [**this guide**](https://xerolinux.xyz/posts/xero-fingerprint/).
-:::
-
 ---
 
 ## Filesystem & Swap
 
 | Feature | Options |
 |---------|---------|
-| Filesystems | `xfs`, `ext4`, `btrfs` |
+| Filesystems | `xfs` & `ext4` |
 | Encryption | LUKS2 |
 | Swap | zRAM via [**zram-generator**](https://github.com/systemd/zram-generator) |
 
 Check zRAM status with `zramctl --output-all`. See the zram-generator documentation for configuration.
 
+{/*
 ---
 
-## Package Managers
+## Secure Boot
 
-No GUI package managers are included by default, as I believe in giving you the freedom to choose the one that suits your workflow best. Through the provided toolkit, you can select from **Octopi**, **Bauh**, or **Bazaar**.
+<div style="text-align:center;margin:1rem 0;"><span style="display:inline-block;background:#166534;color:#bbf7d0;border:1px solid #22c55e;border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;font-weight:600;">Available on June 2026 ISOs and later. Older installs will not have this script.</span></div>
 
 :::danger
-I strongly advise against installing KDE's **Discover** if you're aiming for stability — it's notoriously troublesome. But, as always, the final decision is yours.
+**Experimental feature.** We recommend skipping this for now. Secure Boot support still needs a lot more work and testing, and could leave your system unbootable if something goes wrong. **Do not attempt this on a production machine.** If you do try it, please report back in the [**Community Discord**](https://discord.xerolinux.xyz) so we can improve it.
 :::
 
+**Secure Boot** is a UEFI feature that prevents unsigned or tampered bootloaders and kernels from loading. It is completely optional. Most users do not need it. If you have no specific reason to enable it, skip this section.
+
+
+### Prerequisites
+
+Before running the script, confirm all of the following:
+
+- System boots via **UEFI** (not legacy BIOS/MBR)
+- **GRUB** is your bootloader (the default on XeroLinux)
+- **Setup Mode** is active in your UEFI firmware (see below)
+
+### Entering Setup Mode
+
+Setup Mode clears existing Secure Boot keys and allows new custom keys to be enrolled. How to get there varies by vendor:
+
+| Vendor | Where to look |
+|--------|---------------|
+| **Lenovo** | Security tab → Secure Boot → Reset to Setup Mode |
+| **MSI** | Security tab → Secure Boot → Erase all Secure Boot Settings |
+| **ASUS** | Security tab → Secure Boot → Delete all Secure Boot Variables |
+| **Generic** | Security or Boot tab → Secure Boot → Clear / Delete Keys |
+
+:::tip
+After clearing keys, confirm that the firmware shows **Setup Mode: Active** (or similar wording) before saving and booting back into XeroLinux.
+:::
+
+### Running the Script
+
+With Setup Mode active, open a terminal and run:
+
+:::caution
+This is a post-install step. Only run it after your system is fully installed and working correctly. Do not run it mid-install or right after a fresh boot into a new install.
+:::
+
+<div class="wiki-terminal">
+  <div class="wiki-terminal-bar">
+    <span class="wiki-terminal-dot red"></span>
+    <span class="wiki-terminal-dot yellow"></span>
+    <span class="wiki-terminal-dot green"></span>
+    <span class="wiki-terminal-title">terminal</span>
+  </div>
+  <div class="wiki-terminal-body">
+    <p><span class="prompt">$</span> <span class="cmd">sudo xero-secureboot</span></p>
+  </div>
+</div>
+
+The script detects your current state and acts accordingly. No manual flags required.
+
+After it completes, reboot into your UEFI firmware, find the Secure Boot setting, and **enable** it. Save and exit. Your system will now boot with Secure Boot active.
+
+### What the Script Does
+
+Under the hood, `xero-secureboot` uses [**sbctl**](https://github.com/Foxboron/sbctl) to generate and enroll custom Secure Boot keys, then signs your bootloader and kernel with those keys. It handles four states automatically:
+
+| State | What happens |
+|-------|-------------|
+| Not a UEFI system | Exits with an explanation |
+| Setup Mode not active | Asks you to clear keys in firmware first |
+| Keys enrolled, Secure Boot still off | Signs files, instructs you to enable SB in firmware |
+| Secure Boot fully active | Confirms everything is working |
+
+:::note
+**ASUS boards** receive slightly different key enrollment to avoid a known firmware issue. The script handles this automatically.
+:::
+
+### Automatic Re-signing
+
+Once set up, a **pacman hook** ensures your bootloader and kernel are re-signed automatically whenever either is updated. You do not need to run the script again after kernel or bootloader upgrades.
+
+### Troubleshooting
+
+**"Setup Mode is not active"**
+Keys were not cleared in firmware. Go back into UEFI, find the Secure Boot settings, and delete or clear all existing keys. Save, reboot, then run the script again.
+
+**ASUS board: only some keys enrolled**
+Expected behavior. The script intentionally skips firmware built-in keys on ASUS hardware to avoid a known bricking risk. This is correct and Secure Boot will still work.
+
+**"EFI file not found" or signing fails**
+Confirm you are using GRUB (not systemd-boot or rEFInd) and that your EFI partition is mounted at `/boot/efi` or `/efi`. If you used a custom partition layout during install, the script may not locate your EFI files automatically.
+
 ---
+*/}
 
 ## Kernel Manager / SCX
 
@@ -155,11 +232,11 @@ The toolkit includes a **Kernel Manager** and **sched-ext** tool for kernel tuni
 
 ### The Schedulers
 
-> These schedulers are part of the **sched-ext (scx)** framework, a Linux kernel feature that allows CPU schedulers to be implemented in BPF and loaded dynamically without recompiling the kernel. All schedulers listed here are multipurpose to varying degrees — the best way to find what works for your system is to try them yourself.
+> These schedulers are part of the **sched-ext (scx)** framework, a Linux kernel feature that allows CPU schedulers to be implemented in BPF and loaded dynamically without recompiling the kernel. All schedulers listed here are multipurpose to varying degrees. The best way to find what works for your system is to try them yourself.
 
 #### BPFLAND
 
-A vruntime-based scheduler that prioritizes interactive workloads. It identifies interactive tasks by how frequently they block (many voluntary context switches per second) and prioritizes them accordingly. When deciding which cores to assign tasks to, it takes cache layout into account — preferring cores that share the same L2/L3 cache — which reduces cache misses and improves overall performance. It excels under heavy load, provides strong FPS stability in gaming, and supports hybrid CPU topologies (efficiency and performance cores).
+A vruntime-based scheduler that prioritizes interactive workloads. It identifies interactive tasks by how frequently they block (many voluntary context switches per second) and prioritizes them accordingly. When deciding which cores to assign tasks to, it takes cache layout into account, preferring cores that share the same L2/L3 cache, which reduces cache misses and improves overall performance. It excels under heavy load, provides strong FPS stability in gaming, and supports hybrid CPU topologies (efficiency and performance cores).
 
 **Supported profiles:** `auto`, `gaming`, `lowlatency`, `powersave`
 
@@ -223,7 +300,7 @@ A minimal reference scheduler included mainly as a documentation and learning to
 
 ### Profile Definitions
 
-Profiles are presets that adjust scheduler flags to optimize behavior for specific use cases. They are not available on all schedulers — currently **BPFLAND** and **LAVD** have the most complete profile support.
+Profiles are presets that adjust scheduler flags to optimize behavior for specific use cases. They are not available on all schedulers. Currently **BPFLAND** and **LAVD** have the most complete profile support.
 
 | Profile | Description |
 |---|---|
@@ -248,25 +325,7 @@ No WiFi after install ? Connect via ethernet or `chroot` [**Guide**](https://wik
 sudo pacman -Syy linux-firmware-intel
 ```
 
-For some reason that driver is getting removed during install, will be addressed in future releases.
-
-### Laptop Sleep
-
-Some users reported an issue with Laptop not sleeping when Lid is closed. To be honest, I gave up on that idea as there are way too many fixes that work for a while then stop, nothing permanent. But if you want to try here's one that has been shared by one of our many users [**h-x-z**](https://gist.github.com/h-x-z) :
-
-> Note : This fix was primarily created for the **IdeaPad 3 14IIL05**. So use **AT YOUR OWN RISK !**
-
-<script src="https://gist.github.com/h-x-z/0d69502d540a40c6bfe99133dcf2058a.js"></script>
-
-**Usage**
-
-Paste the above content to a `lidfix.sh` file, make it executable via `chmod +x lidfix.sh` and run via `./lidfix.sh`.
-
-**Info**
-
-The script will make `ec_sys` module load on boot by default. It will also create a script in `/usr/local/bin` that polls that aforementioned `ec memory` every 0.5s, and create a `systemd service` that runs the above script on boot, then enabled and starts the service.
-
-### GTK Apps No Menu
+### GTK No Menu
 
 Some GTK apps (e.g. Virt-Manager) don't display menus in the Global Menu widget. Setting DBus environment variables before launch fixes this.
 
@@ -310,7 +369,7 @@ Replace `kvm` with any other affected GTK app as needed.
 
 If you encounter any issues or have questions directly related to the installation, feel free to reach out on [**Fosstodon**](https://fosstodon.org/@XeroLinux) or [**Discord**](https://discord.gg/5sqxTSuKZu). Please do not ask on Ko-Fi.
 
-![TechXero](../../assets/images/Tech.jpeg)
+<Image src={techxero} alt="TechXero" />
 
 However, if your questions are related to your specific hardware, I may not have the answers you're looking for, as my knowledge is limited to what works on my own systems. For hardware-specific queries, your best resources are the [**ArchWiki**](https://wiki.archlinux.org) or community Discord.
 
