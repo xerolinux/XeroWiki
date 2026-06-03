@@ -644,7 +644,7 @@ a[data-edit-url] {
 	margin: 0;
 	padding: 1rem 1.5rem;
 	background: #12121f;
-	text-align: left;
+	text-align: justify;
 }
 
 .faq-card ul {
@@ -852,7 +852,7 @@ a[data-edit-url] {
 	font-size: 0.9rem;
 	line-height: 1.65;
 	margin: 0.4rem 0 0 !important;
-	text-align: left !important;
+	text-align: justify !important;
 }
 
 .tour-card-body ul {

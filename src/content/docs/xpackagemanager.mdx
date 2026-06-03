@@ -8,11 +8,12 @@ import home from '../../assets/images/xPMShots/1-Home.png';
 import flatpaks from '../../assets/images/xPMShots/2-Flatpaks.png';
 import flatpaks2 from '../../assets/images/xPMShots/3-Flatpaks2.png';
 import native from '../../assets/images/xPMShots/4-Native.png';
-import installed from '../../assets/images/xPMShots/5-Installed.png';
-import tree from '../../assets/images/xPMShots/6-Tree.png';
-import news from '../../assets/images/xPMShots/7-News.png';
-import troubleshooting from '../../assets/images/xPMShots/8-Troubleshooting.png';
-import settings from '../../assets/images/xPMShots/9-Settings.png';
+import appimages from '../../assets/images/xPMShots/5-AppImages.png';
+import installed from '../../assets/images/xPMShots/6-Installed.png';
+import tree from '../../assets/images/xPMShots/7-Tree.png';
+import news from '../../assets/images/xPMShots/8-News.png';
+import troubleshooting from '../../assets/images/xPMShots/9-Troubleshooting.png';
+import settings from '../../assets/images/xPMShots/10-Settings.png';
 
 <p class="page-tagline" id="xpm-tagline"></p>
 
@@ -38,7 +39,7 @@ After months of development, **xPackageManager** is ready. A native graphical pa
 ---
 
 <div class="stat-pills">
-  <span class="stat-pill"><span class="pill-icon">⊞</span><span class="pill-value">2</span><span class="pill-label">Package Ecosystems</span></span>
+  <span class="stat-pill"><span class="pill-icon">⊞</span><span class="pill-value">3</span><span class="pill-label">Package Ecosystems</span></span>
   <span class="stat-pill"><span class="pill-icon">✦</span><span class="pill-value">8</span><span class="pill-label">Repair Tools</span></span>
   <span class="stat-pill"><span class="pill-icon">◎</span><span class="pill-value">14</span><span class="pill-label">Languages</span></span>
   <span class="stat-pill"><span class="pill-icon">◆</span><span class="pill-value">Rust</span><span class="pill-label">No Electron</span></span>
@@ -165,6 +166,18 @@ paru packagename
 <div class="tour-card-body">
 <h3>Packages: Browse Every Arch Repository</h3>
 <p>Every enabled repository is one tab away: <code>core</code>, <code>extra</code>, <code>multilib</code>, <code>chaotic-aur</code>, <code>xerolinux</code>, with search across all of them at once. Each row shows the package name, version, repository badge, and a direct Install or Remove action. No need to remember which repo a package lives in.</p>
+</div>
+</div>
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={appimages.src}>
+  <Image src={appimages} alt="AppImages catalog showing 1049 apps with search, URL install, and per-app Install buttons" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>AppImages: Run Without Installing</h3>
+<p>Over 1,000 applications available to browse, search, and launch as self-contained AppImages. No package manager involvement, no root required, no dependency conflicts. Paste a direct download URL or load a file from disk for anything not in the catalog. A Browse tab shows what is available and an Installed tab tracks what you have already pulled down. A built-in warning is front and centre: AppImages are unsupported third-party bundles, used entirely at your own risk.</p>
 </div>
 </div>
 
