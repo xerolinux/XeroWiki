@@ -271,12 +271,24 @@ paru packagename
 
 Or build from source:
 
+- Dependencies :
+
+```bash
+sudo pacman -S rust cargo flatpak alpm curl fuse2
+```
+
+```bash
+yay/paru -S cpr zsync2 appimageupdate-git
+```
+
+- Build & Install :
+
 ```bash
 git clone https://github.com/xerolinux/xPackageManager
 cd xPackageManager/packaging && makepkg -rsifcd
 ```
 
-To update:
+- To update:
 
 ```bash
 cd xPackageManager/ && git pull
