@@ -1,0 +1,19 @@
+---
+interface Props {
+  label?: string;
+  bodyId?: string;
+}
+const { label = 'terminal', bodyId } = Astro.props;
+---
+
+<div class="wiki-terminal">
+  <div class="wiki-terminal-bar">
+    <span class="wiki-terminal-dot red"></span>
+    <span class="wiki-terminal-dot yellow"></span>
+    <span class="wiki-terminal-dot green"></span>
+    <span class="wiki-terminal-title">{label}</span>
+  </div>
+  <div class="wiki-terminal-body" id={bodyId}>
+    <slot />
+  </div>
+</div>

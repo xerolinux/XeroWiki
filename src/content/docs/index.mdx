@@ -28,6 +28,7 @@ hero:
 ---
 
 import { LinkCard } from '@astrojs/starlight/components';
+import CodeBlock from '../../components/CodeBlock.astro';
 
 <div class="home-content">
 
@@ -40,15 +41,7 @@ import { LinkCard } from '@astrojs/starlight/components';
   <LinkCard title="⁉ XeroLinux F.A.Q" description="Common questions about the project, answered here." href="/faq/" />
 </div>
 
-<div class="wiki-terminal">
-  <div class="wiki-terminal-bar">
-    <span class="wiki-terminal-dot red"></span>
-    <span class="wiki-terminal-dot yellow"></span>
-    <span class="wiki-terminal-dot green"></span>
-    <span class="wiki-terminal-title">arch-tips</span>
-  </div>
-  <div class="wiki-terminal-body" id="terminal-tips"></div>
-</div>
+<CodeBlock label="arch-tips" bodyId="terminal-tips" />
 
 <div class="wiki-pageviews" id="pageview-counter"></div>
 

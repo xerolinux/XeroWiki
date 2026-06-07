@@ -126,17 +126,9 @@ You need to be running **Arch Linux** on the machine doing the flashing, since t
 
 No installation needed. Just run this from your terminal:
 
-<div class="wiki-terminal">
-  <div class="wiki-terminal-bar">
-    <span class="wiki-terminal-dot red"></span>
-    <span class="wiki-terminal-dot yellow"></span>
-    <span class="wiki-terminal-dot green"></span>
-    <span class="wiki-terminal-title">terminal</span>
-  </div>
-  <div class="wiki-terminal-body">
-    <p><span class="prompt">$</span> <span class="cmd">curl -fsSL https://urls.xerolinux.xyz/XeroArchArm | bash</span></p>
-  </div>
-</div>
+```bash
+curl -fsSL https://urls.xerolinux.xyz/XeroArchArm | bash
+```
 
 That one command grabs the latest version, sets up the polkit policy so it can write to block devices, and launches the tool. Run it again any time to update.
 
@@ -148,31 +140,15 @@ First boot takes a bit longer than usual because the Pi is installing your selec
 
 If you set a **static IP** during setup, SSH straight to it:
 
-<div class="wiki-terminal">
-  <div class="wiki-terminal-bar">
-    <span class="wiki-terminal-dot red"></span>
-    <span class="wiki-terminal-dot yellow"></span>
-    <span class="wiki-terminal-dot green"></span>
-    <span class="wiki-terminal-title">terminal</span>
-  </div>
-  <div class="wiki-terminal-body">
-    <p><span class="prompt">$</span> <span class="cmd">ssh yourusername@192.168.x.x</span></p>
-  </div>
-</div>
+```bash
+ssh yourusername@192.168.x.x
+```
 
 On **DHCP**, try the hostname you set followed by `.local` (mDNS resolves it on most home networks):
 
-<div class="wiki-terminal">
-  <div class="wiki-terminal-bar">
-    <span class="wiki-terminal-dot red"></span>
-    <span class="wiki-terminal-dot yellow"></span>
-    <span class="wiki-terminal-dot green"></span>
-    <span class="wiki-terminal-title">terminal</span>
-  </div>
-  <div class="wiki-terminal-body">
-    <p><span class="prompt">$</span> <span class="cmd">ssh yourusername@yourhostname.local</span></p>
-  </div>
-</div>
+```bash
+ssh yourusername@yourhostname.local
+```
 
 If neither works, log into your router and find the Pi in the DHCP lease list to get its IP.
 
