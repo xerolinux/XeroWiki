@@ -157,6 +157,7 @@ html, body {
 		height: calc(100vh - var(--sl-nav-height)) !important;
 		margin-top: var(--sl-nav-height) !important;
 		padding-top: 0 !important;
+		padding-bottom: 4rem !important;
 		background: transparent !important;
 		scrollbar-gutter: stable;
 		scrollbar-color: rgba(86, 87, 245, 0.5) transparent;
@@ -613,7 +614,7 @@ nav.sidebar a[aria-current='true'] {
 	margin-top: -1.5rem;
 }
 
-:not([data-has-hero]) .content-panel { padding-top: 0.5rem !important; }
+:not([data-has-hero]) .content-panel { padding-top: 0.5rem !important; padding-bottom: 2rem !important; }
 :not([data-has-hero]) h1#_top { margin-top: 0.25rem !important; }
 
 @media (max-width: 72rem) {
