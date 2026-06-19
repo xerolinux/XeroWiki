@@ -274,30 +274,26 @@ paru packagename
 sudo pacman -Syy xpm-gui
 ```
 
-Or build from source:
+Or build/update from source (Other Distros):
 
 - Dependencies :
 
 ```bash
-sudo pacman -S rust cargo flatpak alpm curl fuse2
-```
-
-```bash
-yay/paru -S cpr zsync2 downgrade appimageupdate-git
+sudo pacman -S --needed base-devel git
 ```
 
 - Build & Install :
 
 ```bash
 git clone https://github.com/xerolinux/xPackageManager
-cd xPackageManager/packaging && makepkg -rsifcd
+cd xPackageManager/packaging && ./build.sh
 ```
 
 - To update:
 
 ```bash
 cd xPackageManager/ && git pull
-cd packaging/ && makepkg -rsifcd
+cd packaging/ && ./build.sh
 ```
 
 :::note
