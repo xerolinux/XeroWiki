@@ -964,12 +964,6 @@ a[data-edit-url] { display: none !important; }
    Code blocks + wiki-terminal — unified dark panel
    =========================== */
 
-/* Shared token colors used by both */
---cb-bg:     #0d1117;
---cb-header: #161b22;
---cb-border: #30363d;
---cb-label:  #5ce0ff;
-
 .expressive-code {
 	border: 1px solid #30363d !important;
 	border-radius: 0.75rem !important;

@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import rehypeExternalLinks from 'rehype-external-links';
+import { unified } from '@astrojs/markdown-remark';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,10 +12,11 @@ export default defineConfig({
 		inlineStylesheets: 'auto',
 	},
 	markdown: {
-		gfm: true,
-		rehypePlugins: [
-			[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
-		],
+		processor: unified({
+			rehypePlugins: [
+				[rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
+			],
+		}),
 	},
 	integrations: [
 		starlight({
