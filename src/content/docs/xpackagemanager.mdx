@@ -14,6 +14,8 @@ import tree from '../../assets/images/xPMShots/7-Tree.png';
 import news from '../../assets/images/xPMShots/8-News.png';
 import troubleshooting from '../../assets/images/xPMShots/9-Troubleshooting.png';
 import settings from '../../assets/images/xPMShots/10-Settings.png';
+import perms from '../../assets/images/xPMShots/11-Perms.webp';
+import rollback from '../../assets/images/xPMShots/12-Rollback.webp';
 
 <p class="page-tagline" id="xpm-tagline"></p>
 
@@ -40,7 +42,7 @@ After months of development, **xPackageManager** is ready. A native graphical pa
 
 <div class="stat-pills">
   <span class="stat-pill"><span class="pill-icon">⊞</span><span class="pill-value">3</span><span class="pill-label">Package Ecosystems</span></span>
-  <span class="stat-pill"><span class="pill-icon">✦</span><span class="pill-value">8</span><span class="pill-label">Repair Tools</span></span>
+  <span class="stat-pill"><span class="pill-icon">✦</span><span class="pill-value">7</span><span class="pill-label">Repair Tools</span></span>
   <span class="stat-pill"><span class="pill-icon">◎</span><span class="pill-value">14</span><span class="pill-label">Languages</span></span>
   <span class="stat-pill"><span class="pill-icon">◆</span><span class="pill-value">Rust</span><span class="pill-label">No Electron</span></span>
 </div>
@@ -72,7 +74,7 @@ Built in **Rust** with the **Slint** UI toolkit. No Electron, no Python overhead
 
 <div class="faq-card">
 <h3>System Repair</h3>
-<p>8 built-in tools for common Arch problems. Each shows the exact command it runs.</p>
+<p>7 built-in tools for common Arch problems. Each shows the exact command it runs.</p>
 </div>
 
 <div class="faq-card">
@@ -83,6 +85,18 @@ Built in **Rust** with the **Slint** UI toolkit. No Electron, no Python overhead
 <div class="faq-card">
 <h3>14 Languages</h3>
 <p>Czech, German, Spanish, French, Italian, Japanese, Korean, Dutch, Polish, Portuguese, Russian, Swedish, Turkish, and Simplified Chinese.</p>
+</div>
+
+<div class="faq-card">
+<h3>Flatpak Permissions</h3>
+<p>Fine-grained permission control for every installed Flatpak. Toggle network, IPC, Wayland, X11, D-Bus, GPU access and more per app, without touching the terminal.</p>
+</div>
+
+<div></div>
+
+<div class="faq-card">
+<h3>Pacman Rollback</h3>
+<p>Full transaction history pulled from pacman logs. Select any past upgrade and roll it back in one click. No manual downgrade commands required.</p>
 </div>
 
 </div>
@@ -231,7 +245,7 @@ paru packagename
 </div>
 <div class="tour-card-body">
 <h3>Troubleshooting</h3>
-<p>Eight repair tools for the most common Arch problems. Each one shows the exact command it runs before doing anything.</p>
+<p>Seven repair tools for the most common Arch problems. Each one shows the exact command it runs before doing anything.</p>
 </div>
 </div>
 
@@ -249,13 +263,40 @@ paru packagename
 </div>
 </div>
 
+<div class="tour-grid">
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={perms.src}>
+  <Image src={perms} alt="Flatpak Permissions dialog showing toggles for network, IPC, Wayland, X11, D-Bus and device access per app" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Flatpak Permissions</h3>
+<p>Per-app permission control for every installed Flatpak. Toggle network, IPC, Wayland, X11, D-Bus, GPU access and more without touching the terminal. User and system overrides shown side by side with a one-click Reset.</p>
+</div>
+</div>
+
+<div class="tour-card">
+<div class="tour-card-img">
+<a href={rollback.src}>
+  <Image src={rollback} alt="Transaction History panel showing dated pacman upgrade entries with Roll back upgrades button" />
+</a>
+</div>
+<div class="tour-card-body">
+<h3>Pacman Rollback</h3>
+<p>Full transaction history sourced from pacman logs. Select any past upgrade, see exactly which packages changed and their version deltas, then roll it back in one click. No manual downgrade commands needed.</p>
+</div>
+</div>
+
+</div>
+
 ---
 
 ## Troubleshooting Tools
 
 | Tool | What it does |
 |---|---|
-| **Rebuild InitRamFS** | Regenerates initramfs images via `mkinitcpio` |
 | **Fix GnuPG Keyring** | Resets and repopulates pacman keys |
 | **Rebuild GRUB** | Regenerates GRUB bootloader config |
 | **Orphan Manager** | Reviews and removes orphaned packages |
