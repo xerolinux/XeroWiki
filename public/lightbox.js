@@ -78,7 +78,7 @@
 
       // Standalone images not wrapped in <a> — use src
       content.querySelectorAll('img').forEach(function (img) {
-        if (img.parentElement.tagName.toLowerCase() !== 'a') {
+        if (img.parentElement.tagName.toLowerCase() !== 'a' && !img.classList.contains('inline-icon')) {
           img.style.cursor = 'zoom-in';
           img.addEventListener('click', function () {
             openLB(img.src);
@@ -158,8 +158,8 @@
         '.video-embed',
         '.contrib-callout',
         '.sl-markdown-content hr',
-        '.sl-markdown-content > p > img',
-        '.sl-markdown-content img:not(.tour-card-img img)',
+        '.sl-markdown-content > p > img:not(.inline-icon)',
+        '.sl-markdown-content img:not(.tour-card-img img):not(.inline-icon)',
       ];
 
       var seen = new WeakSet();
@@ -222,6 +222,7 @@
         '/hypr-noc/':       ['Hyprland',  'Noctalia'],
         '/contributions/':  ['XeroLinux', 'Contributions'],
         '/faq/':            ['XeroLinux', 'F.A.Q.'],
+        '/xero-ibr/':       ['iBackup',   'Restore'],
       };
 
       var words = WORDS[path];

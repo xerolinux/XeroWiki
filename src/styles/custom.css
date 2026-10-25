@@ -850,7 +850,7 @@ a[data-edit-url] { display: none !important; }
 
 .stat-pill {
 	display: inline-flex;
-	align-items: center;
+	align-items: baseline;
 	gap: 0.5rem;
 	background: var(--color-bg-glass);
 	backdrop-filter: var(--layan-blur);
@@ -878,12 +878,14 @@ a[data-edit-url] { display: none !important; }
 	font-weight: 700;
 	font-family: 'Chakra Petch', system-ui, sans-serif;
 	color: rgb(var(--col-accent, 86, 87, 245));
+	line-height: 1;
 }
 .stat-pill .pill-label {
 	font-size: 0.8rem;
 	color: #999999;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
+	line-height: 1;
 }
 
 /* ===========================
