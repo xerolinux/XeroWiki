@@ -1,17 +1,15 @@
 ---
-title: XeroLinux In-House Tools
+title: Misc Other Tools
 description: XeroLinux themes, scripts, and system tools.
 ---
 
 import { Image } from 'astro:assets';
-import EFIBootGUIMain from '../../assets/images/EFIBootGUIMain.webp';
-import EFIBootGUIAbout from '../../assets/images/EFIBootGUIAbout.webp';
 import SCXTool from '../../assets/images/scx-tool.webp';
 import SCXTool2 from '../../assets/images/scx-tool2.webp';
 import xeroTool from '../../assets/images/xero-tool.webp';
 import howdyQt from '../../assets/images/HowdyQt.webp';
 import wallsGui from '../../assets/images/walls-gui.webp';
-import phpGui from '../../assets/images/phpgui.webp';
+import wallsGuiDemo from '../../assets/images/walls-gui-demo.gif';
 import plymouthDelay from '../../assets/images/Delay.png';
 
 <p class="page-tagline" id="tool-tagline"></p>
@@ -75,37 +73,6 @@ curl -fsSL https://xerolinux.xyz/script/xero-tool.py | python3
 
 ---
 
-## Scheduler Tool
-
-A comprehensive GUI application for managing sched-ext CPU schedulers for **ArchLinux**.
-
-<div class="img-row">
-  <Image src={SCXTool} alt="SCX Tool" />
-  <Image src={SCXTool2} alt="SCX Flags"/>
-</div>
-
-### Features
-
-- **Live Scheduler Switching**: Switch between sched-ext BPF CPU schedulers on the fly.
-- **Real-time Monitoring**: Continuous status updates showing active scheduler and mode.
-- **Persistence Support**: Enable schedulers to auto-start on boot via systemd service.
-- **Multiple Modes**: Support for auto, gaming, lowlatency, and powersave modes.
-- **Kernel Compatibility Check**: Automatic detection of sched-ext kernel support.
-
-### How-to-use
-
-You need the following dependencies :
-
-```bash
-sudo pacman -S scx-scheds scx-tools
-```
-
-Now you can run it and play around with the various Schedulers. Use the `SCX Info` tab to see what each one does.
-
-```bash
-curl -fsSL https://urls.xerolinux.xyz/SCXTool | python3
-```
-
 ## Howdy-Qt
 
 :::caution
@@ -140,88 +107,43 @@ To see features, test it out, follow progress and report any issues or suggestio
 
 ---
 
----
+## Wallpaper Browser
 
-## EFIBoot Manager
+<Image src={wallsGuiDemo} alt="Xero Wallpapers demo" />
 
-<div class="img-row">
-  <Image src={EFIBootGUIMain} alt="EFI Boot Manager Tool" />
-  <Image src={EFIBootGUIAbout} alt="EFI Boot Manager About"/>
-</div>
+Find, preview and set wallpapers and live wallpapers from multiple online sources, all from one app. Built with PyQt6, QML and Kirigami.
 
-EFI Boot Manager GUI is a lightweight desktop app for Linuxhat lets you manage your UEFI/EFI boot entries without ever touching a terminal. **USE AT YOUR OWN RISK !**
+### Sources
 
-### Features
+**Static:** 4K Wallpapers, HDQWalls, WallpaperCave, Wallhaven
 
-  - Delete unwanted boot entries
-  - Enable or disable individual boot entries
-  - Reorder entries and apply a custom boot order
-  - Confirm dialogs to prevent accidental changes
-  - View all EFI boot entries with OS-specific icons
-
-### Installation
-
-Any Arch-based Distro. You need to subscribe to repo on [**Github**](https://github.com/xerolinux/EfiBootGUI) follow it for updates.
-
-```bash
-git clone https://github.com/xerolinux/EfiBootGUI
-cd EfiBootGUI/ && makepkg -si
-```
-
----
-
-## Wallpaper Browser GUI
-
-<Image src={wallsGui} alt="XeroLinux Walls GUI" />
-
-Browse, preview and download wallpapers & live wallpapers from multiple online sources, all from one app.
+**Live/Video:** DesktopHut, LiveWallpapers4Free, Lively, MoeWalls, MotionBGs
 
 ### Features
 
-  - Browse static wallpapers from Wallhaven, 4K Wallpapers and DuskLinux
-  - Browse live/video wallpapers from MoeWalls, MotionBGs and DesktopHut
-  - Search, paginate and preview wallpapers from any source
-  - Multi-select with Ctrl+Click, Shift+Click and Select All
-  - Batch download with progress tracking to separate folders
-  - Browse downloaded wallpapers in a tabbed local viewer
-  - In-app image preview and video playback with full controls
-  - Set static wallpapers directly from the app (auto-detects your DE)
-  - Video thumbnails extracted from actual frames with play overlay
-  - Uses system theme with native look on any desktop environment
+  - Filter by tags, colour, resolution, and aspect ratio
+  - On-device AI "No Anime" filter (CLIP model - nothing uploaded)
+  - Fullscreen coverflow browsing
+  - Crop and upscale images before saving
+  - Local wallpaper library with tabbed viewer
+  - Batch download with progress tracking
+  - Set static wallpapers directly (auto-detects your DE)
+  - Plasma slideshow plugin + live wallpapers via Smart Video Wallpaper Reborn
+  - Supported DEs: Plasma, GNOME, XFCE, Cinnamon, Hyprland, Niri
 
 ### Installation
 
-Any Arch-based Distro. You need to subscribe to repo on [**Github**](https://github.com/xerolinux/xero-wallpapers-gui) follow it for updates.
+**XeroLinux:**
 
 ```bash
-git clone https://github.com/xerolinux/xero-wallpapers-gui
-cd xero-wallpapers-gui/ && makepkg -si
+sudo pacman -S xero-wallpaper-browser
 ```
 
----
+**Other distros:** Download the AppImage from [**GitHub Releases**](https://github.com/xerolinux/xero-wallpapers-gui/releases). It self-updates when a new version is available.
 
-## PHP Server GUI
-
-<Image src={phpGui} alt="XeroLinux PHP Server GUI" />
-
-**phpGUI** is a lightweight desktop app that lets you spin up a local PHP development server without ever touching a terminal.
-
-### Features
-
-  - Create a new project folder and serve it instantly
-  - Browse for and serve any existing project directory
-  - Live Log. See server activity and errors in real time
-  - Clean two-card layout: New Project and Existing Project
-  - Start a PHP built-in server (php -S) with a single click
-
-### Installation
-
-Any Arch-based Distro. You need to subscribe to repo on [**Github**](https://github.com/xerolinux/phpgui) follow it for updates.
-
-```bash
-git clone https://github.com/xerolinux/phpgui
-cd phpgui/packaging/ && makepkg -si
-```
+:::note
+Live wallpapers, the Plasma slideshow plugin, and Smart Video Wallpaper Reborn require KDE Plasma.
+:::
 
 ---
 

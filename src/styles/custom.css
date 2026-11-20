@@ -163,7 +163,13 @@ html, body {
 		scrollbar-color: rgba(86, 87, 245, 0.5) transparent;
 		scrollbar-width: thin;
 	}
+
+	[data-has-hero] .main-frame {
+		padding-bottom: 0 !important;
+	}
 }
+
+[data-has-hero] footer { display: none !important; }
 
 .sl-markdown-content,
 [data-pagefind-body] {
@@ -304,31 +310,13 @@ nav.sidebar a[aria-current='true'] {
 }
 
 [data-has-hero] .hero { padding-block: 0.5rem !important; }
-[data-has-hero] .content-panel { padding-block: 0 !important; }
-[data-has-hero] footer { padding-block: 0 !important; margin: 0 !important; }
-[data-has-hero] main { padding-bottom: 0 !important; }
-
-[data-has-hero] .main-pane {
-	display: flex !important;
-	flex-direction: column !important;
-	justify-content: center !important;
-	flex: 1 !important;
-}
-
-[data-has-hero] .main-frame {
-	display: flex !important;
-	flex-direction: column !important;
-	flex: 1 !important;
-}
-
-[data-has-hero] .lg\:sl-flex { flex: 1 !important; }
 
 /* ===========================
    Home content
    =========================== */
 .home-content {
 	max-width: 1100px;
-	margin: 2.75rem auto 0;
+	margin: 1.25rem auto 0;
 	padding: 0 1.5rem;
 }
 
@@ -346,14 +334,12 @@ nav.sidebar a[aria-current='true'] {
 .card-grid-home {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-auto-rows: 1fr;
-	gap: 1rem;
+	gap: 0.75rem;
 	margin-bottom: 1rem;
 }
 
-.card-grid-home > .sl-link-card { height: 100% !important; }
-.card-grid-home > .sl-link-card:first-child { margin-top: 0.9rem; }
 .card-grid-home .sl-link-card .description { text-align: left !important; }
+.card-grid-home > .sl-link-card { margin-top: 0 !important; }
 
 :root { --sl-sidebar-width: 15rem; }
 
@@ -715,11 +701,13 @@ a[data-edit-url] { display: none !important; }
 .wiki-terminal .comment { color: rgba(208, 208, 216, 0.55); }
 
 .wiki-pageviews {
-	text-align: center;
-	color: #999999;
-	font-size: 0.75rem;
-	margin: 0.25rem 0 0;
-	letter-spacing: 0.05em;
+	display: flex;
+	justify-content: center;
+	margin: 0.5rem 0 0;
+}
+.wiki-pageviews .stat-pill {
+	font-size: 0.55rem;
+	padding: 0.15rem 0.4rem;
 }
 
 /* ===========================

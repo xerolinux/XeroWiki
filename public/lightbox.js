@@ -215,13 +215,10 @@
       var WORDS = {
         '/':                ['Welcome',   'XeroLinux',     'Wiki'],
         '/distro/':         ['XeroLinux', 'Distro'],
-        '/xero-install/':   ['Installer', 'Script'],
-        '/xero-tools/':     ['In-House',  'Tools'],
+        '/xero-tools/':     ['Misc', 'Other', 'Tools'],
         '/xpackagemanager/':['Package',   'Manager'],
-        '/xero-archarm/':   ['Arch',      'ARM',           'Flasher'],
         '/hypr-noc/':       ['Hyprland',  'Noctalia'],
         '/contributions/':  ['XeroLinux', 'Contributions'],
-        '/faq/':            ['XeroLinux', 'F.A.Q.'],
         '/xero-ibr/':       ['iBackup',   'Restore'],
       };
 

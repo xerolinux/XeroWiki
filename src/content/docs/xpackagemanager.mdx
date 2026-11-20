@@ -4,6 +4,7 @@ description: A native GUI package manager for XeroLinux. Manage pacman and Flatp
 ---
 
 import { Image } from 'astro:assets';
+import xpmDemo from '../../assets/images/xpm-demo.gif';
 import home from '../../assets/images/xPMShots/1-Home.png';
 import flatpaks from '../../assets/images/xPMShots/2-Flatpaks.png';
 import flatpaks2 from '../../assets/images/xPMShots/3-Flatpaks2.png';
@@ -23,12 +24,13 @@ import rollback from '../../assets/images/xPMShots/12-Rollback.webp';
 (function() {
   const taglines = [
     'Because <code>pacman -Syu</code> deserves a face.',
-    'pacman + Flatpak. One window. Zero excuses.',
+    'pacman + Flatpak + AppImage. One window. Zero excuses.',
     'Managing packages should not require a <code>man</code> page.',
     'Built in Rust. No Electron. No regrets.',
     'Your repos, your rules. A GUI that actually works.',
     'Arch Linux package management, finally civilised.',
     'From Flathub to <code>core</code>, all in one place.',
+    'Now with Kernel Manager. Because terminals are optional.',
   ];
   const el = document.getElementById("xpm-tagline");
   if (el) el.innerHTML = taglines[Math.floor(Math.random() * taglines.length)];
@@ -36,7 +38,9 @@ import rollback from '../../assets/images/xPMShots/12-Rollback.webp';
 `}</script>
 
 
-After months of development, **xPackageManager** is ready. A native graphical package manager built specifically for **XeroLinux** and Arch Linux users. No more juggling terminal windows, no more remembering pacman flags, no more switching between tools for pacman and Flatpak. Everything lives in one fast, clean application.
+**xPackageManager** is a native graphical package manager built for **XeroLinux** and Arch Linux users. pacman, Flatpak, and AppImage - all managed from one fast, clean application. No terminal juggling, no flag memorization, no tool switching.
+
+<Image src={xpmDemo} alt="xPackageManager demo" />
 
 ---
 
@@ -51,15 +55,15 @@ After months of development, **xPackageManager** is ready. A native graphical pa
 
 ## But Why Another?
 
-Existing tools are either abandoned, ugly, slow, or only handle one package ecosystem. **xPackageManager** handles **pacman packages and Flatpaks in the same window**, ships with built-in system repair tools, shows live Arch news, and visualises dependency trees, all while feeling like a native KDE application.
+Existing tools are either abandoned, ugly, slow, or only handle one package ecosystem. **xPackageManager** handles **pacman, Flatpak, and AppImage in the same window**, ships with built-in system repair tools, shows live Arch news, visualises dependency trees, and now includes a full Kernel Manager and Scheduler switcher.
 
 Built in **Rust** with the **Slint** UI toolkit. No Electron, no Python overhead. A lean binary that starts in under a second.
 
 <div class="feature-grid">
 
 <div class="faq-card">
-<h3>pacman + Flatpak</h3>
-<p>Both ecosystems managed from one window. Install, remove, and update without switching tools.</p>
+<h3>pacman + Flatpak + AppImage</h3>
+<p>All three ecosystems managed from one window. Install, remove, and update without switching tools.</p>
 </div>
 
 <div class="faq-card">
@@ -92,7 +96,15 @@ Built in **Rust** with the **Slint** UI toolkit. No Electron, no Python overhead
 <p>Fine-grained permission control for every installed Flatpak. Toggle network, IPC, Wayland, X11, D-Bus, GPU access and more per app, without touching the terminal.</p>
 </div>
 
-<div></div>
+<div class="faq-card">
+<h3>Kernel Manager</h3>
+<p>Install and remove kernels by family without touching the terminal. Switch kernels and reboot, all from one page.</p>
+</div>
+
+<div class="faq-card">
+<h3>Kernel Schedulers</h3>
+<p>Switch sched-ext BPF CPU schedulers live. Flags reference and per-scheduler info included. No <code>scx</code> commands required.</p>
+</div>
 
 <div class="faq-card">
 <h3>Pacman Rollback</h3>
