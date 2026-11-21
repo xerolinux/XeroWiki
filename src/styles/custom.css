@@ -1044,15 +1044,52 @@ a[data-edit-url] { display: none !important; }
 /* Mobile inline code — same as desktop */
 
 /* ===========================
-   Mobile (max 430px)
+   Mobile (max 600px)
    =========================== */
-@media (max-width: 430px) {
-	.sl-markdown-content table { display: block; overflow-x: auto; border-radius: 0; }
-	.sl-markdown-content th { font-size: 0.875rem; }
+@media (max-width: 600px) {
+	/* No justify on narrow screens — text rivers look terrible */
+	.sl-markdown-content { text-align: left; }
+
+	/* Tables scroll horizontally rather than breaking layout */
+	.sl-markdown-content table {
+		display: block;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		border-radius: 0.5rem;
+		white-space: nowrap;
+	}
+	/* Override nowrap on first column only inside scrollable tables */
+	.sl-markdown-content td:first-child { white-space: normal; }
+
+	/* Code blocks — always scrollable, no overflow blowout */
+	.expressive-code { margin: 1rem 0 !important; }
+	.expressive-code .frame pre,
+	.sl-markdown-content pre:not(.expressive-code pre) {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	/* Images — tighten frame on small screens */
+	.sl-markdown-content img {
+		padding: 4px;
+		max-width: 100%;
+	}
+
+	/* Contrib hero */
+	.contrib-hero img { max-width: 100%; }
+
+	/* Faq / tour padding reduction */
 	.faq-card h3 { padding: 0.65rem 1rem; }
 	.faq-card p, .faq-card ul { padding: 0.65rem 1rem; }
 	.tour-card-body { padding: 0.85rem 1rem; }
 	.contrib-callout { padding: 1rem 1.25rem; }
 	.stat-pills { gap: 0.5rem; }
 	.page-tagline { font-size: 0.95rem; }
+
+	/* Inline code — allow wrap to avoid blowing out on tiny screens */
+	.sl-markdown-content :not(pre) > code {
+		word-break: break-all;
+		overflow-wrap: anywhere;
+		white-space: pre-wrap;
+	}
 }

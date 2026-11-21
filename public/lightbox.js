@@ -215,7 +215,7 @@
       var WORDS = {
         '/':                ['Welcome',   'XeroLinux',     'Wiki'],
         '/distro/':         ['XeroLinux', 'Distro'],
-        '/xero-tools/':     ['Misc', 'Other', 'Tools'],
+        '/xero-tools/':     ['Other', 'Xero', 'Tools'],
         '/xpackagemanager/':['Package',   'Manager'],
         '/hypr-noc/':       ['Hyprland',  'Noctalia'],
         '/contributions/':  ['XeroLinux', 'Contributions'],

@@ -1,5 +1,5 @@
 ---
-title: Misc Other Tools
+title: Other Xero Tools
 description: XeroLinux themes, scripts, and system tools.
 ---
 
@@ -7,7 +7,11 @@ import { Image } from 'astro:assets';
 import SCXTool from '../../assets/images/scx-tool.webp';
 import SCXTool2 from '../../assets/images/scx-tool2.webp';
 import xeroTool from '../../assets/images/xero-tool.webp';
+import xfprintdMain from '../../assets/images/xfprintd-main.png';
+import xfprintdList from '../../assets/images/xfprintd-list.png';
 import howdyQt from '../../assets/images/HowdyQt.webp';
+import xsbGui from '../../assets/images/xsb-gui.webp';
+import xspeedtestApp from '../../assets/images/xspeedtest-app.gif';
 import wallsGui from '../../assets/images/walls-gui.webp';
 import wallsGuiDemo from '../../assets/images/walls-gui-demo.gif';
 import plymouthDelay from '../../assets/images/Delay.png';
@@ -73,6 +77,34 @@ curl -fsSL https://xerolinux.xyz/script/xero-tool.py | python3
 
 ---
 
+## Fingerprint GUI
+
+**XeroLinux Fingerprint GUI** (`xfprintd-gui`) is a GTK4 fingerprint manager built in Rust. It provides a clean interface for enrolling and managing fingerprints and configuring where fingerprint authentication is accepted on your system.
+
+<div class="img-row">
+  <Image src={xfprintdMain} alt="Fingerprint GUI main window" />
+  <Image src={xfprintdList} alt="Enrolled fingerprint list" />
+</div>
+
+### Features
+
+- Enroll new fingerprints with live scan feedback and retry guidance
+- Remove existing fingerprints with confirmation
+- Configure fingerprint auth for the login screen, terminal, and sudo
+- View all enrolled fingerprints in one list
+
+:::note[Requirements]
+Requires a connected fingerprint reader and the `fprintd` service running (usually automatic). Designed specifically for XeroLinux.
+:::
+
+### Install
+
+```bash
+sudo pacman -S xfprintd-gui
+```
+
+---
+
 ## Howdy-Qt
 
 :::caution
@@ -104,6 +136,39 @@ cd xero-howdy-qt/Packaging/ && makepkg -si
 > For **SDDM/PLM**, hit enter on empty password field first, same goes for the Lock Screen. Then it'll work.
 
 To see features, test it out, follow progress and report any issues or suggestions visit the the tool's [**Github Repo**](https://github.com/XeroLinux/xero-howdy-qt).
+
+---
+
+## Secure Boot
+
+**XeroLinux SecureBoot Tool** (`xsb-gui`) is a guided wizard that migrates an installed XeroLinux system from GRUB to Limine and enables Secure Boot through `sbctl`.
+
+<Image src={xsbGui} alt="XeroLinux Limine/SecureBoot Enabler" />
+
+:::danger[Use At Your Own Risk]
+This tool replaces your bootloader and re-enrolls Secure Boot keys at the firmware level. Turn Secure Boot **off** and clear existing keys before running it. An interrupted or misconfigured run can leave the system unbootable. Back up your data first.
+
+Not tested on encrypted systems or BTRFS + Snapshots setups. You've been warned!
+:::
+
+### Features
+
+- Migrates GRUB to Limine in one guided wizard
+- Enables Secure Boot via `sbctl` - creates, enrolls, and signs keys for Limine and all installed kernels
+- Detects other OSes and preserves dual-boot via Limine chainload entries
+- Detects UEFI, GPT, and LUKS roots (including LVM-on-LUKS), carries over GRUB kernel parameters
+- Refuses to remove GRUB until Limine is verified working; refuses to migrate while Secure Boot is active
+- If Limine is already installed, skips migration and goes straight to Secure Boot setup
+
+### Requirements
+
+UEFI mode with a GPT partition table. XeroLinux only.
+
+### Install
+
+```bash
+sudo pacman -S xsb-gui
+```
 
 ---
 
@@ -144,6 +209,28 @@ sudo pacman -S xero-wallpaper-browser
 :::note
 Live wallpapers, the Plasma slideshow plugin, and Smart Video Wallpaper Reborn require KDE Plasma.
 :::
+
+---
+
+## Speed Test GUI
+
+**xSpeedTest** is a Qt6/QML speed test for KDE Plasma. It measures download, upload, ping, and jitter with a live animated stream, follows the system theme with KWin blur, and ships a Plasma 6 widget for the desktop and panel.
+
+<Image src={xspeedtestApp} alt="xSpeedTest in action" />
+
+### Features
+
+- Live animation reacting to real throughput during the test
+- 35 visual styles - dark, full-width designs with one palette each
+- Native KDE look: Kirigami, Qt style, Kvantum, adjustable window opacity
+- Plasma 6 widget - install and update from inside the app
+- Test history (last 50 results), configurable speed units, server selection
+
+### Install
+
+```bash
+sudo pacman -S xspeedtest
+```
 
 ---
 

@@ -41,9 +41,9 @@ export default defineConfig({
 			sidebar: [
 				{ label: '⌂ Home', slug: '' },
 				{ label: '◎ The Distro', slug: 'distro' },
-				{ label: '✦ Misc Other Tools', slug: 'xero-tools' },
 				{ label: '⊞ Package Manager', slug: 'xpackagemanager' },
 				{ label: '⊙ iBackup/Restore', slug: 'xero-ibr' },
+				{ label: '✦ Other Xero Tools', slug: 'xero-tools' },
 				{ label: '❖ User Contributions', slug: 'contributions' },
 			],
 		}),
