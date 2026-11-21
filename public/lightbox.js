@@ -216,6 +216,7 @@
         '/':                ['Welcome',   'XeroLinux',     'Wiki'],
         '/distro/':         ['XeroLinux', 'Distro'],
         '/xero-tools/':     ['Other', 'Xero', 'Tools'],
+        '/secure-boot/':    ['Secure', 'Boot'],
         '/xpackagemanager/':['Package',   'Manager'],
         '/hypr-noc/':       ['Hyprland',  'Noctalia'],
         '/contributions/':  ['XeroLinux', 'Contributions'],

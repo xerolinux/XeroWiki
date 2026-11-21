@@ -10,7 +10,6 @@ import xeroTool from '../../assets/images/xero-tool.webp';
 import xfprintdMain from '../../assets/images/xfprintd-main.png';
 import xfprintdList from '../../assets/images/xfprintd-list.png';
 import howdyQt from '../../assets/images/HowdyQt.webp';
-import xsbGui from '../../assets/images/xsb-gui.webp';
 import xspeedtestApp from '../../assets/images/xspeedtest-app.gif';
 import wallsGui from '../../assets/images/walls-gui.webp';
 import wallsGuiDemo from '../../assets/images/walls-gui-demo.gif';
@@ -136,39 +135,6 @@ cd xero-howdy-qt/Packaging/ && makepkg -si
 > For **SDDM/PLM**, hit enter on empty password field first, same goes for the Lock Screen. Then it'll work.
 
 To see features, test it out, follow progress and report any issues or suggestions visit the the tool's [**Github Repo**](https://github.com/XeroLinux/xero-howdy-qt).
-
----
-
-## Secure Boot
-
-**XeroLinux SecureBoot Tool** (`xsb-gui`) is a guided wizard that migrates an installed XeroLinux system from GRUB to Limine and enables Secure Boot through `sbctl`.
-
-<Image src={xsbGui} alt="XeroLinux Limine/SecureBoot Enabler" />
-
-:::danger[Use At Your Own Risk]
-This tool replaces your bootloader and re-enrolls Secure Boot keys at the firmware level. Turn Secure Boot **off** and clear existing keys before running it. An interrupted or misconfigured run can leave the system unbootable. Back up your data first.
-
-Not tested on encrypted systems or BTRFS + Snapshots setups. You've been warned!
-:::
-
-### Features
-
-- Migrates GRUB to Limine in one guided wizard
-- Enables Secure Boot via `sbctl` - creates, enrolls, and signs keys for Limine and all installed kernels
-- Detects other OSes and preserves dual-boot via Limine chainload entries
-- Detects UEFI, GPT, and LUKS roots (including LVM-on-LUKS), carries over GRUB kernel parameters
-- Refuses to remove GRUB until Limine is verified working; refuses to migrate while Secure Boot is active
-- If Limine is already installed, skips migration and goes straight to Secure Boot setup
-
-### Requirements
-
-UEFI mode with a GPT partition table. XeroLinux only.
-
-### Install
-
-```bash
-sudo pacman -S xsb-gui
-```
 
 ---
 

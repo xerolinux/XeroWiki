@@ -41,6 +41,7 @@ export default defineConfig({
 			sidebar: [
 				{ label: '⌂ Home', slug: '' },
 				{ label: '◎ The Distro', slug: 'distro' },
+				{ label: '⚿ Secure Boot', slug: 'secure-boot' },
 				{ label: '⊞ Package Manager', slug: 'xpackagemanager' },
 				{ label: '⊙ iBackup/Restore', slug: 'xero-ibr' },
 				{ label: '✦ Other Xero Tools', slug: 'xero-tools' },
