@@ -27,6 +27,7 @@ export default defineConfig({
 			favicon: '/favicon.ico',
 			customCss: ['./src/styles/custom.css'],
 			head: [
+				{ tag: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' } },
 				{ tag: 'script', attrs: { src: '/lightbox.js', defer: true } },
 				{ tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.googleapis.com' } },
 				{ tag: 'link', attrs: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' } },

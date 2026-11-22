@@ -1,14 +1,14 @@
 ---
 title: Secure Boot
-description: Migrate XeroLinux from GRUB to Limine and enable Secure Boot using xsb-gui.
+description: Migrate XeroLinux from GRUB to Limine and enable Secure Boot using xsb-gui or manually with sbctl.
 ---
 
 import { Steps } from '@astrojs/starlight/components';
 
-**Limine/SecureBoot Enabler** (`xsb-gui`) switches an installed XeroLinux system from GRUB to **Limine**, then turns on **Secure Boot**, so every file your computer starts is checked before it runs. No terminal needed: a wizard walks you through it.
+**Limine/SecureBoot Enabler** (`xsb-gui`) switches an installed XeroLinux system from GRUB to **Limine**, then turns on **Secure Boot**, so every file your computer starts is verified before it runs. No terminal needed: a wizard walks you through it.
 
 <div style="text-align:center;margin:1.5rem 0;">
-  <img src="/xsb-demo.gif" alt="xsb-gui demo: the welcome page, the system check, the snapshot and passphrase popups, switching to Limine, then Secure Boot setup and the final reboot to BIOS" style="border-radius:0.5rem;max-width:100%;display:inline-block;" />
+  <img src="/xsb-demo.gif" alt="xsb-gui demo" style="border-radius:0.5rem;max-width:100%;display:inline-block;" />
 </div>
 
 :::danger[Use At Your Own Risk]
@@ -22,7 +22,50 @@ This tool **replaces your bootloader** and **changes the Secure Boot keys in you
 
 ---
 
-## The short version
+## How-To Use
+
+<div class="not-content" style="margin:1.5rem 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 90" width="100%" style="max-width:900px;display:block;margin:0 auto;font-family:sans-serif;">
+  <defs>
+    <linearGradient id="sbStep" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2b3d"/>
+      <stop offset="100%" stop-color="#1a1b2a"/>
+    </linearGradient>
+    <linearGradient id="sbActive" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5657f5"/>
+      <stop offset="100%" stop-color="#3a3bb8"/>
+    </linearGradient>
+    <linearGradient id="sbDone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2bd05a"/>
+      <stop offset="100%" stop-color="#1a9040"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="90" fill="url(#sbStep)" rx="10"/>
+  <rect x="10"  y="18" width="130" height="54" rx="8" fill="url(#sbActive)"/>
+  <rect x="160" y="18" width="150" height="54" rx="8" fill="url(#sbActive)"/>
+  <rect x="330" y="18" width="100" height="54" rx="8" fill="#ff8a3d" opacity="0.9"/>
+  <rect x="450" y="18" width="160" height="54" rx="8" fill="url(#sbActive)"/>
+  <rect x="630" y="18" width="150" height="54" rx="8" fill="url(#sbActive)"/>
+  <rect x="800" y="18" width="88" height="54" rx="8" fill="url(#sbDone)"/>
+  <text x="75"  y="41" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">1. Prepare</text>
+  <text x="75"  y="57" fill="#ccd" font-size="9"  text-anchor="middle">back up, SB off</text>
+  <text x="235" y="41" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">2. Run 1</text>
+  <text x="235" y="57" fill="#ccd" font-size="9"  text-anchor="middle">GRUB &#10132; Limine</text>
+  <text x="380" y="41" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">3. Reboot</text>
+  <text x="380" y="57" fill="#ffe" font-size="9"  text-anchor="middle">boot into Limine</text>
+  <text x="530" y="41" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">4. Setup Mode</text>
+  <text x="530" y="57" fill="#ccd" font-size="9"  text-anchor="middle">clear keys in firmware</text>
+  <text x="705" y="41" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">5. Run 2</text>
+  <text x="705" y="57" fill="#ccd" font-size="9"  text-anchor="middle">enroll keys + sign</text>
+  <text x="844" y="41" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">6. Done</text>
+  <text x="844" y="57" fill="#dfd" font-size="9"  text-anchor="middle">SB on in BIOS</text>
+  <text x="148" y="49" fill="#aab" font-size="14" text-anchor="middle">&#9654;</text>
+  <text x="318" y="49" fill="#aab" font-size="14" text-anchor="middle">&#9654;</text>
+  <text x="438" y="49" fill="#aab" font-size="14" text-anchor="middle">&#9654;</text>
+  <text x="618" y="49" fill="#aab" font-size="14" text-anchor="middle">&#9654;</text>
+  <text x="788" y="49" fill="#aab" font-size="14" text-anchor="middle">&#9654;</text>
+</svg>
+</div>
 
 <Steps>
 
@@ -46,251 +89,447 @@ This tool **replaces your bootloader** and **changes the Secure Boot keys in you
 
 </Steps>
 
-Everything below explains each step in more detail, plus what happens with snapshots, encryption, nVidia and dual boot.
-
 ---
 
 ## What it does
 
 - **Moves you from GRUB to Limine.** Limine comes from its own Arch packages (`limine`, `limine-mkinitcpio-hook`), so it updates itself with the rest of your system.
-- **Keeps GRUB until Limine is proven to work.** GRUB is only removed after Limine is installed, registered in your firmware, and has a working boot entry. If anything fails before that, you still boot with GRUB like before.
+- **Keeps GRUB until Limine is proven to work.** GRUB is only removed after Limine is installed, registered in your firmware, and has a working boot entry.
 - **Turns on real Secure Boot.** Limine's settings are locked with a checksum, so nobody can swap your kernel or edit your boot menu without Limine refusing to start.
-- **Supports Btrfs + Snapper.** Snapshots you take from now on show up in the Limine boot menu, so you can boot into one if an update goes wrong.
-- **Supports nVidia systems.** Your nVidia settings carry over, and the tool makes sure your EFI partition has room for nVidia's larger boot files.
-- **Keeps dual boot working.** Windows and other Linux installs get their own entry in the Limine menu, even when they live on another drive.
-- **Uses the current Microsoft certificates.** Both the 2011 and the new 2023 Microsoft certificates are added, so Windows, graphics cards and newer hardware keep working.
+- **Supports Btrfs + Snapper.** Snapshots show up in the Limine boot menu after the switch.
+- **Supports nVidia systems.** Your nVidia settings carry over; EFI space is checked.
+- **Keeps dual boot working.** Windows and other Linux installs get their own Limine menu entry.
+- **Uses the current Microsoft certificates.** Both the 2011 and 2023 Microsoft certificates are enrolled.
 
 ---
 
 ## Requirements
 
-- An installed **XeroLinux** system (FOSS or nVidia edition) that currently starts with **GRUB**.
-- Started in **UEFI** mode, on a disk with a **GPT** partition table (every XeroLinux install is).
-- Enough free space on your EFI partition. The tool works out how much you need and tells you before changing anything.
-- The **Chaotic-AUR** repository (on by default in XeroLinux). Btrfs snapshot support needs `limine-snapper-sync` from there.
-- An internet connection, so the tool can install packages.
+- An installed **XeroLinux** system (FOSS or nVidia edition) currently booting with **GRUB**.
+- **UEFI** mode, **GPT** partition table (every XeroLinux install is).
+- Enough free space on your EFI partition. The tool checks this before changing anything.
+- **Chaotic-AUR** enabled (default on XeroLinux). Btrfs snapshot support needs `limine-snapper-sync` from there.
+- An internet connection to install packages.
 
 ---
 
 ## Before you start
 
-Five minutes here saves a lot of trouble later.
-
 - [ ] **Back up your data.**
-- [ ] **Update your system** and reboot once, so you start from a clean state.
-- [ ] **Turn Secure Boot off** in your BIOS/UEFI settings. The tool will not switch bootloaders while it is on, because Limine is not trusted yet at that point.
-- [ ] **Encrypted drive?** Make sure you **know your disk passphrase**. See [Encrypted drives](#encrypted-drives-luks).
-- [ ] **Dual boot with Windows?** Write down your **BitLocker recovery key** if Windows uses BitLocker: [aka.ms/myrecoverykey](https://aka.ms/myrecoverykey). See [Windows and BitLocker](#windows-and-bitlocker).
-- [ ] **Close other package managers** (pamac, Octopi, or a terminal running `pacman`). The tool waits for them to finish.
+- [ ] **Update your system** and reboot once for a clean state.
+- [ ] **Turn Secure Boot off** in BIOS/UEFI.
+- [ ] **Encrypted drive?** Know your disk passphrase. See [Encrypted drives](#encrypted-drives-luks).
+- [ ] **Dual boot with Windows?** Save your BitLocker recovery key: [aka.ms/myrecoverykey](https://aka.ms/myrecoverykey).
+- [ ] **Close other package managers** (pamac, Octopi, `pacman` in a terminal).
 
 ---
 
-## Step by step
+## Scenario notes
 
-The tool runs **twice**, with a reboot in between. That way Limine has started your computer successfully at least once before Secure Boot is switched on.
+### Btrfs and snapshots
 
-### Run 1: switch to Limine
+The tool installs `limine-snapper-sync` (adds a Snapshots section to the Limine menu), removes `grub-btrfs`, and takes a fresh snapshot called "After Limine migration". Snapshots taken **before** the switch cannot appear in the Limine menu and are risky to roll back to - only post-switch snapshots work normally. A popup explains this before anything changes; you must tick "I understand" to continue. You can optionally delete old snapshots to free EFI space.
 
-<Steps>
+Restore a snapshot with `limine-snapper-restore` or by booting it from the menu. On nVidia systems with an EFI partition under 4 GiB, the menu is limited to the 3 most recent snapshots (configure in `/etc/limine-snapper-sync.conf`).
 
-1. **Welcome.** Read the warning, tick **"I understand, and want to proceed"**, then press **Next**.
+### Encrypted drives (LUKS)
 
-2. **Checking your system.** The tool looks at your disk, EFI partition, bootloader, encryption, Btrfs, graphics card, other operating systems and Secure Boot state. **Nothing changes yet.**
+XeroLinux encrypted installs use a hidden key file inside the boot image so GRUB only asks once. With Limine that image is on the unencrypted EFI partition, so the tool removes the key file. It asks for your passphrase first - if wrong, nothing changes. From then on you type your passphrase once at every boot. If `/home` also uses that key file, it stays on the encrypted root and is only removed from the boot image.
 
-   Depending on your setup, one or two popups may appear:
-   - **Btrfs snapshots:** explains what happens to your existing snapshots. Tick **"I understand"** to continue. See [Btrfs and snapshots](#btrfs-and-snapshots).
-   - **Encrypted drive:** asks for your disk passphrase. See [Encrypted drives](#encrypted-drives-luks).
-
-3. **Migrating to Limine.** Limine is installed and tested. You can follow every step in the log. GRUB is only removed at the very end, once Limine checks out.
-
-4. **All done.** Press **Reboot now**. Your computer now starts with Limine.
-
-</Steps>
-
-### Run 2: turn on Secure Boot
-
-<Steps>
-
-1. **Put your firmware in Setup Mode.** Reboot into your BIOS/UEFI settings and clear the Secure Boot keys. The option is usually called "Clear Secure Boot keys", "Delete all keys" or "Reset to Setup Mode". Boot back into XeroLinux.
-
-2. **Open the tool again.** It sees that Limine is already installed and skips straight to Secure Boot setup.
-
-3. **Enabling Secure Boot.** The tool creates your own Secure Boot keys, adds them together with the Microsoft certificates, locks your Limine settings and signs Limine. If you dual boot Windows, it reminds you about your BitLocker recovery key first.
-
-4. **All done.** Press **Reboot to BIOS**, turn **Secure Boot on**, save and exit. Your computer now starts with Secure Boot switched on.
-
-</Steps>
-
-:::tip[Says "Reboot into Limine first"?]
-You have not started your computer with Limine yet since the switch. Reboot, let Limine start XeroLinux, and open the tool again.
+:::caution
+If you do not know your passphrase, stop. Add one first with `sudo cryptsetup luksAddKey`.
 :::
 
-:::note[MSI, ASUS and Gigabyte boards]
-Many of these boards have no "Setup Mode" option. The last page of the tool shows the exact menu path for each brand, for example **Secure Boot Mode = Custom** and **Delete all Secure Boot Variables**.
-:::
+### nVidia systems
 
----
+All nVidia settings (`nvidia-drm.modeset=1`, `modprobe.blacklist=nouveau`, etc.) carry over unchanged. Boot files are large, so the tool checks EFI space first. Boot Diagnostics warns if `nvidia-drm.modeset=1` ever goes missing.
 
-## Btrfs and snapshots
+### Dual boot
 
-If your system uses Btrfs with Snapper (the XeroLinux default for Btrfs installs), the tool:
-
-- installs **limine-snapper-sync**, which adds a **Snapshots** section to the Limine boot menu,
-- removes **grub-btrfs** and its services, and swaps its boot hook for Limine's own,
-- takes one fresh snapshot right after the switch, called **"After Limine migration"**, so you always have a safe point to go back to.
-
-### What happens to your existing snapshots
-
-Snapshots taken **before** the switch were made while GRUB was your bootloader, so:
-
-- **They cannot appear in the Limine boot menu.** The kernel files they need were never copied to the EFI partition.
-- **Rolling back to one is risky.** It brings back a GRUB-era system whose kernel files may not match the kernel Limine starts, so it may not boot properly.
-
-**Snapshots taken after the switch work normally** and show up in the boot menu.
-
-A popup explains this before anything changes. Tick **"I understand"** to continue. You can also tick **"Delete these old snapshots"** to free up disk space. They are only deleted if you tick that box, and only after Limine is confirmed working.
-
-### Restoring a snapshot later
-
-Boot the snapshot from the Limine menu and follow the restore prompt, or use `limine-snapper-restore`. **btrfs-assistant** still works for browsing and managing snapshots.
-
-### Snapshots and EFI partition space
-
-Every snapshot entry copies its kernel files to the EFI partition, which fills up fast on small partitions, especially with nVidia. On nVidia systems with an EFI partition under 4 GiB, the tool keeps only the 3 most recent snapshots in the boot menu. You can change this in `/etc/limine-snapper-sync.conf` (`MAX_SNAPSHOT_ENTRIES`, `EXCLUDE_SNAPSHOT_TYPES`).
-
----
-
-## Encrypted drives (LUKS)
-
-When XeroLinux is installed on an encrypted drive, it uses a **hidden key file** so you only type your passphrase once at boot. That key file lives inside your boot image.
-
-With Limine, the boot image sits on the **unencrypted** EFI partition, where anyone with your disk could read the key file. So the tool removes it:
-
-<Steps>
-
-1. It asks for your **disk passphrase** and tests it first. **If it is wrong, nothing changes** and the switch does not start.
-
-2. It removes the key file from the boot image and from your encrypted drive. **Your passphrase is never touched.**
-
-3. From now on you **type your passphrase once at every boot**, before XeroLinux starts.
-
-</Steps>
-
-If other encrypted partitions (like `/home`) also open with that key file, the file stays on your encrypted drive, where it is safe, and is only removed from the boot image.
-
-:::caution[Not sure of your passphrase?]
-Stop here. Do not run the tool until you have a passphrase you know works. You can add one with `sudo cryptsetup luksAddKey`.
-:::
-
----
-
-## nVidia systems
-
-- Your nVidia settings (`nvidia-drm.modeset=1`, `modprobe.blacklist=nouveau` and the rest) carry over to Limine unchanged.
-- The nVidia modules in `/etc/mkinitcpio.conf` stay as they are.
-- nVidia boot files are large, so the tool checks your EFI partition has enough room before starting.
-- **Boot Diagnostics** warns you if `nvidia-drm.modeset=1` ever goes missing.
-
----
-
-## Dual boot
-
-The tool reads where each operating system really starts from and adds it to the Limine menu:
-
-- **Windows**, on the same drive or another drive.
-- **Other Linux installs that use shim** (Ubuntu, Fedora, openSUSE and others). These keep working with Secure Boot on.
-- **Other Linux installs with plain GRUB** (no shim) are added too, but **they will not start once Secure Boot is on**, because their GRUB is not signed with a key your computer trusts. The tool warns you about this before you start.
-
-Other operating systems' files are **never changed or deleted**, and each one keeps its own entry in your firmware's boot menu.
-
-### Windows and BitLocker
-
-When Secure Boot keys change, BitLocker notices and **asks for your recovery key once** the next time Windows starts. That is normal. Have the key ready before you turn Secure Boot on: [aka.ms/myrecoverykey](https://aka.ms/myrecoverykey). The tool reminds you before it adds any keys.
+Windows and shim-based distros (Ubuntu, Fedora, openSUSE) keep working with Secure Boot on. Plain-GRUB distros (no shim) will not boot once Secure Boot is on - the tool warns you beforehand. When Secure Boot keys change, BitLocker asks for your recovery key once; have it ready before Run 2.
 
 ---
 
 ## How Secure Boot is set up
 
-### What gets signed
+<div class="not-content" style="margin:1.5rem 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 160" width="100%" style="max-width:860px;display:block;margin:0 auto;font-family:sans-serif;">
+  <defs>
+    <linearGradient id="chainBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22233a"/>
+      <stop offset="100%" stop-color="#161724"/>
+    </linearGradient>
+    <linearGradient id="chainBox" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2e2f50"/>
+      <stop offset="100%" stop-color="#222340"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="160" fill="url(#chainBg)" rx="10"/>
+  <text x="430" y="22" fill="#888" font-size="11" text-anchor="middle">SECURE BOOT VERIFICATION CHAIN</text>
+  <rect x="20"  y="38" width="140" height="52" rx="8" fill="url(#chainBox)" stroke="#5657f5" stroke-width="1.5"/>
+  <rect x="200" y="38" width="140" height="52" rx="8" fill="url(#chainBox)" stroke="#5657f5" stroke-width="1.5"/>
+  <rect x="380" y="38" width="140" height="52" rx="8" fill="url(#chainBox)" stroke="#ff8a3d" stroke-width="1.5"/>
+  <rect x="560" y="38" width="140" height="52" rx="8" fill="url(#chainBox)" stroke="#ff8a3d" stroke-width="1.5"/>
+  <rect x="740" y="38" width="100" height="52" rx="8" fill="url(#chainBox)" stroke="#2bd05a" stroke-width="1.5"/>
+  <text x="90"  y="60" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">UEFI Firmware</text>
+  <text x="90"  y="76" fill="#aab" font-size="9"  text-anchor="middle">checks sig on</text>
+  <text x="90"  y="88" fill="#5cf" font-size="9"  text-anchor="middle">limine_x64.efi</text>
+  <text x="270" y="60" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Limine</text>
+  <text x="270" y="76" fill="#aab" font-size="9"  text-anchor="middle">checks BLAKE2B hash on</text>
+  <text x="270" y="88" fill="#5cf" font-size="9"  text-anchor="middle">kernel + initramfs</text>
+  <text x="450" y="60" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">Kernel</text>
+  <text x="450" y="76" fill="#aab" font-size="9"  text-anchor="middle">starts normally</text>
+  <text x="450" y="88" fill="#fa8" font-size="9"  text-anchor="middle">(not signed)</text>
+  <text x="630" y="60" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">fwupd</text>
+  <text x="630" y="76" fill="#aab" font-size="9"  text-anchor="middle">also signed</text>
+  <text x="630" y="88" fill="#fa8" font-size="9"  text-anchor="middle">(firmware updates)</text>
+  <text x="790" y="60" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">System</text>
+  <text x="790" y="76" fill="#aab" font-size="9"  text-anchor="middle">boots</text>
+  <text x="790" y="88" fill="#6f6" font-size="9"  text-anchor="middle">verified</text>
+  <text x="188" y="69" fill="#5657f5" font-size="16" text-anchor="middle">&#9654;</text>
+  <text x="368" y="69" fill="#5657f5" font-size="16" text-anchor="middle">&#9654;</text>
+  <text x="548" y="69" fill="#888"    font-size="16" text-anchor="middle">&#9654;</text>
+  <text x="728" y="69" fill="#888"    font-size="16" text-anchor="middle">&#9654;</text>
+  <text x="90"  y="118" fill="#5657f5" font-size="9" text-anchor="middle">your key (sbctl)</text>
+  <text x="270" y="118" fill="#ff8a3d" font-size="9" text-anchor="middle">config hash baked in</text>
+  <text x="450" y="118" fill="#888"    font-size="9" text-anchor="middle">Windows files: untouched</text>
+  <text x="630" y="118" fill="#888"    font-size="9" text-anchor="middle">your key (sbctl)</text>
+  <line x1="90"  y1="108" x2="90"  y2="91" stroke="#5657f5" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="270" y1="108" x2="270" y2="91" stroke="#ff8a3d" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="450" y1="108" x2="450" y2="91" stroke="#888"    stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="630" y1="108" x2="630" y2="91" stroke="#888"    stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="430" y="148" fill="#555" font-size="9" text-anchor="middle">Microsoft 2011 + 2023 certificates also enrolled so Windows, GPU firmware and shim-based distros keep working</text>
+</svg>
+</div>
 
-Only two files are signed with your keys:
+**What gets signed with your key:** only `limine_x64.efi` and `fwupd`. Kernels are not signed - Limine checks them by checksum (BLAKE2B hash baked into the signed binary). Windows and other OS files are never touched.
 
-- **Limine** (`EFI/limine/limine_x64.efi`), automatically, every time it updates.
-- **fwupd's firmware updater**, so firmware updates keep working.
+**Microsoft certificates (2011 and 2023):** both are enrolled via `sbctl enroll-keys -m`. The 2011 certs cover existing Windows and most GPU firmware. The 2023 certs cover newer Windows boot managers and Linux shims. Firmware does not check expiry dates so the 2011 certs keep working despite being expired. After enrolling, the tool verifies the 2023 certs are actually present before locking anything.
 
-Windows and other operating systems are **never signed or changed**. Kernels are not signed either: Limine checks them with a checksum instead.
+**Config lock:** the checksum of `limine.conf` is baked into the signed Limine binary. Editing it by hand breaks boot.
 
-### Microsoft certificates (2011 and 2023)
-
-The tool adds **both** sets of Microsoft certificates:
-
-- The **2011** ones are still needed. Most graphics cards (nVidia included) and most current Windows installs rely on them. Without them your screen can stay black at boot, or Windows may not start. They keep working even after their expiry date, because firmware does not check it.
-- The **2023** ones are needed for newer Windows versions, newer Linux shims and newer graphics card firmware.
-
-Afterwards the tool **checks that the 2023 certificates are really there**. If one is missing, it stops before switching anything on and tells you what to do. Your computer keeps starting normally in that case.
-
-### Your boot settings are locked
-
-With Secure Boot on, a checksum of Limine's settings is built into the signed Limine file. If anyone edits `limine.conf` or swaps a kernel, **Limine refuses to start**. Normal kernel updates and new snapshots update the lock for you, so you never need to do anything.
-
-:::caution[Don't edit limine.conf by hand]
-Editing `/boot/efi/limine.conf` directly will stop your computer from starting. Change boot settings in `/etc/default/limine` instead, then run `sudo limine-update`.
+:::caution
+Change boot settings in `/etc/default/limine`, then run `sudo limine-update`. Never edit `/boot/efi/limine.conf` directly when Secure Boot is on.
 :::
 
 ---
 
 ## Built-in tools
 
-These buttons sit on the welcome page, under **Troubleshooting**. The top row only checks things; the bottom row can make changes, and always shows you a preview first.
-
 | Button | What it does |
 |---|---|
 | **Check SecureBoot Status** | Shows whether Secure Boot is on, whether your firmware is in Setup Mode, and whether the keys are yours. |
-| **Boot Diagnostics** | Looks for problems: missing files or boot entries, a leftover key file, missing nVidia settings, and more. Changes nothing. |
-| **Clean up ESP** | Frees space on the EFI partition by removing leftover kernels and old bootloader files. Nothing changes until you press **Apply Cleanup**. |
-| **Reset Keys** | Deletes the Secure Boot keys this tool made on your computer, so you can start Secure Boot setup over. Your firmware is not changed: clear its keys in your BIOS/UEFI settings too. It refuses while Secure Boot is on, because your next Limine update could not be signed and your computer would not start. |
-| **Repair Limine** | Reinstalls and re-registers Limine and rebuilds its boot entries. Also upgrades systems switched by older versions of this tool. Nothing changes until you press **Apply Repair**. |
-
-### Used an older version of this tool?
-
-Older versions left some security gaps: the disk key file on the EFI partition, unlocked Limine settings, and Windows' boot file signed by sbctl. Press **Repair Limine** once. It moves you to the package-managed Limine, removes the key file (after checking your passphrase), locks your settings if you use Secure Boot, and stops sbctl from signing other systems' files.
+| **Boot Diagnostics** | Looks for problems: missing files, boot entries, leftover key files, missing nVidia settings. Changes nothing. |
+| **Clean up ESP** | Removes leftover kernels and old bootloader files from the EFI partition. Preview shown first. |
+| **Reset Keys** | Deletes the Secure Boot keys this tool created. Firmware is not changed - clear its keys in BIOS/UEFI too. Refuses while Secure Boot is on. |
+| **Repair Limine** | Reinstalls, re-registers Limine, rebuilds boot entries. Also upgrades older tool installs. Preview shown first. |
 
 ---
 
 ## Troubleshooting
 
-**"Secure Boot is already enabled in firmware"**
-Turn Secure Boot off in your BIOS/UEFI settings, then run the tool again. You switch it back on at the end of Run 2.
+**"Secure Boot is already enabled in firmware"** - Turn Secure Boot off in BIOS/UEFI, then run the tool again.
 
-**"Secure Boot keys are already enrolled in firmware, but not by this tool"**
-Your firmware still has keys from somewhere else, often the factory Windows keys. Clear all Secure Boot keys in your BIOS/UEFI settings (Setup Mode), then run Secure Boot setup again.
+**"Secure Boot keys are already enrolled in firmware, but not by this tool"** - Clear all Secure Boot keys in firmware (Setup Mode), then run Secure Boot setup again.
 
-**"Microsoft 2023 certificates are missing from your firmware"**
-Nothing was locked or signed, and your computer still starts normally. Clear the Secure Boot keys in your BIOS/UEFI settings, press **Reset Keys** in the tool, then run Secure Boot setup again. If it keeps happening, update your motherboard firmware.
+**"Microsoft 2023 certificates are missing from your firmware"** - Clear keys in firmware, run `sudo /usr/lib/xsb-gui/xsb-helper reset-keys`, run Secure Boot setup again. If it repeats, update your motherboard firmware.
 
-**"Boot your normal system first"**
-You started from a snapshot. Reboot into your normal system and try again.
+**"Boot your normal system first"** - You booted from a snapshot. Reboot into your normal system.
 
-**"Another package operation is running"**
-Close pamac, Octopi or any terminal running `pacman`, then try again. If nothing is running, an interrupted update may have left a lock behind: reboot first.
+**"Another package operation is running"** - Close pamac/Octopi/pacman, then try again. If nothing is running, reboot (stale lock file).
 
-**"Not enough free space on the EFI partition"**
-Press **Clean up ESP**, remove old kernels you no longer use, or make the EFI partition bigger.
+**"Not enough free space on the EFI partition"** - Use **Clean up ESP**, remove unused kernels, or enlarge the partition.
 
-**My passphrase was rejected**
-Nothing was changed. Check your keyboard layout and try again. At boot, the passphrase prompt may use the US layout unless the `keymap` hook is in your mkinitcpio HOOKS (XeroLinux adds it by default).
+**Wrong passphrase rejected** - Nothing changed. Check keyboard layout (boot prompt may use US layout).
 
-**My old snapshots are not in the boot menu**
-That is expected. Only snapshots taken after the switch can appear. See [Btrfs and snapshots](#btrfs-and-snapshots).
+**Old snapshots not in the boot menu** - Expected. Only post-switch snapshots appear.
 
-**Another Linux install stopped starting after I turned Secure Boot on**
-It uses plain GRUB without shim. Turn Secure Boot off to start it, or reinstall that distro's bootloader with shim.
+**Another Linux stopped booting after Secure Boot on** - It uses plain GRUB without shim. Turn Secure Boot off to boot it, or reinstall that distro with shim.
 
-**Black screen after turning Secure Boot on**
-Turn Secure Boot off in your BIOS/UEFI settings and press **Boot Diagnostics**. The tool always adds the Microsoft 2011 certificates graphics cards need, so this usually means your firmware rejected the keys. Clear them and run Secure Boot setup again.
+**Black screen after Secure Boot on** - Turn Secure Boot off, run **Boot Diagnostics**. Usually means firmware rejected key enrollment - clear keys and redo Secure Boot setup.
 
-**Something failed during the switch**
-Until GRUB is removed at the very end, any failure leaves GRUB in place, so your computer still starts like before. Press **Save Detailed Log...** and share the log when you ask for help.
+**Something failed during the switch** - GRUB stays in place until the very last step, so your system still boots. Use **Save Detailed Log...** and share it when asking for help.
+
+---
+
+## Manual method (terminal)
+
+<div class="not-content" style="margin:1.5rem 0;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 100" width="100%" style="max-width:860px;display:block;margin:0 auto;font-family:sans-serif;">
+  <defs>
+    <linearGradient id="manBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e2030"/>
+      <stop offset="100%" stop-color="#16182a"/>
+    </linearGradient>
+  </defs>
+  <rect width="860" height="100" fill="url(#manBg)" rx="10"/>
+  <text x="430" y="20" fill="#666" font-size="10" text-anchor="middle">MANUAL FLOW</text>
+  <rect x="10"  y="30" width="110" height="40" rx="6" fill="#2a2c46" stroke="#5657f5" stroke-width="1.2"/>
+  <rect x="140" y="30" width="130" height="40" rx="6" fill="#2a2c46" stroke="#5657f5" stroke-width="1.2"/>
+  <rect x="290" y="30" width="130" height="40" rx="6" fill="#2a2c46" stroke="#ff8a3d" stroke-width="1.2"/>
+  <rect x="440" y="30" width="140" height="40" rx="6" fill="#2a2c46" stroke="#ff8a3d" stroke-width="1.2"/>
+  <rect x="600" y="30" width="130" height="40" rx="6" fill="#2a2c46" stroke="#ff8a3d" stroke-width="1.2"/>
+  <rect x="750" y="30" width="100" height="40" rx="6" fill="#2a2c46" stroke="#2bd05a" stroke-width="1.2"/>
+  <text x="65"  y="47" fill="#fff" font-size="10" font-weight="bold" text-anchor="middle">1. sbctl</text>
+  <text x="65"  y="61" fill="#aab" font-size="9"  text-anchor="middle">create-keys</text>
+  <text x="205" y="47" fill="#fff" font-size="10" font-weight="bold" text-anchor="middle">2. limine</text>
+  <text x="205" y="61" fill="#aab" font-size="9"  text-anchor="middle">enroll-config</text>
+  <text x="355" y="47" fill="#fff" font-size="10" font-weight="bold" text-anchor="middle">3. sbctl sign</text>
+  <text x="355" y="61" fill="#fa8" font-size="9"  text-anchor="middle">EFI files</text>
+  <text x="510" y="47" fill="#fff" font-size="10" font-weight="bold" text-anchor="middle">4. enroll-keys -m</text>
+  <text x="510" y="61" fill="#fa8" font-size="9"  text-anchor="middle">MS certs included</text>
+  <text x="665" y="47" fill="#fff" font-size="10" font-weight="bold" text-anchor="middle">5. Enable SB</text>
+  <text x="665" y="61" fill="#fa8" font-size="9"  text-anchor="middle">in BIOS/UEFI</text>
+  <text x="800" y="47" fill="#fff" font-size="10" font-weight="bold" text-anchor="middle">6. Verify</text>
+  <text x="800" y="61" fill="#6f6" font-size="9"  text-anchor="middle">sbctl status</text>
+  <text x="128" y="54" fill="#aab" font-size="13" text-anchor="middle">&#9654;</text>
+  <text x="278" y="54" fill="#aab" font-size="13" text-anchor="middle">&#9654;</text>
+  <text x="428" y="54" fill="#aab" font-size="13" text-anchor="middle">&#9654;</text>
+  <text x="588" y="54" fill="#aab" font-size="13" text-anchor="middle">&#9654;</text>
+  <text x="738" y="54" fill="#aab" font-size="13" text-anchor="middle">&#9654;</text>
+</svg>
+</div>
+
+For users who already have Limine installed and want to enable Secure Boot from the terminal. Pick the scenario that matches your setup.
+
+:::caution[Setup Mode is required]
+"Secure Boot off" is not enough. Your firmware must be in **Setup Mode** (Platform Key cleared). Go into BIOS/UEFI and choose "Clear Secure Boot keys", "Reset to Setup Mode", "Delete all keys" or "Custom mode" - exact label varies by vendor.
+:::
+
+---
+
+### Scenario 1: Standard install (no LUKS, no Btrfs, single OS)
+
+**Prerequisites:** Limine already installed and booting. Secure Boot off. Firmware in Setup Mode.
+
+**Step 1 - Install sbctl (0.18 or newer):**
+
+```bash
+sudo pacman -S sbctl
+```
+
+**Step 2 - Verify Setup Mode:**
+
+```bash
+sbctl status
+```
+
+Must show `Setup Mode: Enabled`. If `Disabled`, clear keys in firmware first.
+
+**Step 3 - Create your keys:**
+
+```bash
+sudo sbctl create-keys
+```
+
+**Step 4 - Lock the Limine config (must happen before signing):**
+
+```bash
+sudo limine enroll-config
+```
+
+This bakes a checksum of `limine.conf` into the Limine EFI binary. Any later change to the config, kernel or initramfs requires repeating this step and re-signing.
+
+**Step 5 - Sign EFI files:**
+
+```bash
+sudo sbctl sign -s /boot/EFI/BOOT/BOOTX64.EFI
+sudo sbctl sign -s /boot/EFI/limine/limine_x64.efi
+sudo sbctl verify
+```
+
+The `-s` flag saves each path so it is re-signed automatically on future Limine package updates. Sign everything `sbctl verify` lists as unsigned.
+
+**Step 6 - Enroll keys with Microsoft certificates:**
+
+```bash
+sudo sbctl enroll-keys -m
+```
+
+The `-m` flag is required. Without it Windows will not boot and some machines will not POST. This enrolls both the 2011 and 2023 Microsoft certificates.
+
+**Step 7 - Enable Secure Boot in BIOS/UEFI and confirm:**
+
+Reboot into firmware, turn Secure Boot on, save and exit, then boot back into XeroLinux.
+
+```bash
+sbctl status
+```
+
+Must show `Secure Boot: Enabled` and `Vendor Keys: none` (or `microsoft`).
+
+---
+
+### Scenario 2: Encrypted drive (LUKS)
+
+XeroLinux encrypted installs use a hidden key file inside the initramfs so GRUB only asks for your passphrase once. With Limine the initramfs lives on the unencrypted EFI partition, exposing that key file. You must remove it first.
+
+**Step 1 - Find the key file slot:**
+
+```bash
+sudo cryptsetup luksDump /dev/YOUR_ROOT_PARTITION | grep -A2 "Keyslot"
+```
+
+Identify which slot belongs to the key file (usually slot 1; slot 0 is your passphrase).
+
+**Step 2 - Remove the key file from the initramfs and from LUKS:**
+
+```bash
+sudo mkinitcpio -P
+```
+
+Then remove the key file slot (replace `1` with the actual slot number):
+
+```bash
+sudo cryptsetup luksKillSlot /dev/YOUR_ROOT_PARTITION 1
+```
+
+Confirm with your passphrase when prompted. If the passphrase is wrong, nothing changes.
+
+**Step 3 - Rebuild the initramfs without the key file:**
+
+```bash
+sudo mkinitcpio -P
+```
+
+**Step 4 - Follow Scenario 1 steps 1-7 completely.**
+
+From this point your system will ask for your passphrase once at every boot before XeroLinux starts.
+
+:::note
+If `/home` or swap also unlocks with that key file, they may need their own passphrase entry added before you remove the shared key file slot. Test first with `sudo cryptsetup open --test-passphrase /dev/YOUR_HOME_PARTITION`.
+:::
+
+---
+
+### Scenario 3: Btrfs + Snapper
+
+Limine uses a different snapshot integration than GRUB. The `grub-btrfs` package must be replaced with `limine-snapper-sync`.
+
+**Step 1 - Install the Limine snapshot integration:**
+
+```bash
+sudo pacman -S limine-snapper-sync
+```
+
+**Step 2 - Remove grub-btrfs:**
+
+```bash
+sudo pacman -R grub-btrfs
+sudo systemctl disable --now grub-btrfsd.service
+```
+
+**Step 3 - Enable the Limine snapshot sync service:**
+
+```bash
+sudo systemctl enable --now limine-snapper-sync.timer
+```
+
+**Step 4 - Take a snapshot before proceeding:**
+
+```bash
+sudo snapper -c root create --description "Before Secure Boot setup"
+```
+
+**Step 5 - Follow Scenario 1 steps 1-7 completely.**
+
+After the switch, new snapshots will appear in the Limine boot menu automatically. Old pre-switch snapshots will not appear and are risky to restore from (GRUB-era kernel files).
+
+:::note
+Configure snapshot limits in `/etc/limine-snapper-sync.conf` (`MAX_SNAPSHOT_ENTRIES`, `EXCLUDE_SNAPSHOT_TYPES`). On nVidia systems with an EFI partition under 4 GiB, limit to 3 entries to avoid filling the partition.
+:::
+
+---
+
+### Scenario 4: Dual boot with Windows
+
+:::caution[BitLocker]
+If Windows uses BitLocker (Windows 11 enables it by default), changing Secure Boot keys changes TPM PCR 7 measurements and **will trigger a BitLocker recovery key prompt** on the next Windows boot. Get your recovery key from [aka.ms/myrecoverykey](https://aka.ms/myrecoverykey) before you start. Enter it once and Windows reseals automatically.
+:::
+
+**Step 1 - Locate the Windows boot manager:**
+
+```bash
+ls /boot/EFI/Microsoft/Boot/
+```
+
+The file you need is `bootmgfw.efi` in that directory.
+
+**Step 2 - Verify Limine has a Windows entry in its config:**
+
+```bash
+cat /boot/efi/limine.conf | grep -A3 -i windows
+```
+
+If there is no Windows entry, add one to `/etc/default/limine`:
+
+```ini
+/efi=\EFI\Microsoft\Boot\bootmgfw.efi
+    comment=Windows Boot Manager
+```
+
+Then run `sudo limine-update`.
+
+**Step 3 - Follow Scenario 1 steps 1-7 completely.**
+
+The `-m` flag in `sbctl enroll-keys -m` is what keeps Windows bootable - it enrolls the Microsoft certificates your Windows boot manager is signed with. Never skip it.
+
+**Step 4 - Test both OSes before finishing.**
+
+Boot Windows once to confirm it works (entering the BitLocker recovery key if prompted). Then reboot into XeroLinux and confirm Secure Boot is on.
+
+---
+
+### Scenario 5: nVidia
+
+nVidia's kernel modules may be refused by a kernel with lockdown active. First check whether your kernel enforces lockdown:
+
+**Step 1 - Check lockdown state:**
+
+```bash
+cat /sys/kernel/security/lockdown
+```
+
+- `none` - modules load normally. No extra steps needed. Continue with Scenario 1.
+- `integrity` or `confidentiality` - unsigned modules are refused. The nVidia modules must be signed before enabling Secure Boot.
+
+**Step 2 (only if lockdown is not `none`) - Sign the nVidia modules:**
+
+```bash
+sudo sbctl sign-all
+```
+
+Or sign the specific module files:
+
+```bash
+find /usr/lib/modules -name "nvidia*.ko*" | while read f; do
+  sudo sbctl sign "$f"
+done
+```
+
+**Step 3 - Ensure nVidia settings carry over to Limine:**
+
+```bash
+grep "nvidia" /etc/default/limine
+```
+
+The kernel parameters `nvidia-drm.modeset=1` and `modprobe.blacklist=nouveau` must be present. If missing, add them to the `KERNEL_PARAMS` line in `/etc/default/limine`, then run `sudo limine-update`.
+
+**Step 4 - Check EFI partition space.** nVidia boot images are large:
+
+```bash
+df -h /boot/efi
+```
+
+Need at least 300-400 MB free before signing and enrolling.
+
+**Step 5 - Follow Scenario 1 steps 1-7 completely.**
+
+After boot, verify modules load:
+
+```bash
+lsmod | grep nvidia
+```
 
 ---
 
@@ -316,7 +555,7 @@ sudo /usr/lib/xsb-gui/xsb-helper <command> [--dry-run]
 | `reset-keys` | Clears the local sbctl keys (never touches firmware). Refuses while Secure Boot is on. |
 | `apply-splash` | Applies the XeroLinux boot menu wallpaper. |
 
-`--dry-run` shows what would happen without changing anything. `--luks-passphrase-stdin` reads your disk passphrase from standard input, never from the command line.
+`--dry-run` shows what would happen without changing anything.
 
 ### Files the tool manages
 
@@ -325,6 +564,6 @@ sudo /usr/lib/xsb-gui/xsb-helper <command> [--dry-run]
 | `/etc/default/limine` | Limine settings: EFI path, kernel command line, fallback, settings lock. Edit this, then run `sudo limine-update`. |
 | `/boot/efi/limine.conf` | The generated boot menu. Do not edit by hand when Secure Boot is on. |
 | `/boot/efi/EFI/limine/limine_x64.efi` | Limine itself (signed once Secure Boot is set up). |
-| `/boot/efi/EFI/BOOT/BOOTX64.EFI` | Backup copy of Limine, for firmware that forgets its boot entries. Left alone when it belongs to Windows or another system. |
+| `/boot/efi/EFI/BOOT/BOOTX64.EFI` | Backup copy of Limine, for firmware that forgets its boot entries. |
 | `/etc/limine-snapper-sync.conf` | Snapshot boot menu settings. |
 | `/etc/mkinitcpio.conf.xsb.bak` | Your mkinitcpio settings from before the switch (Btrfs only). |

@@ -94,16 +94,32 @@ html, body {
 
 /* Mobile: revert to normal window scroll — no sidebar to disconnect */
 @media (max-width: 50rem) {
-	html, body {
+	html {
 		overflow: auto !important;
 		height: auto !important;
-		background: #2a2c38 !important;
+		min-height: 100vh !important;
+		background: #191a22 !important;
+	}
+	body {
+		overflow: auto !important;
+		height: auto !important;
+		min-height: 100vh !important;
+		background: #191a22 !important;
+		padding-bottom: env(safe-area-inset-bottom, 0px) !important;
 	}
 	.main-frame {
 		overflow-y: visible !important;
 		height: auto !important;
+		min-height: calc(100vh - var(--sl-nav-height)) !important;
 		margin-top: 0 !important;
 		padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height, 0px) + 1rem) !important;
+		background: #191a22 !important;
+	}
+	.content-panel, article, .sl-container {
+		background: transparent !important;
+	}
+	footer, .meta, .pagination-links, .right-sidebar-panel {
+		background: #191a22 !important;
 	}
 
 	/* Panel backgrounds — lighter to sit correctly on #2a2c38 mobile bg */
@@ -170,6 +186,10 @@ html, body {
 }
 
 [data-has-hero] footer { display: none !important; }
+
+footer, .meta, .pagination-links, .right-sidebar-container {
+	background: transparent !important;
+}
 
 .sl-markdown-content,
 [data-pagefind-body] {
